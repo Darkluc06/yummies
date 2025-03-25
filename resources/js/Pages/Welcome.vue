@@ -1,8 +1,7 @@
-<script setup lang="ts">
-import { Head, Link } from '@inertiajs/vue3';
-
-</script>
-
 <template>
-    <h2>Hello</h2>
+    <section class="test">
+        <h1>test</h1>
+    </section>
 </template>
+
+
