@@ -8,6 +8,11 @@ html{
     font-size: 62.5%;
 }
 
-.test{
-    background: blue;
+body{
+    max-width: 80rem;
+    margin: 0 auto;
+}
+
+#app{
+    padding: 0 2rem;
 }
