@@ -1,7 +1,16 @@
 <template>
-    <section class="test">
-        <h1>test</h1>
-    </section>
+
+        <navigation></navigation>
+
 </template>
 
+<script>
+import Navigation from '@/Components/navigation/navigation.vue';
+import "../../scss/style.scss"
 
+export default {
+    components: {
+        Navigation
+    }
+};
+</script>
