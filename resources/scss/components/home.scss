@@ -1,4 +1,5 @@
 // Variables
+@import "./../assets//variables";
 
 .yummies {
     width: 100vw;
@@ -28,6 +29,20 @@
         .yummies_navigation {
             display: flex;
         }
+    }
 
+    .yummies_main {
+        width: 100vw;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        padding: 0rem $padding-home-sides;
+
+        .yummies_new-recipes{
+            width: 100vw;
+            height: auto;
+            display: flex;
+            gap: 2rem;
+        }
     }
 }

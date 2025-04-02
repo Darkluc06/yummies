@@ -1,10 +1,12 @@
 <script>
 import Navigation from '@/Components/navigation/navigation.vue';
+import NewRecipecomponent from '@/Components/new-recipe/new-recipe.vue';
 import "../../scss/style.scss"
 
 export default {
     components: {
-        Navigation
+        Navigation,
+        NewRecipecomponent
     }
 };
 </script>
@@ -18,15 +20,16 @@ export default {
                 <h2 class="yummies_header-h2">Verschillende kookstijlen</h2>
             </div>
             <div class="yummies_navigation">
-                <navigation></navigation>
+                <Navigation></Navigation>
             </div>
         </header>
         <main class="yummies_main">
-            <section class="new-recipes">
-
+            <section class="yummies_new-recipes">
+                <NewRecipecomponent></NewRecipecomponent>
+                <NewRecipecomponent></NewRecipecomponent>
             </section>
             <section class="yummies_recipes">
-                
+
             </section>
         </main>
 
