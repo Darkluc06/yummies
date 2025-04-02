@@ -1,0 +1,30 @@
+// Variables
+
+.yummies {
+    width: 100vw;
+    height: 100vh;
+    margin-top: 2rem;
+
+    .yummies_header{
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        padding: 0rem 2rem;
+
+        .yummies_header-content {
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            margin-bottom: 1rem;
+
+            .yummies_header-h1{
+                font-size: 4rem;
+            }
+
+            .yummies_header-h2{
+                font-size: 2rem;
+            }
+        }
+
+    }
+}
