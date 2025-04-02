@@ -6,6 +6,7 @@
     height: 100vh;
     margin-top: 2rem;
     padding: 0rem $home-padding-sides;
+    overflow-x: hidden;
 
     .yummies_header{
         width: 100%;
@@ -33,17 +34,37 @@
     }
 
     .yummies_main {
-        width: 100vw;
+        width: 100%;
         height: auto;
         display: flex;
         flex-direction: column;
         gap: 2rem;
 
         .yummies_new-recipes{
-            width: 100vw;
+            width: 100%;
             height: auto;
             display: flex;
             gap: 2rem;
+            
+            overflow-x: auto; 
+            white-space: nowrap; 
+            scrollbar-width: thin; 
+            scrollbar-color: #ccc transparent;
+            
+            &::-webkit-scrollbar {
+                height: .8rem; 
+            }
+            
+            &::-webkit-scrollbar-thumb {
+                background: #aaa; 
+                border-radius: 1rem;
+            }
+
+            & > * { 
+                flex: 0 0 auto; 
+                width: 25rem; 
+            }
+
         }
 
         .yummies_recipes {

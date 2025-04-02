@@ -27,6 +27,8 @@ export default {
             <section class="yummies_new-recipes">
                 <NewRecipecomponent></NewRecipecomponent>
                 <NewRecipecomponent></NewRecipecomponent>
+                <NewRecipecomponent></NewRecipecomponent>
+                <NewRecipecomponent></NewRecipecomponent>
             </section>
             <section class="yummies_recipes">
                 <h2 class="yummies_recipes-name">Recepten</h2>
