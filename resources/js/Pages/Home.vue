@@ -30,8 +30,17 @@ export default {
                 <NewRecipecomponent></NewRecipecomponent>
                 <NewRecipecomponent></NewRecipecomponent>
             </section>
+            <section class="yummies_legenda">
+                <h1 class="yummies_legenda-h1">Legenda</h1>
+                <p class="yummies_legenda-explanation">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam magnam tempore nemo laboriosam non est maxime, excepturi voluptate natus placeat officiis nobis amet, mollitia tenetur repellat. Voluptatem dolore ipsa neque!
+                </p>
+                <button class="yummies_legenda-button">
+                    Zie legenda
+                </button>
+            </section>
             <section class="yummies_recipes">
-                <h2 class="yummies_recipes-name">Recepten</h2>
+                <h1 class="yummies_recipes-h1">Recepten</h1>
                 <div class="yummies_recipes-container">
 
                 </div>

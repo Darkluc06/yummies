@@ -19,11 +19,11 @@
             flex-direction: column;
 
             .yummies_header-h1{
-                font-size: $home-h1;
+                font-size: $home-logo;
             }
 
             .yummies_header-h2{
-                font-size: $home-h2;
+                font-size: $home-h1;
             }
         }
 
@@ -45,34 +45,54 @@
             height: auto;
             display: flex;
             gap: 2rem;
-            
-            overflow-x: auto; 
-            white-space: nowrap; 
-            scrollbar-width: thin; 
+
+            overflow-x: auto;
+            white-space: nowrap;
+            scrollbar-width: thin;
             scrollbar-color: #ccc transparent;
-            
+
             &::-webkit-scrollbar {
-                height: .8rem; 
+                height: .8rem;
             }
-            
+
             &::-webkit-scrollbar-thumb {
-                background: #aaa; 
+                background: #aaa;
                 border-radius: 1rem;
             }
 
-            & > * { 
-                flex: 0 0 auto; 
-                width: 25rem; 
+            & > * {
+                flex: 0 0 auto;
+                width: 25rem;
+            }
+        }
+
+        .yummies_legenda {
+            display: flex;
+            flex-direction: column;
+
+            .yummies_legenda-h1 {
+                font-size: $home-h1;
             }
 
+            .yummies_legenda-explanation {
+                margin-bottom: 1rem;
+            }
+
+            .yummies_legenda-button {
+                width: 10rem;
+                height: 3rem;
+                border: $thin-border;
+                border-radius: 1rem;
+                font-size: 1.2rem;
+            }
         }
 
         .yummies_recipes {
             display: flex;
             flex-direction: column;
 
-            .yummies_recipes-name {
-                font-size: $home-h2;
+            .yummies_recipes-h1 {
+                font-size: $home-h1;
             }
 
             .yummies_recipes-container{

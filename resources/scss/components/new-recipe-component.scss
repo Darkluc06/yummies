@@ -3,16 +3,16 @@
 .new_recipe_component {
     width: 30rem;
     height: 20rem;
-    border: .1rem solid black;
+    border: $thin-border;
     border-radius: $borderRadius;
     position: relative;
 
-    .new_recipe_img{
+    .new_recipe_img {
         width: 100%;
         height: 100%;
         border-radius: $borderRadius;
         position: absolute;
-
+        object-fit: cover;
     }
 
     .new_recipe_figure {
