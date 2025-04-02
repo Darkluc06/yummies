@@ -17,8 +17,18 @@ export default {
                 <h1 class="yummies_header-h1">Yummies</h1>
                 <h2 class="yummies_header-h2">Verschillende kookstijlen</h2>
             </div>
-            <navigation></navigation>
+            <div class="yummies_navigation">
+                <navigation></navigation>
+            </div>
         </header>
+        <main class="yummies_main">
+            <section class="new-recipes">
+
+            </section>
+            <section class="yummies_recipes">
+                
+            </section>
+        </main>
 
     </article>
 
