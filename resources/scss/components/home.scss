@@ -2,15 +2,15 @@
 @import "./../assets//variables";
 
 .yummies {
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     margin-top: 2rem;
+    padding: 0rem $home-padding-sides;
 
     .yummies_header{
-        width: 100vw;
+        width: 100%;
         display: flex;
         flex-direction: column;
-        padding: 0rem 2rem;
 
         .yummies_header-content {
             display: flex;
@@ -18,16 +18,17 @@
             flex-direction: column;
 
             .yummies_header-h1{
-                font-size: 4rem;
+                font-size: $home-h1;
             }
 
             .yummies_header-h2{
-                font-size: 2rem;
+                font-size: $home-h2;
             }
         }
 
         .yummies_navigation {
             display: flex;
+            width: 100%;
         }
     }
 
@@ -36,13 +37,29 @@
         height: auto;
         display: flex;
         flex-direction: column;
-        padding: 0rem $padding-home-sides;
+        gap: 2rem;
 
         .yummies_new-recipes{
             width: 100vw;
             height: auto;
             display: flex;
             gap: 2rem;
+        }
+
+        .yummies_recipes {
+            display: flex;
+            flex-direction: column;
+
+            .yummies_recipes-name {
+                font-size: $home-h2;
+            }
+
+            .yummies_recipes-container{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 2rem;
+            }
         }
     }
 }

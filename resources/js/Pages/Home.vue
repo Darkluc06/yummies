@@ -29,7 +29,10 @@ export default {
                 <NewRecipecomponent></NewRecipecomponent>
             </section>
             <section class="yummies_recipes">
+                <h2 class="yummies_recipes-name">Recepten</h2>
+                <div class="yummies_recipes-container">
 
+                </div>
             </section>
         </main>
 
