@@ -9,12 +9,17 @@
     overflow: hidden;
 
     .nav-ul {
-        padding: 1rem 0rem;
-        width: 100%;
-        height: auto;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+    padding: 1rem;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    gap: 2rem;
+    scroll-behavior: smooth;
 
         .nav-links {
             display: flex;
