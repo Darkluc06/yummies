@@ -25,7 +25,7 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     Route::get('/recipes', [RecipeController::class, 'index'])->name('recipes');
-    Route::get('/ingredients', [IngredientController::class, 'index'])->name('ingredients');
+    Route::resource('/ingredients', IngredientController::class);
 });
 
 require __DIR__.'/auth.php';

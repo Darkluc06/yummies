@@ -14,6 +14,11 @@ return new class extends Migration
         Schema::create('recipes', function (Blueprint $table) {
             $table->id();
             $table->string('recipe_name');
+            $table->string('description');
+            $table->string('image_path');
+            $table->string('recipe_duration');
+            $table->integer('portions');
+            $table->string('food_category');
             $table->timestamps();
         });
     }
