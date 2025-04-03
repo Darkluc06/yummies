@@ -1,0 +1,41 @@
+.legenda {
+    background: white;
+    width: 100%;
+    height: 90%;
+    padding: 1rem 2rem;
+    top: 10%;
+    left: 0%;
+    position: fixed;
+    border-top: .1rem solid black;
+    border-radius: 2rem;
+    z-index: 999;
+
+    .legenda_container-top {
+        width: 100%;
+        height: auto;
+
+        .legenda_container-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .legenda_close-btn {
+                font-size: 2rem;
+            }
+
+            .legenda_h1 {
+                font-size: 2rem;
+            }
+        }
+
+        .legenda_p {
+            font-size: 1.2rem;
+            padding-bottom: 1rem;
+        }
+    }
+
+    .legenda_container-bottom {
+        width: 100%;
+        height: 80%;
+    }
+}
