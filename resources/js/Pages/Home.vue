@@ -20,7 +20,7 @@ export default {
         openLegenda() {
             this.legendaOpen = true;
             let app = document.querySelectorAll(".yummies");
-            app[0].style.height = "100vh";
+            app[0].style.height = "100dvh";
             app[0].style.overflowY = "hidden";
 
         },

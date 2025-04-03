@@ -5,11 +5,11 @@
     position: relative;
     width: 100%;
     height: 100vh;
-    margin-top: 2rem;
     padding: 0rem $home-padding-sides;
     overflow-x: hidden;
 
     .yummies_header{
+        padding-top: 2rem;
         width: 100%;
         display: flex;
         flex-direction: column;
