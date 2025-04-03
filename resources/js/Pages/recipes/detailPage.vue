@@ -41,8 +41,14 @@
                     <button class="recipePage__button"><SvgIcon :name="`minus`"/></button>
                 </div>
             </div>
-            <ul class="ingredients">
-                <ingredients />
+            <span class="recipePage__span">
+                Verberg afbeeldingen
+                <button class="recipePage__toggle" @click="toggleImage" :class="showImage ? `` : `recipePage__toggle--active`">
+                    <figure class="recipePage__circle"></figure>
+                </button>
+            </span>
+            <ul class="ingredients" :class="showImage ? `ingredients--image` : `ingredients--list`">
+                <ingredients :shwoImage="showImage"/>
             </ul>
         </section>
     </article>
@@ -61,6 +67,16 @@ export default {
         SvgIcon,
         Link,
         ingredients
+    },
+    data(){
+        return{
+            showImage: false
+        }
+    },
+    methods: {
+        toggleImage(){
+            this.showImage = !this.showImage;
+        }
     }
 }
 

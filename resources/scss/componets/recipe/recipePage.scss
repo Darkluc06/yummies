@@ -70,4 +70,44 @@
             }
         }
     }
+
+    &__subTitle{
+        font-size: 2.5rem;
+    }
+
+    h3{
+        font-size: 2rem;
+    }
+
+    &__toggle{
+        width: 8rem;
+        height: 4rem;
+        border: 0.2rem solid black;
+        border-radius: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 0 0.5rem;
+        transition: justify-content 0.4s linear;
+
+        &--active{
+            justify-content: flex-end;
+        }
+    }
+
+    &__circle {
+        height: 3rem;
+        aspect-ratio: 1/1;
+        background: red;
+        border-radius: 50%;
+    }
+
+    &__span{
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        align-items: center;
+        font-size: 1.8rem;
+    }
+
 }
