@@ -1,6 +1,7 @@
 // Assets
 @use "./assets/reset";
 @use "./assets/variables";
-@use "./components/home.scss";
-@use "./components/nav-icon.scss";
-@use "./components/new-recipe-component.scss";
+@use "./components/home/home.scss";
+@use "./components/navigation/nav-icon.scss";
+@use "./components/new-recipe/new-recipe-component.scss";
+@use "./components/recipe/recipe.scss";

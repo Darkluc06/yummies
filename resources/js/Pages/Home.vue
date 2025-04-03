@@ -1,12 +1,13 @@
 <script>
 import Navigation from '@/Components/navigation/navigation.vue';
 import NewRecipecomponent from '@/Components/new-recipe/new-recipe.vue';
-import "../../scss/style.scss"
+import Recipe from '@/Components/recipe/recipe.vue';
 
 export default {
     components: {
         Navigation,
-        NewRecipecomponent
+        NewRecipecomponent,
+        Recipe
     }
 };
 </script>
@@ -42,7 +43,8 @@ export default {
             <section class="yummies_recipes">
                 <h1 class="yummies_recipes-h1">Recepten</h1>
                 <div class="yummies_recipes-container">
-
+                    <Recipe></Recipe>
+                    <Recipe></Recipe>
                 </div>
             </section>
         </main>

@@ -1,5 +1,5 @@
 // Variables
-@import "./../assets//variables";
+@import "../../assets/variables";
 
 .yummies {
     width: 100%;
@@ -93,6 +93,7 @@
 
             .yummies_recipes-h1 {
                 font-size: $home-h1;
+                padding-bottom: 1rem;
             }
 
             .yummies_recipes-container{
