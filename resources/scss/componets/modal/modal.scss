@@ -1,0 +1,36 @@
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    &__modal{
+        height: 85%;
+        background: white;
+        border-radius: 2rem 2rem 0 0;
+        overflow-y: scroll;
+        padding: 2rem;
+        border: 0.2rem solid black;
+    }
+
+    &__header{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__title{
+        font-size: 3rem;
+    }
+
+    &__close{
+        .icon{
+            width: 3rem;
+            height: 3rem;
+        }
+    }
+}

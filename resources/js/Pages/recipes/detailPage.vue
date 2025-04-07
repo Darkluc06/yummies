@@ -45,11 +45,11 @@
                 <ingredients/>
                 <ingredients/>
             </ul>
+            <div class="recipePage__wrapper">
+                <h2 class="recipePage__subTitle">Kookdiagram </h2>
+                <button @click="modalOpen" class="recipePage__modalButton">Legenda</button>
+            </div>
         </section>
-        <div class="recipePage__wrapper">
-            <h2 class="recipePage__title">Kook </h2>
-            <button @click="modalOpen" class="recipePage__modalButton">Legenda</button>
-        </div>
         <modal :title="`Leganda`" :open="openModal" @close="closeModal" />
     </article>
 </template>
@@ -77,10 +77,24 @@ export default {
     },
     methods: {
         modalOpen(){
-            this.openModal = true
+            this.openModal = true;
+            this.updateRecipePageStyle();
         },
         closeModal() {
             this.openModal = false;
+            this.updateRecipePageStyle();
+        },
+        updateRecipePageStyle() {
+            let recipePage = document.querySelectorAll(".recipePage");
+            if (recipePage && recipePage[0]) {
+                if (this.openModal) {
+                    recipePage[0].style.height = "100dvh";
+                    recipePage[0].style.overflowY = "hidden";
+                } else {
+                    recipePage[0].style.height = "auto";
+                    recipePage[0].style.overflowY = "scroll";
+                }
+            }
         },
     }
 }

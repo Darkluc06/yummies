@@ -3,6 +3,7 @@
     height: max-content;
     display: flex;
     flex-direction: column;
+    position: relative;
 
     &__figure{
         height: 30rem;
@@ -108,6 +109,13 @@
         gap: 1rem;
         align-items: center;
         font-size: 1.8rem;
+    }
+
+    &__modalButton{
+        padding: 0.5rem 2rem;
+        border: 0.2rem solid black;
+        font-size: 1.8rem;
+        border-radius: 1rem;
     }
 
 }
