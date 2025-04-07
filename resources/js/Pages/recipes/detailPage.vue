@@ -46,6 +46,11 @@
                 <ingredients/>
             </ul>
         </section>
+        <div class="recipePage__wrapper">
+            <h2 class="recipePage__title">Kook </h2>
+            <button @click="modalOpen" class="recipePage__modalButton">Legenda</button>
+        </div>
+        <modal :title="`Leganda`" :open="openModal" @close="closeModal" />
     </article>
 </template>
 
@@ -55,23 +60,28 @@ import imageComponent from '@/Components/general/image/imageComponent.vue';
 import SvgIcon from '@/Components/general/icon/SvgIcon.vue';
 import { Link } from '@inertiajs/vue3';
 import ingredients from '@/Components/recipe/ingredients.vue';
+import modal from '@/Components/modal/modal.vue';
 
 export default {
     components:{
         imageComponent,
         SvgIcon,
         Link,
-        ingredients
+        ingredients,
+        modal
     },
     data(){
         return{
-            //showImage: false
+            openModal: false
         }
     },
     methods: {
-        // toggleImage(){
-        //     this.showImage = !this.showImage;
-        // }
+        modalOpen(){
+            this.openModal = true
+        },
+        closeModal() {
+            this.openModal = false;
+        },
     }
 }
 
