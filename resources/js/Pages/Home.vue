@@ -3,13 +3,15 @@ import Legenda from '@/Components/legenda/legenda.vue';
 import Navigation from '@/Components/navigation/navigation.vue';
 import NewRecipecomponent from '@/Components/new-recipe/new-recipe.vue';
 import Recipe from '@/Components/recipe/recipe.vue';
+import footerComponent from './../Components/footer/footer.vue'
 
 export default {
     components: {
         Navigation,
         NewRecipecomponent,
         Recipe,
-        Legenda
+        Legenda,
+        footerComponent
     },
     data() {
         return {
@@ -47,10 +49,7 @@ export default {
         </header>
         <main class="yummies_main">
             <section class="yummies_new-recipes">
-                <NewRecipecomponent />
-                <NewRecipecomponent />
-                <NewRecipecomponent />
-                <NewRecipecomponent />
+
             </section>
             <section class="yummies_legenda">
                 <h1 class="yummies_legenda-h1">Legenda</h1>
@@ -71,6 +70,7 @@ export default {
                 </div>
             </section>
         </main>
+        <footerComponent></footerComponent>
     </article>
 </template>
 
