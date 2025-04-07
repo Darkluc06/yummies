@@ -20,11 +20,6 @@
                     </li>
                     <li class="recipe__icon">
                         <span class="recipe__span">
-                            3 <SvgIcon :name="`person`"/>
-                        </span>
-                    </li>
-                    <li class="recipe__icon">
-                        <span class="recipe__span">
                             15 min <SvgIcon :name="`timer`"/>
                         </span>
                     </li>
