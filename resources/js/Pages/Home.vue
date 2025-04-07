@@ -41,6 +41,12 @@ export default {
         <header class="yummies_header">
             <div class="yummies_header-content">
                 <h1 class="yummies_header-h1">Yummies</h1>
+                <input
+                    type="text"
+                    placeholder="Zoek verschillende kookstijlen"
+                    class="yummies_input"
+                    ref="searchField"
+                />
                 <h2 class="yummies_header-h2">Verschillende kookstijlen</h2>
             </div>
             <div class="yummies_navigation">
