@@ -22,11 +22,6 @@
                 </li>
                 <li class="recipePage__icon">
                     <span>
-                        <SvgIcon :name="`person`"/> 3
-                    </span>
-                </li>
-                <li class="recipePage__icon">
-                    <span>
                         <SvgIcon :name="`grocery`"/> 4 
                     </span>
                 </li>
@@ -41,14 +36,14 @@
                     <button class="recipePage__button"><SvgIcon :name="`minus`"/></button>
                 </div>
             </div>
-            <span class="recipePage__span">
-                Verberg afbeeldingen
-                <button class="recipePage__toggle" @click="toggleImage" :class="showImage ? `` : `recipePage__toggle--active`">
-                    <figure class="recipePage__circle"></figure>
-                </button>
-            </span>
-            <ul class="ingredients" :class="showImage ? `ingredients--image` : `ingredients--list`">
-                <ingredients :shwoImage="showImage"/>
+            <ul class="ingredients ingredients--list">
+                <ingredients/>
+                <ingredients/>
+                <ingredients/>
+                <ingredients/>
+                <ingredients/>
+                <ingredients/>
+                <ingredients/>
             </ul>
         </section>
     </article>
@@ -70,13 +65,13 @@ export default {
     },
     data(){
         return{
-            showImage: false
+            //showImage: false
         }
     },
     methods: {
-        toggleImage(){
-            this.showImage = !this.showImage;
-        }
+        // toggleImage(){
+        //     this.showImage = !this.showImage;
+        // }
     }
 }
 

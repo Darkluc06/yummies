@@ -1,5 +1,5 @@
 <template>
-    <li class="ingredients__ingredient" v-if="shwoImage === false">
+    <li class="ingredients__ingredient">
         <button :class="`ingredients__button ingredients__button--${checked}`" @click="checkBox">
             <SvgIcon  :name="`check`"/>
         </button>
@@ -17,12 +17,6 @@ import SvgIcon from '../general/icon/SvgIcon.vue';
 export default {
     components:{
         SvgIcon
-    },
-    props:{
-        shwoImage: {
-            type: Boolean,
-            default: true
-        }
     },
     data() {
         return{
