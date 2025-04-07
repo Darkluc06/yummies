@@ -49,6 +49,7 @@
                 <h2 class="recipePage__subTitle">Kookdiagram </h2>
                 <button @click="modalOpen" class="recipePage__modalButton">Legenda</button>
             </div>
+            <cookingDiagram />
         </section>
         <modal :title="`Leganda`" :open="openModal" @close="closeModal" />
     </article>
@@ -61,6 +62,7 @@ import SvgIcon from '@/Components/general/icon/SvgIcon.vue';
 import { Link } from '@inertiajs/vue3';
 import ingredients from '@/Components/recipe/ingredients.vue';
 import modal from '@/Components/modal/modal.vue';
+import cookingDiagram from '@/Components/cookingDiagram/cookingDiagram.vue';
 
 export default {
     components:{
@@ -68,7 +70,8 @@ export default {
         SvgIcon,
         Link,
         ingredients,
-        modal
+        modal,
+        cookingDiagram
     },
     data(){
         return{
