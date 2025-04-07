@@ -4,12 +4,6 @@
 
 <template>
     <nav class="nav_container">
-        <input
-                    type="text"
-                    placeholder="Zoek verschillende kookstijlen"
-                    class="nav_input"
-                    ref="searchField"
-                />
         <ul class="nav_ul">
             <li class="nav_links" @click="selectCategory('Aziatisch')">
                 <figure class="nav_icon  ">

@@ -11,20 +11,6 @@
     flex-direction: column;
     gap: 2rem;
 
-    .nav_input{
-        width: 92%;
-        height: 6.5rem;
-        transform: translateY(12%);
-        padding-left: 2rem;
-        border: .1rem solid #ccc;
-        transition: all 0.3s ease-in-out;
-        font-size: 2rem;
-        outline: none;
-        border-radius: 10rem;
-        box-shadow: 0 0 .5rem .2rem rgba(0,0,0, .3);
-        z-index: 1;
-    }
-
     .nav_ul {
         display: flex;
         flex-direction: row;
