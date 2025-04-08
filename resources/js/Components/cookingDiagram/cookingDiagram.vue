@@ -12,6 +12,9 @@
         <div class="cookingDiagram__row">
             <Ingredient :isString="false" :icon="`x`" :difficulty="3" />
         </div>
+        <div class="cookingDiagram__row">
+            <Line :active="true" :has-small-arrow="true" />
+        </div>
     </section>
 </template>
 

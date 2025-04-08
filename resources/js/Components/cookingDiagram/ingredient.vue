@@ -1,7 +1,7 @@
 <template>
     <div class="cookingDiagram__column">
         <span class="cookingDiagram__ingredient" v-if="isString === true">
-            <SvgIcon :name="`arrow`" />
+            <SvgIcon :name="`arrow-long`" />
             {{ ingedient }}
         </span>
         <figure class="cookingDiagram__icon" v-if="isString === false">
