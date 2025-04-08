@@ -41,7 +41,7 @@
                 </div>
             </section>
         </main>
-        <footerComponent></footerComponent>
+        <FooterComponent></FooterComponent>
     </article>
 </template>
 
@@ -50,7 +50,7 @@ import Legenda from '@/Components/legenda/legenda.vue';
 import Navigation from '@/Components/navigation/navigation.vue';
 import NewRecipecomponent from '@/Components/new-recipe/new-recipe.vue';
 import Recipe from '@/Components/recipe/recipe.vue';
-import footerComponent from './../Components/footer/footer.vue'
+import FooterComponent from './../Components/footer/footer.vue'
 
 export default {
     components: {
@@ -58,7 +58,7 @@ export default {
         NewRecipecomponent,
         Recipe,
         Legenda,
-        footerComponent
+        FooterComponent
     },
     data() {
         return {
