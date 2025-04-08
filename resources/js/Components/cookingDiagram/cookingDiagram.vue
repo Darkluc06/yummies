@@ -1,26 +1,31 @@
 <template>
     <section class="cookingDiagram">
         <div class="cookingDiagram__row">
-            <tools :tool="`pot`" />
-            <tools :tool="`pot`" />
-            <tools :tool="`pot`" />
-            <tools :tool="`pot`" />
+            <Tools :tool="`pot`" />
+            <Tools :tool="`pot`" />
+            <Tools :tool="`pot`" />
+            <Tools :tool="`pot`" />
         </div>
         <div class="cookingDiagram__row">
-            <line :active="true" />
+            <Line :active="true" />
+        </div>
+        <div class="cookingDiagram__row">
+            <Ingredient :isString="false" :icon="`x`" :difficulty="3" />
         </div>
     </section>
 </template>
 
 <script>
 
-import tools from './tools.vue'
-import line from './line.vue'
+import Tools from './tools.vue'
+import Line from './line.vue'
+import Ingredient from './ingredient.vue';
 
 export default {
     components:{
-        tools,
-        line
+        Tools,
+        Line,
+        Ingredient
     }
 }
 

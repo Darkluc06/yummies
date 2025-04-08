@@ -1,7 +1,9 @@
 <template>
-    <figure class="cookingDiagram__tool">
-        <SvgIcon :name="tool" />
-    </figure>
+    <div class="cookingDiagram__column">
+        <figure class="cookingDiagram__tool">
+            <SvgIcon :name="tool" />
+        </figure>
+    </div>
 </template>
 
 <script>
@@ -9,10 +11,10 @@
 import SvgIcon from '../general/icon/SvgIcon.vue';
 
 export default {
-    components:{
+    components: {
         SvgIcon
     },
-    props:{
+    props: {
         tool: {
             type: String,
             default: "pan"
