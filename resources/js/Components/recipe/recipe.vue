@@ -33,7 +33,7 @@
 <script>
 
 import imageComponent from '../general/image/imageComponent.vue';
-import SvgIcon from '../general/icon/SvgIcon.vue';
+import SvgIcon from '../general/svgIcon/SvgIcon.vue';
 import { Link } from '@inertiajs/vue3';
 
 export default {

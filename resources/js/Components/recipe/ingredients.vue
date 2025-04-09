@@ -5,14 +5,11 @@
         </button>
         <p class="ingredients__name">1 kg Kruimige aardappelen</p>
     </li>
-    <li class="ingredients__ingredient" v-if="shwoImage === true">
-        
-    </li>
 </template>
 
 <script>
 
-import SvgIcon from '../general/icon/SvgIcon.vue';
+import SvgIcon from '../general/svgIcon/SvgIcon.vue';
 
 export default {
     components:{

@@ -17,12 +17,12 @@
             <ul class="recipePage__icons">
                 <li class="recipePage__icon">
                     <span>
-                        <SvgIcon :name="`timer`"/> 15 min 
+                        <SvgIcon :name="`timer`"/> 15 min
                     </span>
                 </li>
                 <li class="recipePage__icon">
                     <span>
-                        <SvgIcon :name="`grocery`"/> 4 
+                        <SvgIcon :name="`grocery`"/> 4
                     </span>
                 </li>
             </ul>
@@ -51,14 +51,14 @@
             </div>
             <cookingDiagram />
         </section>
-        <modal :title="`Leganda`" :open="openModal" @close="closeModal" />
+        <modal :open="openModal" @close="closeModal" />
     </article>
 </template>
 
 <script>
 
 import imageComponent from '@/Components/general/image/imageComponent.vue';
-import SvgIcon from '@/Components/general/icon/SvgIcon.vue';
+import SvgIcon from '@/Components/general/svgIcon/SvgIcon.vue';
 import { Link } from '@inertiajs/vue3';
 import ingredients from '@/Components/recipe/ingredients.vue';
 import modal from '@/Components/modal/modal.vue';

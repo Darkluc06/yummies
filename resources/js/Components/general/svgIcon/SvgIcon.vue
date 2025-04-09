@@ -11,10 +11,10 @@
       <path :d="currentPath" />
     </svg>
   </template>
-  
+
   <script>
 import { computed } from 'vue';
-import svgPaths from '../../../../assets/icons/icons.json';
+import svgPaths from '../../../../assets/icons-json/icons.json';
 
 export default {
   props: {
@@ -42,4 +42,3 @@ export default {
   },
 };
 </script>
-  
