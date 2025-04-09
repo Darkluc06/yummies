@@ -5,16 +5,15 @@ import { Ingredient } from '@/interfaces/Ingredient';
 import IngredientComponent from '@/Components/IngredientComponent.vue';
 
 const props = defineProps<{
-  ingredients: Ingredient
-}>()
-
-console.log(props.ingredients[0].id)
+  ingredients: Array<Ingredient>
+}>();
 
 </script>
 
 <template>
   <authenticated-layout>
     <h1>
+        Ingredients
     </h1>
 
     <ul v-for="ingredient in ingredients">
