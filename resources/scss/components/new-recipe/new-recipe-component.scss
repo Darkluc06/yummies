@@ -1,16 +1,16 @@
-@import "../../assets/variables";
+@use "../../assets/variables";
 
 .new_recipe_component {
     width: 30rem;
     height: 20rem;
-    border: $thin-border;
-    border-radius: $borderRadius;
+    border: variables.$thin-border;
+    border-radius: variables.$borderRadius;
     position: relative;
 
     .new_recipe_img {
         width: 100%;
         height: 100%;
-        border-radius: $borderRadius;
+        border-radius: variables.$borderRadius;
         position: absolute;
         object-fit: cover;
     }
