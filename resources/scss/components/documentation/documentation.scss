@@ -7,6 +7,7 @@
 
     .instruction_documentation {
         width: 100%;
+        min-height: 50vh;
         border: .2rem solid black;
         padding-left: 1rem;
         border-radius: 2rem;
@@ -15,10 +16,18 @@
         .instruction_documentation-top {
             padding-bottom: 1rem;
 
-            .instruction_header {
+            .instruction_documentation-header {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
+
+                .instruction_documentation-h1 {
+                    font-size: 4rem;
+                }
+
+                .instruction_documentation-close {
+                    padding-right: 1rem;
+                }
             }
 
             .instruction_documentation-button{
@@ -31,9 +40,7 @@
                 padding-right: 1rem;
             }
 
-            .instruction_documentation-h1 {
-                font-size: 4rem;
-            }
+
         }
     }
 
@@ -44,6 +51,33 @@
         padding-left: 1rem;
         border-radius: 2rem;
 
+        .instruction_legenda-top {
+            padding-bottom: 1rem;
 
+            .instruction_legenda-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .instruction_legenda-h1 {
+                    font-size: 4rem;
+                }
+
+                .instruction_legenda-close {
+                    padding-right: 1rem;
+                }
+            }
+
+            .instruction_legenda-button{
+                font-size: 2rem;
+                padding-right: 1rem;
+            }
+
+            .instruction_legenda-button{
+                font-size: 2rem;
+                padding-right: 1rem;
+            }
+
+        }
     }
 }
