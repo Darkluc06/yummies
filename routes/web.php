@@ -4,11 +4,8 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
-<<<<<<< HEAD
 use App\Http\Controllers\DocumentationPageController;
-=======
 use App\Http\Controllers\RecipePageController;
->>>>>>> legenda
 
 Route::get('/', function () {
     return Inertia::render('Home', [

@@ -1,5 +1,3 @@
-
-
 <template>
     <article class="yummies">
         <header class="yummies_header">
@@ -81,16 +79,4 @@ export default {
         },
     }
 };
-</script>
-
-<script>
-
-import recipe from '@/Components/recipe/recipe.vue';
-
-export default {
-    components:{
-        recipe
-    }
-}
-
 </script>
