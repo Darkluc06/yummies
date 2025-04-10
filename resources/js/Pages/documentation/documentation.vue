@@ -3,31 +3,39 @@
         <article id="instruction_documentation" class="instruction_documentation" v-if="showDocumentation">
             <section class="instruction_documentation-top">
                 <header class="instruction_documentation-header">
-                    <h1 class="instruction_documentation-h1">Documentatie</h1>
-                    <Link class="instruction_documentation-close" :href="`/`"><SvgIcon :name="`close`" /></Link>
+                    <h1 class="instruction_documentation-h1"> {{ instruction.documentation.title }} </h1>
+                    <Link class="instruction_documentation-close" :href="`/`">
+                    <SvgIcon :name="`close`" />
+                    </Link>
                 </header>
-                <button class="instruction_documentation-button" @click="goToDocumentation">Documentatie</button>
-                <button class="instruction_legenda-button" @click="goToLegenda">Legenda</button>
+                <button class="instruction_documentation-button" @click="goToDocumentation"> {{ instruction.buttons['button-documentation'] }} </button>
+                <button class="instruction_legenda-button" @click="goToLegenda"> {{ instruction.buttons["button-legenda"] }} </button>
             </section>
             <section class="instructions_documentation-mid">
                 <p class="instructions_documentation-p">
-                it. Quae optio voluptates non et a ullam nam qui nihil aliquid fugit tempore expedita dolor nemo unde autem, tenetur nobis debitis deleniti.
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae optio voluptates non et a ullam nam qui nihil aliquid fugit tempore expedita dolor nemo unde autem, tenetur nobis debitis deleniti.
-
+                    {{ instruction.documentation.paragraph  }}
                 </p>
             </section>
         </article>
         <article id="instruction_legenda" class="instruction_legenda" v-else>
             <section class="instruction_legenda-top">
                 <header class="instruction_legenda-header">
-                    <h1 class="instruction_legenda-h1">Legenda</h1>
-                    <Link class="instruction_legenda-close" :href="`/`"><SvgIcon :name="`close`" /></Link>
+                    <h1 class="instruction_legenda-h1"> {{ instruction.legenda.title }} </h1>
+                    <Link class="instruction_legenda-close" :href="`/`">
+                    <SvgIcon :name="`close`" />
+                    </Link>
                 </header>
-                <button class="instruction_legenda-button" @click="goToDocumentation">Documentatie</button>
-                <button class="instruction_legenda-button" @click="goToLegenda">Legenda</button>
+                <button class="instruction_legenda-button" @click="goToDocumentation"> {{ instruction.buttons['button-documentation'] }} </button>
+                <button class="instruction_legenda-button" @click="goToLegenda"> {{ instruction.buttons["button-legenda"] }} </button>
             </section>
             <section class="instruction_legenda-mid">
-                
+                <summary class="instruction_legenda-summary"> {{ instruction.legenda.summary }} </summary>
+                <ul class="instruction_legenda-container">
+                    <li class="instruction_legenda-icons" v-for="(iconImg, index) in icons" :key="index" v-if="icons">
+                        <img class="instruction_legenda-img" :src="getIconUrl(iconImg.src)" :alt="iconImg.alt" />
+                        <span class="instruction_legenda-label">{{ iconImg.label }}</span>
+                    </li>
+                </ul>
             </section>
         </article>
     </div>
@@ -36,6 +44,7 @@
 <script>
 import SvgIcon from '@/Components/general/icon/SvgIcon.vue';
 import { Link } from '@inertiajs/vue3';
+import json from './../../../../resources/assets/jason/data.json';
 
 export default {
     components: {
@@ -45,6 +54,8 @@ export default {
     data() {
         return {
             showDocumentation: true,
+            instruction: json["instruction"],
+            icons: json["instruction"]["legenda"]["imgs"],
         };
     },
 
@@ -55,6 +66,9 @@ export default {
         goToLegenda() {
             this.showDocumentation = false;
         },
+        getIconUrl(filename) {
+            return `/img/${filename}`;
+        }
     },
 
 };

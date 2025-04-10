@@ -1,4 +1,87 @@
 {
+    "instruction": {
+        "buttons": {
+            "button-legenda": "Legenda",
+            "button-documentation": "Documentation"
+        },
+        "documentation": {
+            "title": "Documentation",
+            "paragraph": "Dit document legt uit..."
+
+        },
+        "legenda": {
+            "title": "Legenda",
+            "summary": "In deze legenda kun je alle iconen, pijlen, kleuren en voorbeelden zien",
+            "imgs": [
+                {
+                    "alt": "Cirkel conditie",
+                    "label": "Actie",
+                    "src": "cconditie.png"
+                },
+                {
+                    "alt": "Ruit conditie",
+                    "label": "Conditie",
+                    "src": "rconditie.png"
+                },
+                {
+                    "alt": "Niet x",
+                    "label": "'Niet X",
+                    "src": "niet_x.png"
+                },
+                {
+                    "alt": "x en y",
+                    "label": "X en Y",
+                    "src": "x_en_y.png"
+                },
+                {
+                    "alt": "x of y",
+                    "label": "X of Y",
+                    "src": "x_of_y.png"
+                },
+                {
+                    "alt": "x of y z",
+                    "label": "X of Z of Y",
+                    "src": "x_of_y_z.png"
+                },
+                {
+                    "alt": "Roeren",
+                    "label": "Roeren",
+                    "src": "roeren.png"
+                },
+                {
+                    "alt": "Schillen",
+                    "label": "Schillen",
+                    "src": "schillen.png"
+                },
+                {
+                    "alt": "Openen",
+                    "label": "Openen",
+                    "src": "openen.png"
+                },
+                {
+                    "alt": "Afscheuren",
+                    "label": "Afsheuren",
+                    "src": "afscheuren.png"
+                },
+                {
+                    "alt": "Reepjes snijden X",
+                    "label": "Reepjes snijden",
+                    "src": "reepjes_snijden.png"
+                },
+                {
+                    "alt": "Reepjes snijden Y",
+                    "label": "Reepjes snijden",
+                    "src": "reepjes_snijdenY.png"
+                },
+                {
+                    "alt": "Ringen snijden",
+                    "label": "Ringen snijden",
+                    "src": "ringen_snijden.png"
+                }
+            ]
+        }
+
+    },
     "cooking-diagram": {
         "title": "Legenda",
         "summary": "Deze legenda laat een overzicht zien van verschillende iconen, pijlen, kleuren en voorbeelden",
