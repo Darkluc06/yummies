@@ -4,7 +4,11 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+<<<<<<< HEAD
 use App\Http\Controllers\DocumentationPageController;
+=======
+use App\Http\Controllers\RecipePageController;
+>>>>>>> legenda
 
 Route::get('/', function () {
     return Inertia::render('Home', [
@@ -26,5 +30,6 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::resource('/documentation', DocumentationPageController::class);
+Route::resource('/recipe', RecipePageController::class);
 
 require __DIR__.'/auth.php';
