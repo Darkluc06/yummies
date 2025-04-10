@@ -1,0 +1,34 @@
+@import "../../assets/variables";
+
+.new_recipe_component {
+    width: 30rem;
+    height: 20rem;
+    border: $thin-border;
+    border-radius: $borderRadius;
+    position: relative;
+
+    .new_recipe_img {
+        width: 100%;
+        height: 100%;
+        border-radius: $borderRadius;
+        position: absolute;
+        object-fit: cover;
+    }
+
+    .new_recipe_figure {
+        width: 7rem;
+        height: 3rem;
+        position: absolute;
+        border-radius: 1rem;
+        left: 1rem;
+        top: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: .1rem solid black;
+
+        .new_recipe_h1{
+            font-size: 1.7rem;
+        }
+    }
+}

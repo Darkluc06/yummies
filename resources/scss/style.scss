@@ -1,6 +1,7 @@
 // Assets
 @use "./assets/reset";
 
+
 // Recipe
 @use "./componets/recipe/recipe.scss";
 @use "./componets/recipe/recipePage.scss";
@@ -8,6 +9,14 @@
 
 // Modal
 @use "./componets/modal/modal.scss";
+@use "./components/legenda/legenda.scss";
 
 // Cooking diagram
 @use "./componets/cookingDiagram/cookingDiagram.scss";
+
+@use "./assets/variables";
+@use "./components/home/home.scss";
+@use "./components/navigation/nav-icon.scss";
+@use "./components/new-recipe/new-recipe-component.scss";
+
+@use "./components/footer/footer.scss";
