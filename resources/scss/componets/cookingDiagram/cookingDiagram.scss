@@ -68,6 +68,25 @@
         }
     }
 
+    &__bigArrow{
+        position: absolute;
+        width: 80%;
+        height: 2rem;
+        border: 0.2rem solid black;
+        top: 100%;
+        left: 0;
+        transform: translate(-37%, -100%);
+        display: flex;
+        align-items: center;
+        z-index: 1;
+
+        svg{
+            transform: translateX(-90%);
+            z-index: 10;
+            background: white;
+        }
+    }
+
     &__ingredient{
         position: absolute;
         display: flex;

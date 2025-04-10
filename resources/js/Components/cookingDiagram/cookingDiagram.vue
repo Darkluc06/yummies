@@ -19,34 +19,35 @@
             <Line :active="false" />
         </div>
         <div class="cookingDiagram__row">
+            <Line :active="false" />
+            <Line :active="false" />
+            <Line :active="true" />
+            <Line :active="true" :has-big-arrow="true" />
+        </div>
+        <div class="cookingDiagram__row">
             <Ingredient :is-string="true" :ingedient="`500g Meel, 1l melk, 2 eieren`" />
             <Line :active="false" />
             <Line :active="true" />
-            <Line :active="false" />
         </div>
         <div class="cookingDiagram__row">
             <Ingredient :is-string="false" :icon="`twitter`" :difficulty="5"/>
             <Line :active="false" />
             <Line :active="true" />
-            <Line :active="false" />
         </div>
         <div class="cookingDiagram__row">
             <Line :active="true" />
             <Ingredient :is-string="false" :icon="`twitter`" :difficulty="3"/>
             <Line :active="true" />
-            <Line :active="false" />
         </div>
         <div class="cookingDiagram__row">
             <Line :active="true" />
             <Ingredient :is-string="true" :ingedient="`Boter`" />
             <Line :active="true" />
-            <Line :active="false" />
         </div>
         <div class="cookingDiagram__row">
             <Line :active="true" :end="true" />
             <Line :active="true" />
             <Line :active="true" />
-            <Line :active="false" />
         </div>
     </section>
 </template>
