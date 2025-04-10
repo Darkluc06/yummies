@@ -1,13 +1,16 @@
 <template>
     <div class="cookingDiagram__column">
+        <figure class="cookingDiagram__line cookingDiagram__line--active"></figure>
         <span class="cookingDiagram__ingredient" v-if="isString === true">
             <SvgIcon :name="`arrow-long`" />
             {{ ingedient }}
         </span>
-        <figure class="cookingDiagram__icon" v-if="isString === false">
+        <span class="cookingDiagram__icon" v-if="isString === false">
             <SvgIcon :name="icon" />
-            <div class="cookingDiagram__difficulty" v-for="(difficulty, index) in difficulty"></div>
-        </figure>
+            <ul class="cookingDiagram__difficultyWrapper">
+                <li class="cookingDiagram__difficulty" v-for="(difficulty, index) in difficulty"></li>
+            </ul>
+        </span>
     </div>
 </template>
 
@@ -35,6 +38,10 @@ export default {
         difficulty: {
             type: Number,
             default: 1,
+        },
+        active:{
+            type: Boolean,
+            default: false,
         }
     }
 }

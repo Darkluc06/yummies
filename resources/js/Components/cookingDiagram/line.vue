@@ -1,7 +1,9 @@
 <template>
     <div class="cookingDiagram__column">
         <div class="cookingDiagram__lineWrapper">
-            <figure class="cookingDiagram__line" :class="active ? `cookingDiagram__line--active` : ``"></figure>
+            <figure class="cookingDiagram__line" :class="active ? `cookingDiagram__line--active` : ``, end ? `cookingDiagram__line--end` : `` ">
+                <SvgIcon v-if="end === true" :name="`arrow-long`" />
+            </figure>
             <svg xmlns="http://www.w3.org/2000/svg" width="95.5" height="39" viewBox="0 0 95.5 39" v-if="hasBigArrow === true">
                 <g id="Arrow-big" transform="translate(-274.5 -323.5)">
                     <g id="Rectangle_98" data-name="Rectangle 98" transform="translate(294 337)" fill="none"
@@ -43,6 +45,10 @@ export default {
             type: Boolean,
             default: false,
             required: false
+        },
+        end:{
+            type: Boolean,
+            default: false
         }
     },
     components:{

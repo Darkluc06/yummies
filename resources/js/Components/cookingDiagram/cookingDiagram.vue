@@ -7,13 +7,46 @@
             <Tools :tool="`pot`" />
         </div>
         <div class="cookingDiagram__row">
+            <Line :active="false" />
+            <Line :active="false" />
+            <Ingredient :is-string="true" :ingedient="`2L water`" :active="true" />
+            <Line :active="false" />
+        </div>
+        <div class="cookingDiagram__row">
+            <Line :active="false" />
+            <Line :active="false" />
+            <Ingredient :is-string="false" :icon="`twitter`" :difficulty="1"/>
+            <Line :active="false" />
+        </div>
+        <div class="cookingDiagram__row">
+            <Ingredient :is-string="true" :ingedient="`500g Meel, 1l melk, 2 eieren`" />
+            <Line :active="false" />
             <Line :active="true" />
+            <Line :active="false" />
         </div>
         <div class="cookingDiagram__row">
-            <Ingredient :isString="false" :icon="`x`" :difficulty="3" />
+            <Ingredient :is-string="false" :icon="`twitter`" :difficulty="5"/>
+            <Line :active="false" />
+            <Line :active="true" />
+            <Line :active="false" />
         </div>
         <div class="cookingDiagram__row">
-            <Line :active="true" :has-small-arrow="true" />
+            <Line :active="true" />
+            <Ingredient :is-string="false" :icon="`twitter`" :difficulty="3"/>
+            <Line :active="true" />
+            <Line :active="false" />
+        </div>
+        <div class="cookingDiagram__row">
+            <Line :active="true" />
+            <Ingredient :is-string="true" :ingedient="`Boter`" />
+            <Line :active="true" />
+            <Line :active="false" />
+        </div>
+        <div class="cookingDiagram__row">
+            <Line :active="true" :end="true" />
+            <Line :active="true" />
+            <Line :active="true" />
+            <Line :active="false" />
         </div>
     </section>
 </template>

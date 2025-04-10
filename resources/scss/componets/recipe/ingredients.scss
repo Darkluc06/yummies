@@ -1,6 +1,7 @@
 .ingredients{
     list-style: none;
     display: flex;
+    max-width: 100%;
     
     &--list{
         flex-direction: column;
