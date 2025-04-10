@@ -1,6 +1,6 @@
 <template>
     <section class="cookingDiagram">
-        <div class="cookingDiagram__row">
+        <div class="cookingDiagram__row ">
             <Tools :tool="`pot`" />
             <Tools :tool="`pot`" />
             <Tools :tool="`pot`" />
@@ -53,17 +53,27 @@
 </template>
 
 <script>
-
-import Tools from './tools.vue'
-import Line from './line.vue'
+import Tools from './tools.vue';
+import Line from './line.vue';
 import Ingredient from './ingredient.vue';
 
 export default {
-    components:{
-        Tools,
-        Line,
-        Ingredient
-    }
-}
-
+  components: {
+    Tools,
+    Line,
+    Ingredient,
+  },
+  mounted() {
+    this.calculateColumns();
+  },
+  methods: {
+    calculateColumns() {
+      let rowElements = document.getElementsByClassName('cookingDiagram__row');
+      for (let i = 0; i < rowElements.length; i++) {
+        const childCount = rowElements[i].children.length;
+        rowElements[i].classList.add(`columns--${childCount}`);
+      }
+    },
+  },
+};
 </script>

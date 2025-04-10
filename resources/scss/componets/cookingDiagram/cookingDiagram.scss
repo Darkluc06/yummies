@@ -9,8 +9,13 @@
     &__row {
         display: grid;
         grid-auto-flow: column;
-        grid-template-columns: repeat(4, calc(100% / 3));
         white-space: nowrap;
+
+        @for $i from 1 through 10 {
+            &.columns--#{$i} {
+                grid-template-columns: repeat($i, calc(100% / 3));
+            }
+          }
     }
   
     &__column {
