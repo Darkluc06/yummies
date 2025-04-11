@@ -32,7 +32,7 @@
                 <summary class="instruction_legenda-summary"> {{ instruction.legenda.summary }} </summary>
                 <ul class="instruction_legenda-container">
                     <li class="instruction_legenda-icons" v-for="(iconImg, index) in icons" :key="index" v-if="icons">
-                        <img class="instruction_legenda-img" :src="getIconUrl(iconImg.src)" :alt="iconImg.alt" />
+                        <img class="instruction_legenda-img" :src="getImgUrl(iconImg.src)" :alt="iconImg.alt" />
                         <span class="instruction_legenda-label">{{ iconImg.label }}</span>
                     </li>
                 </ul>
@@ -66,7 +66,7 @@ export default {
         goToLegenda() {
             this.showDocumentation = false;
         },
-        getIconUrl(filename) {
+        getImgUrl(filename) {
             return `/img/${filename}`;
         }
     },
