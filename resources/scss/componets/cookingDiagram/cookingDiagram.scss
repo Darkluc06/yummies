@@ -23,7 +23,6 @@
         display: flex;
         justify-content: center;
         position: relative;
-        margin: 0.5rem 0;
     }
 
     &__tool{
@@ -49,9 +48,13 @@
         height: 7rem;
         background: #C3C3C3;
         border-radius: 2rem;
+        margin: 0.2rem 0;
 
         &--active{
+            height: 7.4rem;
             background: black;
+            margin: 0rem !important;
+            border-radius: 0rem;
         }
 
         &--end{
@@ -68,7 +71,7 @@
                 position: absolute;
                 top: 100%;
                 left: 95%;
-                transform: translateY(-46%);
+                transform: translateY(-44%);
             }
         }
     }

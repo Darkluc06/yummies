@@ -5,7 +5,7 @@
             <SvgIcon :name="`arrow-long`" />
             {{ ingedient }}
         </span>
-        <span class="cookingDiagram__icon" v-if="isString === false">
+        <span class="cookingDiagram__icon" :class="isCircle ? `circle` : `triangle`" v-if="isString === false">
             <SvgIcon :name="icon" />
             <ul class="cookingDiagram__difficultyWrapper">
                 <li class="cookingDiagram__difficulty" v-for="(difficulty, index) in difficulty"></li>
@@ -42,6 +42,10 @@ export default {
         active:{
             type: Boolean,
             default: false,
+        },
+        isCircle:{
+            type: Boolean,
+            default: true,
         }
     }
 }
