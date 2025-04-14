@@ -14,7 +14,7 @@ class IngredientController extends Controller
 	{
 		$ingredients = Ingredient::all();
 
-		return Inertia::render('cms/ingredients', ['ingredients' => $ingredients]);
+		return Inertia::render('cms/Ingredients', ['ingredients' => $ingredients]);
 	}
 
 	public function create() : Response
@@ -29,30 +29,6 @@ class IngredientController extends Controller
 		return Inertia::render('cms/ingredientEdit', ['ingredient' => $ingredient]);
 	}
 
-//	public function store(Request $request)
-//	{
-//		// Validate the incoming request data
-//		$validated = $request->validate([
-//			'ingredient_name' => 'required|string|max:255',
-//			'image_path' => 'nullable|image|max:2048', // Adjust max file size as needed
-//		]);
-//
-//		// Handle file upload if present
-//		if ($request->hasFile('image_path')) {
-//			$imagePath = $request->file('image_path')->store('ingredients', 'public');
-//			$validated['image_path'] = $imagePath;
-//		}
-//
-//		// Create the ingredient
-//		$ingredient = Ingredient::create($validated);
-//
-//		// Log for debugging (optional)
-//		Log::info('Ingredient created', ['ingredient' => $ingredient]);
-//
-//		// Redirect back or to a specific route (Inertia handles this)
-//		return redirect()->route('ingredients.index')->with('success', 'Ingredient created successfully');
-//	}
-
 	public function store(Request $request)
 	{
 		$ingredient = new Ingredient();
@@ -62,7 +38,6 @@ class IngredientController extends Controller
 
 	public function update(Request $request, Ingredient $ingredient)
 	{
-		// @TODO create update function
 		try
 		{
 			$validated = $request->validate([

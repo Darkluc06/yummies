@@ -15,6 +15,6 @@ class RecipeController extends Controller
 {
    public function index(): Response
    {
-       return Inertia::render('cms/recipes');
+       return Inertia::render('cms/Recipes');
    }
 }
