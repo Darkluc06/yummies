@@ -49,6 +49,51 @@
             <Line :active="true" />
             <Line :active="true" />
         </div>
+        <div class="cookingDiagram__row">
+          <Emty />
+          <Ingredient :is-string="false" :icon="`twitter`" :difficulty="0"/>
+          <Line :active="true" />
+        </div>
+        <div class="cookingDiagram__row">
+          <Emty />
+          <Ingredient :is-string="false" :icon="`twitter`" :difficulty="5" :is-circle="false"/>
+          <Line :active="true" />
+        </div>
+        <div class="cookingDiagram__row">
+          <Emty />
+          <Ingredient :is-string="false" :icon="`twitter`" :difficulty="0" :is-circle="false"/>
+          <Line :active="true" />
+        </div>
+        <div class="cookingDiagram__row">
+          <Emty />
+          <Ingredient :is-string="false" :icon="`twitter`" :difficulty="0"/>
+          <Line :active="true" />
+        </div>
+        <div class="cookingDiagram__row">
+          <Emty />
+          <Ingredient :is-string="false" :icon="`twitter`" :difficulty="0" :is-circle="false"/>
+          <Line :active="true" />
+        </div>
+        <div class="cookingDiagram__row">
+          <Emty />
+          <Ingredient :is-string="false" :icon="`twitter`" :difficulty="0"/>
+          <Line :active="true" />
+        </div>
+        <div class="cookingDiagram__row">
+          <Emty />
+          <Ingredient :is-string="false" :icon="`twitter`" :difficulty="0" :is-circle="false"/>
+          <Line :active="true" />
+        </div>
+        <div class="cookingDiagram__row">
+          <Emty />
+          <Line :active="true" :end="true" />
+          <Line :active="true" />
+        </div>
+        <div class="cookingDiagram__row">
+          <Emty />
+          <Emty />
+          <Line :active="true" />
+        </div>
     </section>
 </template>
 
@@ -56,12 +101,14 @@
 import Tools from './tools.vue';
 import Line from './line.vue';
 import Ingredient from './ingredient.vue';
+import Emty from './emty.vue';
 
 export default {
   components: {
     Tools,
     Line,
     Ingredient,
+    Emty,
   },
   mounted() {
     this.calculateColumns();
