@@ -168,4 +168,32 @@
         background: rgb(0, 0, 0);
         border-radius: 50%;
     }
+
+    &__backwardsArrow{
+        position: absolute;
+        z-index: -1;
+        top: 50%;
+        left: 50%;
+        width: 30%;
+        transform: translate(12%, -101%);
+        border-bottom: 0.2rem solid black;
+        border-right: 0.2rem solid black;
+        border-top: 0.2rem solid black;
+
+        @for $i from 1 through 10 {
+            &.steps--#{$i} {
+                height: calc(10rem * $i - 5rem);
+            }
+        }
+    }
+
+    &__arrow{
+        width: 100%;
+        height: 100%;
+        position: relative;
+
+        .icon{
+            transform: translate(-50%, -54%) rotate(180deg);
+        }
+    }
 }

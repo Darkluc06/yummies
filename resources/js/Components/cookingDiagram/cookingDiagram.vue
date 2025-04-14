@@ -81,7 +81,7 @@
         </div>
         <div class="cookingDiagram__row">
           <Emty />
-          <Ingredient :is-string="false" :icon="`twitter`" :difficulty="0" :is-circle="false"/>
+          <Ingredient :is-string="false" :icon="`twitter`" :difficulty="0" :is-circle="false" :has-backwards-arrow="true" :steps="`4`"/>
           <Line :active="true" />
         </div>
         <div class="cookingDiagram__row">
@@ -102,7 +102,7 @@ import Tools from './tools.vue';
 import Line from './line.vue';
 import Ingredient from './ingredient.vue';
 import Emty from './emty.vue';
-
+ 
 export default {
   components: {
     Tools,
