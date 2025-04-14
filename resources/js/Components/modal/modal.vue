@@ -54,24 +54,7 @@
                     </li>
                 </ul>
             </div>
-            <figure class="modal_figure">
-                <p class="modal_figure-p"> De onderstaande afbeelding geeft aan dat je iets tijdelijk blijvend moet doen
-                </p>
-                <img src="./../../../../public/img/iets_blijven_doen.png" alt="" class="modal_img-keep-doing">
-            </figure>
             <div class="modal_ingredients">
-                <p class="modal_ingredients-p">Verschillende onderdelen (moeten) afgebeeld worden in (kleur)vakken,
-                    zodat je
-                    makkelijk kan zien
-                    wat bepaalde stappen doen. Het item naam en symbolen in het vak blijven wit. Vervolgens staan de
-                    ingredienten op volgorde van wat er
-                    als eerst in gaat en op volgorde van kleur.</p>
-                <img src="./../../../../public/img/colors.png" alt="" class="modal_ingredients-img">
-                <p class="modal_ingredients-p">
-                    In de ingredienten staan eerst de hoeveelheid. Altijd in eenheiden, grammen, liters, eetlepels
-                    of thee lepels. En dan de naam. Wanneer een ingredient in twee blokken voorkomt
-                    komt bij zonder kleur boven aan
-                </p>
                 <div class="modal_ingredients-container">
                     <h2 class="modal_ingredients-h2">Ingrediënten:</h2>
                     <ul class="modal_ingredients">
