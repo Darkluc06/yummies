@@ -98,31 +98,127 @@
                 font-size: 2rem;
             }
 
-            .instruction_legenda-container {
-                width: 100%;
+            .instruction_containers {
                 display: flex;
-                align-items: center;
-                justify-content: space-between;
-                flex-wrap: wrap;
+                flex-direction: column;
+                gap: 2rem;
+                padding-bottom: 1rem;
 
-                .instruction_legenda-icons {
-                    width: 25%;
+                .instruction_container-icons {
+                    width: 100%;
                     display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    flex-direction: column;
+                    flex-wrap: wrap;
+                    justify-content: flex-start;
+
+                    .instruction_icons {
+                        width: auto;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        margin-bottom: 1rem;
+                        height: 12rem;
+                    }
+
+                    .instruction_icon {
+                        width: 11rem;
+                        height: 11rem;
+                        object-fit: contain;
+                    }
+
+                    .instruction_icon-label {
+                        font-size: 1.2rem;
+                        text-align: center;
+                        flex-grow: 1;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
                 }
 
-                .instruction_legenda-img {
-                    width: 10rem;
-                    height: 10rem;
-                    object-fit: contain;
+                .icons-condition {
                 }
 
-                .instruction_legenda-label {
+                .icons-xyz {
+                }
+
+                .icons-circles {
+                }
+
+                .icons-diamonds {
+                }
+
+                .icons-intensity {
+                }
+
+                .intensity-explanation,
+                .arrows-explanation {
                     font-size: 1.5rem;
+                    width: 100%;
                 }
             }
+
+            .instruction_figure {
+                display: flex;
+                flex-direction: column;
+
+                .instruction_figure-p {
+                    font-size: 1.5rem;
+                }
+
+                .instruction_img-keep-doing {
+                    object-fit: contain;
+                    padding-bottom: 1rem;
+                    max-width: 60rem;
+                }
+            }
+
+                .instruction_ingredients-p {
+                    font-size: 1.5rem;
+                }
+
+                .instruction_ingredients-img {
+                    object-fit: contain;
+                    padding-bottom: 1rem;
+                    max-width: 40rem;
+                }
+
+                .instruction_ingredients-container{
+
+                .instruction_ingredients-h2 {
+                    font-size: 2rem;
+                }
+
+                .instruction_ingredients {
+                    display: flex;
+                    flex-direction: column;
+
+                    .instruction_ingredients-ingredient {
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-start;
+                        font-size: 1.5rem;
+                        gap: .5rem;
+
+                        &.blue {
+                            background: rgb(135, 183, 255);
+                        }
+
+                        &.green {
+                            background: rgb(128, 248, 128);
+                        }
+
+                        &.yellow {
+                            background: yellow;
+                        }
+                    }
+                    .instruction_ingredients-checkbox{
+
+                    }
+                }
+            }
+
+
         }
     }
 }
