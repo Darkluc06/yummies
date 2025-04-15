@@ -1,4 +1,12 @@
 {
+    "navigation": {
+        "asian": "Aziatisch",
+        "italian": "Italiaans",
+        "fastfood": "Fastfood",
+        "japanese": "Japans",
+        "vegetarian": "Vegetarisch"
+    },
+
     "instruction": {
         "buttons": {
             "button-legenda": "Legenda",
