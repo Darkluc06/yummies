@@ -4,7 +4,7 @@
     <article class="yummies">
         <header class="yummies_header">
             <div class="yummies_header-content">
-                <h1 class="yummies_header-h1">Yummies</h1>
+                <h1 class="yummies_header-h1"> {{ data.title }} </h1>
                 <input
                     type="text"
                     placeholder="Zoek verschillende kookstijlen"
@@ -12,7 +12,7 @@
                     ref="searchField"
                     id="yummies-input"
                 />
-                <h2 class="yummies_header-h2">Verschillende kookstijlen</h2>
+                <h2 class="yummies_header-h2"> {{ data.headerH2 }} </h2>
             </div>
             <div class="yummies_navigation">
                 <Navigation />
@@ -34,7 +34,7 @@
                 <Legenda v-if="legendaOpen" @close="closeLegenda" />
             </section> -->
             <section class="yummies_recipes">
-                <h1 class="yummies_recipes-h1">Recepten</h1>
+                <h1 class="yummies_recipes-h1"> {{ data.sectionRecipeH2 }} </h1>
                 <div class="yummies_recipes-container">
                     <Recipe />
                     <Recipe />
@@ -51,6 +51,7 @@ import Navigation from '@/Components/navigation/navigation.vue';
 import NewRecipecomponent from '@/Components/new-recipe/new-recipe.vue';
 import Recipe from '@/Components/recipe/recipe.vue';
 import FooterComponent from './../Components/footer/footer.vue'
+import json from './../../assets/json/data.json'
 
 export default {
     components: {
@@ -62,6 +63,7 @@ export default {
     },
     data() {
         return {
+            data: json.home,
             legendaOpen: false
         };
     },
