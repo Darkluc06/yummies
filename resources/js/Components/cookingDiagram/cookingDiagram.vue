@@ -50,7 +50,7 @@
             <Line :active="true" />
         </div>
         <div class="cookingDiagram__row">
-          <Emty />
+          <Forloop :width="'2'" :steps="'8'" />
           <Ingredient :is-string="false" :icon="`twitter`" :difficulty="0"/>
           <Line :active="true" />
         </div>
@@ -102,6 +102,7 @@ import Tools from './tools.vue';
 import Line from './line.vue';
 import Ingredient from './ingredient.vue';
 import Emty from './emty.vue';
+import Forloop from './forloop.vue';
  
 export default {
   components: {
@@ -109,6 +110,7 @@ export default {
     Line,
     Ingredient,
     Emty,
+    Forloop
   },
   mounted() {
     this.calculateColumns();

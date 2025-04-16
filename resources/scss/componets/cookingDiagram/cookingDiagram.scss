@@ -51,6 +51,7 @@
         background: #C3C3C3;
         border-radius: 2rem;
         margin: 0.2rem 0;
+        z-index: -1;
 
         &--active {
             height: 10rem;
@@ -194,6 +195,41 @@
 
         .icon{
             transform: translate(-50%, -54%) rotate(180deg);
+        }
+    }
+
+    &__forloop{
+        position: absolute;
+        left: 50%;
+        top: calc(0% + 1rem);
+        border: 0.2rem dashed black;
+
+        @for $i from 1 through 10 {
+            &.steps--#{$i} {
+                height: calc(10rem * $i - 5rem);
+            }
+        }
+        @for $i from 1 through 10 {
+            &.width--#{$i} {
+                width: calc(100% * $i - 5rem);
+            }
+        }
+    }
+
+    &__forloopIcon{
+        width: max-content;
+
+        .cookingDiagram__iconWrapper{
+            width: max-content;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            transform: translate(-50%, -50%) rotate(45deg);
+
+            .icon{
+                width: 4rem;
+                height: 4rem;
+            }
         }
     }
 }
