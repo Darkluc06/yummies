@@ -161,6 +161,8 @@
             .instruction_figure {
                 display: flex;
                 flex-direction: column;
+                align-items: flex-start;
+                width: 100%;
 
                 .instruction_figure-p {
                     font-size: 1.5rem;
@@ -169,7 +171,7 @@
                 .instruction_img-keep-doing {
                     object-fit: contain;
                     padding-bottom: 1rem;
-                    max-width: 60rem;
+                    max-width: 40rem;
                 }
             }
 
