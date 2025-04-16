@@ -9,7 +9,7 @@
             />
             <section class="recipe__text">
                 <figure class="recipe__type">
-                    <SvgIcon :name="recipe.type.toLowerCase()" />
+                    <iconComponent :icon="recipe.type" />
                 </figure>
                 <h3 class="recipe__title">{{ recipe.name }}</h3>
                 <ul class="recipe__icons">
@@ -43,11 +43,13 @@
 <script>
 import imageComponent from '../general/image/imageComponent.vue';
 import SvgIcon from '../general/icon/SvgIcon.vue';
+import iconComponent from '../general/icon/icon.vue'
 
 export default {
     name: "recipeList",
     components:{
         imageComponent,
+        iconComponent,
         SvgIcon
     },
     props: {
