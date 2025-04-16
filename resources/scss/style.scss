@@ -3,16 +3,16 @@
 
 
 // Recipe
-@use "./componets/recipe/recipe.scss";
-@use "./componets/recipe/recipePage.scss";
-@use "./componets/recipe/ingredients.scss";
+@use "./components/recipe/recipe.scss";
+@use "./components/recipe/recipePage.scss";
+@use "./components/recipe/ingredients.scss";
 
 // Modal
-@use "./componets/modal/modal.scss";
+@use "./components/modal/modal.scss";
 @use "./components/legenda/legenda.scss";
 
 // Cooking diagram
-@use "./componets/cookingDiagram/cookingDiagram.scss";
+@use "./components/cookingDiagram/cookingDiagram.scss";
 
 @use "./assets/variables";
 @use "./components/home/home.scss";
