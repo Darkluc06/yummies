@@ -23,7 +23,7 @@
 
 <script>
 import SvgIcon from '../general/svgIcon/SvgIcon.vue';
-import json from './../../../../resources/assets/jason/data.json';
+import json from './../../../../resources/assets/json/data.json';
 
 export default {
     props: {

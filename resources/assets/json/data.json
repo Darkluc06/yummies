@@ -7,49 +7,49 @@
             {
                 "name": "Sushi Delight",
                 "type": "Japans",
-                "image": "",
+                "image": "./img/sushi.jpg",
                 "time": "25 min",
                 "description": "Heerlijke verse sushi."
             },
             {
                 "name": "Spaghetti Carbonara",
                 "type": "Italiaans",
-                "image": "",
+                "image": "./img/spaghetti.webp",
                 "time": "20 min",
                 "description": "Klassieke romige carbonara."
             },
             {
                 "name": "Kip Curry",
                 "type": "Aziatisch",
-                "image": "",
+                "image": "./img/curry.jpeg",
                 "time": "35 min",
                 "description": "Smaakvolle kip curry."
             },
             {
                 "name": "Veggie Burger",
                 "type": "Vegetarisch",
-                "image": "",
+                "image": "./img/veggie.jpg",
                 "time": "30 min",
                 "description": "Heerlijke vegetarische burger."
             },
             {
                 "name": "Pizza Margherita",
                 "type": "Italiaans",
-                "image": "",
+                "image": "./img/pizza.jpg",
                 "time": "25 min",
                 "description": "Eenvoudige en smaakvolle pizza."
             },
             {
                 "name": "Teriyaki Chicken",
                 "type": "Japans",
-                "image": "",
+                "image": "./img/teriyaki.webp",
                 "time": "30 min",
                 "description": "Zoete en hartige teriyaki kip."
             },
             {
                 "name": "Nasi Goreng",
                 "type": "Aziatisch",
-                "image": "",
+                "image": "./img/nasi.jpg",
                 "servings": 4,
                 "time": "25 min",
                 "description": "Indonesische gebakken rijst."
@@ -57,7 +57,7 @@
             {
                 "name": "Friet met mayonaise",
                 "type": "Fastfood",
-                "image": "",
+                "image": "./img/friet.jpg",
                 "time": "15 min",
                 "description": "Klassieke friet met mayonaise."
             }
