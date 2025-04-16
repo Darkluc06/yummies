@@ -1,6 +1,6 @@
 <template>
     <section class="cookingDiagram">
-        <div class="cookingDiagram__row">
+        <div class="cookingDiagram__row ">
             <Tools :tool="`pot`" />
             <Tools :tool="`pot`" />
             <Tools :tool="`pot`" />
@@ -49,21 +49,80 @@
             <Line :active="true" />
             <Line :active="true" />
         </div>
+        <div class="cookingDiagram__row">
+          <Forloop :width="'2'" :steps="'8'" />
+          <Ingredient :is-string="false" :icon="`twitter`" :difficulty="0"/>
+          <Line :active="true" />
+        </div>
+        <div class="cookingDiagram__row">
+          <Emty />
+          <Ingredient :is-string="false" :icon="`twitter`" :difficulty="5" :is-circle="false"/>
+          <Line :active="true" />
+        </div>
+        <div class="cookingDiagram__row">
+          <Emty />
+          <Ingredient :is-string="false" :icon="`twitter`" :difficulty="0" :is-circle="false"/>
+          <Line :active="true" />
+        </div>
+        <div class="cookingDiagram__row">
+          <Emty />
+          <Ingredient :is-string="false" :icon="`twitter`" :difficulty="0"/>
+          <Line :active="true" />
+        </div>
+        <div class="cookingDiagram__row">
+          <Emty />
+          <Ingredient :is-string="false" :icon="`twitter`" :difficulty="0" :is-circle="false"/>
+          <Line :active="true" />
+        </div>
+        <div class="cookingDiagram__row">
+          <Emty />
+          <Ingredient :is-string="false" :icon="`twitter`" :difficulty="0"/>
+          <Line :active="true" />
+        </div>
+        <div class="cookingDiagram__row">
+          <Emty />
+          <Ingredient :is-string="false" :icon="`twitter`" :difficulty="0" :is-circle="false" :has-backwards-arrow="true" :steps="`4`"/>
+          <Line :active="true" />
+        </div>
+        <div class="cookingDiagram__row">
+          <Emty />
+          <Line :active="true" :end="true" />
+          <Line :active="true" />
+        </div>
+        <div class="cookingDiagram__row">
+          <Emty />
+          <Emty />
+          <Line :active="true" />
+        </div>
     </section>
 </template>
 
 <script>
-
-import Tools from './tools.vue'
-import Line from './line.vue'
+import Tools from './tools.vue';
+import Line from './line.vue';
 import Ingredient from './ingredient.vue';
-
+import Emty from './emty.vue';
+import Forloop from './forloop.vue';
+ 
 export default {
-    components:{
-        Tools,
-        Line,
-        Ingredient
-    }
-}
-
+  components: {
+    Tools,
+    Line,
+    Ingredient,
+    Emty,
+    Forloop
+  },
+  mounted() {
+    this.calculateColumns();
+  },
+  methods: {
+    calculateColumns() {
+      let rowElements = document.getElementsByClassName('cookingDiagram__row');
+      for (let i = 0; i < rowElements.length; i++) {
+        const childCount = rowElements[i].children.length;
+        rowElements[i].classList.add(`columns--${childCount}`);
+      }
+    },
+  },
+};
 </script>
