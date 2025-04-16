@@ -15,22 +15,12 @@
                 <ul class="recipe__icons">
                     <li class="recipe__icon">
                         <span class="recipe__span">
-                            {{ recipe.likes }} <SvgIcon :name="`heart`"/>
-                        </span>
-                    </li>
-                    <li class="recipe__icon">
-                        <span class="recipe__span">
-                            {{ recipe.servings }} <SvgIcon :name="`person`"/>
-                        </span>
-                    </li>
-                    <li class="recipe__icon">
-                        <span class="recipe__span">
                             {{ recipe.time }} <SvgIcon :name="`timer`"/>
                         </span>
                     </li>
                     <li class="recipe__icon">
                         <span class="recipe__span">
-                            {{ recipe.calories }} <SvgIcon :name="`fire`"/>
+                            {{ recipe.likes }} <SvgIcon :name="`heart`"/>
                         </span>
                     </li>
                 </ul>
