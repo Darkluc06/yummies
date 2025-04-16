@@ -74,10 +74,10 @@
     "instruction": {
         "buttons": {
             "button-legenda": "Legenda",
-            "button-documentation": "Documentation"
+            "button-documentation": "Documentatie"
         },
         "documentation": {
-            "title": "Documentation",
+            "title": "Documentatie",
             "paragraph": "Dit document legt uit..."
         },
         "legenda": {

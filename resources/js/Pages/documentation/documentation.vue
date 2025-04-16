@@ -140,7 +140,7 @@
 <script>
 import SvgIcon from '@/Components/general/icon/SvgIcon.vue';
 import { Link } from '@inertiajs/vue3';
-import json from '../../../assets/jason/data.json';
+import json from './../../../assets/json/data.json';
 
 export default {
     components: {
