@@ -1,0 +1,537 @@
+{
+    "instruction": {
+        "buttons": {
+            "button-legenda": "Legenda",
+            "button-documentation": "Documentation"
+        },
+        "documentation": {
+            "title": "Documentation",
+            "paragraph": "Dit document legt uit..."
+
+        },
+        "legenda": {
+            "title": "Legenda",
+            "summary": "In deze legenda kun je alle iconen, pijlen, kleuren en voorbeelden zien",
+            "iconsImgCondition": [
+            {
+                "alt": "Cirkel conditie",
+                "label": "Cirkel conditie",
+                "src": "cconditie.png"
+            },
+            {
+                "alt": "Ruit conditie",
+                "label": "Ruit conditie",
+                "src": "rconditie.png"
+            }
+        ],
+        "iconsXYZ": [
+            {
+                "alt": "Niet X",
+                "label": "Niet X",
+                "src": "niet_x.png"
+            },
+            {
+                "alt": "X en Y",
+                "label": "X en Y",
+                "src": "x_en_y.png"
+            },
+            {
+                "alt": "X of Y Z",
+                "label": "X of Y Z",
+                "src": "x_of_y_z.png"
+            },
+            {
+                "alt": "X of Y",
+                "label": "X of Y",
+                "src": "x_of_y.png"
+            }
+        ],
+        "iconsImgsCircle": [
+            {
+                "alt": "Roeren",
+                "label": "Roeren",
+                "src": "roeren.png"
+            },
+            {
+                "alt": "Schillen",
+                "label": "Schillen",
+                "src": "schillen.png"
+            },
+            {
+                "alt": "Openen",
+                "label": "Openen",
+                "src": "openen.png"
+            },
+            {
+                "alt": "Blokjes snijden",
+                "label": "Blokjes snijden",
+                "src": "blokjes_snijden.png"
+            },
+            {
+                "alt": "Reepjes snijden X",
+                "label": "Reepjes snijden X",
+                "src": "reepjes_snijden.png"
+            },
+            {
+                "alt": "Reepjes snijden Y",
+                "label": "Reepjes snijden Y",
+                "src": "reepjes_snijdenY.png"
+            },
+            {
+                "alt": "Ringen snijden",
+                "label": "Ringen snijden",
+                "src": "ringen_snijden.png"
+            },
+            {
+                "alt": "Afscheuren",
+                "label": "Afscheuren",
+                "src": "afscheuren.png"
+            },
+            {
+                "alt": "Draaien",
+                "label": "Draaien",
+                "src": "draaien.png"
+            },
+            {
+                "alt": "Mengen/kneden",
+                "label": "Mengen of kneden",
+                "src": "gemengd.png"
+            },
+            {
+                "alt": "Plat maken",
+                "label": "Plat maken",
+                "src": "plat_maken.png"
+            },
+            {
+                "alt": "Afgieten",
+                "label": "Afgieten",
+                "src": "afgieten.png"
+            },
+            {
+                "alt": "Wassen",
+                "label": "Wassen",
+                "src": "wassen.png"
+            },
+            {
+                "alt": "Opwarmen",
+                "label": "Opwarmen",
+                "src": "opwarmen.png"
+            },
+            {
+                "alt": "Koud maken",
+                "label": "Koud maken",
+                "src": "koud_maken.png"
+            },
+            {
+                "alt": "Actie X",
+                "label": "Actie X",
+                "src": "Actie_X.png"
+            },
+            {
+                "alt": "Actie Y",
+                "label": "Actie Y",
+                "src": "Actie_Y.png"
+            },
+            {
+                "alt": "Actie Z",
+                "label": "Actie Z",
+                "src": "Actie_Z.png"
+            },
+            {
+                "alt": "Breed maken",
+                "label": "Breed maken",
+                "src": "breed_maken.png"
+            },
+            {
+                "alt": "Insijden boven",
+                "label": "Insnijden boven",
+                "src": "insijden_boven.png"
+            },
+            {
+                "alt": "Insijden",
+                "label": "Insnijden",
+                "src": "insijden.png"
+            },
+            {
+                "alt": "Oven op ven",
+                "label": "Oven op ven",
+                "src": "oven_op_ven.png"
+            },
+            {
+                "alt": "Blenderen",
+                "label": "Blenderen",
+                "src": "blenderen.png"
+            },
+            {
+                "alt": "Hoog maken",
+                "label": "Actie",
+                "src": "hoog_maken.png"
+            },
+            {
+                "alt": "Plat Y-as",
+                "label": "Actie",
+                "src": "plat_Y_axis.png"
+            }
+        ],
+        "iconsImgsDiamond": [
+            {
+                "alt": "Koken",
+                "label": "Actie",
+                "src": "koken.png"
+            },
+            {
+                "alt": "Waterig",
+                "label": "Waterig",
+                "src": "waterig.png"
+            },
+            {
+                "alt": "Gemengd",
+                "label": "Gemengd",
+                "src": "gemengd.png"
+            },
+            {
+                "alt": "Droog",
+                "label": "Droog",
+                "src": "droog.png"
+            },
+            {
+                "alt": "Vast",
+                "label": "Vast",
+                "src": "vast.png"
+            },
+            {
+                "alt": "Sterk",
+                "label": "Sterk",
+                "src": "sterk.png"
+            },
+            {
+                "alt": "Bruin",
+                "label": "Bruin",
+                "src": "Br.png"
+            },
+            {
+                "alt": "Wit",
+                "label": "Kleur",
+                "src": "wit.png"
+            },
+            {
+                "alt": "Zwart",
+                "label": "Zwart",
+                "src": "zwart.png"
+            },
+            {
+                "alt": "Conditie A",
+                "label": "Conditie A",
+                "src": "cond_a.png"
+            },
+            {
+                "alt": "Conditie B",
+                "label": "Conditie B",
+                "src": "cond_B.png"
+            },
+            {
+                "alt": "Conditie C",
+                "label": "Conditie C",
+                "src": "cond_C.png"
+            },
+            {
+                "alt": "Wacht X tijd",
+                "label": "Instructie",
+                "src": "wacht_x_tijd.png"
+            },
+            {
+                "alt": "Eetbaar",
+                "label": "Eetbaar",
+                "src": "eetbaar.png"
+            },
+            {
+                "alt": "Gaar",
+                "label": "Gaar",
+                "src": "gaar.png"
+            },
+            {
+                "alt": "Verkleind",
+                "label": "Verkleind",
+                "src": "verkleind.png"
+            },
+            {
+                "alt": "Op of leeg",
+                "label": "Op/leeg",
+                "src": "op_leeg.png"
+            }
+        ],
+        "iconsImgIntensity": [
+            {
+                "alt": "Intensiteit 1 Cirkel",
+                "label": "",
+                "src": "intensiviteit1Cirkel.png"
+            },
+            {
+                "alt": "Intensiteit 2 Cirkel",
+                "label": "",
+                "src": "intensiviteit2Cirkel.png"
+            },
+            {
+                "alt": "Intensiteit 3 Cirkel",
+                "label": "",
+                "src": "intensiviteit3Cirkel.png"
+            },
+            {
+                "alt": "Intensiteit 4 Cirkel",
+                "label": "",
+                "src": "intensiviteit4Cirkel.png"
+            },
+            {
+                "alt": "Intensiteit 5 Cirkel",
+                "label": "",
+                "src": "intensiviteit5Cirkel.png"
+            },
+            {
+                "alt": "Intensiteit 1",
+                "label": "",
+                "src": "intensiviteit1.png"
+            },
+            {
+                "alt": "Intensiteit 3",
+                "label": "",
+                "src": "intensiviteit3.png"
+            },
+            {
+                "alt": "Intensiteit 4",
+                "label": "",
+                "src": "intensiviteit4.png"
+            },
+            {
+                "alt": "Intensiteit 5",
+                "label": "",
+                "src": "intensiviteit5.png"
+            },
+            {
+                "alt": "Intensiteit 12",
+                "label": "",
+                "src": "intensiviteit12.png"
+            }
+        ],
+        "iconsImgArrows": [
+            {
+                "alt": "Doe alles erin",
+                "label": "Actie",
+                "src": "doe_alles_erin.png"
+            },
+            {
+                "alt": "Smeer alles",
+                "label": "Actie",
+                "src": "smeer_alles.png"
+            },
+            {
+                "alt": "Strooi",
+                "label": "Actie",
+                "src": "strooi.png"
+            },
+            {
+                "alt": "Bekleed buitenkant",
+                "label": "Voorbereiding",
+                "src": "bekleed_buitenkant.png"
+            },
+            {
+                "alt": "Bekleed binnenkant",
+                "label": "Voorbereiding",
+                "src": "bekleed_binnenkant.png"
+            },
+            {
+                "alt": "Verplaats instrument",
+                "label": "Actie",
+                "src": "verplaats_instrument.png"
+            },
+            {
+                "alt": "Aardappels van A naar B",
+                "label": "Aardappels van A naar B",
+                "src": "aardappels_van_a_naar_b.png"
+            }
+        ],
+        "iconsImgDoSomething": {
+            "alt": "Iets blijven doen",
+            "label": "Actie",
+            "src": "iets_blijven_doen.png"
+        },
+        "colorImg": [
+            {
+                "explanation": "Verschillende onderdelen (moeten) afgebeeld worden in (kleuren)vakken, zodat je makkelijk kan zien wat bepaalde stappen doen. Het item naam en symbool in het vak blijven wit. Vervolgens staan de ingredienten op volgorde van wat er als eerst in gaat en op de volgorde va kleur",
+                "alt": "colors",
+                "label": "Voorbeeld",
+                "src": "colors.png"
+            }
+        ],
+        "ingredients": {
+            "blueBox": [
+                {
+                    "amount": 1.5,
+                    "unit": "kg",
+                    "name": "low sodium vegetable broth"
+                },
+                {
+                    "amount": 63,
+                    "unit": "g",
+                    "name": "low sodium soy sauce"
+                },
+                {
+                    "amount": 2,
+                    "unit": "el",
+                    "name": "rice vinegar"
+                },
+                {
+                    "amount": 60,
+                    "unit": "g",
+                    "name": "tahini (sesame seed paste)"
+                },
+                {
+                    "amount": 3,
+                    "unit": "tl",
+                    "name": "white miso paste"
+                },
+                {
+                    "amount": 2,
+                    "unit": "el",
+                    "name": "hot chili oil"
+                },
+                {
+                    "amount": 1,
+                    "unit": "",
+                    "name": "ginger"
+                },
+                {
+                    "amount": 2,
+                    "unit": "",
+                    "name": "garlic"
+                },
+                {
+                    "amount": 8,
+                    "unit": "",
+                    "name": "mi bolletjes"
+                },
+                {
+                    "amount": 200,
+                    "unit": "g",
+                    "name": "spinazie"
+                }
+            ],
+            "greenBox": [
+                {
+                    "amount": 4,
+                    "unit": "el",
+                    "name": "boter"
+                },
+                {
+                    "amount": 900,
+                    "unit": "g",
+                    "name": "champions"
+                },
+                {
+                    "amount": 2,
+                    "unit": "",
+                    "name": "charlotjes"
+                },
+                {
+                    "amount": 2,
+                    "unit": "el",
+                    "name": "raw sesame seeds"
+                },
+                {
+                    "amount": 2,
+                    "unit": "tl",
+                    "name": "chili flakes"
+                }
+            ],
+            "yellowBox": [
+                {
+                    "amount": 4,
+                    "unit": "",
+                    "name": "ei"
+                }
+            ],
+            "whiteBox": {
+                "amount": 1,
+                "unit": "",
+                "name": "wortel"
+            }
+        },
+        "doSomethingImg":
+            {
+                "alt": "Instructie alleen op subset doen",
+                "label": "nstructie alleen op subset doen",
+                "src": "instructie_alleen_op_subset_doen.png"
+            }
+        }
+    },
+    "cooking-diagram": {
+        "title": "Legenda",
+        "summary": "Deze legenda laat een overzicht zien van verschillende iconen, pijlen, kleuren en voorbeelden",
+        "iconsImgs": [
+            {
+                "alt": "Cirkel conditie",
+                "label": "Actie",
+                "src": "cconditie.png"
+            },
+            {
+                "alt": "Ruit conditie",
+                "label": "Conditie",
+                "src": "rconditie.png"
+            },
+            {
+                "alt": "Niet x",
+                "label": "'Niet X",
+                "src": "niet_x.png"
+            },
+            {
+                "alt": "x en y",
+                "label": "X en Y",
+                "src": "x_en_y.png"
+            },
+            {
+                "alt": "x of y",
+                "label": "X of Y",
+                "src": "x_of_y.png"
+            },
+            {
+                "alt": "x of y z",
+                "label": "X of Z of Y",
+                "src": "x_of_y_z.png"
+            },
+            {
+                "alt": "Roeren",
+                "label": "Roeren",
+                "src": "roeren.png"
+            },
+            {
+                "alt": "Schillen",
+                "label": "Schillen",
+                "src": "schillen.png"
+            },
+            {
+                "alt": "Openen",
+                "label": "Openen",
+                "src": "openen.png"
+            },
+            {
+                "alt": "Afscheuren",
+                "label": "Afsheuren",
+                "src": "afscheuren.png"
+            },
+            {
+                "alt": "Reepjes snijden X",
+                "label": "Reepjes snijden",
+                "src": "reepjes_snijden.png"
+            },
+            {
+                "alt": "Reepjes snijden Y",
+                "label": "Reepjes snijden",
+                "src": "reepjes_snijdenY.png"
+            },
+            {
+                "alt": "Ringen snijden",
+                "label": "Ringen snijden",
+                "src": "ringen_snijden.png"
+            }
+        ]
+    }
+}

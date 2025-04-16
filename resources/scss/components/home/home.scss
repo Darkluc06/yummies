@@ -1,11 +1,11 @@
 // Variables
-@use "../../assets/variables";
+@use "./../../assets/variables" as v;
 
 .yummies {
     position: relative;
     width: 100%;
     height: 100vh;
-    padding: variables.$home-padding-sides;
+    padding: 0rem v.$home-padding-sides;
     overflow-x: hidden;
     overflow-y: scroll;
 
@@ -39,12 +39,12 @@
 
 
             .yummies_header-h1{
-                font-size: variables.$home-logo;
+                font-size: v.$home-logo;
                 animation: .4s ease-out go_up forwards;
             }
 
             .yummies_header-h2{
-                font-size: variables.$home-h1;
+                font-size: v.$home-h1;
                 animation: .5s ease-out go_up forwards;
             }
         }
@@ -94,7 +94,7 @@
             flex-direction: column;
 
             .yummies_legenda-h1 {
-                font-size: variables.$home-h1;
+                font-size: v.$home-h1;
             }
 
             .yummies_legenda-explanation {
@@ -104,7 +104,7 @@
             .yummies_legenda-button {
                 width: 10rem;
                 height: 3rem;
-                border: variables.$thin-border;
+                border: v.$thin-border;
                 border-radius: 1rem;
                 font-size: 1.2rem;
             }
@@ -115,7 +115,7 @@
             flex-direction: column;
 
             .yummies_recipes-h1 {
-                font-size: variables.$home-h1;
+                font-size: v.$home-h1;
                 padding-bottom: 1rem;
                 animation: .6s ease-out go_up forwards;
             }

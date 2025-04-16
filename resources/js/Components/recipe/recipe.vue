@@ -20,7 +20,7 @@
                     </li>
                     <li class="recipe__icon">
                         <span class="recipe__span">
-                            {{ recipe.likes }} <SvgIcon :name="`heart`"/>
+                            15 min <SvgIcon :name="`timer`"/>
                         </span>
                     </li>
                 </ul>

@@ -1,50 +1,54 @@
 <template>
-    <div class="modal" v-if="open === true">
-        <section class="modal__modal">
-            <header class="modal__header">
-                <h2 class="modal__title">
-                    {{ title }}
+    <div class="modal" v-show="open">
+        <section class="modal_modal">
+            <header class="modal_header">
+                <h2 class="modal_title">
+                    {{ info['cooking-diagram'].title }}
                 </h2>
-                <button class="modal__close" @click="modalClose"><SvgIcon :name="`close`" /></button>
+                <button class="modal_close" @click="modalClose">
+                    <SvgIcon :name="`close`" />
+                </button>
             </header>
-            <ul class="modal__icons">
-                <li class="modal__icon">
-                    <span>
-                        <SvgIcon :name="`burger`" />
-                        Omschrijving van icoon
-                    </span>
+            <summary class="modal_summary">{{ info['cooking-diagram'].summary }}</summary>
+            <ul class="modal_container-icons">
+                <li class="modal_icons" v-for="(iconImg, index) in icons" :key="index" v-if="icons">
+                    <img class="modal_icon" :src="getIconUrl(iconImg.src)" :alt="iconImg.alt" />
+                    <span class="modal_icon-label">{{ iconImg.label }}</span>
                 </li>
             </ul>
+            <ul class="modal_container-colors"></ul>
         </section>
     </div>
 </template>
 
 <script>
-
-import SvgIcon from '../general/icon/SvgIcon.vue';
-import { Link } from '@inertiajs/vue3';
+import SvgIcon from '../general/svgIcon/SvgIcon.vue';
+import json from './../../../../resources/assets/jason/data.json';
 
 export default {
-    components:{
-        SvgIcon,
-        Link
-    },
-    props:{
-        title:{
-            type: String,
-            required: true,
-        },
-        open:{
+    props: {
+        open: {
             type: Boolean,
             required: true,
-            default: false
+            default: false,
+        },
+    },
+    components: {
+        SvgIcon
+    },
+    data() {
+        return {
+            info: json,
+            icons: json['cooking-diagram']['iconsImgs'],
+        };
+    },
+    methods: {
+        modalClose() {
+            this.$emit('close');
+        },
+        getIconUrl(filename) {
+            return `/img/${filename}`;
         }
     },
-    methods:{
-        modalClose(){
-            this.$emit('close');
-        }
-    }
-}
-
+};
 </script>
