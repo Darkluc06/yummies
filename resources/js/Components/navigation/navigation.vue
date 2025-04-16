@@ -3,6 +3,7 @@
         <ul class="nav_ul">
             <li class="nav_links" @click="selectCategory('all')">
                 <figure class="nav_icon  ">
+                    <iconComponent :icon="'Alle'"/>
                 </figure>
                 <h2> {{ cookingStyle.all }} </h2>
             </li>

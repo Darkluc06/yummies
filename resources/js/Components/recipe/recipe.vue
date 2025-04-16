@@ -1,6 +1,7 @@
 <template>
     <li class="recipe__item">
-        <a :href="`/recepten/${recipe.name.toLowerCase().replace(/ /g, '-')}`" class="recipe__link">
+        <a :href="`/recipe` " class="recipe__link">
+        <!-- <a :href="`/recepten/${recipe.name.toLowerCase().replace(/ /g, '-')}`" class="recipe__link"> -->
             <imageComponent
                 :figureClass="`recipe__figure`"
                 :imageClass="`recipe__img`"
