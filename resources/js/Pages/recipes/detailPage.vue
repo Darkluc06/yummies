@@ -11,26 +11,26 @@
                     <SvgIcon :name="`burger`" />
             </figure>
             <div class="recipePage__wrapper">
-                <h1 class="recipePage__title">Naam van recept</h1>
+                <h1 class="recipePage__title"> {{ recipe.title }} </h1>
                 <Link :href="`/`"><SvgIcon :name="`close`" /></Link>
             </div>
             <ul class="recipePage__icons">
                 <li class="recipePage__icon">
                     <span>
-                        <SvgIcon :name="`timer`"/> 15 min 
+                        <SvgIcon :name="`timer`"/> {{ recipe.timer }}
                     </span>
                 </li>
                 <li class="recipePage__icon">
                     <span>
-                        <SvgIcon :name="`grocery`"/> 4 
+                        <SvgIcon :name="`grocery`"/> {{ recipe.groceries }}
                     </span>
                 </li>
             </ul>
             <h2 class="recipePage__subTitle">
-                Ingredienten
+                {{ recipe.ingredients }}
             </h2>
             <div class="recipePage__wrapper">
-                <h3>3 Porties</h3>
+                <h3><span> {{ recipe.servings.amount }} </span> {{ recipe.servings.serving }} </h3>
                 <div>
                     <button class="recipePage__button"><SvgIcon :name="`plus`"/></button>
                     <button class="recipePage__button"><SvgIcon :name="`minus`"/></button>
@@ -61,6 +61,7 @@ import SvgIcon from '@/Components/general/icon/SvgIcon.vue';
 import { Link } from '@inertiajs/vue3';
 import ingredients from '@/Components/recipe/ingredients.vue';
 import modal from '@/Components/modal/modal.vue';
+import json from './../../../assets/json/data.json'
 
 export default {
     components:{
@@ -72,7 +73,8 @@ export default {
     },
     data(){
         return{
-            openModal: false
+            openModal: false,
+            recipe: json.recipe
         }
     },
     methods: {
