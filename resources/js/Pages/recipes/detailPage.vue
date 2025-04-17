@@ -32,8 +32,8 @@
             <div class="recipePage__wrapper">
                 <h3>3 Porties</h3>
                 <div>
-                    <button class="recipePage__button"><SvgIcon :name="`plus`"/></button>
                     <button class="recipePage__button"><SvgIcon :name="`minus`"/></button>
+                    <button class="recipePage__button"><SvgIcon :name="`plus`"/></button>
                 </div>
             </div>
             <ul class="ingredients ingredients--list">
