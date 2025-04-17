@@ -12,6 +12,7 @@
     &__item{
         height: max-content;
         width: 100%;
+        position: relative;
     }
 
     &__link{
@@ -78,6 +79,16 @@
         gap: 2rem;
     }
 
+    &__favorite{
+        position: absolute;
+        bottom: 0%;
+        right: 0%;
+        padding: .7rem;
+        border-radius: 50%;
+        transform: translate(-50%, -250%);
+        z-index: 999;
+    }
+
     &__span{
         display: flex;
         gap: 0.5rem;
@@ -88,6 +99,7 @@
         .icon{
             width: 2.5rem;
             height: 2.5rem;
+            z-index: 999;
         }
     }
 
