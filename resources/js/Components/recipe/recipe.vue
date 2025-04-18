@@ -17,7 +17,7 @@
                 </svg>
             </button>
         </span>
-        <Link :href="`/recipe`" class="recipe__link">
+        <Link :href="`/recipe`" :data="{name: recipe.urlName}" class="recipe__link">
             <imageComponent
                 :figureClass="`recipe__figure`"
                 :imageClass="`recipe__img`"
