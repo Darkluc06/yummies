@@ -75,7 +75,7 @@
                 border-radius: 100%;
                 // box-shadow: 0 0 .5rem .2rem rgba(0,0,0, .3);
                 background: white;
-                border: 0.1rem solid map-get(map-get(colors.$palletOne, "textColors"), "title");
+                border: 0.1rem solid map-get(map-get(colors.$palletOne, "borderColors"), "default");
 
                 svg{
                     g{

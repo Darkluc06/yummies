@@ -136,6 +136,8 @@
                 font-size: v.$home-h1;
                 padding-bottom: 1rem;
                 animation: .6s ease-out go_up forwards;
+                color: map-get(map-get(colors.$palletOne, "textColors"), "title");
+                font-size: 3rem;
             }
 
             .yummies_recipes-container{
