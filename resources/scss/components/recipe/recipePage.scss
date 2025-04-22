@@ -61,6 +61,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        border: 0.2rem solid map-get(map-get(colors.$palletOne, "borderColors"), "default");
 
         .icon{
             width: 3.5rem;
@@ -148,9 +149,11 @@
 
     &__modalButton{
         padding: 0.5rem 2rem;
-        border: 0.2rem solid black;
+        border: 0.2rem solid map-get(map-get(colors.$palletOne, "borderColors"), "default");
         font-size: 1.8rem;
         border-radius: 1rem;
+        background: white;
+        color: map-get(map-get(colors.$palletOne, "textColors"), "title");
     }
 
 }
