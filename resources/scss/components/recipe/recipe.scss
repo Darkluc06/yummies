@@ -97,8 +97,12 @@
         right: 0%;
         padding: .7rem;
         border-radius: 50%;
-        transform: translate(-50%, -280%);
+        transform: translate(-50%, -220%);
         z-index: 999;
+
+        .icon{
+            fill: map-get(map-get(colors.$palletOne, "textColors"), "title");
+        }
     }
 
     &__span{
