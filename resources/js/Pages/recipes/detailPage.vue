@@ -3,7 +3,7 @@
         <imageComponent
             :figureClass="`recipePage__figure`"
             :imageClass="`recipePage__img`"
-            :imageSource="`https://placehold.co/900x400`"
+            :imageSource="`./img/sushi.jpg`"
             :imageAlt="`test`"
         />
         <section class="recipePage__text">
@@ -12,7 +12,7 @@
             </figure>
             <div class="recipePage__wrapper">
                 <h1 class="recipePage__title">Naam van recept</h1>
-                <Link :href="`/`"><SvgIcon :name="`close`" /></Link>
+                <Link :href="`/`" :class="`recipePage__link`"><SvgIcon :name="`close`" /></Link>
             </div>
             <ul class="recipePage__icons">
                 <li class="recipePage__icon">

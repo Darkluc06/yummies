@@ -1,9 +1,19 @@
+@use "../../assets/colors";
+
 .recipePage{
     width: 100%;
     height: max-content;
     display: flex;
     flex-direction: column;
     position: relative;
+
+    &__link{
+        .icon{
+            width: 3.5rem;
+            height: 3.5rem;
+            fill: map-get(map-get(colors.$palletOne, "textColors"), "title");
+        }
+    }
 
     &__figure{
         height: 30rem;
@@ -19,7 +29,8 @@
     &__text{
         width: 100%;
         height: max-content;
-        border-top: 0.2rem solid black;
+        border: 0.2rem solid map-get(map-get(colors.$palletOne, "borderColors"), "default");
+        border-bottom: none;
         border-radius: 2rem 2rem 0 0;
         transform: translateY(-2rem);
         background: white;
@@ -28,27 +39,47 @@
         gap: 2rem;
         position: relative;
         padding: 1rem;
+        margin-bottom: -2rem;
+        background: map-get(map-get(colors.$palletOne, "backgroundColors"), "main");
     }
 
     &__wrapper{
         display: flex;
         justify-content: space-between;
 
+        div{
+            display: flex;
+            gap: 1rem;
+        }
+    }
+
+    &__button{
+        width: 4rem;
+        height: 4rem;
+        background: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
         .icon{
             width: 3.5rem;
             height: 3.5rem;
+            fill: map-get(map-get(colors.$palletOne, "textColors"), "title");
         }
     }
 
     &__title{
         font-size: 3rem;
+        color: map-get(map-get(colors.$palletOne, "textColors"), "title");
     }
 
     &__icons{
         display: flex;
-        width: 80%;
+        width: 60%;
         margin: 0 auto;
-        border: 0.2rem solid black;
+        border: 0.2rem solid map-get(map-get(colors.$palletOne, "borderColors"), "default");
+        background: white;
         padding: 1rem;
         border-radius: 2rem;
         justify-content: space-evenly;
@@ -64,44 +95,48 @@
             justify-content: center;
             align-items: center;
             font-size: 2rem;
+            color: map-get(map-get(colors.$palletOne, "textColors"), "title");
 
             svg{
                 width: 5rem;
                 height: 5rem;
+                fill: map-get(map-get(colors.$palletOne, "textColors"), "title");
             }
         }
     }
 
     &__subTitle{
         font-size: 2.5rem;
+        color: map-get(map-get(colors.$palletOne, "textColors"), "title");
     }
 
     h3{
         font-size: 2rem;
+        color: map-get(map-get(colors.$palletOne, "textColors"), "title");
     }
 
-    &__toggle{
-        width: 8rem;
-        height: 4rem;
-        border: 0.2rem solid black;
-        border-radius: 2rem;
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        padding: 0 0.5rem;
-        transition: justify-content 0.4s linear;
+    // &__toggle{
+    //     width: 8rem;
+    //     height: 4rem;
+    //     border: 0.2rem solid black;
+    //     border-radius: 2rem;
+    //     display: flex;
+    //     align-items: center;
+    //     justify-content: flex-start;
+    //     padding: 0 0.5rem;
+    //     transition: justify-content 0.4s linear;
 
-        &--active{
-            justify-content: flex-end;
-        }
-    }
+    //     &--active{
+    //         justify-content: flex-end;
+    //     }
+    // }
 
-    &__circle {
-        height: 3rem;
-        aspect-ratio: 1/1;
-        background: red;
-        border-radius: 50%;
-    }
+    // &__circle {
+    //     height: 3rem;
+    //     aspect-ratio: 1/1;
+    //     background: red;
+    //     border-radius: 50%;
+    // }
 
     &__span{
         display: flex;
