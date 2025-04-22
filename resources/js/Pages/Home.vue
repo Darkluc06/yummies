@@ -8,7 +8,7 @@
                     <input type="text" placeholder="Zoek verschillende kookstijlen" class="yummies_input"
                         ref="searchField" id="yummies-input" />
                 </label>
-                <h2 class="yummies_header-h2"> {{ data.headerH2 }} </h2>
+                <!-- <h2 class="yummies_header-h2"> {{ data.headerH2 }} </h2> -->
             </div>
             <div class="yummies_navigation">
                 <Navigation @categorySelected="setSelectedCategory" />

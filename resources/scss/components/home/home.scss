@@ -59,6 +59,7 @@
         &-h1{
             font-size: v.$home-logo;
             animation: .4s ease-out go_up forwards;
+            color: map-get(map-get(colors.$palletOne, "textColors"), "title");
         }
 
         &-h2{
