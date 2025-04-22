@@ -3,13 +3,11 @@
         <header class="yummies_header">
             <div class="yummies_header-content">
                 <h1 class="yummies_header-h1"> {{ data.title }} </h1>
-                <input
-                    type="text"
-                    placeholder="Zoek verschillende kookstijlen"
-                    class="yummies_input"
-                    ref="searchField"
-                    id="yummies-input"
-                />
+                <label class="yummies_span">
+                    <SvgIcon :name="`search`" />
+                    <input type="text" placeholder="Zoek verschillende kookstijlen" class="yummies_input"
+                        ref="searchField" id="yummies-input" />
+                </label>
                 <h2 class="yummies_header-h2"> {{ data.headerH2 }} </h2>
             </div>
             <div class="yummies_navigation">
@@ -23,11 +21,7 @@
             <section class="yummies_recipes">
                 <h1 class="yummies_recipes-h1"> {{ data.sectionRecipeH2 }} </h1>
                 <ul class="yummies_recipes-container">
-                    <Recipe
-                        v-for="recipe in filteredRecipes"
-                        :key="recipe.name"
-                        :recipe="recipe"
-                    />
+                    <Recipe v-for="recipe in filteredRecipes" :key="recipe.name" :recipe="recipe" />
                 </ul>
             </section>
         </main>
@@ -42,6 +36,7 @@ import NewRecipecomponent from '@/Components/new-recipe/new-recipe.vue';
 import Recipe from '@/Components/recipe/recipe.vue';
 import FooterComponent from './../Components/footer/footer.vue'
 import json from './../../assets/json/data.json'
+import SvgIcon from '@/Components/general/icon/SvgIcon.vue';
 
 export default {
     components: {
@@ -49,7 +44,8 @@ export default {
         NewRecipecomponent,
         Recipe,
         Legenda,
-        FooterComponent
+        FooterComponent,
+        SvgIcon
     },
     data() {
         return {
