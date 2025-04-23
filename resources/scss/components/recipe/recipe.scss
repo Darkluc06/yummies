@@ -40,7 +40,7 @@
 
     &__text {
         width: 100%;
-        border: 0.2rem solid map-get(map-get(colors.$palletTwo, "borderColors"), "default");
+        border: 0.2rem solid map-get(map-get(colors.$palletTwo, "borderColors"), "second");
         border-radius: 2rem;
         transform: translateY(-2rem);
         background: map-get(map-get(colors.$palletTwo, "backgroundColors"), "second");
@@ -58,12 +58,12 @@
         left: 50%;
         padding: 1rem;
         background: white;
-        border: 0.2rem solid map-get(map-get(colors.$palletTwo, "borderColors"), "default");
+        border: 0.2rem solid map-get(map-get(colors.$palletTwo, "borderColors"), "second");
         border-radius: 50%;
         transform: translate(-50%, -50%);
 
         .icon{
-            fill: map-get(map-get(colors.$palletTwo, "textColors"), "title");
+            fill: map-get(map-get(colors.$palletTwo, "textColors"), "icon");
         }
 
         svg{
@@ -71,7 +71,7 @@
             width: 3.5rem;
             g{
                 path{
-                    fill: map-get(map-get(colors.$palletTwo, "textColors"), "title") !important;
+                    fill: map-get(map-get(colors.$palletTwo, "textColors"), "icon") !important;
                 }
             }
         }
@@ -105,7 +105,7 @@
         z-index: 999;
 
         .icon{
-            fill: map-get(map-get(colors.$palletTwo, "textColors"), "title");
+            fill: map-get(map-get(colors.$palletTwo, "textColors"), "icon");
         }
     }
 
@@ -125,5 +125,6 @@
 
     &__paragraph{
         font-size: 1.8rem;
+        color: map-get(map-get(colors.$palletTwo, "textColors"), "icon");
     }
 }
