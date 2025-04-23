@@ -26,7 +26,7 @@
         .icon{
             width: 3rem;
             height: 3rem;
-            fill: map-get(map-get(colors.$palletTwo, "textColors"), "title");
+            fill: map-get(map-get(colors.$palletTwo, "textColors"), "icon");
         }
     }
 
