@@ -57,23 +57,30 @@ export default {
         };
     },
     mounted() {
-        const favoriteKey = `favoriteRecipe-${this.recipe.id}`;
-        this.isFavorite = localStorage.getItem(favoriteKey) === 'true';
+        const favoriteKey = 'favoriteRecipes'; 
+        const storedFavorites = localStorage.getItem(favoriteKey);
+        this.isFavorite = storedFavorites ? JSON.parse(storedFavorites).includes(this.recipe.urlName) : false;
         this.updateHeartColor();
     },
     methods: {
         toggleFavorite() {
             this.isFavorite = !this.isFavorite;
-            const favoriteKey = `favoriteRecipe-${this.recipe.id}`;
-            localStorage.setItem(favoriteKey, this.isFavorite);
+            const favoriteKey = 'favoriteRecipes';
+            let favorites = JSON.parse(localStorage.getItem(favoriteKey)) || [];
+
+            if (this.isFavorite) {
+                if (!favorites.includes(this.recipe.urlName)) {
+                    favorites.push(this.recipe.urlName);
+                }
+            } else {
+                favorites = favorites.filter(url => url !== this.recipe.urlName);
+            }
+
+            localStorage.setItem(favoriteKey, JSON.stringify(favorites));
             this.updateHeartColor();
         },
         updateHeartColor() {
-            if(this.isFavorite === true){
-                this.heart = "heart-fill"
-            }else{
-                this.heart = "heart"
-            }
+            this.heart = this.isFavorite ? "heart-fill" : "heart";
         }
     }
 };

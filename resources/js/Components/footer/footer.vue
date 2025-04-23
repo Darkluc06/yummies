@@ -1,6 +1,6 @@
 <template>
     <section class="footer_component">
-        <a href="" class="footer_link">
+        <a href="http://127.0.0.1:8000/" class="footer_link">
             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-book"
                 viewBox="0 0 16 16">
                 <path
