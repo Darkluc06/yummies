@@ -2,19 +2,7 @@
     <li class="recipe__item">
         <span class="recipe__favorite">
             <button id="safeRecipe-{{ recipe.id }}" class="recipe__span" @click="toggleFavorite">
-                <svg
-                    :id="`heartSvg-${recipe.id}`"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    height="20"
-                    class="bi bi-heart-fill"
-                    viewBox="0 0 16 16"
-                >
-                    <path
-                        fill-rule="evenodd"
-                        d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"
-                    />
-                </svg>
+                <SvgIcon :name="heart" />
             </button>
         </span>
         <Link :href="`/recipe`" :data="{name: recipe.urlName}" class="recipe__link">
@@ -65,6 +53,7 @@ export default {
     data() {
         return {
             isFavorite: false,
+            heart: "heart"
         };
     },
     mounted() {
@@ -80,9 +69,10 @@ export default {
             this.updateHeartColor();
         },
         updateHeartColor() {
-            const heartSvg = document.getElementById(`heartSvg-${this.recipe.id}`);
-            if (heartSvg) {
-                heartSvg.style.fill = this.isFavorite ? "red" : "currentColor";
+            if(this.isFavorite === true){
+                this.heart = "heart-fill"
+            }else{
+                this.heart = "heart"
             }
         }
     }

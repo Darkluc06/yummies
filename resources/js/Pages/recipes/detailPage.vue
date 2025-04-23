@@ -3,7 +3,7 @@
         <imageComponent
             :figureClass="`recipePage__figure`"
             :imageClass="`recipePage__img`"
-            :imageSource="recipe.image"
+            :imageSource="`./img/sushi.jpg`"
             :imageAlt="`test`"
         />
         <section class="recipePage__text">

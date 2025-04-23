@@ -8,10 +8,12 @@
                     <SvgIcon :name="`close`" />
                     </Link>
                 </header>
-                <button class="instruction_documentation-button" @click="goToDocumentation"> {{
-                    instruction.buttons['button-documentation'] }} </button>
-                <button class="instruction_legenda-button" @click="goToLegenda"> {{
-                    instruction.buttons["button-legenda"] }} </button>
+                <div class="instruction__buttonWrapper">
+                    <button class="instruction_documentation-button instruction_documentation-button--active" @click="goToDocumentation"> {{
+                        instruction.buttons['button-documentation'] }} </button>
+                    <button class="instruction_legenda-button" @click="goToLegenda"> {{
+                        instruction.buttons["button-legenda"] }} </button>
+                </div>
             </section>
             <section class="instructions_documentation-mid">
                 <p class="instructions_documentation-p">
@@ -27,10 +29,12 @@
                     <SvgIcon :name="`close`" />
                     </Link>
                 </header>
-                <button class="instruction_legenda-button" @click="goToDocumentation"> {{
-                    instruction.buttons['button-documentation'] }} </button>
-                <button class="instruction_legenda-button" @click="goToLegenda"> {{
-                    instruction.buttons["button-legenda"] }} </button>
+                <div class="instruction__buttonWrapper">
+                    <button class="instruction_legenda-button" @click="goToDocumentation"> {{
+                        instruction.buttons['button-documentation'] }} </button>
+                    <button class="instruction_legenda-button instruction_legenda-button--active" @click="goToLegenda"> {{
+                        instruction.buttons["button-legenda"] }} </button>
+                </div>
             </section>
             <section class="instruction_legenda-mid">
                 <summary class="instruction_legenda-summary"> {{ instruction.legenda.summary }} </summary>
@@ -76,20 +80,23 @@
                         <p class="arrows-explanation">Een pijl, geeft aan dat alle elementen van de voorgaande moeten
                             worden
                             verplaats naar een ander instrumen</p>
-                        <li class="instruction_icons" v-for="(iconImg, index) in iconsArrows" :key="index" v-if="iconsArrows">
+                        <li class="instruction_icons" v-for="(iconImg, index) in iconsArrows" :key="index"
+                            v-if="iconsArrows">
                             <img class="instruction_icon" :src="getImgUrl(iconImg.src)" :alt="iconImg.alt" />
                             <span class="instruction_icon-label">{{ iconImg.label }}</span>
                         </li>
                     </ul>
                 </div>
                 <figure class="instruction_figure">
-                    <p class="instruction_figure-p"> De onderstaande afbeelding geeft aan dat je iets tijdelijk blijvend moet
+                    <p class="instruction_figure-p"> De onderstaande afbeelding geeft aan dat je iets tijdelijk blijvend
+                        moet
                         doen
                     </p>
                     <img src="./../../../../public/img/iets_blijven_doen.png" alt="" class="instruction_img-keep-doing">
                 </figure>
                 <div class="instruction_ingredients">
-                    <p class="instruction_ingredients-p">Verschillende onderdelen (moeten) afgebeeld worden in (kleur)vakken,
+                    <p class="instruction_ingredients-p">Verschillende onderdelen (moeten) afgebeeld worden in
+                        (kleur)vakken,
                         zodat je
                         makkelijk kan zien
                         wat bepaalde stappen doen. Het item naam en symbolen in het vak blijven wit. Vervolgens staan de
@@ -104,8 +111,8 @@
                     <div class="instruction_ingredients-container">
                         <h2 class="instruction_ingredients-h2">Ingrediënten:</h2>
                         <ul class="instruction_ingredients">
-                            <li class="instruction_ingredients-ingredient blue" v-for="(ingredient, index) in ingredientsBlue"
-                                :key="index">
+                            <li class="instruction_ingredients-ingredient blue"
+                                v-for="(ingredient, index) in ingredientsBlue" :key="index">
                                 <input class="instruction_ingredients-checkbox" type="checkbox" />
                                 <span>{{ ingredient.name }} {{ ingredient.amount }} {{ ingredient.unit }}</span>
                             </li>
@@ -127,7 +134,8 @@
                         <ul class="instruction_ingredients">
                             <li class="instruction_ingredients-ingredient white">
                                 <input class="instruction_ingredients-checkbox" type="checkbox" />
-                                <span>{{ ingredientsWhite.name }} {{ ingredientsWhite.amount }} {{ ingredientsWhite.unit}}</span>
+                                <span>{{ ingredientsWhite.name }} {{ ingredientsWhite.amount }} {{
+                                    ingredientsWhite.unit }}</span>
                             </li>
                         </ul>
                     </div>

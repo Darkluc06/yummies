@@ -1,3 +1,5 @@
+@use "../../assets/colors";
+
 .modal{
     position: fixed;
     top: 0;
@@ -15,7 +17,7 @@
         border-radius: 2rem 2rem 0 0;
         overflow-y: scroll;
         padding: 2rem;
-        border: 0.2rem solid black;
+        border: 0.2rem solid map-get(map-get(colors.$palletOne, "borderColors"), "default");
 
         .modal_header{
             display: flex;
@@ -23,6 +25,7 @@
 
             .modal_title{
                 font-size: 3rem;
+                color: map-get(map-get(colors.$palletOne, "textColors"), "title");
             }
         }
 
@@ -30,6 +33,7 @@
             list-style: none;
             font-size: 2rem;
             margin-bottom: 1rem;
+            color: map-get(map-get(colors.$palletOne, "textColors"), "subTitle");
         }
 
         .modal_container-icons {
@@ -55,6 +59,7 @@
 
                 .modal_icon-label {
                     font-size: 1.5rem;
+                    color: map-get(map-get(colors.$palletOne, "textColors"), "subTitle");
                 }
             }
         }
@@ -63,6 +68,7 @@
             .icon{
                 width: 3rem;
                 height: 3rem;
+                fill: map-get(map-get(colors.$palletOne, "textColors"), "title");
             }
         }
     }

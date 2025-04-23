@@ -1,3 +1,5 @@
+@use "../../assets/colors";
+
 .recipe{
     display: flex;
     flex-direction: column;
@@ -20,13 +22,13 @@
         width: 100%;
         display: flex;
         flex-direction: column;
-        border: 0.2rem solid black;
         border-radius: 2rem;
     }
 
     &__figure{
         height: 30rem;
         width: 100%;
+        border: 0.1rem solid transparent;
     }
 
     &__img{
@@ -36,20 +38,19 @@
         border-radius: 1.5rem;
     }
 
-    &__text{
+    &__text {
         width: 100%;
-        height: max-content;
-        border-top: 0.2rem solid black;
+        border: 0.2rem solid map-get(map-get(colors.$palletOne, "borderColors"), "default");
         border-radius: 2rem;
         transform: translateY(-2rem);
-        background: white;
+        background: map-get(map-get(colors.$palletOne, "backgroundColors"), "second");
         display: flex;
         flex-direction: column;
         gap: 0.5rem;
         position: relative;
-        padding: 1rem;
-        padding-top: 2rem;
-    }
+        padding: 2rem 1rem;
+        margin-bottom: -2rem;
+      }
 
     &__type{
         position: absolute;
@@ -57,18 +58,28 @@
         left: 50%;
         padding: 1rem;
         background: white;
-        border: 0.2rem solid black;
+        border: 0.2rem solid map-get(map-get(colors.$palletOne, "borderColors"), "default");
         border-radius: 50%;
         transform: translate(-50%, -50%);
 
         .icon{
-            height: 5rem;
-            width: 5rem;
+            fill: map-get(map-get(colors.$palletOne, "textColors"), "title");
+        }
+
+        svg{
+            height: 3.5rem;
+            width: 3.5rem;
+            g{
+                path{
+                    fill: map-get(map-get(colors.$palletOne, "textColors"), "title") !important;
+                }
+            }
         }
     }
 
     &__title{
         font-size: 2.5rem;
+        color: map-get(map-get(colors.$palletOne, "textColors"), "title");
     }
 
     &__icons{
@@ -77,6 +88,11 @@
         justify-content: flex-start;
         list-style: none;
         gap: 2rem;
+        color: map-get(map-get(colors.$palletOne, "textColors"), "title");
+
+        .icon{
+            fill: map-get(map-get(colors.$palletOne, "textColors"), "title");
+        }
     }
 
     &__favorite{
@@ -85,8 +101,12 @@
         right: 0%;
         padding: .7rem;
         border-radius: 50%;
-        transform: translate(-50%, -280%);
+        transform: translate(-50%, -220%);
         z-index: 999;
+
+        .icon{
+            fill: map-get(map-get(colors.$palletOne, "textColors"), "title");
+        }
     }
 
     &__span{

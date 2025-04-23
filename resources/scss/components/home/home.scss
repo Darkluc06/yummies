@@ -1,5 +1,6 @@
 // Variables
 @use "./../../assets/variables" as v;
+@use "../../assets/colors";
 
 .yummies {
     position: relative;
@@ -8,45 +9,62 @@
     padding: 0rem v.$home-padding-sides;
     overflow-x: hidden;
     overflow-y: scroll;
+    background: map-get(map-get(colors.$palletOne, "backgroundColors"), "main");
 
-    .yummies_input{
-        width: 92%;
-        height: 6.5rem;
-        padding-left: 2rem;
-        border: .1rem solid #ccc;
-        transition: all 0.3s ease-in-out;
-        font-size: 2rem;
-        outline: none;
-        border-radius: 10rem;
-        box-shadow: 0 0 .5rem .2rem rgba(0,0,0, .3);
-        z-index: 1;
-        margin-bottom: 2rem;
-        z-index: 999;
+    &_span{
+        width: 100%;
+        display: flex;
+        border: 0.1rem solid map-get(map-get(colors.$palletOne, "borderColors"), "default");
         animation: .45s ease-out go_up forwards;
+        padding: 1rem;
+        background: white;
+        border-radius: 1rem;
+        align-items: center;
+        gap: 0.5rem;
+        margin: 2rem 0;
+
+        .icon{
+            width: 3rem;
+            height: 3rem;
+            fill: map-get(map-get(colors.$palletOne, "textColors"), "title");
+        }
     }
 
-    .yummies_header{
+    &_input{
+        width: 100%;
+        height: 4rem;
+        border: none;
+        font-size: 1.8rem;
+        color: map-get(map-get(colors.$palletOne, "textColors"), "title");
+        border-radius: 0.5rem;
+
+        &::placeholder{
+            color: map-get(map-get(colors.$palletOne, "textColors"), "title");
+        }
+    }
+
+    &_header{
         padding-top: 2rem;
         width: 100%;
         display: flex;
         flex-direction: column;
         position: sticky;
 
-        .yummies_header-content {
+        &-content {
             display: flex;
             align-items: flex-start;
             flex-direction: column;
+        }
 
+        &-h1{
+            font-size: v.$home-logo;
+            animation: .4s ease-out go_up forwards;
+            color: map-get(map-get(colors.$palletOne, "textColors"), "title");
+        }
 
-            .yummies_header-h1{
-                font-size: v.$home-logo;
-                animation: .4s ease-out go_up forwards;
-            }
-
-            .yummies_header-h2{
-                font-size: v.$home-h1;
-                animation: .5s ease-out go_up forwards;
-            }
+        &-h2{
+            font-size: v.$home-h1;
+            animation: .5s ease-out go_up forwards;
         }
 
         .yummies_navigation {
@@ -119,6 +137,8 @@
                 font-size: v.$home-h1;
                 padding-bottom: 1rem;
                 animation: .6s ease-out go_up forwards;
+                color: map-get(map-get(colors.$palletOne, "textColors"), "title");
+                font-size: 3rem;
             }
 
             .yummies_recipes-container{

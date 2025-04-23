@@ -63,7 +63,7 @@
         &--end {
             position: absolute;
             width: 90%;
-            background: white;
+            background: transparent;
             border-left: 0.3rem solid black;
             border-radius: 0;
             top: 50%;
@@ -93,9 +93,9 @@
         z-index: 1;
 
         svg {
-            transform: translateX(-90%);
+            transform: translateX(-105%);
             z-index: 10;
-            background: white;
+            background: transparent;
         }
     }
 
