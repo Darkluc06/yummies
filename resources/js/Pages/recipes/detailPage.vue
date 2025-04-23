@@ -3,7 +3,7 @@
         <imageComponent
             :figureClass="`recipePage__figure`"
             :imageClass="`recipePage__img`"
-            :imageSource="`https://placehold.co/900x400`"
+            :imageSource="recipe.image"
             :imageAlt="`test`"
         />
         <section class="recipePage__text">
@@ -11,39 +11,37 @@
                     <SvgIcon :name="`burger`" />
             </figure>
             <div class="recipePage__wrapper">
-                <h1 class="recipePage__title">Naam van recept</h1>
+                <h1 class="recipePage__title">{{ this.recipe.name }}</h1>
                 <Link :href="`/`"><SvgIcon :name="`close`" /></Link>
             </div>
             <ul class="recipePage__icons">
                 <li class="recipePage__icon">
                     <span>
-                        <SvgIcon :name="`timer`"/> 15 min
+                        <SvgIcon :name="`timer`"/> {{ this.recipe.time }}
                     </span>
                 </li>
                 <li class="recipePage__icon">
                     <span>
-                        <SvgIcon :name="`grocery`"/> 4
+                        <SvgIcon :name="`grocery`"/> {{ this.recipe.ingredients.length }}
                     </span>
                 </li>
             </ul>
             <h2 class="recipePage__subTitle">
-                Ingredienten
+                Ingrediënten
             </h2>
             <div class="recipePage__wrapper">
-                <h3>3 Porties</h3>
+                <h3> {{ this.recipe.servings }} porties </h3>
                 <div>
-                    <button class="recipePage__button"><SvgIcon :name="`minus`"/></button>
-                    <button class="recipePage__button"><SvgIcon :name="`plus`"/></button>
+                    <button class="recipePage__button" @click="removeServingToRecipe"><SvgIcon :name="`minus`"/></button>
+                    <button class="recipePage__button" @click="addServingToRecipe"><SvgIcon :name="`plus`"/></button>
                 </div>
             </div>
             <ul class="ingredients ingredients--list">
-                <ingredients/>
-                <ingredients/>
-                <ingredients/>
-                <ingredients/>
-                <ingredients/>
-                <ingredients/>
-                <ingredients/>
+                <ingredients
+                        v-for="ingredient in this.recipe.ingredients"
+                        :key="ingredient.amount"
+                        :ingredient="ingredient"
+                    />
             </ul>
             <div class="recipePage__wrapper">
                 <h2 class="recipePage__subTitle">Kookdiagram </h2>
@@ -63,6 +61,7 @@ import { Link } from '@inertiajs/vue3';
 import ingredients from '@/Components/recipe/ingredients.vue';
 import modal from '@/Components/modal/modal.vue';
 import cookingDiagram from '@/Components/cookingDiagram/cookingDiagram.vue';
+import json from './../../../assets/json/data.json';
 
 export default {
     components:{
@@ -75,8 +74,14 @@ export default {
     },
     data(){
         return{
-            openModal: false
+            openModal: false,
+            recipe: null,
         }
+    },
+    created()
+    {
+        let urlParams = new URLSearchParams(window.location.search);
+        this.recipe = json.home.recipes.find(recipe => recipe.urlName === urlParams.get('name'));
     },
     methods: {
         modalOpen(){
@@ -99,6 +104,26 @@ export default {
                 }
             }
         },
+        addServingToRecipe() {
+            this.recipe.servings++;
+
+            this.calculateIngredientAmounts(this.recipe.servings - 1, this.recipe.servings);
+        },
+        removeServingToRecipe() {
+            if(this.recipe.servings <= 1) {
+                this.recipe.servings = 1;
+                return;
+            }
+            this.recipe.servings--;
+
+            this.calculateIngredientAmounts(this.recipe.servings + 1, this.recipe.servings);
+        },
+        calculateIngredientAmounts(oldServings, newServings) {
+            for (let index = 0; index < this.recipe.ingredients.length; index++) {
+                const ingredient = this.recipe.ingredients[index];
+                ingredient.amount = ingredient.amount / oldServings * newServings;
+            }
+        }
     }
 }
 

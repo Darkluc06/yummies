@@ -6,60 +6,276 @@
         "recipes": [
             {
                 "name": "Sushi Delight",
+                "urlName": "sushi-delight",
                 "type": "Japans",
                 "image": "./img/sushi.jpg",
                 "time": "25 min",
-                "description": "Heerlijke verse sushi."
+                "description": "Heerlijke verse sushi.",
+                "servings": 2,
+                "ingredients": [
+                    {
+                        "amount": "500",
+                        "unit": "gram",
+                        "name": "rijst"
+                    },
+                    {
+                        "amount": "10",
+                        "unit": "plakken",
+                        "name": "zeewier"
+                    },
+                    {
+                        "amount": "200",
+                        "unit": "gram",
+                        "name": "zalm"
+                    }
+                ]
             },
             {
                 "name": "Spaghetti Carbonara",
+                "urlName": "spaghetti-carbonara",
                 "type": "Italiaans",
                 "image": "./img/spaghetti.webp",
                 "time": "20 min",
-                "description": "Klassieke romige carbonara."
+                "description": "Klassieke romige carbonara.",
+                "servings": 3,
+                "ingredients": [
+                    {
+                        "amount": "375",
+                        "unit": "gram",
+                        "name": "spaghetti"
+                    },
+                    {
+                        "amount": "100",
+                        "unit": "gram",
+                        "name": "carbonara"
+                    },
+                    {
+                        "amount": "1",
+                        "unit": "liter",
+                        "name": "melk"
+                    }
+                ]
             },
             {
                 "name": "Kip Curry",
+                "urlName": "kip-curry",
                 "type": "Aziatisch",
                 "image": "./img/curry.jpeg",
                 "time": "35 min",
-                "description": "Smaakvolle kip curry."
+                "description": "Smaakvolle kip curry.",
+                "servings": 4,
+                "ingredients": [
+                    {
+                        "amount": "500",
+                        "unit": "gram",
+                        "name": "kip"
+                    },
+                    {
+                        "amount": "600",
+                        "unit": "gram",
+                        "name": "rijst"
+                    },
+                    {
+                        "amount": "1",
+                        "unit": "",
+                        "name": "prij"
+                    },
+                    {
+                        "amount": "1",
+                        "unit": "el",
+                        "name": "zonnebloemolie"
+                    },
+                    {
+                        "amount": "250",
+                        "unit": "gram",
+                        "name": "snacktomaatjes"
+                    }
+                ]
             },
             {
                 "name": "Veggie Burger",
+                "urlName": "veggie-burger",
                 "type": "Vegetarisch",
                 "image": "./img/veggie.jpg",
                 "time": "30 min",
-                "description": "Heerlijke vegetarische burger."
+                "description": "Heerlijke vegetarische burger.",
+                "servings": 2,
+                "ingredients": [
+                    {
+                        "amount": "400",
+                        "unit": "gram",
+                        "name": "vegan hamburgers"
+                    },
+                    {
+                        "amount": "5",
+                        "unit": "plakken",
+                        "name": "sla"
+                    },
+                    {
+                        "amount": "1",
+                        "unit": "",
+                        "name": "vleestomaat"
+                    },
+                    {
+                        "amount": "2",
+                        "unit": "plakken",
+                        "name": "kaas"
+                    },
+                    {
+                        "amount": "50",
+                        "unit": "gram",
+                        "name": "mayonaise"
+                    }
+                ]
             },
             {
                 "name": "Pizza Margherita",
+                "urlName": "pizza-margherita",
                 "type": "Italiaans",
                 "image": "./img/pizza.jpg",
                 "time": "25 min",
-                "description": "Eenvoudige en smaakvolle pizza."
+                "description": "Eenvoudige en smaakvolle pizza.",
+                "servings": 1,
+                "ingredients": [
+                    {
+                        "amount": "100",
+                        "unit": "gram",
+                        "name": "deeg"
+                    },
+                    {
+                        "amount": "150",
+                        "unit": "gram",
+                        "name": "tomatensaus"
+                    },
+                    {
+                        "amount": "100",
+                        "unit": "gram",
+                        "name": "champignons"
+                    },
+                    {
+                        "amount": "200",
+                        "unit": "gram",
+                        "name": "geraspte kaas"
+                    }
+                ]
             },
             {
                 "name": "Teriyaki Chicken",
+                "urlName": "teriyaki-chicken",
                 "type": "Japans",
                 "image": "./img/teriyaki.webp",
                 "time": "30 min",
-                "description": "Zoete en hartige teriyaki kip."
+                "description": "Zoete en hartige teriyaki kip.",
+                "servings": 3,
+                "ingredients": [
+                    {
+                        "amount": "75",
+                        "unit": "ml",
+                        "name": "sojasaus"
+                    },
+                    {
+                        "amount": "25",
+                        "unit": "ml",
+                        "name": "water"
+                    },
+                    {
+                        "amount": "2",
+                        "unit": "el",
+                        "name": "honing"
+                    },
+                    {
+                        "amount": "500",
+                        "unit": "gram",
+                        "name": "kip"
+                    },
+                    {
+                        "amount": "200",
+                        "unit": "gram",
+                        "name": "rijst"
+                    },
+                    {
+                        "amount": "400",
+                        "unit": "gram",
+                        "name": "broccoli"
+                    }
+                ]
             },
             {
                 "name": "Nasi Goreng",
+                "urlName": "nasi-goreng",
                 "type": "Aziatisch",
                 "image": "./img/nasi.jpg",
-                "servings": 4,
                 "time": "25 min",
-                "description": "Indonesische gebakken rijst."
+                "description": "Indonesische gebakken rijst.",
+                "servings": 5,
+                "ingredients": [
+                    {
+                        "amount": "1.25",
+                        "unit": "el",
+                        "name": "sojasaus"
+                    },
+                    {
+                        "amount": "2.5",
+                        "unit": "el",
+                        "name": "ketjap manis"
+                    },
+                    {
+                        "amount": "2.5",
+                        "unit": "stuks",
+                        "name": "tomaten"
+                    },
+                    {
+                        "amount": "5",
+                        "unit": "stuks",
+                        "name": "eieren"
+                    },
+                    {
+                        "amount": "7.5",
+                        "unit": "tenen",
+                        "name": "knoflook"
+                    },
+                    {
+                        "amount": "1",
+                        "unit": "stuk",
+                        "name": "komkommer"
+                    }
+                ]
             },
             {
                 "name": "Friet met mayonaise",
+                "urlName": "friet-met-mayonaise",
                 "type": "Fastfood",
                 "image": "./img/friet.jpg",
                 "time": "15 min",
-                "description": "Klassieke friet met mayonaise."
+                "description": "Klassieke friet met mayonaise.",
+                "servings": 2,
+                "ingredients": [
+                    {
+                        "amount": "500",
+                        "unit": "gram",
+                        "name": "patat"
+                    },
+                    {
+                        "amount": "2",
+                        "unit": "el",
+                        "name": "ketchup"
+                    },
+                    {
+                        "amount": "5",
+                        "unit": "stuks",
+                        "name": "sla"
+                    },
+                    {
+                        "amount": "100",
+                        "unit": "gram",
+                        "name": "tomaten"
+                    },
+                    {
+                        "amount": "1",
+                        "unit": "stuk",
+                        "name": "ui"
+                    }
+                ]
             }
         ]
     },
