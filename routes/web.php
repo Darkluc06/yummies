@@ -6,6 +6,8 @@ use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use App\Http\Controllers\DocumentationPageController;
 use App\Http\Controllers\RecipePageController;
+use App\Http\Controllers\FavoritePageController;
+
 
 Route::get('/', function () {
     return Inertia::render('Home', [
@@ -28,5 +30,6 @@ Route::middleware('auth')->group(function () {
 
 Route::resource('/documentation', DocumentationPageController::class);
 Route::resource('/recipe', RecipePageController::class);
+Route::resource('/favorite', FavoritePageController::class);
 
 require __DIR__.'/auth.php';

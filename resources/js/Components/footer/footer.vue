@@ -18,7 +18,7 @@
             </svg>
             Documentatie
         </a>
-        <a href="" class="footer_link">
+        <a href="/favorite" class="footer_link">
             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-heart"
                 viewBox="0 0 16 16">
                 <path
