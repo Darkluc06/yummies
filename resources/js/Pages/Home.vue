@@ -3,13 +3,8 @@
         <header class="yummies_header">
             <div class="yummies_header-content">
                 <h1 class="yummies_header-h1"> {{ data.title }} </h1>
-                <input
-                    type="text"
-                    placeholder="Zoek verschillende kookstijlen"
-                    class="yummies_input"
-                    ref="searchField"
-                    id="yummies-input"
-                />
+                <input type="text" placeholder="Zoek verschillende kookstijlen" class="yummies_input" ref="searchField"
+                    id="yummies-input" />
                 <h2 class="yummies_header-h2"> {{ data.headerH2 }} </h2>
             </div>
             <div class="yummies_navigation">
@@ -23,15 +18,11 @@
             <section class="yummies_recipes">
                 <h1 class="yummies_recipes-h1"> {{ data.sectionRecipeH2 }} </h1>
                 <ul class="yummies_recipes-container">
-                    <Recipe
-                        v-for="recipe in filteredRecipes"
-                        :key="recipe.name"
-                        :recipe="recipe"
-                    />
+                    <Recipe v-for="recipe in filteredRecipes" :key="recipe.name" :recipe="recipe" />
                 </ul>
             </section>
         </main>
-        <FooterComponent></FooterComponent>
+        <FooterComponent :class="{ hidden: !footerVisible }"></FooterComponent>
     </article>
 </template>
 
@@ -55,7 +46,10 @@ export default {
         return {
             data: json.home,
             legendaOpen: false,
-            selectedCategory: null
+            selectedCategory: null,
+            isScrollable: false,
+            footerVisible: true,
+            isScrolling: false,
         };
     },
     computed: {
@@ -65,6 +59,15 @@ export default {
             }
             return this.data.recipes.filter(recipe => recipe.type === this.selectedCategory);
         }
+    },
+    mounted() {
+        this.checkScrollability();
+        window.addEventListener('resize', this.checkScrollability);
+        window.addEventListener('scroll', this.handleScroll);
+    },
+    beforeUnmount() {
+        window.removeEventListener('resize', this.checkScrollability);
+        window.removeEventListener('scroll', this.handleScroll);
     },
     methods: {
         openLegenda() {
@@ -81,7 +84,25 @@ export default {
         },
         setSelectedCategory(category) {
             this.selectedCategory = category;
-        }
+        },
+        // Checkt if the footer needs to be visible on the page
+        checkScrollability() {
+            this.isScrollable = document.body.scrollHeight > document.body.clientHeight;
+            if (!this.isScrollable && !this.isScrolling) {
+                this.footerVisible = true;
+            } else {
+                this.footerVisible = false;
+            }
+        },
+        handleScroll() {
+            this.footerVisible = false;
+            this.isScrolling = true;
+            clearTimeout(this.scrollTimeout);
+            this.scrollTimeout = setTimeout(() => {
+                this.isScrolling = false;
+                this.checkScrollability();
+            }, 100);
+        },
     }
 };
 </script>
