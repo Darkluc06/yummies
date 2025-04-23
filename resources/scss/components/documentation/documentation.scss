@@ -14,7 +14,7 @@
     .instruction_documentation {
         width: 100%;
         min-height: 50vh;
-        border: .2rem solid map-get(map-get(colors.$palletOne, "borderColors"), "default");
+        border: .2rem solid map-get(map-get(colors.$palletTwo, "borderColors"), "default");
         padding-left: 1rem;
         border-radius: 2rem;
         padding-bottom: 1rem;
@@ -29,7 +29,7 @@
 
                 .instruction_documentation-h1 {
                     font-size: 4rem;
-                    color: map-get(map-get(colors.$palletOne, "textColors"), "title");
+                    color: map-get(map-get(colors.$palletTwo, "textColors"), "title");
                 }
 
                 .instruction_documentation-close {
@@ -45,12 +45,12 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                border: 0.2rem solid map-get(map-get(colors.$palletOne, "borderColors"), "default");
+                border: 0.2rem solid map-get(map-get(colors.$palletTwo, "borderColors"), "default");
 
 
                 &--active{
-                    background: map-get(map-get(colors.$palletOne, "backgroundColors"), "third");
-                    color: map-get(map-get(colors.$palletOne, "textColors"), "active");
+                    background: map-get(map-get(colors.$palletTwo, "backgroundColors"), "third");
+                    color: map-get(map-get(colors.$palletTwo, "textColors"), "active");
                 }
             }
 
@@ -62,11 +62,11 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                border: 0.2rem solid map-get(map-get(colors.$palletOne, "borderColors"), "default");
+                border: 0.2rem solid map-get(map-get(colors.$palletTwo, "borderColors"), "default");
 
                 &--active{
-                    background: map-get(map-get(colors.$palletOne, "backgroundColors"), "third");
-                    color: map-get(map-get(colors.$palletOne, "textColors"), "active");
+                    background: map-get(map-get(colors.$palletTwo, "backgroundColors"), "third");
+                    color: map-get(map-get(colors.$palletTwo, "textColors"), "active");
                 }
             }
         }
@@ -85,7 +85,7 @@
 
     .instruction_legenda {
         width: 100%;
-        border: .2rem solid map-get(map-get(colors.$palletOne, "borderColors"), "default");        padding-left: 1rem;
+        border: .2rem solid map-get(map-get(colors.$palletTwo, "borderColors"), "default");        padding-left: 1rem;
         border-radius: 2rem;
         padding-bottom: 1rem;
 
@@ -114,11 +114,11 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                border: 0.2rem solid map-get(map-get(colors.$palletOne, "borderColors"), "default");
+                border: 0.2rem solid map-get(map-get(colors.$palletTwo, "borderColors"), "default");
 
                 &--active{
-                    background: map-get(map-get(colors.$palletOne, "backgroundColors"), "third");
-                    color: map-get(map-get(colors.$palletOne, "textColors"), "active");
+                    background: map-get(map-get(colors.$palletTwo, "backgroundColors"), "third");
+                    color: map-get(map-get(colors.$palletTwo, "textColors"), "active");
                 }
             }
 
@@ -130,11 +130,11 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                border: 0.2rem solid map-get(map-get(colors.$palletOne, "borderColors"), "default");
+                border: 0.2rem solid map-get(map-get(colors.$palletTwo, "borderColors"), "default");
 
                 &--active{
-                    background: map-get(map-get(colors.$palletOne, "backgroundColors"), "third");
-                    color: map-get(map-get(colors.$palletOne, "textColors"), "active");
+                    background: map-get(map-get(colors.$palletTwo, "backgroundColors"), "third");
+                    color: map-get(map-get(colors.$palletTwo, "textColors"), "active");
                 }
             }
         }

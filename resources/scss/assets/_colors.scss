@@ -1,4 +1,4 @@
-$palletOne: (
+$palletTwo: (
   "backgroundColors": (
     "main": #F4EEE6,
     "second": #E5D2B8,
@@ -11,5 +11,22 @@ $palletOne: (
   ),
   "borderColors": (
     "default": #809670,
+  ),
+);
+
+$palletTwo: (
+  "backgroundColors": (
+    "main": #CADBB7,
+    "second": #F4EEE6,
+    "third": #809670,
+  ),
+  "textColors": (
+    "title": #485935,
+    "subTitle": #725C3A,
+    "icon": #93A267,
+    "active": #ffffff,
+  ),
+  "borderColors": (
+    "default": #485935,
   ),
 );

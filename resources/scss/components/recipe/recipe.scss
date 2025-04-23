@@ -40,10 +40,10 @@
 
     &__text {
         width: 100%;
-        border: 0.2rem solid map-get(map-get(colors.$palletOne, "borderColors"), "default");
+        border: 0.2rem solid map-get(map-get(colors.$palletTwo, "borderColors"), "default");
         border-radius: 2rem;
         transform: translateY(-2rem);
-        background: map-get(map-get(colors.$palletOne, "backgroundColors"), "second");
+        background: map-get(map-get(colors.$palletTwo, "backgroundColors"), "second");
         display: flex;
         flex-direction: column;
         gap: 0.5rem;
@@ -58,12 +58,12 @@
         left: 50%;
         padding: 1rem;
         background: white;
-        border: 0.2rem solid map-get(map-get(colors.$palletOne, "borderColors"), "default");
+        border: 0.2rem solid map-get(map-get(colors.$palletTwo, "borderColors"), "default");
         border-radius: 50%;
         transform: translate(-50%, -50%);
 
         .icon{
-            fill: map-get(map-get(colors.$palletOne, "textColors"), "title");
+            fill: map-get(map-get(colors.$palletTwo, "textColors"), "title");
         }
 
         svg{
@@ -71,7 +71,7 @@
             width: 3.5rem;
             g{
                 path{
-                    fill: map-get(map-get(colors.$palletOne, "textColors"), "title") !important;
+                    fill: map-get(map-get(colors.$palletTwo, "textColors"), "title") !important;
                 }
             }
         }
@@ -79,7 +79,7 @@
 
     &__title{
         font-size: 2.5rem;
-        color: map-get(map-get(colors.$palletOne, "textColors"), "title");
+        color: map-get(map-get(colors.$palletTwo, "textColors"), "title");
     }
 
     &__icons{
@@ -88,10 +88,10 @@
         justify-content: flex-start;
         list-style: none;
         gap: 2rem;
-        color: map-get(map-get(colors.$palletOne, "textColors"), "title");
+        color: map-get(map-get(colors.$palletTwo, "textColors"), "title");
 
         .icon{
-            fill: map-get(map-get(colors.$palletOne, "textColors"), "title");
+            fill: map-get(map-get(colors.$palletTwo, "textColors"), "title");
         }
     }
 
@@ -105,7 +105,7 @@
         z-index: 999;
 
         .icon{
-            fill: map-get(map-get(colors.$palletOne, "textColors"), "title");
+            fill: map-get(map-get(colors.$palletTwo, "textColors"), "title");
         }
     }
 
