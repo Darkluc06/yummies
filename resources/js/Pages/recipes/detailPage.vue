@@ -3,7 +3,7 @@
         <imageComponent
             :figureClass="`recipePage__figure`"
             :imageClass="`recipePage__img`"
-            :imageSource="`https://placehold.co/900x400`"
+            :imageSource="recipe.image"
             :imageAlt="`test`"
         />
         <section class="recipePage__text">
