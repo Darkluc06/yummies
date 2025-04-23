@@ -61,7 +61,7 @@
 
             h2{
                 font-size: 1.5rem;
-                color: map-get(map-get(colors.$palletOne, "textColors"), "subTitle");
+                color: map-get(map-get(colors.$palletTwo, "textColors"), "subTitle");
                 font-weight: 500;
             }
 
@@ -69,18 +69,18 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                width: 6rem;
-                height: 6rem;
+                width: 7rem;
+                height: 7rem;
                 padding: 1rem;
                 border-radius: 100%;
                 // box-shadow: 0 0 .5rem .2rem rgba(0,0,0, .3);
-                background: white;
-                border: 0.1rem solid map-get(map-get(colors.$palletOne, "borderColors"), "default");
+                background: map-get(map-get(colors.$palletTwo, "backgroundColors"), "second");
+                border: 0.1rem solid map-get(map-get(colors.$palletTwo, "borderColors"), "default");
 
                 svg{
                     g{
                         path{
-                            fill: map-get(map-get(colors.$palletOne, "textColors"), "title") !important;
+                            fill: map-get(map-get(colors.$palletTwo, "textColors"), "icon") !important;
                         }
                     }
                 }

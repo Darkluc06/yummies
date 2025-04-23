@@ -1,23 +1,23 @@
 @use "../../assets/colors";
 
-.recipe{
+.recipe {
     display: flex;
     flex-direction: column;
     gap: 2rem;
     list-style: none;
 
-    &__headTitle{
+    &__headTitle {
         margin: 2rem 0;
         font-size: 3rem;
     }
 
-    &__item{
+    &__item {
         height: max-content;
         width: 100%;
         position: relative;
     }
 
-    &__link{
+    &__link {
         height: 100%;
         width: 100%;
         display: flex;
@@ -25,13 +25,13 @@
         border-radius: 2rem;
     }
 
-    &__figure{
+    &__figure {
         height: 30rem;
         width: 100%;
         border: 0.1rem solid transparent;
     }
 
-    &__img{
+    &__img {
         width: 100%;
         height: 102%;
         object-fit: cover;
@@ -40,62 +40,63 @@
 
     &__text {
         width: 100%;
-        border: 0.2rem solid map-get(map-get(colors.$palletOne, "borderColors"), "default");
+        border: 0.2rem solid map-get(map-get(colors.$palletTwo, "borderColors"), "second");
         border-radius: 2rem;
         transform: translateY(-2rem);
-        background: map-get(map-get(colors.$palletOne, "backgroundColors"), "second");
+        background: map-get(map-get(colors.$palletTwo, "backgroundColors"), "second");
         display: flex;
         flex-direction: column;
         gap: 0.5rem;
         position: relative;
         padding: 2rem 1rem;
         margin-bottom: -2rem;
-      }
+    }
 
-    &__type{
+    &__type {
         position: absolute;
         top: 0;
         left: 50%;
         padding: 1rem;
-        background: white;
-        border: 0.2rem solid map-get(map-get(colors.$palletOne, "borderColors"), "default");
+        background: map-get(map-get(colors.$palletTwo, "backgroundColors"), "second");
+        border: 0.2rem solid map-get(map-get(colors.$palletTwo, "borderColors"), "second");
         border-radius: 50%;
         transform: translate(-50%, -50%);
 
-        .icon{
-            fill: map-get(map-get(colors.$palletOne, "textColors"), "title");
+        .icon {
+            fill: map-get(map-get(colors.$palletTwo, "textColors"), "icon");
         }
 
-        svg{
+        svg {
             height: 3.5rem;
             width: 3.5rem;
-            g{
-                path{
-                    fill: map-get(map-get(colors.$palletOne, "textColors"), "title") !important;
+
+            g {
+                path {
+                    fill: map-get(map-get(colors.$palletTwo, "textColors"), "icon") !important;
                 }
             }
         }
     }
 
-    &__title{
+    &__title {
         font-size: 2.5rem;
-        color: map-get(map-get(colors.$palletOne, "textColors"), "title");
+        color: map-get(map-get(colors.$palletTwo, "textColors"), "title");
     }
 
-    &__icons{
+    &__icons {
         display: flex;
         height: max-content;
         justify-content: flex-start;
         list-style: none;
         gap: 2rem;
-        color: map-get(map-get(colors.$palletOne, "textColors"), "title");
+        color: map-get(map-get(colors.$palletTwo, "textColors"), "title");
 
-        .icon{
-            fill: map-get(map-get(colors.$palletOne, "textColors"), "title");
+        .icon {
+            fill: map-get(map-get(colors.$palletTwo, "textColors"), "title");
         }
     }
 
-    &__favorite{
+    &__favorite {
         position: absolute;
         bottom: 0%;
         right: 0%;
@@ -104,26 +105,27 @@
         transform: translate(-50%, -220%);
         z-index: 999;
 
-        .icon{
-            fill: map-get(map-get(colors.$palletOne, "textColors"), "title");
+        .icon {
+            fill: map-get(map-get(colors.$palletTwo, "textColors"), "icon");
         }
     }
 
-    &__span{
+    &__span {
         display: flex;
         gap: 0.5rem;
         height: 100%;
         align-items: center;
         font-size: 1.5rem;
 
-        .icon{
+        .icon {
             width: 2.5rem;
             height: 2.5rem;
             z-index: 999;
         }
     }
 
-    &__paragraph{
+    &__paragraph {
         font-size: 1.8rem;
+        color: map-get(map-get(colors.$palletTwo, "textColors"), "icon");
     }
 }

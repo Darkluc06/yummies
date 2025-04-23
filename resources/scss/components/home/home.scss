@@ -9,12 +9,12 @@
     padding: 0rem v.$home-padding-sides;
     overflow-x: hidden;
     overflow-y: scroll;
-    background: map-get(map-get(colors.$palletOne, "backgroundColors"), "main");
+    background: map-get(map-get(colors.$palletTwo, "backgroundColors"), "main");
 
     &_span{
         width: 100%;
         display: flex;
-        border: 0.1rem solid map-get(map-get(colors.$palletOne, "borderColors"), "default");
+        border: 0.1rem solid map-get(map-get(colors.$palletTwo, "borderColors"), "default");
         animation: .45s ease-out go_up forwards;
         padding: 1rem;
         background: white;
@@ -22,11 +22,12 @@
         align-items: center;
         gap: 0.5rem;
         margin: 2rem 0;
+        background: map-get(map-get(colors.$palletTwo, "backgroundColors"), "second");
 
         .icon{
             width: 3rem;
             height: 3rem;
-            fill: map-get(map-get(colors.$palletOne, "textColors"), "title");
+            fill: map-get(map-get(colors.$palletTwo, "textColors"), "icon");
         }
     }
 
@@ -35,11 +36,12 @@
         height: 4rem;
         border: none;
         font-size: 1.8rem;
-        color: map-get(map-get(colors.$palletOne, "textColors"), "title");
+        color: map-get(map-get(colors.$palletTwo, "textColors"), "title");
+        background: map-get(map-get(colors.$palletTwo, "backgroundColors"), "second");
         border-radius: 0.5rem;
 
         &::placeholder{
-            color: map-get(map-get(colors.$palletOne, "textColors"), "title");
+            color: map-get(map-get(colors.$palletTwo, "textColors"), "title");
         }
     }
 
@@ -59,7 +61,7 @@
         &-h1{
             font-size: v.$home-logo;
             animation: .4s ease-out go_up forwards;
-            color: map-get(map-get(colors.$palletOne, "textColors"), "title");
+            color: map-get(map-get(colors.$palletTwo, "textColors"), "title");
         }
 
         &-h2{
@@ -137,7 +139,7 @@
                 font-size: v.$home-h1;
                 padding-bottom: 1rem;
                 animation: .6s ease-out go_up forwards;
-                color: map-get(map-get(colors.$palletOne, "textColors"), "title");
+                color: map-get(map-get(colors.$palletTwo, "textColors"), "title");
                 font-size: 3rem;
             }
 

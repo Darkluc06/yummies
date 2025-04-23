@@ -19,15 +19,15 @@
     &__button{
         width: 3rem;
         height: 3rem;
-        border: 0.2rem solid map-get(map-get(colors.$palletOne, "borderColors"), "default");
+        border: 0.2rem solid map-get(map-get(colors.$palletTwo, "borderColors"), "second");
         display: flex;
         align-items: center;
         justify-content: center;
         border-radius: 1em;
-        background: white;
+        background: map-get(map-get(colors.$palletTwo, "backgroundColors"), "second");
 
         .icon{
-            fill: map-get(map-get(colors.$palletOne, "textColors"), "title");
+            fill: map-get(map-get(colors.$palletTwo, "textColors"), "icon");
         }
 
         &--false{
@@ -45,7 +45,7 @@
 
     &__name{
         font-size: 1.5rem;
-        color: map-get(map-get(colors.$palletOne, "textColors"), "subTitle");
+        color: map-get(map-get(colors.$palletTwo, "textColors"), "subTitle");
         font-weight: 500;
     }
 }

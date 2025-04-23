@@ -20,11 +20,11 @@
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        color: map-get(map-get(colors.$palletOne, "textColors"), "subTitle");
+        color: map-get(map-get(colors.$palletTwo, "textColors"), "subTitle");
 
         svg {
             path {
-                fill: map-get(map-get(colors.$palletOne, "textColors"), "title") !important;
+                fill: map-get(map-get(colors.$palletTwo, "textColors"), "title") !important;
             }
         }
     }
