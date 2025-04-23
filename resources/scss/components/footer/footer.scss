@@ -10,6 +10,7 @@
     padding: 0 2rem;
     transition: transform 0.3s ease-in-out;
     transform: translateY(0);
+    background: white;
 
     .footer_link {
         font-size: 1.5rem;
@@ -20,6 +21,6 @@
     }
 
     &.hidden {
-        transform: translateY(100%); 
+        transform: translateY(100%);
     }
 }
