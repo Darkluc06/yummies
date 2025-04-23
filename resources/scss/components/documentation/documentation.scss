@@ -15,6 +15,7 @@
         width: 100%;
         min-height: 50vh;
         border: .2rem solid map-get(map-get(colors.$palletTwo, "borderColors"), "default");
+        background: map-get(map-get(colors.$palletTwo, "backgroundColors"), "second");
         padding-left: 1rem;
         border-radius: 2rem;
         padding-bottom: 1rem;
@@ -40,33 +41,35 @@
             .instruction_documentation-button{
                 font-size: 2rem;
                 padding: 0.5rem 1rem;
-                background: white;
+                background: map-get(map-get(colors.$palletTwo, "backgroundColors"), "second");
+                color: map-get(map-get(colors.$palletTwo, "textColors"), "icon");
                 border-radius: 2rem;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                border: 0.2rem solid map-get(map-get(colors.$palletTwo, "borderColors"), "default");
+                border: 0.2rem solid map-get(map-get(colors.$palletTwo, "borderColors"), "second");
 
 
                 &--active{
-                    background: map-get(map-get(colors.$palletTwo, "backgroundColors"), "third");
-                    color: map-get(map-get(colors.$palletTwo, "textColors"), "active");
+                    background: map-get(map-get(colors.$palletTwo, "backgroundColors"), "main");
+                    color: map-get(map-get(colors.$palletTwo, "textColors"), "icon");
                 }
             }
 
             .instruction_legenda-button{
                 font-size: 2rem;
                 padding: 0.5rem 1rem;
-                background: white;
+                background: map-get(map-get(colors.$palletTwo, "backgroundColors"), "second");
+                color: map-get(map-get(colors.$palletTwo, "textColors"), "icon");
                 border-radius: 2rem;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                border: 0.2rem solid map-get(map-get(colors.$palletTwo, "borderColors"), "default");
+                border: 0.2rem solid map-get(map-get(colors.$palletTwo, "borderColors"), "second");
 
                 &--active{
-                    background: map-get(map-get(colors.$palletTwo, "backgroundColors"), "third");
-                    color: map-get(map-get(colors.$palletTwo, "textColors"), "active");
+                    background: map-get(map-get(colors.$palletTwo, "backgroundColors"), "main");
+                    color: map-get(map-get(colors.$palletTwo, "textColors"), "icon");
                 }
             }
         }
@@ -85,7 +88,9 @@
 
     .instruction_legenda {
         width: 100%;
-        border: .2rem solid map-get(map-get(colors.$palletTwo, "borderColors"), "default");        padding-left: 1rem;
+        border: .2rem solid map-get(map-get(colors.$palletTwo, "borderColors"), "default");   
+        background: map-get(map-get(colors.$palletTwo, "backgroundColors"), "second");     
+        padding-left: 1rem;
         border-radius: 2rem;
         padding-bottom: 1rem;
 
@@ -99,6 +104,7 @@
 
                 .instruction_legenda-h1 {
                     font-size: 4rem;
+                    color: map-get(map-get(colors.$palletTwo, "textColors"), "title");
                 }
 
                 .instruction_legenda-close {
@@ -109,32 +115,34 @@
             .instruction_legenda-button{
                 font-size: 2rem;
                 padding: 0.5rem 1rem;
-                background: white;
+                background: map-get(map-get(colors.$palletTwo, "backgroundColors"), "second");
+                color: map-get(map-get(colors.$palletTwo, "textColors"), "icon");
                 border-radius: 2rem;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                border: 0.2rem solid map-get(map-get(colors.$palletTwo, "borderColors"), "default");
+                border: 0.2rem solid map-get(map-get(colors.$palletTwo, "borderColors"), "second");
 
                 &--active{
-                    background: map-get(map-get(colors.$palletTwo, "backgroundColors"), "third");
-                    color: map-get(map-get(colors.$palletTwo, "textColors"), "active");
+                    background: map-get(map-get(colors.$palletTwo, "backgroundColors"), "main");
+                    color: map-get(map-get(colors.$palletTwo, "textColors"), "icon");
                 }
             }
 
             .instruction_legenda-button{
                 font-size: 2rem;
                 padding: 0.5rem 1rem;
-                background: white;
+                background: map-get(map-get(colors.$palletTwo, "backgroundColors"), "second");
+                color: map-get(map-get(colors.$palletTwo, "textColors"), "icon");
                 border-radius: 2rem;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                border: 0.2rem solid map-get(map-get(colors.$palletTwo, "borderColors"), "default");
+                border: 0.2rem solid map-get(map-get(colors.$palletTwo, "borderColors"), "second");
 
                 &--active{
-                    background: map-get(map-get(colors.$palletTwo, "backgroundColors"), "third");
-                    color: map-get(map-get(colors.$palletTwo, "textColors"), "active");
+                    background: map-get(map-get(colors.$palletTwo, "backgroundColors"), "main");
+                    color: map-get(map-get(colors.$palletTwo, "textColors"), "icon");
                 }
             }
         }
