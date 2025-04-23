@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Yummies
 
 ## Assignment
@@ -9,3 +10,5 @@ Open the terminal and type the following in each terminal:
 2. php artisan serve
 3. php artisan inertia:start-ssr
 
+=======
+>>>>>>> develop

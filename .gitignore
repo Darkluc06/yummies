@@ -1,7 +1,10 @@
 /.phpunit.cache
 /bootstrap/ssr
 /bootstrap/ssr
+<<<<<<< HEAD
 /bootstrap/ssr
+=======
+>>>>>>> develop
 /node_modules
 /public/build
 /public/hot
