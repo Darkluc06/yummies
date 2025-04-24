@@ -105,6 +105,17 @@ import Emty from './emty.vue';
 import Forloop from './forloop.vue';
  
 export default {
+  props:{
+    equitment:{
+      type: String,
+    },
+    ingedientIsString:{
+      type: Boolean
+    },
+    nameOfIngredient:{
+      type: String
+    }
+  },
   components: {
     Tools,
     Line,
