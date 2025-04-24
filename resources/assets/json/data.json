@@ -750,6 +750,309 @@
         }
     },
     "cooking-diagram": {
-        "title": "Legenda"
+        "diagrams": {
+            "name": "Sushi Delight",
+            "diagram": [
+                [
+                    {
+                        "type": "Tools",
+                        "tool": "pot"
+                    },
+                    {
+                        "type": "Tools",
+                        "tool": "pot"
+                    },
+                    {
+                        "type": "Tools",
+                        "tool": "pot"
+                    },
+                    {
+                        "type": "Tools",
+                        "tool": "pot"
+                    }
+                ],
+                [
+                    {
+                        "type": "Line",
+                        "active": false
+                    },
+                    {
+                        "type": "Line",
+                        "active": false
+                    },
+                    {
+                        "type": "Ingredient",
+                        "is-string": true,
+                        "ingedient": "2L water",
+                        "active": true
+                    },
+                    {
+                        "type": "Line",
+                        "active": false
+                    }
+                ],
+                [
+                    {
+                        "type": "Line",
+                        "active": false
+                    },
+                    {
+                        "type": "Line",
+                        "active": false
+                    },
+                    {
+                        "type": "Ingredient",
+                        "is-string": false,
+                        "image": "./img/actie_x.png",
+                        "imageAlt": "test",
+                        "difficulty": 1
+                    },
+                    {
+                        "type": "Line",
+                        "active": false
+                    }
+                ],
+                [
+                    {
+                        "type": "Line",
+                        "active": false
+                    },
+                    {
+                        "type": "Line",
+                        "active": false
+                    },
+                    {
+                        "type": "Line",
+                        "active": true
+                    },
+                    {
+                        "type": "Line",
+                        "active": true,
+                        "has-big-arrow": true
+                    }
+                ],
+                [
+                    {
+                        "type": "Ingredient",
+                        "is-string": true,
+                        "ingedient": "500g Meel, 1l melk, 2 eieren"
+                    },
+                    {
+                        "type": "Line",
+                        "active": false
+                    },
+                    {
+                        "type": "Line",
+                        "active": true
+                    }
+                ],
+                [
+                    {
+                        "type": "Ingredient",
+                        "is-string": false,
+                        "image": "./img/actie_x.png",
+                        "imageAlt": "test",
+                        "difficulty": 5
+                    },
+                    {
+                        "type": "Line",
+                        "active": false
+                    },
+                    {
+                        "type": "Line",
+                        "active": true
+                    }
+                ],
+                [
+                    {
+                        "type": "Line",
+                        "active": true
+                    },
+                    {
+                        "type": "Ingredient",
+                        "is-string": false,
+                        "image": "./img/actie_x.png",
+                        "imageAlt": "test",
+                        "difficulty": 3
+                    },
+                    {
+                        "type": "Line",
+                        "active": true
+                    }
+                ],
+                [
+                    {
+                        "type": "Line",
+                        "active": true
+                    },
+                    {
+                        "type": "Ingredient",
+                        "is-string": true,
+                        "ingedient": "Boter"
+                    },
+                    {
+                        "type": "Line",
+                        "active": true
+                    }
+                ],
+                [
+                    {
+                        "type": "Line",
+                        "active": true,
+                        "end": true
+                    },
+                    {
+                        "type": "Line",
+                        "active": true
+                    },
+                    {
+                        "type": "Line",
+                        "active": true
+                    }
+                ],
+                [
+                    {
+                        "type": "Forloop",
+                        "width": "2",
+                        "steps": "8"
+                    },
+                    {
+                        "type": "Ingredient",
+                        "is-string": false,
+                        "image": "./img/actie_x.png",
+                        "imageAlt": "test",
+                        "difficulty": 0
+                    },
+                    {
+                        "type": "Line",
+                        "active": true
+                    }
+                ],
+                [
+                    {
+                        "type": "Emty"
+                    },
+                    {
+                        "type": "Ingredient",
+                        "is-string": false,
+                        "image": "./img/actie_x.png",
+                        "imageAlt": "test",
+                        "difficulty": 5
+                    },
+                    {
+                        "type": "Line",
+                        "active": true
+                    }
+                ],
+                [
+                    {
+                        "type": "Emty"
+                    },
+                    {
+                        "type": "Ingredient",
+                        "is-string": false,
+                        "image": "./img/actie_x.png",
+                        "imageAlt": "test",
+                        "difficulty": 0
+                    },
+                    {
+                        "type": "Line",
+                        "active": true
+                    }
+                ],
+                [
+                    {
+                        "type": "Emty"
+                    },
+                    {
+                        "type": "Ingredient",
+                        "is-string": false,
+                        "image": "./img/actie_x.png",
+                        "imageAlt": "test",
+                        "difficulty": 0
+                    },
+                    {
+                        "type": "Line",
+                        "active": true
+                    }
+                ],
+                [
+                    {
+                        "type": "Emty"
+                    },
+                    {
+                        "type": "Ingredient",
+                        "is-string": false,
+                        "image": "./img/actie_x.png",
+                        "imageAlt": "test",
+                        "difficulty": 0
+                    },
+                    {
+                        "type": "Line",
+                        "active": true
+                    }
+                ],
+                [
+                    {
+                        "type": "Emty"
+                    },
+                    {
+                        "type": "Ingredient",
+                        "is-string": false,
+                        "image": "./img/actie_x.png",
+                        "imageAlt": "test",
+                        "difficulty": 0
+                    },
+                    {
+                        "type": "Line",
+                        "active": true
+                    }
+                ],
+                [
+                    {
+                        "type": "Emty"
+                    },
+                    {
+                        "type": "Ingredient",
+                        "is-string": false,
+                        "image": "./img/actie_x.png",
+                        "imageAlt": "test",
+                        "difficulty": 0,
+                        "has-backwards-arrow": true,
+                        "steps": "4"
+                    },
+                    {
+                        "type": "Line",
+                        "active": true
+                    }
+                ],
+                [
+                    {
+                        "type": "Emty"
+                    },
+                    {
+                        "type": "Line",
+                        "active": true,
+                        "end": true
+                    },
+                    {
+                        "type": "Line",
+                        "active": true
+                    }
+                ],
+                [
+                    {
+                        "type": "Emty"
+                    },
+                    {
+                        "type": "Emty"
+                    },
+                    {
+                        "type": "Line",
+                        "active": true
+                    }
+                ]
+            ]
+        }
     }
 }
