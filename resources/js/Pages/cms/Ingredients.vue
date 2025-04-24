@@ -5,21 +5,24 @@ import { Ingredient } from '@/interfaces/Ingredient';
 import IngredientComponent from '@/Components/IngredientComponent.vue';
 
 const props = defineProps<{
-  ingredients: Array<Ingredient>
+    ingredients: Array<Ingredient>
 }>();
 
 </script>
 
 <template>
-  <authenticated-layout>
-    <h1>
-        Ingredients
-    </h1>
+    <authenticated-layout>
+        <h1>
+            Ingredients
+        </h1>
+        <a href="/dashboard/ingredients/create">
+          Create
+        </a>
 
-    <ul v-for="ingredient in ingredients">
-      <IngredientComponent :ingredient="ingredient" />
-    </ul>
+        <ul v-for="ingredient in ingredients">
+            <IngredientComponent :ingredient="ingredient" />
+        </ul>
 
-  </authenticated-layout>
+    </authenticated-layout>
 </template>
 

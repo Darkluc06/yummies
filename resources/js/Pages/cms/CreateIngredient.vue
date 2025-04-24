@@ -1,7 +1,12 @@
 <template>
   <form @submit.prevent="submitForm">
     <input type="text" v-model="form.ingredient_name" name="ingredient_name" />
-    <input type="file" @change="form.image_path = $event.target.files[0]" name="image_path" accept="image/*" />
+    <input
+        type="file"
+        @change="handleFileChange"
+        name="image_path"
+        accept="image/*"
+    />
     <button type="submit">Submit</button>
   </form>
 </template>
@@ -17,6 +22,11 @@ const form = useForm<{
   ingredient_name: '',
   image_path: null,
 });
+
+const handleFileChange = (event: Event) => {
+  const target = event.target as HTMLInputElement;
+  form.image_path = target.files?.[0] ?? null;
+};
 
 // Define the submit function
 const submitForm = () => {

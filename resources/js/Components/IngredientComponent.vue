@@ -9,5 +9,7 @@
 <template>
     <li>
         {{ ingredient }}
+        <a :href="`/dashboard/ingredients/${ingredient.id}/edit`">Update</a>
     </li>
+
 </template>
