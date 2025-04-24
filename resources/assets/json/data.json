@@ -28,6 +28,15 @@
                         "unit": "gram",
                         "name": "zalm"
                     }
+                ],
+                "keywords": [
+                    "25 min",
+                    "sushi",
+                    "Japans",
+                    "vis",
+                    "rijst",
+                    "zeewier",
+                    "zalm"
                 ]
             },
             {
@@ -54,6 +63,15 @@
                         "unit": "liter",
                         "name": "melk"
                     }
+                ],
+                "keywords": [
+                    "20 min",
+                    "spaghetti",
+                    "carbonara",
+                    "Italiaans",
+                    "pasta",
+                    "romig",
+                    "melk"
                 ]
             },
             {
@@ -90,6 +108,15 @@
                         "unit": "gram",
                         "name": "snacktomaatjes"
                     }
+                ],
+                "keywords": [
+                    "35 min",
+                    "kip",
+                    "curry",
+                    "Aziatisch",
+                    "rijst",
+                    "prij",
+                    "tomaat"
                 ]
             },
             {
@@ -126,6 +153,18 @@
                         "unit": "gram",
                         "name": "mayonaise"
                     }
+                ],
+                "keywords": [
+                    "30 min",
+                    "veggie",
+                    "burger",
+                    "vegetarisch",
+                    "vegan",
+                    "hamburgers",
+                    "sla",
+                    "tomaat",
+                    "kaas",
+                    "mayonaise"
                 ]
             },
             {
@@ -157,6 +196,16 @@
                         "unit": "gram",
                         "name": "geraspte kaas"
                     }
+                ],
+                "keywords": [
+                    "25 min",
+                    "pizza",
+                    "margherita",
+                    "Italiaans",
+                    "deeg",
+                    "tomatensaus",
+                    "champignons",
+                    "kaas"
                 ]
             },
             {
@@ -198,6 +247,17 @@
                         "unit": "gram",
                         "name": "broccoli"
                     }
+                ],
+                "keywords": [
+                    "teriyaki",
+                    "kip",
+                    "Japans",
+                    "zoet",
+                    "hartig",
+                    "sojasaus",
+                    "honing",
+                    "rijst",
+                    "broccoli"
                 ]
             },
             {
@@ -239,6 +299,19 @@
                         "unit": "stuk",
                         "name": "komkommer"
                     }
+                ],
+                "keywords": [
+                    "25 min",
+                    "rijst",
+                    "Aziatisch",
+                    "Indonesisch",
+                    "gebakken rijst",
+                    "sojasaus",
+                    "ketjap manis",
+                    "tomaat",
+                    "ei",
+                    "knoflook",
+                    "komkommer"
                 ]
             },
             {
@@ -275,6 +348,17 @@
                         "unit": "stuk",
                         "name": "ui"
                     }
+                ],
+                "keywords": [
+                    "15 min",
+                    "friet",
+                    "patat",
+                    "mayonaise",
+                    "fastfood",
+                    "ketchup",
+                    "sla",
+                    "tomaat",
+                    "ui"
                 ]
             }
         ]
