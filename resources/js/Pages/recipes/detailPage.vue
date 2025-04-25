@@ -47,7 +47,7 @@
                 <h2 class="recipePage__subTitle">Kookdiagram </h2>
                 <button @click="modalOpen" class="recipePage__modalButton">Legenda</button>
             </div>
-            <cookingDiagram />
+            <cookingDiagram :nameOfRecipe="this.recipe.name" />
         </section>
         <modal :open="openModal" @close="closeModal" />
     </article>
