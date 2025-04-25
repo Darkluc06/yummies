@@ -24,6 +24,9 @@ import Forloop from './forloop.vue';
 import jsonData from "../../../assets/json/data.json";
 
 export default {
+  props:{
+    nameOfRecipe: String
+  },
   components: {
     Tools,
     Line,
@@ -32,8 +35,17 @@ export default {
     Forloop
   },
   data() {
+    let recipeDiagram = [];
+    const foundRecipe = jsonData.home.recipes.find(recipe => recipe.name === this.nameOfRecipe);
+
+    if (foundRecipe) {
+      recipeDiagram = foundRecipe.diagram;
+    } else {  
+
+    }
+    
     return {
-      diagramData: jsonData['cooking-diagram'].diagrams.diagram,
+      diagramData: recipeDiagram,
     };
   },
   mounted() {
