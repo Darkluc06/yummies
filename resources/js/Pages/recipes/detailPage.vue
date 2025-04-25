@@ -51,6 +51,7 @@
         </section>
         <modal :open="openModal" @close="closeModal" />
     </article>
+    <FooterComponent :class="{ hidden: !footerVisible }"></FooterComponent>
 </template>
 
 <script>
@@ -62,6 +63,7 @@ import ingredients from '@/Components/recipe/ingredients.vue';
 import modal from '@/Components/modal/modal.vue';
 import cookingDiagram from '@/Components/cookingDiagram/cookingDiagram.vue';
 import json from './../../../assets/json/data.json';
+import FooterComponent from "../../Components/footer/footer.vue"
 
 export default {
     components:{
@@ -70,13 +72,27 @@ export default {
         Link,
         ingredients,
         modal,
-        cookingDiagram
+        cookingDiagram,
+        FooterComponent
     },
     data(){
         return{
             openModal: false,
             recipe: null,
+
+            isScrollable: false,
+            footerVisible: true,
+            isScrolling: false,
         }
+    },
+    mounted() {
+        this.checkScrollability();
+        window.addEventListener('resize', this.checkScrollability);
+        window.addEventListener('scroll', this.handleScroll);
+    },
+    beforeUnmount() {
+        window.removeEventListener('resize', this.checkScrollability);
+        window.removeEventListener('scroll', this.handleScroll);
     },
     created()
     {
@@ -123,7 +139,24 @@ export default {
                 const ingredient = this.recipe.ingredients[index];
                 ingredient.amount = ingredient.amount / oldServings * newServings;
             }
-        }
+        },
+        checkScrollability() {
+            this.isScrollable = document.body.scrollHeight > document.body.clientHeight;
+            if (!this.isScrollable && !this.isScrolling) {
+                this.footerVisible = true;
+            } else {
+                this.footerVisible = false;
+            }
+        },
+        handleScroll() {
+            this.footerVisible = false;
+            this.isScrolling = true;
+            clearTimeout(this.scrollTimeout);
+            this.scrollTimeout = setTimeout(() => {
+                this.isScrolling = false;
+                this.checkScrollability();
+            }, 100);
+        },
     }
 }
 
