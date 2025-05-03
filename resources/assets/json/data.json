@@ -5,6 +5,7 @@
         "sectionRecipeH2": "Recepten",
         "recipes": [
             {
+                "id": 1,
                 "name": "Sushi Delight",
                 "urlName": "sushi-delight",
                 "type": "Japans",
@@ -67,9 +68,10 @@
                             "active": false
                         },
                         {
+                            "recipeId": 1,
                             "type": "Ingredient",
                             "is-string": true,
-                            "ingedient": "2L water",
+                            "ingredientIndecis": [0,1, 2],
                             "active": true
                         },
                         {
@@ -91,7 +93,8 @@
                             "is-string": false,
                             "image": "./img/actie_x.png",
                             "imageAlt": "test",
-                            "difficulty": 1
+                            "difficulty": 1,
+                            "recipeId": 1
                         },
                         {
                             "type": "Line",
@@ -121,7 +124,8 @@
                         {
                             "type": "Ingredient",
                             "is-string": true,
-                            "ingedient": "500g Meel, 1l melk, 2 eieren"
+                            "ingredientIndecis": [0, 1, 2],
+                            "recipeId": 1
                         },
                         {
                             "type": "Line",
@@ -138,7 +142,8 @@
                             "is-string": false,
                             "image": "./img/actie_x.png",
                             "imageAlt": "test",
-                            "difficulty": 5
+                            "difficulty": 5,
+                            "recipeId": 1
                         },
                         {
                             "type": "Line",
@@ -159,7 +164,8 @@
                             "is-string": false,
                             "image": "./img/actie_x.png",
                             "imageAlt": "test",
-                            "difficulty": 3
+                            "difficulty": 3,
+                            "recipeId": 1
                         },
                         {
                             "type": "Line",
@@ -174,7 +180,8 @@
                         {
                             "type": "Ingredient",
                             "is-string": true,
-                            "ingedient": "Boter"
+                            "ingedient": "Boter",
+                            "recipeId": 1
                         },
                         {
                             "type": "Line",
@@ -207,7 +214,8 @@
                             "is-string": false,
                             "image": "./img/actie_x.png",
                             "imageAlt": "test",
-                            "difficulty": 0
+                            "difficulty": 0,
+                            "recipeId": 1
                         },
                         {
                             "type": "Line",
@@ -223,7 +231,8 @@
                             "is-string": false,
                             "image": "./img/actie_x.png",
                             "imageAlt": "test",
-                            "difficulty": 5
+                            "difficulty": 5,
+                            "recipeId": 1
                         },
                         {
                             "type": "Line",
@@ -239,7 +248,8 @@
                             "is-string": false,
                             "image": "./img/actie_x.png",
                             "imageAlt": "test",
-                            "difficulty": 0
+                            "difficulty": 0,
+                            "recipeId": 1
                         },
                         {
                             "type": "Line",
@@ -255,7 +265,8 @@
                             "is-string": false,
                             "image": "./img/actie_x.png",
                             "imageAlt": "test",
-                            "difficulty": 0
+                            "difficulty": 0,
+                            "recipeId": 1
                         },
                         {
                             "type": "Line",
@@ -271,7 +282,8 @@
                             "is-string": false,
                             "image": "./img/actie_x.png",
                             "imageAlt": "test",
-                            "difficulty": 0
+                            "difficulty": 0,
+                            "recipeId": 1
                         },
                         {
                             "type": "Line",
@@ -287,7 +299,8 @@
                             "is-string": false,
                             "image": "./img/actie_x.png",
                             "imageAlt": "test",
-                            "difficulty": 0
+                            "difficulty": 0,
+                            "recipeId": 1
                         },
                         {
                             "type": "Line",
@@ -305,7 +318,8 @@
                             "imageAlt": "test",
                             "difficulty": 0,
                             "has-backwards-arrow": true,
-                            "steps": "4"
+                            "steps": "4",
+                            "recipeId": 1
                         },
                         {
                             "type": "Line",
@@ -341,6 +355,7 @@
                 ]
             },
             {
+                "id": 2,
                 "name": "Spaghetti Carbonara",
                 "urlName": "spaghetti-carbonara",
                 "type": "Italiaans",
@@ -406,7 +421,8 @@
                             "type": "Ingredient",
                             "is-string": true,
                             "ingedient": "2L water",
-                            "active": true
+                            "active": true,
+                            "recipeId": 1
                         },
                         {
                             "type": "Line",
@@ -677,6 +693,7 @@
                 ]
             },
             {
+                "id": 3,
                 "name": "Kip Curry",
                 "urlName": "kip-curry",
                 "type": "Aziatisch",
@@ -722,6 +739,7 @@
                 ]
             },
             {
+                "id": 4,
                 "name": "Veggie Burger",
                 "urlName": "veggie-burger",
                 "type": "Vegetarisch",
@@ -770,6 +788,7 @@
                 ]
             },
             {
+                "id": 5,
                 "name": "Pizza Margherita",
                 "urlName": "pizza-margherita",
                 "type": "Italiaans",
@@ -811,6 +830,7 @@
                 ]
             },
             {
+                "id": 6,
                 "name": "Teriyaki Chicken",
                 "urlName": "teriyaki-chicken",
                 "type": "Japans",
@@ -863,6 +883,7 @@
                 ]
             },
             {
+                "id": 7,
                 "name": "Nasi Goreng",
                 "urlName": "nasi-goreng",
                 "type": "Aziatisch",
@@ -917,6 +938,7 @@
                 ]
             },
             {
+                "id": 8,
                 "name": "Friet met mayonaise",
                 "urlName": "friet-met-mayonaise",
                 "type": "Fastfood",

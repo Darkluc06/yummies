@@ -3,13 +3,13 @@
         <section class="modal_modal">
             <header class="modal_header">
                 <h2 class="modal_title">
-                    {{ info['cooking-diagram'].title }}
+                    {{ info.home.title }}
                 </h2>
                 <button class="modal_close" @click="modalClose">
                     <SvgIcon :name="`close`" />
                 </button>
             </header>
-            <summary class="modal_summary">{{ info['cooking-diagram'].summary }}</summary>
+            <summary class="modal_summary">{{ info.home.recipes['descriptions']}}</summary>
             <ul class="modal_container-icons">
                 <li class="modal_icons" v-for="(iconImg, index) in icons" :key="index" v-if="icons">
                     <img class="modal_icon" :src="getIconUrl(iconImg.src)" :alt="iconImg.alt" />
@@ -39,7 +39,8 @@ export default {
     data() {
         return {
             info: json,
-            icons: json['cooking-diagram']['iconsImgs'],
+            // icons: json['cooking-diagram']['iconsImgs'],
+            icons: json['home']['recipes']['']
         };
     },
     methods: {
