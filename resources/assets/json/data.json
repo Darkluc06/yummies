@@ -71,7 +71,7 @@
                             "recipeId": 1,
                             "type": "Ingredient",
                             "is-string": true,
-                            "ingredientIndecis": [0,1, 2],
+                            "ingredientIndecis": [0, 1, 2],
                             "active": true
                         },
                         {
@@ -140,7 +140,7 @@
                         {
                             "type": "Ingredient",
                             "is-string": false,
-                            "image": "./img/actie_x.png",
+                            "image": "./img/actie_y.png",
                             "imageAlt": "test",
                             "difficulty": 5,
                             "recipeId": 1

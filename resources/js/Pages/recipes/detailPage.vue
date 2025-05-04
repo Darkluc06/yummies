@@ -49,7 +49,7 @@
             </div>
             <cookingDiagram :nameOfRecipe="this.recipe" :key="this.recipe" />
         </section>
-        <modal :open="openModal" @close="closeModal" />
+        <modal :open="openModal" :recipe="this.recipe" @close="closeModal" />
     </article>
     <FooterComponent :class="{ hidden: !footerVisible }"></FooterComponent>
 </template>
