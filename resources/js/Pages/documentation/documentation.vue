@@ -143,17 +143,20 @@
             </section>
         </article>
     </div>
+    <FooterComponent :class="{ hidden: !footerVisible }"></FooterComponent>
 </template>
 
 <script>
 import SvgIcon from '@/Components/general/icon/SvgIcon.vue';
 import { Link } from '@inertiajs/vue3';
 import json from './../../../assets/json/data.json';
+import FooterComponent from '../../Components/footer/footer.vue';
 
 export default {
     components: {
         SvgIcon,
-        Link
+        Link,
+        FooterComponent
     },
     data() {
         return {
@@ -171,10 +174,22 @@ export default {
             ingredientsBlue: json['instruction']['legenda']['ingredients']['blueBox'],
             ingredientsGreen: json['instruction']['legenda']['ingredients']['greenBox'],
             ingredientsYellow: json['instruction']['legenda']['ingredients']['yellowBox'],
-            ingredientsWhite: json['instruction']['legenda']['ingredients']['whiteBox']
+            ingredientsWhite: json['instruction']['legenda']['ingredients']['whiteBox'],
+
+            isScrollable: false,
+            footerVisible: true,
+            isScrolling: false,
         };
     },
-
+    mounted() {
+        this.checkScrollability();
+        window.addEventListener('resize', this.checkScrollability);
+        window.addEventListener('scroll', this.handleScroll);
+    },
+    beforeUnmount() {
+        window.removeEventListener('resize', this.checkScrollability);
+        window.removeEventListener('scroll', this.handleScroll);
+    },
     methods: {
         goToDocumentation() {
             this.showDocumentation = true;
@@ -184,8 +199,26 @@ export default {
         },
         getImgUrl(filename) {
             return `/img/${filename}`;
-        }
+        },
+        checkScrollability() {
+            this.isScrollable = document.body.scrollHeight > document.body.clientHeight;
+            if (!this.isScrollable && !this.isScrolling) {
+                this.footerVisible = true;
+            } else {
+                this.footerVisible = false;
+            }
+        },
+        handleScroll() {
+            this.footerVisible = false;
+            this.isScrolling = true;
+            clearTimeout(this.scrollTimeout);
+            this.scrollTimeout = setTimeout(() => {
+                this.isScrolling = false;
+                this.checkScrollability();
+            }, 100);
+        },
     },
+
 
 };
 </script>

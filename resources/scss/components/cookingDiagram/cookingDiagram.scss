@@ -116,28 +116,10 @@
         }
     }
 
-    &__iconWrapper {
-        border: 0.2rem solid black;
-        padding: 0.5rem;
-        background: white;
-
-        &.circle{
-            border-radius: 50%;
-        }
-
-        &.triangle{
-            transform: rotate(45deg);
-
-            .icon{
-                transform: rotate(-45deg);
-            }
-        }
-    }
-
     &__icon {
         position: absolute;
-        width: 5rem;
-        height: 5rem;
+        width: 6rem;
+        height: 6rem;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
@@ -145,12 +127,18 @@
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        gap: 1rem;
+    }
 
-        .icon {
-            width: 4rem;
-            height: 4rem;
-        }
+    &__iconWrapper {
+        width: 6rem;
+        height: 6rem;
+        z-index: 10;
+    }
+
+    &__img{
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
     }
 
 
@@ -220,11 +208,10 @@
         width: max-content;
 
         .cookingDiagram__iconWrapper{
-            width: max-content;
             position: absolute;
             top: 100%;
             left: 0;
-            transform: translate(-50%, -50%) rotate(45deg);
+            transform: translate(-50%, -50%);
 
             .icon{
                 width: 4rem;

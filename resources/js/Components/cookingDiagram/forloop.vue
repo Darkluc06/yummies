@@ -2,9 +2,10 @@
     <div class="cookingDiagram__column">
         <figure class="cookingDiagram__forloop" :class="`steps--${steps}`, `width--${width}`">
             <span class="cookingDiagram__forloopIcon">
-                <div class="cookingDiagram__iconWrapper triangle">
+                <!-- <div class="cookingDiagram__iconWrapper triangle">
                     <SvgIcon :name="name" />
-                </div>
+                </div> -->
+                <ImageComponent :figure-class="`cookingDiagram__iconWrapper`" :image-class="`cookingDiagram__img`" :image-source="`./img/actie_x.png`" :image-alt="`test`" />
             </span>
         </figure>
     </div>
@@ -12,11 +13,11 @@
 
 <script>
 
-import SvgIcon from '../general/icon/SvgIcon.vue';
+import ImageComponent from '../general/image/imageComponent.vue';
 
 export default {
     components: {
-        SvgIcon,
+        ImageComponent
     },
     props: {
         name: {

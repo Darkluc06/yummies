@@ -6,9 +6,10 @@
             {{ ingedient }}
         </span>
         <span class="cookingDiagram__icon" v-if="isString === false">
-            <div class="cookingDiagram__iconWrapper" :class="isCircle ? `circle` : `triangle`">
+            <!-- <div class="cookingDiagram__iconWrapper" :class="isCircle ? `circle` : `triangle`">
                 <SvgIcon :name="icon" />
-            </div>
+            </div> -->
+            <ImageComponent :figure-class="`cookingDiagram__iconWrapper`" :image-class="`cookingDiagram__img`" :image-source="image" :image-alt="imageAlt" />
             <ul class="cookingDiagram__difficultyWrapper">
                 <li class="cookingDiagram__difficulty" v-for="(difficulty, index) in difficulty"></li>
             </ul>
@@ -21,11 +22,13 @@
 
 import SvgIcon from '../general/icon/SvgIcon.vue';
 import BackwardsArrow from './backwardsArrow.vue';
+import ImageComponent from '../general/image/imageComponent.vue';
 
 export default {
     components: {
         SvgIcon,
-        BackwardsArrow
+        BackwardsArrow,
+        ImageComponent
     },
     props: {
         ingedient: {
@@ -36,9 +39,12 @@ export default {
             type: Boolean,
             default: true
         },
-        icon: {
+        image: {
             type: String,
             required: false
+        },
+        imageAlt:{
+            type: String
         },
         difficulty: {
             type: Number,
