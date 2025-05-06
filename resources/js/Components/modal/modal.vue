@@ -60,7 +60,8 @@ export default {
         },
         getIcons() {
             const existedIcons = [];
-            this.icons = this.recipe.diagram
+            if(this.recipe.diagram){
+                this.icons = this.recipe.diagram
                 .flat()  // Makes the diagram in the recipes 1 big array instead of multiple sub arrays
                 .filter(objectCookingDiagram => objectCookingDiagram.image !== undefined)
                 .map(objectCookingDiagram => ({
@@ -74,6 +75,7 @@ export default {
                     existedIcons.push(icon.src);
                     return true;
                 });
+            }
         },
     },
 };

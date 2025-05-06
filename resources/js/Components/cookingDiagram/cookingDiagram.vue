@@ -33,9 +33,11 @@ export default {
 
         recipeDiagram = this.nameOfRecipe.diagram;
 
-        return {
-            diagramData: recipeDiagram,
-        };
+        if(recipeDiagram){
+            return{
+                diagramData: recipeDiagram,
+            }
+        }
     },
     mounted() {
         this.calculateColumns();
