@@ -16,9 +16,10 @@ return new class extends Migration
             $table->string('recipe_name');
             $table->string('description');
             $table->string('image_path');
-            $table->string('recipe_duration');
+            $table->integer('recipe_duration');
             $table->integer('portions');
             $table->string('food_category');
+            $table->string('keywords');
             $table->timestamps();
         });
     }
