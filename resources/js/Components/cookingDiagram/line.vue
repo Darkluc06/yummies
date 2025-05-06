@@ -8,7 +8,7 @@
             <SvgIcon v-if="hasSmallArrow === true" :name="`arrow-long`" />
         </div>
         <figure class="cookingDiagram__bigArrow" v-if="hasBigArrow === true">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20.5" height="39" viewBox="0 0 20.5 39">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="40" viewBox="0 0 20.5 39">
                 <g id="Polygon_7" data-name="Polygon 7" transform="translate(0 39) rotate(-90)" fill="none">
                     <path d="M19.5,0,39,20.5H0Z" stroke="none" />
                     <path

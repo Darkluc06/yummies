@@ -6,38 +6,50 @@
         "recipes": [
             {
                 "id": 1,
-                "name": "Sushi Delight",
+                "name": "Pannenkoek",
                 "urlName": "sushi-delight",
                 "type": "Japans",
-                "image": "./img/sushi.jpg",
+                "image": "./img/pannenkoek.jpg",
                 "time": "25 min",
                 "description": "Heerlijke verse sushi.",
                 "servings": 2,
                 "ingredients": [
                     {
                         "amount": "500",
-                        "unit": "gram",
-                        "name": "rijst"
+                        "unit": "ml",
+                        "name": "water"
                     },
                     {
-                        "amount": "10",
-                        "unit": "plakken",
-                        "name": "zeewier"
+                        "amount": "300",
+                        "unit": "gram",
+                        "name": "tarwebloem"
                     },
                     {
-                        "amount": "200",
+                        "amount": "1",
+                        "unit": "tl",
+                        "name": "zout"
+                    },
+                    {
+                        "amount": "2",
+                        "unit": "middelgrote",
+                        "name": "scharreleieren"
+                    },
+                    {
+                        "amount": "500",
+                        "unit": "ml",
+                        "name": "halfvolle melk"
+                    },
+                    {
+                        "amount": "30",
                         "unit": "gram",
-                        "name": "zalm"
+                        "name": "roomboter"
                     }
                 ],
                 "keywords": [
                     "25 min",
-                    "sushi",
-                    "Japans",
-                    "vis",
-                    "rijst",
-                    "zeewier",
-                    "zalm"
+                    "lunch",
+                    "ontbijt",
+                    "avondeten"
                 ],
                 "diagram": [
                     [
@@ -71,7 +83,7 @@
                             "recipeId": 1,
                             "type": "Ingredient",
                             "is-string": true,
-                            "ingredientIndecis": [0, 1, 2],
+                            "ingredientIndecis": [0],
                             "active": true
                         },
                         {
@@ -124,7 +136,7 @@
                         {
                             "type": "Ingredient",
                             "is-string": true,
-                            "ingredientIndecis": [0, 1, 2],
+                            "ingredientIndecis": [1, 3, 5],
                             "recipeId": 1
                         },
                         {
@@ -180,7 +192,7 @@
                         {
                             "type": "Ingredient",
                             "is-string": true,
-                            "ingedient": "Boter",
+                            "ingredientIndecis": [5],
                             "recipeId": 1
                         },
                         {
@@ -1033,7 +1045,7 @@
                 {
                     "alt": "X of Y Z",
                     "label": "X of Y Z",
-                    "src": "x_of_y_z.png"
+                    "src": "x_of_y_en_z.png"
                 },
                 {
                     "alt": "X of Y",
@@ -1065,12 +1077,12 @@
                 {
                     "alt": "Reepjes snijden X",
                     "label": "Reepjes snijden X",
-                    "src": "reepjes_snijden.png"
+                    "src": "reepjes_snijden_x.png"
                 },
                 {
                     "alt": "Reepjes snijden Y",
                     "label": "Reepjes snijden Y",
-                    "src": "reepjes_snijdenY.png"
+                    "src": "reepjes_snijden.png"
                 },
                 {
                     "alt": "Ringen snijden",
@@ -1140,12 +1152,12 @@
                 {
                     "alt": "Insijden boven",
                     "label": "Insnijden boven",
-                    "src": "insijden_boven.png"
+                    "src": "insnijden_boven.png"
                 },
                 {
                     "alt": "Insijden",
                     "label": "Insnijden",
-                    "src": "insijden.png"
+                    "src": "insnijden.png"
                 },
                 {
                     "alt": "Oven op ven",
@@ -1202,7 +1214,7 @@
                 {
                     "alt": "Bruin",
                     "label": "Bruin",
-                    "src": "Br.png"
+                    "src": "bruin.png"
                 },
                 {
                     "alt": "Wit",
