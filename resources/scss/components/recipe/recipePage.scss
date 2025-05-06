@@ -71,7 +71,7 @@
 
     &__title{
         font-size: 3rem;
-        color: map-get(map-get(colors.$palletTwo, "textColors"), "title");
+        color: black;
     }
 
     &__icons{
@@ -86,7 +86,7 @@
     }
 
     &__icon{
-        
+
         span{
             width: auto;
             height: auto;
@@ -107,12 +107,12 @@
 
     &__subTitle{
         font-size: 2.5rem;
-        color: map-get(map-get(colors.$palletTwo, "textColors"), "title");
+        color: black;
     }
 
     h3{
         font-size: 2rem;
-        color: map-get(map-get(colors.$palletTwo, "textColors"), "title");
+        color: black;
     }
 
     // &__toggle{
