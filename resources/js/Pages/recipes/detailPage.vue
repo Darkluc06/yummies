@@ -14,6 +14,9 @@
                 <h1 class="recipePage__title">{{ this.recipe.name }}</h1>
                 <Link :href="`/`"><SvgIcon :name="`close`" /></Link>
             </div>
+            <p class="recipePage__p">
+                {{ this.recipe["description"] }}
+            </p>
             <ul class="recipePage__icons">
                 <li class="recipePage__icon">
                     <span>
