@@ -47,9 +47,9 @@
                 <h2 class="recipePage__subTitle">Kookdiagram </h2>
                 <button @click="modalOpen" class="recipePage__modalButton">Legenda</button>
             </div>
-            <cookingDiagram :nameOfRecipe="this.recipe.name" />
+            <cookingDiagram :nameOfRecipe="this.recipe" :key="this.recipe" />
         </section>
-        <modal :open="openModal" @close="closeModal" />
+        <modal :open="openModal" :recipe="this.recipe" @close="closeModal" />
     </article>
     <FooterComponent :class="{ hidden: !footerVisible }"></FooterComponent>
 </template>
@@ -79,7 +79,6 @@ export default {
         return{
             openModal: false,
             recipe: null,
-
             isScrollable: false,
             footerVisible: true,
             isScrolling: false,
@@ -97,6 +96,7 @@ export default {
     created()
     {
         let urlParams = new URLSearchParams(window.location.search);
+
         this.recipe = json.home.recipes.find(recipe => recipe.urlName === urlParams.get('name'));
     },
     methods: {
@@ -122,7 +122,6 @@ export default {
         },
         addServingToRecipe() {
             this.recipe.servings++;
-
             this.calculateIngredientAmounts(this.recipe.servings - 1, this.recipe.servings);
         },
         removeServingToRecipe() {
@@ -131,7 +130,6 @@ export default {
                 return;
             }
             this.recipe.servings--;
-
             this.calculateIngredientAmounts(this.recipe.servings + 1, this.recipe.servings);
         },
         calculateIngredientAmounts(oldServings, newServings) {

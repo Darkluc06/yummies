@@ -13,6 +13,7 @@
     transition: transform 0.3s ease-in-out;
     transform: translateY(0);
     background: white;
+    z-index: 999;
 
     .footer_link {
         font-size: 1.5rem;

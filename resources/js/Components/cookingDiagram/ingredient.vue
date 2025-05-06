@@ -3,7 +3,7 @@
         <figure class="cookingDiagram__line cookingDiagram__line--active"></figure>
         <span class="cookingDiagram__ingredient" v-if="isString === true">
             <SvgIcon :name="`arrow-long`" />
-            {{ ingedient }}
+            {{ this.ingredientsString }}
         </span>
         <span class="cookingDiagram__icon" v-if="isString === false">
             <!-- <div class="cookingDiagram__iconWrapper" :class="isCircle ? `circle` : `triangle`">
@@ -23,6 +23,7 @@
 import SvgIcon from '../general/icon/SvgIcon.vue';
 import BackwardsArrow from './backwardsArrow.vue';
 import ImageComponent from '../general/image/imageComponent.vue';
+import json from './../../../assets/json/data.json'
 
 export default {
     components: {
@@ -30,9 +31,19 @@ export default {
         BackwardsArrow,
         ImageComponent
     },
+    data () {
+        return {
+            data : json.home,
+            ingredientsString: "",
+        }
+    },
     props: {
-        ingedient: {
-            type: String,
+        recipeId: {
+            type: Number,
+            required: true
+        },
+        ingredientIndecis: {
+            type: Array,
             required: false
         },
         isString: {
@@ -69,6 +80,32 @@ export default {
         backwardsArrowDirection: {
             type: String,
             default: "left"
+        }
+    },
+    mounted() {
+        this.searchRecipeId()
+    },
+    beforeUpdate()
+    {
+        this.searchRecipeId()
+    },
+    methods: {
+        searchRecipeId() {
+            let recipe = this.data.recipes.find(recipe => this.recipeId === recipe.id);
+            if (this.ingredientIndecis === undefined) return;
+
+            this.ingredientsString = "";
+
+            for (let index = 0; index < this.ingredientIndecis.length; index++) {
+                let ingredientIndex = this.ingredientIndecis[index];
+                let ingredient = recipe.ingredients[ingredientIndex]
+
+                this.ingredientsString += ingredient.amount + " " + ingredient.unit + " " + ingredient.name;
+
+                if (this.ingredientIndecis.length - 1 !== index) {
+                    this.ingredientsString += ", ";
+                }
+            }
         }
     }
 }

@@ -3,16 +3,17 @@
         <section class="modal_modal">
             <header class="modal_header">
                 <h2 class="modal_title">
-                    {{ info['cooking-diagram'].title }}
+                    Legenda
                 </h2>
                 <button class="modal_close" @click="modalClose">
                     <SvgIcon :name="`close`" />
                 </button>
             </header>
-            <summary class="modal_summary">{{ info['cooking-diagram'].summary }}</summary>
+            <summary class="modal_summary">In deze legenda zie je alle symbolen en pijlen die voor dit recept gebruikt
+                worden</summary>
             <ul class="modal_container-icons">
-                <li class="modal_icons" v-for="(iconImg, index) in icons" :key="index" v-if="icons">
-                    <img class="modal_icon" :src="getIconUrl(iconImg.src)" :alt="iconImg.alt" />
+                <li class="modal_icons" v-for="(iconImg, index) in this.icons" :key="index" v-if="icons">
+                    <img class="modal_icon" :src="this.getIconUrl(iconImg.src)" :alt="iconImg.alt" />
                     <span class="modal_icon-label">{{ iconImg.label }}</span>
                 </li>
             </ul>
@@ -32,6 +33,10 @@ export default {
             required: true,
             default: false,
         },
+        recipe: {
+            type: Object,
+            required: true,
+        }
     },
     components: {
         SvgIcon
@@ -39,16 +44,40 @@ export default {
     data() {
         return {
             info: json,
-            icons: json['cooking-diagram']['iconsImgs'],
+            icons: [],
+            recipes: json['home']['recipes'],
         };
+    },
+    mounted() {
+        this.getIcons()
     },
     methods: {
         modalClose() {
             this.$emit('close');
         },
         getIconUrl(filename) {
-            return `/img/${filename}`;
-        }
+            return `${filename}`;
+        },
+        getIcons() {
+            const existedIcons = [];
+            if(this.recipe.diagram){
+                this.icons = this.recipe.diagram
+                .flat()  // Makes the diagram in the recipes 1 big array instead of multiple sub arrays
+                .filter(objectCookingDiagram => objectCookingDiagram.image !== undefined)
+                .map(objectCookingDiagram => ({
+                    src: objectCookingDiagram.image,
+                    alt: objectCookingDiagram.altImage
+                }))
+                .filter(icon => {
+                    if (existedIcons.includes(icon.src)) {
+                        return false;
+                    }
+                    existedIcons.push(icon.src);
+                    return true;
+                });
+            }
+        },
     },
 };
+
 </script>
