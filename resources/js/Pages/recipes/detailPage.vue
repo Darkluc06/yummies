@@ -46,9 +46,12 @@
                         :ingredient="ingredient"
                     />
             </ul>
-            <div class="recipePage__wrapper">
-                <h2 class="recipePage__subTitle">Kookdiagram </h2>
+            <div class="recipePage__wrapper" v-if="this.recipe.diagram">
+                <h2 class="recipePage__subTitle">Kookdiagram</h2>
                 <button @click="modalOpen" class="recipePage__modalButton">Legenda</button>
+            </div>
+            <div class="recipePage__wrapper" v-if="!this.recipe.diagram">
+                <h2 class="recipePage__subTitle">Geen kookdiagram</h2>
             </div>
             <cookingDiagram :nameOfRecipe="this.recipe" :key="this.recipe" />
         </section>

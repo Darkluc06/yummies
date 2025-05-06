@@ -1,3 +1,5 @@
+@use "../../assets/colors";
+
 .cookingDiagram {
     width: 100%;
     height: auto;
@@ -5,6 +7,11 @@
     grid-auto-flow: row;
     grid-template-rows: auto;
     overflow-x: scroll;
+    background: map-get(map-get(colors.$palletTwo, "backgroundColors"), "white");
+    padding: 2rem 1rem;
+    z-index: -1;
+    margin-bottom: 5rem;
+    border-radius: 2rem;
 
     &__row {
         display: grid;
@@ -62,38 +69,38 @@
 
         &--end {
             position: absolute;
-            width: 90%;
+            width: calc(100% - 7px);
             background: transparent;
-            border-left: 0.3rem solid black;
+            border-left: 0.2rem solid black;
             border-radius: 0;
             top: 50%;
             left: 50%;
-            transform: translate(-0.5%, -50%);
-            border-bottom: 0.3rem solid black;
+            transform: translate(-0.43%, -50%);
+            border-bottom: 0.2rem solid black;
 
             .icon {
                 position: absolute;
                 top: 100%;
                 left: 95%;
-                transform: translateY(-44%);
+                transform: translateY(-46%);
             }
         }
     }
 
     &__bigArrow {
         position: absolute;
-        width: 80%;
+        width: calc(100% - 20px);
         height: 2rem;
         border: 0.2rem solid black;
         top: 100%;
         left: 0;
-        transform: translate(-37%, -100%);
+        transform: translate(-46%, -100%);
         display: flex;
         align-items: center;
         z-index: 1;
 
         svg {
-            transform: translateX(-105%);
+            transform: translateX(-110%);
             z-index: 10;
             background: transparent;
         }
@@ -170,8 +177,8 @@
         z-index: -1;
         top: 50%;
         left: 50%;
-        width: 30%;
-        transform: translate(12%, -101%);
+        width: 25%;
+        transform: translate(3%, -101%);
         border-bottom: 0.2rem solid black;
         border-right: 0.2rem solid black;
         border-top: 0.2rem solid black;
@@ -189,7 +196,7 @@
         position: relative;
 
         .icon{
-            transform: translate(-50%, -54%) rotate(180deg);
+            transform: translate(-25%, -54%) rotate(180deg);
         }
     }
 
