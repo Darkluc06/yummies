@@ -1,10 +1,10 @@
 <template>
     <div class="cookingDiagram__column">
         <figure class="cookingDiagram__line cookingDiagram__line--active"></figure>
-        <span class="cookingDiagram__ingredient" v-if="isString === true">
+        <div class="cookingDiagram__ingredient" v-if="isString === true">
             <SvgIcon :name="`arrow-long`" />
-            {{ this.ingredientsString }}
-        </span>
+            <p>{{ this.ingredientsString }}</p>
+        </div>
         <span class="cookingDiagram__icon" v-if="isString === false">
             <!-- <div class="cookingDiagram__iconWrapper" :class="isCircle ? `circle` : `triangle`">
                 <SvgIcon :name="icon" />

@@ -106,13 +106,20 @@
         // top: 50%;
         // transform: translateY(-50%);
         font-size: 1.5rem;
-        text-wrap: wrap;
-        width: 100%;
+        width: 90%;
+        gap: 0.5rem;
+        height: 100%;
+        overflow-y: scroll;
 
         .icon {
             transform: rotate(180deg);
             width: 24px;
             height: 24px;
+        }
+
+        p{
+            width: 100%;
+            text-wrap: wrap;
         }
     }
 
