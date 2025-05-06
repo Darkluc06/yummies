@@ -1033,7 +1033,7 @@
                 {
                     "alt": "X of Y Z",
                     "label": "X of Y Z",
-                    "src": "x_of_y_z.png"
+                    "src": "x_of_y_en_z.png"
                 },
                 {
                     "alt": "X of Y",
@@ -1065,12 +1065,12 @@
                 {
                     "alt": "Reepjes snijden X",
                     "label": "Reepjes snijden X",
-                    "src": "reepjes_snijden.png"
+                    "src": "reepjes_snijden_x.png"
                 },
                 {
                     "alt": "Reepjes snijden Y",
                     "label": "Reepjes snijden Y",
-                    "src": "reepjes_snijdenY.png"
+                    "src": "reepjes_snijden.png"
                 },
                 {
                     "alt": "Ringen snijden",
@@ -1140,12 +1140,12 @@
                 {
                     "alt": "Insijden boven",
                     "label": "Insnijden boven",
-                    "src": "insijden_boven.png"
+                    "src": "insnijden_boven.png"
                 },
                 {
                     "alt": "Insijden",
                     "label": "Insnijden",
-                    "src": "insijden.png"
+                    "src": "insnijden.png"
                 },
                 {
                     "alt": "Oven op ven",
@@ -1202,7 +1202,7 @@
                 {
                     "alt": "Bruin",
                     "label": "Bruin",
-                    "src": "Br.png"
+                    "src": "bruin.png"
                 },
                 {
                     "alt": "Wit",
