@@ -45,11 +45,21 @@
     &__wrapper{
         display: flex;
         justify-content: space-between;
+        align-items: center;
 
         div{
             display: flex;
             gap: 1rem;
         }
+
+        &--header{
+            padding-top: 2rem;
+        }
+    }
+
+    &__close {
+        width: 3.25rem;
+        height: 3.25rem;
     }
 
     &__p{

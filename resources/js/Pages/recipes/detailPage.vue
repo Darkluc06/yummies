@@ -6,7 +6,7 @@
             <figure class="recipe__type">
                 <SvgIcon :name="`burger`" />
             </figure>
-            <div class="recipePage__wrapper">
+            <div class="recipePage__wrapper recipePage__wrapper--header">
                 <div>
                     <h1 class="recipePage__title">{{ this.recipe.name }}</h1>
                     <span class="recipePage__favorite">
@@ -16,7 +16,7 @@
                     </span>
                 </div>
                 <Link :href="`/`">
-                <SvgIcon :name="`close`" />
+                <SvgIcon :name="`close`" :class-name="'recipePage__close'" />
                 </Link>
             </div>
             <p class="recipePage__p">
