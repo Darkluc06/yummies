@@ -100,3 +100,17 @@
             }
         }
     }
+
+@media screen and (max-width: 370px) {
+
+    .nav_container {
+        .nav_ul {
+            .nav_links {
+                .nav_icon {
+                    width: 6rem;
+                    height: 6rem;
+                }
+            }
+        }
+    }
+}

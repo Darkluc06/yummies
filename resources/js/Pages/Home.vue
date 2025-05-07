@@ -6,7 +6,7 @@
                 <label class="yummies_span">
                     <SvgIcon :name="`search`" />
                     <input v-model="searchTerm" @input="generateSuggestions" @keyup.enter="performSearch" type="text"
-                        placeholder="Zoek verschillende kookstijlen" class="yummies_input" ref="searchField"
+                        placeholder="Zoek recepten" class="yummies_input" ref="searchField"
                         id="yummies-input" />
                     <ul v-if="suggestions.length > 0" class="search-suggestions">
                         <li v-for="suggestion in suggestions" :key="suggestion.urlName"
