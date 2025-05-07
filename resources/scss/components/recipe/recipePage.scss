@@ -35,7 +35,7 @@
         transform: translateY(-2rem);
         display: flex;
         flex-direction: column;
-        gap: 2rem;
+        gap: 1rem;
         position: relative;
         padding: 1rem;
         margin-bottom: -2rem;
@@ -50,6 +50,10 @@
             display: flex;
             gap: 1rem;
         }
+    }
+
+    &__p{
+        font-size: 2rem;
     }
 
     &__button{
