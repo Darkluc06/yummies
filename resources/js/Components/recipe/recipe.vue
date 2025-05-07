@@ -57,7 +57,7 @@ export default {
         };
     },
     mounted() {
-        const favoriteKey = 'favoriteRecipes'; 
+        const favoriteKey = 'favoriteRecipes';
         const storedFavorites = localStorage.getItem(favoriteKey);
         this.isFavorite = storedFavorites ? JSON.parse(storedFavorites).includes(this.recipe.urlName) : false;
         this.updateHeartColor();
