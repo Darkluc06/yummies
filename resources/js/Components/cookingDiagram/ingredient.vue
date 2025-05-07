@@ -9,8 +9,11 @@
             <!-- <div class="cookingDiagram__iconWrapper" :class="isCircle ? `circle` : `triangle`">
                 <SvgIcon :name="icon" />
             </div> -->
-            <figure class="cookingDiagram__iconWrapper">
+            <figure class="cookingDiagram__iconWrapper" @click="CompletedStep()">
                 <img :src="image" :alt="imageAlt" class="cookingDiagram__img">
+                <div class="cookingDiagram__completed" :class="finishedStep ? `cookingDiagram__completed--active` : ``">
+                    <SvgIcon :name="`check`" />
+                </div>
             </figure>
             <ul class="cookingDiagram__difficultyWrapper">
                 <li class="cookingDiagram__difficulty" v-for="(difficulty, index) in difficulty"></li>
@@ -35,6 +38,8 @@ export default {
         return {
             data : json.home,
             ingredientsString: "",
+            popupActive: false,
+            finishedStep: false,
         }
     },
     props: {
@@ -106,6 +111,12 @@ export default {
                     this.ingredientsString += ", ";
                 }
             }
+        },
+        OpenPopup(){
+            this.popupActive = !this.popupActive;
+        },
+        CompletedStep(){
+            this.finishedStep = !this.finishedStep;
         }
     }
 }

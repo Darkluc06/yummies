@@ -147,6 +147,7 @@
         width: 6rem;
         height: 6rem;
         z-index: 10;
+        position: relative;
     }
 
     &__img{
@@ -155,7 +156,27 @@
         object-fit: contain;
     }
 
+    &__completed{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 4rem;
+        height: 4rem;
+        border: 0.2rem solid map-get(map-get(colors.$palletTwo, "borderColors"), "second");
+        background: map-get(map-get(colors.$palletTwo, "backgroundColors"), "second");
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 0.2s linear;
 
+        &--active{
+            opacity: 1;
+            transition: opacity 0.2s linear;
+        }
+    }
 
     &__difficultyWrapper {
         display: flex;
