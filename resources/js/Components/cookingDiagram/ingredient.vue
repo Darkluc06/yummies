@@ -1,14 +1,16 @@
 <template>
     <div class="cookingDiagram__column">
         <figure class="cookingDiagram__line cookingDiagram__line--active"></figure>
-        <div class="cookingDiagram__ingredient" v-if="isString === true" @click="OpenPopup()">
-            <SvgIcon :name="`arrow-long`" />
-            <p>{{ this.ingredientsString }}</p>
-            <div class="cookingDiagram__ingredientPopup" :class="popupActive ? `cookingDiagram__ingredientPopup--active` : ``">
+        <div class="cookingDiagram__ingredient" v-if="isString === true">
+            <div class="cookingDiagram__ingredientWrapper" :class="popupActive ? `` : `cookingDiagram__ingredientWrapper--active`" @click="OpenPopup()">
+                <SvgIcon :name="`arrow-long`" />
                 <p>{{ this.ingredientsString }}</p>
+            </div>
+            <div class="cookingDiagram__ingredientPopup" :class="popupActive ? `cookingDiagram__ingredientPopup--active` : ``">
                 <button @click="ClosePopup()">
                     <SvgIcon :name="`close`"/>
                 </button>
+                <p>{{ this.ingredientsString }}</p>
             </div>
         </div>
         <span class="cookingDiagram__icon" v-if="isString === false">

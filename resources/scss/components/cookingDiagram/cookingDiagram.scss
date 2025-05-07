@@ -108,15 +108,10 @@
 
     &__ingredient {
         position: absolute;
-        display: flex;
         left: 50%;
-        // top: 50%;
-        // transform: translateY(-50%);
         font-size: 1.5rem;
         width: 90%;
-        gap: 0.5rem;
         height: 100%;
-        overflow-y: scroll;
 
         .icon {
             transform: rotate(180deg);
@@ -124,9 +119,56 @@
             height: 24px;
         }
 
-        p{
+        p {
             width: 100%;
             text-wrap: wrap;
+        }
+    }
+
+    &__ingredientWrapper {
+        position: absolute;
+        width: 100%;
+        display: flex;
+        gap: .5rem;
+        height: 100%;
+        overflow-y: scroll;
+        z-index: 1;
+        opacity: 0;
+        transition: opacity 0.2s linear;
+
+        &--active{
+            z-index: 2;
+            opacity: 1;
+            transition: opacity 0.2s linear;
+        }
+    }
+
+    &__ingredientPopup {
+        width: 100%;
+        height: max-content;
+        position: absolute;
+        border: 0.2rem solid map-get(map-get(colors.$palletTwo, "borderColors"), "second");
+        background: map-get(map-get(colors.$palletTwo, "backgroundColors"), "second");
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        padding: .5rem;
+        opacity: 0;
+        transition: opacity 0.2s linear;
+        z-index: 0;
+
+        &--active {
+            z-index: 2;
+            opacity: 1;
+            transition: opacity 0.2s linear;
+        }
+
+        p{
+            text-wrap: wrap;
+        }
+
+        button {
+            z-index: 10;
         }
     }
 
@@ -150,13 +192,13 @@
         position: relative;
     }
 
-    &__img{
+    &__img {
         height: 100%;
         width: 100%;
         object-fit: contain;
     }
 
-    &__completed{
+    &__completed {
         position: absolute;
         top: 50%;
         left: 50%;
@@ -172,7 +214,7 @@
         opacity: 0;
         transition: opacity 0.2s linear;
 
-        &--active{
+        &--active {
             opacity: 1;
             transition: opacity 0.2s linear;
         }
@@ -193,7 +235,7 @@
         border-radius: 50%;
     }
 
-    &__backwardsArrow{
+    &__backwardsArrow {
         position: absolute;
         z-index: -1;
         top: 50%;
@@ -211,17 +253,17 @@
         }
     }
 
-    &__arrow{
+    &__arrow {
         width: 100%;
         height: 100%;
         position: relative;
 
-        .icon{
+        .icon {
             transform: translate(-25%, -54%) rotate(180deg);
         }
     }
 
-    &__forloop{
+    &__forloop {
         position: absolute;
         left: 50%;
         top: calc(0% + 1rem);
@@ -232,6 +274,7 @@
                 height: calc(10rem * $i - 5rem);
             }
         }
+
         @for $i from 1 through 10 {
             &.width--#{$i} {
                 width: calc(100% * $i - 5rem);
@@ -239,16 +282,16 @@
         }
     }
 
-    &__forloopIcon{
+    &__forloopIcon {
         width: max-content;
 
-        .cookingDiagram__iconWrapper{
+        .cookingDiagram__iconWrapper {
             position: absolute;
             top: 100%;
             left: 0;
             transform: translate(-50%, -50%);
 
-            .icon{
+            .icon {
                 width: 4rem;
                 height: 4rem;
             }
