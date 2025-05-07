@@ -50,7 +50,7 @@
             <div class="recipePage__wrapper" v-if="!this.recipe.diagram">
                 <h2 class="recipePage__subTitle">Geen kookdiagram</h2>
             </div>
-            <cookingDiagram :nameOfRecipe="this.recipe" :key="this.recipe" />
+            <cookingDiagram :nameOfRecipe="this.recipe" :key="this.recipe" v-if="this.recipe.diagram" />
         </section>
         <modal :open="openModal" :recipe="this.recipe" @close="closeModal" />
     </article>
