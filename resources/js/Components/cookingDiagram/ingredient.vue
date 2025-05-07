@@ -9,7 +9,9 @@
             <!-- <div class="cookingDiagram__iconWrapper" :class="isCircle ? `circle` : `triangle`">
                 <SvgIcon :name="icon" />
             </div> -->
-            <ImageComponent :figure-class="`cookingDiagram__iconWrapper`" :image-class="`cookingDiagram__img`" :image-source="image" :image-alt="imageAlt" />
+            <figure class="cookingDiagram__iconWrapper">
+                <img :src="image" :alt="imageAlt" class="cookingDiagram__img">
+            </figure>
             <ul class="cookingDiagram__difficultyWrapper">
                 <li class="cookingDiagram__difficulty" v-for="(difficulty, index) in difficulty"></li>
             </ul>
@@ -22,14 +24,12 @@
 
 import SvgIcon from '../general/icon/SvgIcon.vue';
 import BackwardsArrow from './backwardsArrow.vue';
-import ImageComponent from '../general/image/imageComponent.vue';
 import json from './../../../assets/json/data.json'
 
 export default {
     components: {
         SvgIcon,
         BackwardsArrow,
-        ImageComponent
     },
     data () {
         return {
