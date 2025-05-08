@@ -28,9 +28,25 @@
                 fill: map-get(map-get(colors.$palletTwo, "textColors"), "title") !important;
             }
         }
+
+        .footer_p {
+            font-size: 1.5rem;
+        }
     }
 
     &.hidden {
         transform: translateY(100%);
+    }
+}
+
+@media screen and (max-width: 370px) {
+    .footer_component {
+
+        .footer_link {
+
+            .footer_p {
+                font-size: 1.3rem;
+            }
+        }
     }
 }

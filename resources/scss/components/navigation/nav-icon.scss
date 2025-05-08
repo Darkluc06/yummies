@@ -59,6 +59,10 @@
             text-align: center;
             gap: 1rem;
 
+            &.active {
+                text-decoration: underline;
+            }
+
             h2{
                 font-size: 1.5rem;
                 color: map-get(map-get(colors.$palletTwo, "textColors"), "subTitle");
@@ -96,3 +100,17 @@
             }
         }
     }
+
+@media screen and (max-width: 370px) {
+
+    .nav_container {
+        .nav_ul {
+            .nav_links {
+                .nav_icon {
+                    width: 6rem;
+                    height: 6rem;
+                }
+            }
+        }
+    }
+}

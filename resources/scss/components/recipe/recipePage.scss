@@ -6,6 +6,7 @@
     display: flex;
     flex-direction: column;
     position: relative;
+    padding-bottom: 6em;
 
     &__link{
         .icon{
@@ -45,11 +46,21 @@
     &__wrapper{
         display: flex;
         justify-content: space-between;
+        align-items: center;
 
         div{
             display: flex;
             gap: 1rem;
         }
+
+        &--header{
+            padding-top: 2rem;
+        }
+    }
+
+    &__close {
+        width: 3.25rem;
+        height: 3.25rem;
     }
 
     &__p{
@@ -76,6 +87,14 @@
     &__title{
         font-size: 3rem;
         color: black;
+    }
+
+    &__favorite {
+        z-index: 999;
+
+        svg {
+            fill: map-get(map-get(colors.$palletTwo, "textColors"), "icon");
+        }
     }
 
     &__icons{
@@ -105,6 +124,7 @@
                 width: 5rem;
                 height: 5rem;
                 fill: map-get(map-get(colors.$palletTwo, "textColors"), "icon");
+
             }
         }
     }

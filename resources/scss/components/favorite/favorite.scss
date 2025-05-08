@@ -1,7 +1,10 @@
+@use "../../assets/colors";
+
 .favorites {
     min-height: 100vh;
     padding: 2rem;
-    padding-bottom: 10rem;
+    padding-bottom: 12rem;
+    background: map-get(map-get(colors.$palletTwo, "backgroundColors"), "main");
 
     .favorites_header {
         .favorites_h1 {

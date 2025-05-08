@@ -48,7 +48,7 @@
         flex-direction: column;
         gap: 0.5rem;
         position: relative;
-        padding: 2rem 1rem;
+        padding: 3rem 1rem;
         margin-bottom: -2rem;
     }
 
@@ -80,7 +80,8 @@
 
     &__title {
         font-size: 2.5rem;
-        color: map-get(map-get(colors.$palletTwo, "textColors"), "title");
+        color: map-get(map-get(colors.$palletTwo, "textColors"), "text");
+        align-items: center;
     }
 
     &__icons {
@@ -102,7 +103,7 @@
         right: 0%;
         padding: .7rem;
         border-radius: 50%;
-        transform: translate(-50%, -220%);
+        transform: translate(-50%, -240%);
         z-index: 999;
 
         .icon {
@@ -116,6 +117,7 @@
         height: 100%;
         align-items: center;
         font-size: 1.5rem;
+        color: map-get(map-get(colors.$palletTwo, "textColors"), "text");
 
         .icon {
             width: 2.5rem;
@@ -126,6 +128,25 @@
 
     &__paragraph {
         font-size: 1.8rem;
-        color: map-get(map-get(colors.$palletTwo, "textColors"), "icon");
+        color: map-get(map-get(colors.$palletTwo, "textColors"), "text");
+    }
+}
+
+@media screen and (max-width: 370px) {
+    .recipe__item {
+
+        .recipe__text {
+
+            .recipe__title {
+                font-size: 2.5rem;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 330px) {
+    .recipe__favorite {
+        transform: translate(-10%, -310%);
     }
 }
