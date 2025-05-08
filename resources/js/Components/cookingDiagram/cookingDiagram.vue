@@ -1,7 +1,6 @@
 <template>
-    <section class="cookingDiagram">
+    <section ref="cookingDiagram" class="cookingDiagram">
         <div v-for="(row, rowIndex) in diagramData" :key="'row-' + rowIndex" class="cookingDiagram__row">
-            <!-- It takes into account to rerender the child element, so the ingredients will know they have to change when you press the + or - button -->
             <component v-for="(item, itemIndex) in row"
                 :key="['item-' + rowIndex + '-' + itemIndex, JSON.stringify(nameOfRecipe.ingredients)]" :is="item.type"
                 v-bind="item">
@@ -36,11 +35,27 @@ export default {
         if(recipeDiagram){
             return{
                 diagramData: recipeDiagram,
+                isDragging: false,
+                startX: 0,
+                scrollLeft: 0,
             }
         }
     },
     mounted() {
         this.calculateColumns();
+        const diagram = this.$refs.cookingDiagram;
+
+        diagram.addEventListener('mousedown', this.startDrag);
+        diagram.addEventListener('mousemove', this.drag);
+        diagram.addEventListener('mouseup', this.endDrag);
+        diagram.addEventListener('mouseleave', this.endDrag);
+    },
+    beforeUnmount() {
+        const diagram = this.$refs.cookingDiagram;
+        diagram.removeEventListener('mousedown', this.startDrag);
+        diagram.removeEventListener('mousemove', this.drag);
+        diagram.removeEventListener('mouseup', this.endDrag);
+        diagram.removeEventListener('mouseleave', this.endDrag);
     },
     methods: {
         calculateColumns() {
@@ -49,6 +64,22 @@ export default {
                 const childCount = rowElements[i].children.length;
                 rowElements[i].classList.add(`columns--${childCount}`);
             }
+        },
+        startDrag(e) {
+            this.isDragging = true;
+            this.startX = e.pageX - this.$refs.cookingDiagram.offsetLeft;
+            this.scrollLeft = this.$refs.cookingDiagram.scrollLeft;
+            this.$refs.cookingDiagram.style.cursor = 'grabbing';
+        },
+        drag(e) {
+            if (!this.isDragging) return;
+            const x = e.pageX - this.$refs.cookingDiagram.offsetLeft;
+            const walk = (x - this.startX) * 1; // Adjust scroll speed if needed
+            this.$refs.cookingDiagram.scrollLeft = this.scrollLeft - walk;
+        },
+        endDrag() {
+            this.isDragging = false;
+            this.$refs.cookingDiagram.style.cursor = 'grab';
         },
     },
 };
