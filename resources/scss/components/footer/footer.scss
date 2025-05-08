@@ -1,0 +1,36 @@
+@use "../../assets/colors";
+
+.footer_component {
+    width: 100%;
+    height: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    padding: 0 2rem;
+    transition: transform 0.3s ease-in-out;
+    transform: translateY(0);
+    background: white;
+    z-index: 999;
+
+    .footer_link {
+        font-size: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        color: map-get(map-get(colors.$palletTwo, "textColors"), "subTitle");
+
+        svg {
+            path {
+                fill: map-get(map-get(colors.$palletTwo, "textColors"), "title") !important;
+            }
+        }
+    }
+
+    &.hidden {
+        transform: translateY(100%);
+    }
+}

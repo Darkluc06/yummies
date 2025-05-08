@@ -6,8 +6,10 @@
 
 html{
     font-size: 62.5%;
+    height: 100%;
 }
 
-.test{
-    background: blue;
+body{
+    max-width: 80rem;
+    margin: 0 auto;
 }
