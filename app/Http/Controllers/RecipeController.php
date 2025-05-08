@@ -17,24 +17,24 @@ class RecipeController extends Controller
         return Inertia::render('cms/Recipes', ['recipes' => $recipes]);
     }
 
-//    public function show(int $id) : Response
-//    {
-//        $recipe = Recipe::findOrFail($id);
-//
-//        return Inertia::render('cms/Recipe', ['recipe' => $recipe]);
-//    }
+    public function show(int $id) : Response
+    {
+        $recipe = Recipe::findOrFail($id);
+
+        return Inertia::render('cms/Recipe', ['recipe' => $recipe]);
+    }
 
     public function create() : Response
     {
         return Inertia::render('cms/CreateRecipe');
     }
 
-//    public function edit(int $id) : Response
-//    {
-//        $recipe = Recipe::findOrFail($id);
-//
-//        return Inertia::render('cms/EditRecipe', ['recipe' => $recipe]);
-//    }
+    public function edit(int $id) : Response
+    {
+        $recipe = Recipe::findOrFail($id);
+
+        return Inertia::render('cms/EditRecipe', ['recipe' => $recipe]);
+    }
 
     public function store(Request $request)
     {
@@ -48,26 +48,29 @@ class RecipeController extends Controller
         try
         {
             $validated = $request->validate([
-                'recipe_name' => 'required',
-                'description' => 'required',
-                'image_path'      => 'required|mimes:jpg,png,gif,avif,jpeg|max:2048',
+                'recipe_name'     => 'required',
+                'description'     => 'required',
+                'image_path'      => 'nullable|mimes:jpg,png,gif,avif,jpeg|max:2048',
                 'recipe_duration' => 'required|numeric',
-                'portions' => 'required|numeric',
-                'food_category' => 'required',
-                'keywords' => 'required',
+                'portions'        => 'required|numeric',
+                'food_category'   => 'required',
+                'keywords'        => 'required',
             ]);
 
             if ($request->hasFile('image_path'))
             {
-                $imagePath               = $request->file('image_path')->store('ingredients', 'public');
+                $imagePath               = $request->file('image_path')->store('recipes', 'public');
                 $validated['image_path'] = $imagePath;
+            }
+            else
+            {
+                $validated['image_path'] = $recipe['image_path'];
             }
 
             $recipe->fill($validated);
             $recipe->save();
 
             return redirect()->route('recipes.index')->with('success', 'Recipe created successfully');
-
         }
         catch (\Illuminate\Validation\ValidationException $e)
         {
@@ -86,6 +89,7 @@ class RecipeController extends Controller
             ], 500);
         }
     }
+
     public function destroy(Recipe $recipe)
     {
         Recipe::findOrFail($recipe->id)->delete();

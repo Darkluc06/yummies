@@ -17,7 +17,7 @@ return new class extends Migration
 				{
 					$table->id();
 					$table->string('ingredient_name');
-					$table->string('image_path');
+					$table->string('image_path')->nullable();
 					$table->timestamps();
 				});
 		}
