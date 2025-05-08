@@ -2,14 +2,27 @@
     <div class="cookingDiagram__column">
         <figure class="cookingDiagram__line cookingDiagram__line--active"></figure>
         <div class="cookingDiagram__ingredient" v-if="isString === true">
-            <SvgIcon :name="`arrow-long`" />
-            <p>{{ this.ingredientsString }}</p>
+            <div class="cookingDiagram__ingredientWrapper" :class="popupActive ? `` : `cookingDiagram__ingredientWrapper--active`" @click="OpenPopup()">
+                <SvgIcon :name="`arrow-long`" />
+                <p>{{ this.ingredientsString }}</p>
+            </div>
+            <div class="cookingDiagram__ingredientPopup" :class="popupActive ? `cookingDiagram__ingredientPopup--active` : ``">
+                <button @click="ClosePopup()">
+                    <SvgIcon :name="`close`"/>
+                </button>
+                <p>{{ this.ingredientsString }}</p>
+            </div>
         </div>
         <span class="cookingDiagram__icon" v-if="isString === false">
             <!-- <div class="cookingDiagram__iconWrapper" :class="isCircle ? `circle` : `triangle`">
                 <SvgIcon :name="icon" />
             </div> -->
-            <ImageComponent :figure-class="`cookingDiagram__iconWrapper`" :image-class="`cookingDiagram__img`" :image-source="image" :image-alt="imageAlt" />
+            <figure class="cookingDiagram__iconWrapper" @click="CompletedStep()">
+                <img :src="image" :alt="imageAlt" class="cookingDiagram__img">
+                <div class="cookingDiagram__completed" :class="finishedStep ? `cookingDiagram__completed--active` : ``">
+                    <SvgIcon :name="`check`" />
+                </div>
+            </figure>
             <ul class="cookingDiagram__difficultyWrapper">
                 <li class="cookingDiagram__difficulty" v-for="(difficulty, index) in difficulty"></li>
             </ul>
@@ -22,19 +35,19 @@
 
 import SvgIcon from '../general/icon/SvgIcon.vue';
 import BackwardsArrow from './backwardsArrow.vue';
-import ImageComponent from '../general/image/imageComponent.vue';
 import json from './../../../assets/json/data.json'
 
 export default {
     components: {
         SvgIcon,
         BackwardsArrow,
-        ImageComponent
     },
     data () {
         return {
             data : json.home,
             ingredientsString: "",
+            popupActive: false,
+            finishedStep: false,
         }
     },
     props: {
@@ -106,6 +119,15 @@ export default {
                     this.ingredientsString += ", ";
                 }
             }
+        },
+        OpenPopup(){
+            this.popupActive = true;
+        },
+        ClosePopup(){
+            this.popupActive = false;
+        },
+        CompletedStep(){
+            this.finishedStep = !this.finishedStep;
         }
     }
 }
