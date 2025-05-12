@@ -22,8 +22,8 @@
         </header>
         <main class="yummies_main">
             <section class="yummies_recipes">
-                <div class="yummies__desktopWrapper">
-                    <label class="yummies_desktopSearch yummies_span">
+                <div class="yummies__desktop--wrapper">
+                    <label class="yummies__desktop--search yummies_span">
                         <SvgIcon :name="`search`" />
                         <input v-model="searchTerm" @input="generateSuggestions" @keyup.enter="performSearch"
                             type="text" placeholder="Zoek recepten" class="yummies_input" ref="searchField"
