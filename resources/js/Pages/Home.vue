@@ -7,8 +7,7 @@
                 <label class="yummies_span">
                     <SvgIcon :name="`search`" />
                     <input v-model="searchTerm" @input="generateSuggestions" @keyup.enter="performSearch" type="text"
-                        placeholder="Zoek recepten" class="yummies_input" ref="searchField"
-                        id="yummies-input" />
+                        placeholder="Zoek recepten" class="yummies_input" ref="searchField" id="yummies-input" />
                     <ul v-if="suggestions.length > 0" class="search-suggestions">
                         <li v-for="suggestion in suggestions" :key="suggestion.urlName"
                             @click="selectSuggestion(suggestion)" class="search-suggestion-item">
@@ -16,13 +15,28 @@
                         </li>
                     </ul>
                 </label>
-                </div>
+            </div>
             <div class="yummies_navigation">
                 <Navigation @categorySelected="setSelectedCategory" />
             </div>
         </header>
         <main class="yummies_main">
             <section class="yummies_recipes">
+                <div class="yummies__desktopWrapper">
+                    <label class="yummies_desktopSearch yummies_span">
+                        <SvgIcon :name="`search`" />
+                        <input v-model="searchTerm" @input="generateSuggestions" @keyup.enter="performSearch"
+                            type="text" placeholder="Zoek recepten" class="yummies_input" ref="searchField"
+                            id="yummies-input" />
+                        <ul v-if="suggestions.length > 0" class="search-suggestions">
+                            <li v-for="suggestion in suggestions" :key="suggestion.urlName"
+                                @click="selectSuggestion(suggestion)" class="search-suggestion-item">
+                                {{ suggestion.name }}
+                            </li>
+                        </ul>
+                    </label>
+                    <Navigation @categorySelected="setSelectedCategory" />
+                </div>
                 <h1 class="yummies_recipes-h1"> {{ data.sectionRecipeH2 }} </h1>
                 <ul class="yummies_recipes-container">
                     <Recipe v-for="recipe in filteredRecipes" :key="recipe.name" :recipe="recipe" />
@@ -147,8 +161,8 @@ export default {
         },
 
         performSearch() {
-        // The filtering is already done in filteredRecipes,
-        // here we only need to hide the suggestions.
+            // The filtering is already done in filteredRecipes,
+            // here we only need to hide the suggestions.
             this.suggestions = [];
         },
 
