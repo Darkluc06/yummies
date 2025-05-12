@@ -23,3 +23,9 @@
         font-size: 1.8rem;
     }
 }
+
+@media screen and (max-width: 62.5rem) {
+    .desktopNav{
+        display: none;
+    }
+}

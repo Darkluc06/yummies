@@ -10,7 +10,7 @@
     overflow-y: scroll;
     background: map-get(map-get(colors.$palletTwo, "backgroundColors"), "main");
 
-    &_span{
+    &_span {
         width: 100%;
         display: flex;
         border: 0.1rem solid map-get(map-get(colors.$palletTwo, "borderColors"), "default");
@@ -23,7 +23,7 @@
         margin: 2rem 0;
         background: map-get(map-get(colors.$palletTwo, "backgroundColors"), "second");
 
-        .icon{
+        .icon {
             width: 3rem;
             height: 3rem;
             fill: map-get(map-get(colors.$palletTwo, "textColors"), "icon");
@@ -49,7 +49,7 @@
         }
     }
 
-    &_input{
+    &_input {
         width: 100%;
         height: 4rem;
         border: none;
@@ -58,12 +58,12 @@
         background: map-get(map-get(colors.$palletTwo, "backgroundColors"), "second");
         border-radius: 0.5rem;
 
-        &::placeholder{
+        &::placeholder {
             color: map-get(map-get(colors.$palletTwo, "textColors"), "title");
         }
     }
 
-    &_header{
+    &_header {
         padding-top: 2rem;
         width: 100%;
         display: none;
@@ -75,13 +75,13 @@
             flex-direction: column;
         }
 
-        &-h1{
+        &-h1 {
             font-size: v.$home-logo;
             animation: .4s ease-out go_up forwards;
             color: map-get(map-get(colors.$palletTwo, "textColors"), "title");
         }
 
-        &-h2{
+        &-h2 {
             font-size: v.$home-h1;
             animation: .5s ease-out go_up forwards;
         }
@@ -97,11 +97,9 @@
         width: 100%;
         height: auto;
         display: flex;
-        flex-direction: column;
-        gap: 2rem;
         margin-bottom: 10rem;
 
-        .yummies_new-recipes{
+        .yummies_new-recipes {
             width: 100%;
             height: auto;
             display: flex;
@@ -121,7 +119,7 @@
                 border-radius: 1rem;
             }
 
-            & > * {
+            &>* {
                 flex: 0 0 auto;
                 width: 25rem;
             }
@@ -160,12 +158,10 @@
                 font-size: 3rem;
             }
 
-            &-container{
+            &-container {
                 display: flex;
-                flex-direction: column;
-                align-items: center;
+                flex-wrap: wrap;
                 gap: 2rem;
-                margin-bottom: 2rem;
                 animation: .65s ease-out go_up forwards;
             }
         }
@@ -177,9 +173,11 @@
         transform: translateY(100%);
         opacity: 1;
     }
+
     75% {
         opacity: .3;
     }
+
     100% {
         transform: translateY(0%);
         opacity: 1;
@@ -189,7 +187,7 @@
 @media screen and (max-width: 370px) {
     .yummies {
         &_header {
-            &-h1{
+            &-h1 {
                 font-size: 3rem;
             }
         }
@@ -202,7 +200,7 @@
 
             .yummies_recipes {
 
-                &-h1{
+                &-h1 {
                     font-size: 2.5rem;
                 }
             }
@@ -213,15 +211,27 @@
 }
 
 @media screen and (max-width: 62.5rem) {
-    .yummies{
+    .yummies {
         padding: 0rem v.$home-padding-sides;
 
-        &_header{
+        &_header {
             display: flex;
+        }
+
+        &_main {
+            flex-direction: column;
+            gap: 2rem;
+        }
+    }
+
+    .yummies_recipes {
+        &-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            animation: .65s ease-out go_up forwards;
         }
     }
 }
-
-
-
-

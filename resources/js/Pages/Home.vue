@@ -22,9 +22,6 @@
             </div>
         </header>
         <main class="yummies_main">
-            <section class="yummies_new-recipes">
-
-            </section>
             <section class="yummies_recipes">
                 <h1 class="yummies_recipes-h1"> {{ data.sectionRecipeH2 }} </h1>
                 <ul class="yummies_recipes-container">
