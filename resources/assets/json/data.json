@@ -83,7 +83,7 @@
                             "recipeId": 1,
                             "type": "Ingredient",
                             "is-string": true,
-                            "ingredientIndecis": [0],
+                            "ingredientIndexes": [0],
                             "active": true
                         },
                         {
@@ -136,7 +136,7 @@
                         {
                             "type": "Ingredient",
                             "is-string": true,
-                            "ingredientIndecis": [1, 3, 5],
+                            "ingredientIndexes": [1, 3, 5],
                             "recipeId": 1
                         },
                         {
@@ -192,7 +192,7 @@
                         {
                             "type": "Ingredient",
                             "is-string": true,
-                            "ingredientIndecis": [5],
+                            "ingredientIndexes": [5],
                             "recipeId": 1
                         },
                         {
