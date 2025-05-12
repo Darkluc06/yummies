@@ -438,9 +438,8 @@
                         {
                             "type": "Ingredient",
                             "is-string": false,
-                            "image": "./img/opwarmen.png",
-                            "imageAlt": "test",
-                            "difficulty": 0,
+                            "image": "../img/opwarmen.webp",
+                            "imageAlt": "Opwarmen",
                             "recipeId": 1
                         },
                         {
@@ -451,12 +450,12 @@
                     [
                         {
                             "type": "Ingredient",
-                            "is-string": false,
-                            "image": "../img/actie_x.webp",
-                            "imageAlt": "test",
+                            "has-ingredient-arrow": true,
+                            "image": "../img/blokjes_snijden.webp",
+                            "imageAlt": "Opwarmen",
+                            "recipeId": 2,
                             "difficulty": 4,
-                            "ingredientIndecis": [1],
-                            "recipeId": 2
+                            "ingredientIndecis": [1]
                         },
                         {
                             "type": "Line",
@@ -466,27 +465,12 @@
                     [
                         {
                             "type": "Ingredient",
-                            "is-string": true,
-                            "ingedient": "500g Meel, 1l melk, 2 eieren"
-                        },
-                        {
-                            "type": "Line",
-                            "active": false
-                        },
-                        {
-                            "type": "Line",
-                            "active": true
-                        }
-                    ],
-                    [
-                        {
-                            "type": "Ingredient",
-                            "is-string": false,
-                            "image": "../img/actie_x.webp",
-                            "imageAlt": "test",
+                            "has-ingredient-arrow": true,
+                            "image": "../img/blokjes_snijden.webp",
+                            "imageAlt": "Opwarmen",
+                            "recipeId": 2,
                             "difficulty": 2,
-                            "ingredientIndecis": [2],
-                            "recipeId": 2
+                            "ingredientIndecis": [2]
                         },
                         {
                             "type": "Line",
@@ -496,12 +480,12 @@
                     [
                         {
                             "type": "Ingredient",
-                            "is-string": false,
-                            "image": "../img/actie_x.webp",
-                            "imageAlt": "test",
+                            "has-ingredient-arrow": true,
+                            "image": "../img/reepjes_snijden.webp",
+                            "imageAlt": "Opwarmen",
+                            "recipeId": 2,
                             "difficulty": 3,
-                            "ingredientIndecis": [3],
-                            "recipeId": 2
+                            "ingredientIndecis": [3]
                         },
                         {
                             "type": "Line",
@@ -511,171 +495,16 @@
                     [
                         {
                             "type": "Ingredient",
-                            "is-string": true,
-                            "ingedient": "Boter"
-                        },
-                        {
-                            "type": "Line",
-                            "active": true
-                        }
-                    ],
-                    [
-                        {
-                            "type": "Line",
-                            "active": true,
-                            "end": true
-                        },
-                        {
-                            "type": "Line",
-                            "active": true
-                        },
-                        {
-                            "type": "Line",
-                            "active": true
-                        }
-                    ],
-                    [
-                        {
-                            "type": "Forloop",
-                            "width": "2",
-                            "steps": "8"
-                        },
-                        {
-                            "type": "Ingredient",
-                            "is-string": false,
-                            "image": "../img/actie_x.webp",
-                            "imageAlt": "test",
+                            "has-ingredient-arrow": true,
+                            "image": "../img/blokjes_snijden.webp",
+                            "imageAlt": "Opwarmen",
+                            "recipeId": 2,
                             "difficulty": 5,
-                            "ingredientIndecis": [4],
-                            "recipeId": 2
+                            "ingredientIndecis": [4]
                         },
                         {
                             "type": "Line",
-                            "active": true
-                        }
-                    ],
-                    [
-                        {
-                            "type": "Emty"
-                        },
-                        {
-                            "type": "Ingredient",
-                            "is-string": false,
-                            "image": "../img/actie_x.webp",
-                            "imageAlt": "test",
-                            "difficulty": 5
-                        },
-                        {
-                            "type": "Line",
-                            "active": true
-                        }
-                    ],
-                    [
-                        {
-                            "type": "Emty"
-                        },
-                        {
-                            "type": "Ingredient",
-                            "is-string": false,
-                            "image": "../img/actie_x.webp",
-                            "imageAlt": "test",
-                            "difficulty": 0
-                        },
-                        {
-                            "type": "Line",
-                            "active": true
-                        }
-                    ],
-                    [
-                        {
-                            "type": "Emty"
-                        },
-                        {
-                            "type": "Ingredient",
-                            "is-string": false,
-                            "image": "../img/actie_x.webp",
-                            "imageAlt": "test",
-                            "difficulty": 0
-                        },
-                        {
-                            "type": "Line",
-                            "active": true
-                        }
-                    ],
-                    [
-                        {
-                            "type": "Emty"
-                        },
-                        {
-                            "type": "Ingredient",
-                            "is-string": false,
-                            "image": "../img/actie_x.webp",
-                            "imageAlt": "test",
-                            "difficulty": 0
-                        },
-                        {
-                            "type": "Line",
-                            "active": true
-                        }
-                    ],
-                    [
-                        {
-                            "type": "Emty"
-                        },
-                        {
-                            "type": "Ingredient",
-                            "is-string": false,
-                            "image": "../img/actie_x.webp",
-                            "imageAlt": "test",
-                            "difficulty": 0
-                        },
-                        {
-                            "type": "Line",
-                            "active": true
-                        }
-                    ],
-                    [
-                        {
-                            "type": "Emty"
-                        },
-                        {
-                            "type": "Ingredient",
-                            "is-string": false,
-                            "image": "../img/actie_x.webp",
-                            "imageAlt": "test",
-                            "difficulty": 0,
-                            "has-backwards-arrow": true,
-                            "steps": "4"
-                        },
-                        {
-                            "type": "Line",
-                            "active": true
-                        }
-                    ],
-                    [
-                        {
-                            "type": "Emty"
-                        },
-                        {
-                            "type": "Line",
-                            "active": true,
-                            "end": true
-                        },
-                        {
-                            "type": "Line",
-                            "active": true
-                        }
-                    ],
-                    [
-                        {
-                            "type": "Emty"
-                        },
-                        {
-                            "type": "Emty"
-                        },
-                        {
-                            "type": "Line",
-                            "active": true
+                            "Active": true
                         }
                     ]
                 ]
