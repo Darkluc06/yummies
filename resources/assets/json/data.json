@@ -382,14 +382,24 @@
                         "name": "Olie"
                     },
                     {
-                        "amount": "100",
+                        "amount": "250",
                         "unit": "gram",
-                        "name": "carbonara"
+                        "name": "Ui"
                     },
                     {
-                        "amount": "1",
-                        "unit": "liter",
-                        "name": "melk"
+                        "amount": "250",
+                        "unit": "gram",
+                        "name": "Aardappels"
+                    },
+                    {
+                        "amount": "250",
+                        "unit": "gram",
+                        "name": "Bleekschilderij"
+                    },
+                    {
+                        "amount": "4",
+                        "unit": "",
+                        "name": "Peppers"
                     }
                 ],
                 "keywords": [
@@ -406,6 +416,10 @@
                         {
                             "type": "Tools",
                             "tool": "pot"
+                        },
+                        {
+                            "type": "Tools",
+                            "tool": "pot"
                         }
                     ],
                     [
@@ -414,6 +428,10 @@
                             "is-string": true,
                             "ingredientIndecis": [0],
                             "recipeId": 2
+                        },
+                        {
+                            "type": "Line",
+                            "Active": true
                         }
                     ],
                     [
@@ -424,17 +442,70 @@
                             "imageAlt": "test",
                             "difficulty": 0,
                             "recipeId": 1
+                        },
+                        {
+                            "type": "Line",
+                            "Active": true
                         }
                     ],
                     [
                         {
                             "type": "Ingredient",
                             "has-ingredient-arrow": true,
-                            "image": "./img/opwarmen.png",
+                            "image": "./img/blokjes_snijden.png",
                             "imageAlt": "test",
                             "difficulty": 4,
-                            "ingredientIndecis": [0],
+                            "ingredientIndecis": [1],
                             "recipeId": 2
+                        },
+                        {
+                            "type": "Line",
+                            "Active": true
+                        }
+                    ],
+                    [
+                        {
+                            "type": "Ingredient",
+                            "has-ingredient-arrow": true,
+                            "image": "./img/blokjes_snijden.png",
+                            "imageAlt": "test",
+                            "difficulty": 2,
+                            "ingredientIndecis": [2],
+                            "recipeId": 2
+                        },
+                        {
+                            "type": "Line",
+                            "Active": true
+                        }
+                    ],
+                    [
+                        {
+                            "type": "Ingredient",
+                            "has-ingredient-arrow": true,
+                            "image": "./img/reepjes_snijden.png",
+                            "imageAlt": "test",
+                            "difficulty": 3,
+                            "ingredientIndecis": [3],
+                            "recipeId": 2
+                        },
+                        {
+                            "type": "Line",
+                            "Active": true
+                        }
+                    ],
+                    [
+                        {
+                            "type": "Ingredient",
+                            "has-ingredient-arrow": true,
+                            "image": "./img/blokjes_snijden.png",
+                            "imageAlt": "test",
+                            "difficulty": 5,
+                            "ingredientIndecis": [4],
+                            "recipeId": 2
+                        },
+                        {
+                            "type": "Line",
+                            "Active": true
                         }
                     ]
                 ]

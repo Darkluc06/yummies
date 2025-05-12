@@ -7,8 +7,10 @@
         <figure class="cookingDiagram__specialArrow--imgWrapper">
             <img :src="image" :alt="imageAlt" class="cookingDiagram__specialArrow--img">
         </figure>
-        <div class="cookingDiagram__specialArrow--line"></div>
-        <p class="cookingDiagram__specialArrow--ingredient">{{ ingredient }}</p>
+        <div class="cookingDiagram__specialArrow--wrapper">
+            <!-- <figure class="cookingDiagram__specialArrow--line"></figure> -->
+            <p class="cookingDiagram__specialArrow--ingredient">{{ ingredient }}</p>
+        </div>
     </figure>
 </template>
 
