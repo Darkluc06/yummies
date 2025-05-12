@@ -98,6 +98,7 @@
         height: auto;
         display: flex;
         margin-bottom: 10rem;
+        padding: 2rem;
 
         .yummies_new-recipes {
             width: 100%;
@@ -149,6 +150,8 @@
         .yummies_recipes {
             display: flex;
             flex-direction: column;
+            max-width: 1600px;
+            margin: 0 auto;
 
             &-h1 {
                 font-size: v.$home-h1;
@@ -163,6 +166,7 @@
                 flex-wrap: wrap;
                 gap: 2rem;
                 animation: .65s ease-out go_up forwards;
+                justify-content: space-around;
             }
         }
     }
