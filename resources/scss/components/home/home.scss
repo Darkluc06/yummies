@@ -6,7 +6,6 @@
     position: relative;
     width: 100%;
     min-height: 100vh;
-    padding: 0rem v.$home-padding-sides;
     overflow-x: hidden;
     overflow-y: scroll;
     background: map-get(map-get(colors.$palletTwo, "backgroundColors"), "main");
@@ -67,7 +66,7 @@
     &_header{
         padding-top: 2rem;
         width: 100%;
-        display: flex;
+        display: none;
         flex-direction: column;
 
         &-content {
@@ -210,6 +209,16 @@
         }
 
 
+    }
+}
+
+@media screen and (max-width: 62.5rem) {
+    .yummies{
+        padding: 0rem v.$home-padding-sides;
+
+        &_header{
+            display: flex;
+        }
     }
 }
 
