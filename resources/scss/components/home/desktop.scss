@@ -12,7 +12,17 @@
         }
 
         &--search {
-            width: 50%;  
+            width: 50%;
+        }
+    }
+}
+
+@media screen and (max-width: 62.5rem) {
+    .yummies {
+        &__desktop {
+            &--wrapper {
+                display: none;
+            }
         }
     }
 }

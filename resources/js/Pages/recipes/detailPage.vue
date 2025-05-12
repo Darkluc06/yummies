@@ -1,4 +1,5 @@
 <template>
+    <DesktopNavigation :title="'Kook Diagram'" />
     <article class="recipePage">
         <imageComponent :figureClass="`recipePage__figure`" :imageClass="`recipePage__img`" :imageSource="recipe.image"
             :imageAlt="`test`" />
@@ -77,6 +78,7 @@ import modal from '@/Components/modal/modal.vue';
 import cookingDiagram from '@/Components/cookingDiagram/cookingDiagram.vue';
 import json from './../../../assets/json/data.json';
 import FooterComponent from "../../Components/footer/footer.vue"
+import DesktopNavigation from '@/Components/navigation/desktopNavigation.vue';
 
 export default {
     components: {
@@ -87,7 +89,8 @@ export default {
         ingredients,
         modal,
         cookingDiagram,
-        FooterComponent
+        FooterComponent,
+        DesktopNavigation
     },
     data() {
         return {
