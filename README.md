@@ -1,27 +1,29 @@
-# Kookdiagrammen
+# kook-diagram
 
-## setup
+This template should help get you started developing with Vue 3 in Vite.
 
-### Prerequisites
+## Recommended IDE Setup
 
-1. install php-PDO (for windows and linux)
+[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
 
-### order of commands/actions
+## Customize configuration
 
-1. npm install (Installs node packackes)
-2. composer require laravel/breeze --dev (Installs vendor files to run the backend)
-3. php artisan breeze:install (installs "scaffolding" for the project. the following options need to be made)
-    * vue.js with inertia
-    * inertia-ssr / typescript
-    * PHPUnit
-4. php artisan key:generate (This generates a personal application key in the .env)
-5. restore following files = routes/web.php - app.ts  (these files get changed while performing previous commands.
-(the following three commands run simultaneously to mantain the project in development)
-6. php artisan serve (runs the PHP)
-7. php artisan inertia:start-ssr (Runs Inertia which is the routing between the front and back end
-8. npm run dev (runs the node packakges in the dev environment)
+See [Vite Configuration Reference](https://vite.dev/config/).
 
-## notes
+## Project Setup
 
-npm run build = local environment no live changes
-resources/assets contains the json files
+```sh
+npm install
+```
+
+### Compile and Hot-Reload for Development
+
+```sh
+npm run dev
+```
+
+### Compile and Minify for Production
+
+```sh
+npm run build
+```

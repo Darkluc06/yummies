@@ -1,0 +1,32 @@
+@use "../../assets/colors";
+
+.desktopNav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    background: map-get(map-get(colors.$palletTwo, "backgroundColors"), "second");
+
+    &__title{
+        font-size: 4rem;
+        color: map-get(map-get(colors.$palletTwo, "textColors"), "title");
+    }
+
+    &__list{
+        list-style: none;
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    &__link{
+        font-size: 1.8rem;
+        color: map-get(map-get(colors.$palletTwo, "textColors"), "text");
+    }
+}
+
+@media screen and (max-width: 62.5rem) {
+    .desktopNav{
+        display: none;
+    }
+}
