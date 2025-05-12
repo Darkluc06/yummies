@@ -1,5 +1,6 @@
 <template>
     <article class="yummies">
+        <DesktopNavigation :title="data.title" />
         <header class="yummies_header">
             <div class="yummies_header-content">
                 <h1 class="yummies_header-h1"> {{ data.title }} </h1>
@@ -21,9 +22,6 @@
             </div>
         </header>
         <main class="yummies_main">
-            <section class="yummies_new-recipes">
-
-            </section>
             <section class="yummies_recipes">
                 <h1 class="yummies_recipes-h1"> {{ data.sectionRecipeH2 }} </h1>
                 <ul class="yummies_recipes-container">
@@ -43,6 +41,7 @@ import Recipe from '@/Components/recipe/recipe.vue';
 import FooterComponent from './../Components/footer/footer.vue'
 import json from './../../assets/json/data.json'
 import SvgIcon from '@/Components/general/icon/SvgIcon.vue';
+import DesktopNavigation from '@/Components/navigation/desktopNavigation.vue';
 
 export default {
     components: {
@@ -51,7 +50,8 @@ export default {
         Recipe,
         Legenda,
         FooterComponent,
-        SvgIcon
+        SvgIcon,
+        DesktopNavigation
     },
     data() {
         return {
