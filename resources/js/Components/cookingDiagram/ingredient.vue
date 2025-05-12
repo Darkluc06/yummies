@@ -28,6 +28,7 @@
             </ul>
         </span>
         <BackwardsArrow :steps="steps" :direction="backwardsArrowDirection" v-if="hasBackwardsArrow === true"/>
+        <Arrow v-if="hasIngredientArrow === true" :image="image" :image-alt="imageAlt" :difficulty="difficulty" :ingredient="ingredientsString" />
     </div>
 </template>
 
@@ -36,11 +37,13 @@
 import SvgIcon from '../general/icon/SvgIcon.vue';
 import BackwardsArrow from './backwardsArrow.vue';
 import json from './../../../assets/json/data.json'
+import Arrow from './arrow.vue';
 
 export default {
     components: {
         SvgIcon,
         BackwardsArrow,
+        Arrow
     },
     data () {
         return {
@@ -93,6 +96,10 @@ export default {
         backwardsArrowDirection: {
             type: String,
             default: "left"
+        },
+        hasIngredientArrow:{
+            type: Boolean,
+            default: false
         }
     },
     mounted() {
