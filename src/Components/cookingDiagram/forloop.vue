@@ -5,7 +5,7 @@
                 <!-- <div class="cookingDiagram__iconWrapper triangle">
                     <SvgIcon :name="name" />
                 </div> -->
-                <ImageComponent :figure-class="`cookingDiagram__iconWrapper`" :image-class="`cookingDiagram__img`" :image-source="`../img/actie_x.png`" :image-alt="`test`" />
+                <ImageComponent :figure-class="`cookingDiagram__iconWrapper`" :image-class="`cookingDiagram__img`" :image-source="`../img/actie_x.webp`" :image-alt="`test`" />
             </span>
         </figure>
     </div>
