@@ -1,7 +1,7 @@
 <template>
     <article class="yummies">
+        <DesktopNavigation :title="data.title" />
         <header class="yummies_header">
-            <DesktopNavigation :title="data.title" />
             <div class="yummies_header-content">
                 <h1 class="yummies_header-h1"> {{ data.title }} </h1>
                 <label class="yummies_span">
