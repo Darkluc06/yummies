@@ -1,15 +1,16 @@
 @use "../../assets/colors";
+@use "sass:map";
 
 .desktopNav{
     width: 100%;
     display: flex;
     justify-content: space-between;
     padding: 2rem;
-    background: map-get(map-get(colors.$palletTwo, "backgroundColors"), "second");
+    background: map.get(map.get(colors.$palletTwo, "backgroundColors"), "second");
 
     &__title{
         font-size: 4rem;
-        color: map-get(map-get(colors.$palletTwo, "textColors"), "title");
+        color: map.get(map.get(colors.$palletTwo, "textColors"), "title");
     }
 
     &__list{
@@ -21,11 +22,11 @@
 
     &__link{
         font-size: 1.8rem;
-        color: map-get(map-get(colors.$palletTwo, "textColors"), "text");
+        color: map.get(map.get(colors.$palletTwo, "textColors"), "text");
         padding: 0.5rem 0;
 
         &--active{
-            border-bottom: .2rem solid map-get(map-get(colors.$palletTwo, "borderColors"), "second");
+            border-bottom: .2rem solid map.get(map.get(colors.$palletTwo, "borderColors"), "second");
         }
     }
 }
