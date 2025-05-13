@@ -58,7 +58,7 @@ export default {
             type: Number,
             required: true
         },
-        ingredientIndecis: {
+        ingredientIndexes: {
             type: Array,
             required: false
         },
@@ -112,17 +112,17 @@ export default {
     methods: {
         searchRecipeId() {
             let recipe = this.data.recipes.find(recipe => this.recipeId === recipe.id);
-            if (this.ingredientIndecis === undefined) return;
+            if (this.ingredientIndexes === undefined) return;
 
             this.ingredientsString = "";
 
-            for (let index = 0; index < this.ingredientIndecis.length; index++) {
-                let ingredientIndex = this.ingredientIndecis[index];
+            for (let index = 0; index < this.ingredientIndexes.length; index++) {
+                let ingredientIndex = this.ingredientIndexes[index];
                 let ingredient = recipe.ingredients[ingredientIndex]
 
                 this.ingredientsString += ingredient.amount + " " + ingredient.unit + " " + ingredient.name;
 
-                if (this.ingredientIndecis.length - 1 !== index) {
+                if (this.ingredientIndexes.length - 1 !== index) {
                     this.ingredientsString += ", ";
                 }
             }

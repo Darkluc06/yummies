@@ -25,9 +25,8 @@
             <section class="instruction_legenda-top">
                 <header class="instruction_legenda-header">
                     <h1 class="instruction_legenda-h1"> {{ instruction.legenda.title }} </h1>
-                    <Link class="instruction_legenda-close" :href="`/`">
+                    <Link class="instruction_legenda-close" :href="`/`" />
                     <SvgIcon :name="`close`" />
-                    </Link>
                 </header>
                 <div class="instruction__buttonWrapper">
                     <button class="instruction_legenda-button" @click="goToDocumentation"> {{
@@ -37,7 +36,7 @@
                 </div>
             </section>
             <section class="instruction_legenda-mid">
-                <summary class="instruction_legenda-summary"> {{ instruction.legenda.summary }} </summary>
+                <p class="instruction_legenda-summary"> {{ instruction.legenda.summary }} </p>
                 <div class="instruction_containers">
                     <ul class="instruction_container-icons icons-condition">
                         <li class="instruction_icons" v-for="(iconImg, index) in iconsCondition" :key="index"
@@ -66,20 +65,23 @@
                             <span class="instruction_icon-label">{{ iconImg.label }}</span>
                         </li>
                     </ul>
+                  <p class="intensity-explanation">Intensiteit kan worden aangegeven op cond en acties van 0 naar
+                    5.
+                    Waar 5 het intens is en 0 niet gedefinieerd
+                  </p>
                     <ul class="instruction_container-icons icons-intensity">
-                        <p class="intensity-explanation">Intensiteit kan worden aangegeven op cond en acties van 0 naar
-                            5.
-                            Waar 5 het intens is en 0 niet gedefinieerd</p>
+
                         <li class="instruction_icons" v-for="(iconImg, index) in iconsIntensity" :key="index"
                             v-if="iconsIntensity">
                             <img class="instruction_icon" :src="getImgUrl(iconImg.src)" :alt="iconImg.alt" />
                             <span class="instruction_icon-label">{{ iconImg.label }}</span>
                         </li>
                     </ul>
+                  <p class="arrows-explanation">Een pijl, geeft aan dat alle elementen van de voorgaande moeten
+                    worden
+                    verplaats naar een ander instrumen</p>
                     <ul class="instruction_container-icons icons-arrows">
-                        <p class="arrows-explanation">Een pijl, geeft aan dat alle elementen van de voorgaande moeten
-                            worden
-                            verplaats naar een ander instrumen</p>
+
                         <li class="instruction_icons" v-for="(iconImg, index) in iconsArrows" :key="index"
                             v-if="iconsArrows">
                             <img class="instruction_icon" :src="getImgUrl(iconImg.src)" :alt="iconImg.alt" />
@@ -149,8 +151,8 @@
 <script>
 import SvgIcon from '@/Components/general/icon/SvgIcon.vue';
 import { RouterLink } from 'vue-router';
-import json from '../../assets/json/data.json';
-import FooterComponent from '../../Components/footer/footerComponent.vue';
+import json from '/src/assets/json/data.json';
+import FooterComponent from '/src/Components/footer/footerComponent.vue';
 
 export default {
     components: {

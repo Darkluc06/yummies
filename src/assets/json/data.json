@@ -9,7 +9,7 @@
                 "name": "Pannenkoek",
                 "urlName": "sushi-delight",
                 "type": "Japans",
-                "image": "../img/pannenkoek.webp",
+                "image": "/img/pannenkoek.webp",
                 "time": "25 min",
                 "description": "Heerlijke verse sushi.",
                 "servings": 2,
@@ -83,7 +83,7 @@
                             "recipeId": 1,
                             "type": "Ingredient",
                             "is-string": true,
-                            "ingredientIndecis": [0],
+                            "ingredientIndexes": [0],
                             "active": true
                         },
                         {
@@ -103,7 +103,7 @@
                         {
                             "type": "Ingredient",
                             "is-string": false,
-                            "image": "../img/actie_x.webp",
+                            "image": "/img/actie_x.webp",
                             "imageAlt": "test",
                             "difficulty": 1,
                             "recipeId": 1
@@ -136,7 +136,7 @@
                         {
                             "type": "Ingredient",
                             "is-string": true,
-                            "ingredientIndecis": [1, 3, 5],
+                            "ingredientIndexes": [1, 3, 5],
                             "recipeId": 1
                         },
                         {
@@ -152,7 +152,7 @@
                         {
                             "type": "Ingredient",
                             "is-string": false,
-                            "image": "../img/actie_y.webp",
+                            "image": "/img/actie_y.webp",
                             "imageAlt": "test",
                             "difficulty": 5,
                             "recipeId": 1
@@ -174,7 +174,7 @@
                         {
                             "type": "Ingredient",
                             "is-string": false,
-                            "image": "../img/actie_x.webp",
+                            "image": "/img/actie_x.webp",
                             "imageAlt": "test",
                             "difficulty": 3,
                             "recipeId": 1
@@ -192,7 +192,7 @@
                         {
                             "type": "Ingredient",
                             "is-string": true,
-                            "ingredientIndecis": [5],
+                            "ingredientIndexes": [5],
                             "recipeId": 1
                         },
                         {
@@ -224,7 +224,7 @@
                         {
                             "type": "Ingredient",
                             "is-string": false,
-                            "image": "../img/actie_x.webp",
+                            "image": "/img/actie_x.webp",
                             "imageAlt": "test",
                             "difficulty": 0,
                             "recipeId": 1
@@ -241,7 +241,7 @@
                         {
                             "type": "Ingredient",
                             "is-string": false,
-                            "image": "../img/actie_x.webp",
+                            "image": "/img/actie_x.webp",
                             "imageAlt": "test",
                             "difficulty": 5,
                             "recipeId": 1
@@ -258,7 +258,7 @@
                         {
                             "type": "Ingredient",
                             "is-string": false,
-                            "image": "../img/actie_x.webp",
+                            "image": "/img/actie_x.webp",
                             "imageAlt": "test",
                             "difficulty": 0,
                             "recipeId": 1
@@ -275,7 +275,7 @@
                         {
                             "type": "Ingredient",
                             "is-string": false,
-                            "image": "../img/actie_x.webp",
+                            "image": "/img/actie_x.webp",
                             "imageAlt": "test",
                             "difficulty": 0,
                             "recipeId": 1
@@ -292,7 +292,7 @@
                         {
                             "type": "Ingredient",
                             "is-string": false,
-                            "image": "../img/actie_x.webp",
+                            "image": "/img/actie_x.webp",
                             "imageAlt": "test",
                             "difficulty": 0,
                             "recipeId": 1
@@ -309,7 +309,7 @@
                         {
                             "type": "Ingredient",
                             "is-string": false,
-                            "image": "../img/actie_x.webp",
+                            "image": "/img/actie_x.webp",
                             "imageAlt": "test",
                             "difficulty": 0,
                             "recipeId": 1
@@ -326,7 +326,7 @@
                         {
                             "type": "Ingredient",
                             "is-string": false,
-                            "image": "../img/actie_x.webp",
+                            "image": "/img/actie_x.webp",
                             "imageAlt": "test",
                             "difficulty": 0,
                             "has-backwards-arrow": true,
@@ -371,7 +371,7 @@
                 "name": "Spaghetti Carbonara",
                 "urlName": "spaghetti-carbonara",
                 "type": "Italiaans",
-                "image": "../img/spaghetti.webp",
+                "image": "/img/spaghetti.webp",
                 "time": "20 min",
                 "description": "Klassieke romige carbonara.",
                 "servings": 3,
@@ -420,9 +420,131 @@
                         {
                             "type": "Tools",
                             "tool": "pot"
+                        },
+                        {
+                            "type": "Tools",
+                            "tool": "pot"
+                        },
+                        {
+                            "type": "Tools",
+                            "tool": "pot"
                         }
                     ],
                     [
+                        {
+                            "type": "Line",
+                            "active": false
+                        },
+                        {
+                            "type": "Line",
+                            "active": false
+                        },
+                        {
+                            "type": "Ingredient",
+                            "is-string": true,
+                            "ingedient": "2L water",
+                            "active": true,
+                            "recipeId": 1
+                        },
+                        {
+                            "type": "Line",
+                            "active": false
+                        }
+                    ],
+                    [
+                        {
+                            "type": "Line",
+                            "active": false
+                        },
+                        {
+                            "type": "Line",
+                            "active": false
+                        },
+                        {
+                            "type": "Ingredient",
+                            "is-string": false,
+                            "image": "/img/actie_x.webp",
+                            "imageAlt": "test",
+                            "difficulty": 1
+                        },
+                        {
+                            "type": "Line",
+                            "active": false
+                        }
+                    ],
+                    [
+                        {
+                            "type": "Line",
+                            "active": false
+                        },
+                        {
+                            "type": "Line",
+                            "active": false
+                        },
+                        {
+                            "type": "Line",
+                            "active": true
+                        },
+                        {
+                            "type": "Line",
+                            "active": true,
+                            "has-big-arrow": true
+                        }
+                    ],
+                    [
+                        {
+                            "type": "Ingredient",
+                            "is-string": true,
+                            "ingedient": "500g Meel, 1l melk, 2 eieren"
+                        },
+                        {
+                            "type": "Line",
+                            "active": false
+                        },
+                        {
+                            "type": "Line",
+                            "active": true
+                        }
+                    ],
+                    [
+                        {
+                            "type": "Ingredient",
+                            "is-string": false,
+                            "image": "/img/actie_x.webp",
+                            "imageAlt": "test",
+                            "difficulty": 5
+                        },
+                        {
+                            "type": "Line",
+                            "active": false
+                        },
+                        {
+                            "type": "Line",
+                            "active": true
+                        }
+                    ],
+                    [
+                        {
+                            "type": "Line",
+                            "active": true
+                        },
+                        {
+                            "type": "Ingredient",
+                            "is-string": false,
+                            "image": "/img/actie_x.webp",
+                            "imageAlt": "test",
+                            "difficulty": 3
+                        },
+                        {
+                            "type": "Line",
+                            "active": true
+                        }
+                    ],
+                    [
+                        {
+                            "type": "Line",
+                            "active": true
+                        },
                         {
                             "type": "Ingredient",
                             "is-string": true,
@@ -438,9 +560,9 @@
                         {
                             "type": "Ingredient",
                             "is-string": false,
-                            "image": "../img/opwarmen.webp",
+                            "image": "/img/opwarmen.webp",
                             "imageAlt": "Opwarmen",
-                            "recipeId": 1
+                            "recipeId": 1,
                         },
                         {
                             "type": "Line",
@@ -451,11 +573,11 @@
                         {
                             "type": "Ingredient",
                             "has-ingredient-arrow": true,
-                            "image": "../img/blokjes_snijden.webp",
+                            "image": "/img/blokjes_snijden.webp",
                             "imageAlt": "Opwarmen",
                             "recipeId": 2,
                             "difficulty": 4,
-                            "ingredientIndecis": [1]
+                            "ingredientIndexes": [1]
                         },
                         {
                             "type": "Line",
@@ -466,11 +588,43 @@
                         {
                             "type": "Ingredient",
                             "has-ingredient-arrow": true,
-                            "image": "../img/blokjes_snijden.webp",
+                            "image": "/img/blokjes_snijden.webp",
                             "imageAlt": "Opwarmen",
                             "recipeId": 2,
                             "difficulty": 2,
-                            "ingredientIndecis": [2]
+                            "ingredientIndexes": [2]
+                        },
+                        {
+                            "type": "Line",
+                            "active": true
+                        }
+                    ],
+                    [
+                        {
+                            "type": "Emty"
+                        },
+                        {
+                            "type": "Ingredient",
+                            "is-string": false,
+                            "image": "/img/actie_x.webp",
+                            "imageAlt": "test",
+                            "difficulty": 0
+                        },
+                        {
+                            "type": "Line",
+                            "active": true
+                        }
+                    ],
+                    [
+                        {
+                            "type": "Emty"
+                        },
+                        {
+                            "type": "Ingredient",
+                            "is-string": false,
+                            "image": "/img/actie_x.webp",
+                            "imageAlt": "test",
+                            "difficulty": 0
                         },
                         {
                             "type": "Line",
@@ -481,11 +635,11 @@
                         {
                             "type": "Ingredient",
                             "has-ingredient-arrow": true,
-                            "image": "../img/reepjes_snijden.webp",
+                            "image": "/img/reepjes_snijden.webp",
                             "imageAlt": "Opwarmen",
                             "recipeId": 2,
                             "difficulty": 3,
-                            "ingredientIndecis": [3]
+                            "ingredientIndexes": [3]
                         },
                         {
                             "type": "Line",
@@ -496,11 +650,11 @@
                         {
                             "type": "Ingredient",
                             "has-ingredient-arrow": true,
-                            "image": "../img/blokjes_snijden.webp",
+                            "image": "/img/blokjes_snijden.webp",
                             "imageAlt": "Opwarmen",
                             "recipeId": 2,
                             "difficulty": 5,
-                            "ingredientIndecis": [4]
+                            "ingredientIndexes": [4]
                         },
                         {
                             "type": "Line",
@@ -514,7 +668,7 @@
                 "name": "Kip Curry",
                 "urlName": "kip-curry",
                 "type": "Aziatisch",
-                "image": "../img/curry.webp",
+                "image": "/img/curry.webp",
                 "time": "35 min",
                 "description": "Smaakvolle kip curry.",
                 "servings": 4,
@@ -560,7 +714,7 @@
                 "name": "Veggie Burger",
                 "urlName": "veggie-burger",
                 "type": "Vegetarisch",
-                "image": "../img/veggie.webp",
+                "image": "/img/veggie.webp",
                 "time": "30 min",
                 "description": "Heerlijke vegetarische burger.",
                 "servings": 2,
@@ -609,7 +763,7 @@
                 "name": "Pizza Margherita",
                 "urlName": "pizza-margherita",
                 "type": "Italiaans",
-                "image": "../img/pizza.webp",
+                "image": "/img/pizza.webp",
                 "time": "25 min",
                 "description": "Eenvoudige en smaakvolle pizza.",
                 "servings": 1,
@@ -651,7 +805,7 @@
                 "name": "Teriyaki Chicken",
                 "urlName": "teriyaki-chicken",
                 "type": "Japans",
-                "image": "../img/teriyaki.webp",
+                "image": "/img/teriyaki.webp",
                 "time": "30 min",
                 "description": "Zoete en hartige teriyaki kip.",
                 "servings": 3,
@@ -704,7 +858,7 @@
                 "name": "Nasi Goreng",
                 "urlName": "nasi-goreng",
                 "type": "Aziatisch",
-                "image": "../img/nasi.webp",
+                "image": "/img/nasi.webp",
                 "time": "25 min",
                 "description": "Indonesische gebakken rijst.",
                 "servings": 5,
@@ -759,7 +913,7 @@
                 "name": "Friet met mayonaise",
                 "urlName": "friet-met-mayonaise",
                 "type": "Fastfood",
-                "image": "../img/friet.webp",
+                "image": "/img/friet.webp",
                 "time": "15 min",
                 "description": "Klassieke friet met mayonaise.",
                 "servings": 2,

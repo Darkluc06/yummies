@@ -9,8 +9,8 @@
                     <SvgIcon :name="`close`" />
                 </button>
             </header>
-            <summary class="modal_summary">In deze legenda zie je alle symbolen en pijlen die voor dit recept gebruikt
-                worden</summary>
+            <p class="modal_summary">In deze legenda zie je alle symbolen en pijlen die voor dit recept gebruikt
+                worden</p>
             <ul class="modal_container-icons">
                 <li class="modal_icons" v-for="(iconImg, index) in this.icons" :key="index" v-if="icons">
                     <img class="modal_icon" :src="this.getIconUrl(iconImg.src)" :alt="iconImg.alt" />
