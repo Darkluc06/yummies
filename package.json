@@ -1,34 +1,22 @@
 {
-    "private": true,
-    "type": "module",
-    "scripts": {
-<<<<<<< HEAD
-        "build": "vue-tsc && vite build && vite build --ssr && vite build && vite build --ssr --ssr && vite build && vite build --ssr && vite build && vite build --ssr --ssr --ssr",
-=======
-        "build": "vue-tsc && vite build && vite build --ssr && vite build && vite build --ssr --ssr",
->>>>>>> develop
-        "dev": "vite"
-    },
-    "devDependencies": {
-        "@inertiajs/vue3": "^2.0.0",
-        "@tailwindcss/forms": "^0.5.3",
-        "@tailwindcss/vite": "^4.0.0",
-        "@vitejs/plugin-vue": "^5.0.0",
-        "@vue/server-renderer": "^3.4.0",
-        "autoprefixer": "^10.4.12",
-        "axios": "^1.8.2",
-        "concurrently": "^9.0.1",
-        "laravel-vite-plugin": "^1.2.0",
-        "postcss": "^8.4.31",
-        "sass-embedded": "^1.86.0",
-        "tailwindcss": "^3.2.1",
-        "typescript": "^5.6.3",
-        "vite": "^6.0.11",
-        "vue": "^3.4.0",
-        "vue-tsc": "^2.0.24"
-    },
-    "dependencies": {
-        "sass": "^1.86.0",
-        "sass-loader": "^16.0.5"
-    }
+  "name": "kook-diagram",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "sass": "^1.88.0",
+    "sass-loader": "^16.0.5",
+    "vue": "^3.5.13",
+    "vue-router": "^4.5.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.3",
+    "vite": "^6.2.4",
+    "vite-plugin-vue-devtools": "^7.7.2"
+  }
 }

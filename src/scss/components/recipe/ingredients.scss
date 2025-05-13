@@ -1,0 +1,52 @@
+@use "../../assets/colors";
+@use "sass:map";
+
+.ingredients{
+    list-style: none;
+    display: flex;
+    max-width: 100%;
+
+    &--list{
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    &__ingredient{
+        display: flex;
+        gap: 0.5rem;
+        align-items: center;
+    }
+
+    &__button{
+        width: 3rem;
+        height: 3rem;
+        border: 0.2rem solid map.get(map.get(colors.$palletTwo, "borderColors"), "second");
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 1em;
+        background: map.get(map.get(colors.$palletTwo, "backgroundColors"), "second");
+
+        .icon{
+            fill: map.get(map.get(colors.$palletTwo, "textColors"), "icon");
+        }
+
+        &--false{
+            .icon{
+                opacity: 0;
+            }
+        }
+
+        &--true{
+            .icon{
+                opacity: 1;
+            }
+        }
+    }
+
+    &__name{
+        font-size: 1.5rem;
+        color: black;
+        font-weight: 500;
+    }
+}

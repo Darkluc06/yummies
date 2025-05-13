@@ -1,0 +1,33 @@
+// Assets
+@use "./assets/reset";
+@use "./assets/variables";
+
+// Recipe
+@use "./components/recipe/recipe.scss";
+@use "./components/recipe/recipePage.scss";
+@use "./components/recipe/ingredients.scss";
+
+// Modal
+@use "./components/modal/modal.scss";
+@use "./components/legenda/legenda.scss";
+
+// Cooking diagram
+@use "./components/cookingDiagram/cookingDiagram.scss";
+
+// Home
+@use "./components/home/home.scss";
+@use "./components/home/desktop.scss";
+
+// Navigation
+@use "./components/navigation/nav-icon.scss";
+@use "./components/new-recipe/new-recipe-component.scss";
+@use "./components/navigation/desktopNavigation.scss";
+
+//Footer
+@use "./components/footer/footer.scss";
+
+// Documentation
+@use "./components/documentation/documentation.scss";
+
+// Favorite
+@use "./components/favorite/favorite.scss";

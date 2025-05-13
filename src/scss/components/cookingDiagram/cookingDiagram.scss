@@ -1,0 +1,427 @@
+@use "../../assets/colors";
+@use "sass:map";
+
+.cookingDiagram {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-rows: auto;
+    overflow-x: scroll;
+    background: map.get(map.get(colors.$palletTwo, "backgroundColors"), "white");
+    padding: 2rem 1rem;
+    z-index: -1;
+    margin-bottom: 5rem;
+    border-radius: 2rem;
+
+    &__row {
+        display: grid;
+        grid-auto-flow: column;
+        white-space: nowrap;
+        height: max-content;
+
+        @for $i from 1 through 10 {
+            &.columns--#{$i} {
+                grid-template-columns: repeat($i, calc(100% / 3));
+            }
+        }
+    }
+
+    &__column {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        height: auto;
+    }
+
+    &__tool {
+        width: 5rem;
+        height: 5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .icon {
+            height: 5rem;
+            width: 5rem;
+        }
+    }
+
+    &__lineWrapper {
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__line {
+        width: 0.2rem;
+        height: 7rem;
+        background: #C3C3C3;
+        border-radius: 2rem;
+        margin: 0.2rem 0;
+        z-index: -1;
+
+        &--active {
+            height: 10rem;
+            background: black;
+            margin: 0rem !important;
+            border-radius: 0rem;
+        }
+
+        &--end {
+            position: absolute;
+            width: 100%;
+            background: transparent;
+            border-left: 0.2rem solid black;
+            border-radius: 0;
+            top: 50%;
+            left: 50%;
+            transform: translate(-0.43%, -50%);
+            border-bottom: 0.2rem solid black;
+
+            .icon {
+                position: absolute;
+                top: 100%;
+                left: calc(100% - 1.8rem);
+                transform: translateY(-46%);
+            }
+        }
+    }
+
+    &__bigArrow {
+        position: absolute;
+        width: calc(100% - 2rem);
+        height: 2rem;
+        border: 0.2rem solid black;
+        border-inline-end: none;
+        top: 100%;
+        left: 0;
+        //transform: translate(-50%, -100%);
+        transform: translateX(-45%) translateY(-100%);
+        display: flex;
+        align-items: center;
+        z-index: 1;
+
+        svg {
+            transform: translateX(-100%) scale(2);
+            z-index: 10;
+            background: transparent;
+        }
+    }
+
+    &__ingredient {
+        position: absolute;
+        left: 50%;
+        font-size: 1.5rem;
+        width: 90%;
+        height: 100%;
+
+        .icon {
+            transform: rotate(180deg);
+        }
+
+        p {
+            width: 100%;
+            text-wrap: wrap;
+        }
+    }
+
+    &__ingredientWrapper {
+        position: absolute;
+        width: 100%;
+        display: flex;
+        gap: .5rem;
+        height: 100%;
+        overflow-y: scroll;
+        z-index: 1;
+        opacity: 0;
+        transition: opacity 0.2s linear;
+
+        &--active{
+            z-index: 2;
+            opacity: 1;
+            transition: opacity 0.2s linear;
+        }
+    }
+
+    &__ingredientPopup {
+        width: 100%;
+        height: max-content;
+        position: absolute;
+        border: 0.2rem solid map.get(map.get(colors.$palletTwo, "borderColors"), "second");
+        background: map.get(map.get(colors.$palletTwo, "backgroundColors"), "second");
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        padding: .5rem;
+        opacity: 0;
+        transition: opacity 0.2s linear;
+        z-index: 0;
+
+        &--active {
+            z-index: 2;
+            opacity: 1;
+            transition: opacity 0.2s linear;
+        }
+
+        p{
+            text-wrap: wrap;
+        }
+
+        button {
+            z-index: 10;
+        }
+    }
+
+    &__icon {
+        position: absolute;
+        width: 6rem;
+        height: 6rem;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    &__iconWrapper {
+        width: 6rem;
+        height: 6rem;
+        z-index: 10;
+        position: relative;
+    }
+
+    &__img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+    }
+
+    &__completed {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 4rem;
+        height: 4rem;
+        border: 0.2rem solid map.get(map.get(colors.$palletTwo, "borderColors"), "second");
+        background: map.get(map.get(colors.$palletTwo, "backgroundColors"), "second");
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 0.2s linear;
+
+        &--active {
+            opacity: 1;
+            transition: opacity 0.2s linear;
+        }
+    }
+
+    &__difficultyWrapper {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        gap: 0.2rem;
+        flex-wrap: wrap;
+    }
+
+    &__difficulty {
+        height: 1.5rem;
+        width: 1.5rem;
+        background: rgb(0, 0, 0);
+        border-radius: 50%;
+    }
+
+    &__backwardsArrow {
+        position: absolute;
+        z-index: -1;
+        top: 50%;
+        left: 50%;
+        width: 25%;
+        transform: translate(3%, -101%);
+        border-bottom: 0.2rem solid black;
+        border-right: 0.2rem solid black;
+        border-top: 0.2rem solid black;
+
+        @for $i from 1 through 10 {
+            &.steps--#{$i} {
+                height: calc(10rem * $i - 5rem);
+            }
+        }
+    }
+
+    &__arrow {
+        width: 100%;
+        height: 100%;
+        position: relative;
+
+        .icon {
+            transform: translate(-25%, -54%) rotate(180deg);
+        }
+    }
+
+    &__forloop {
+        position: absolute;
+        left: 50%;
+        top: calc(0% + 1rem);
+        border: 0.2rem dashed black;
+
+        @for $i from 1 through 10 {
+            &.steps--#{$i} {
+                height: calc(10rem * $i - 5rem);
+            }
+        }
+
+        @for $i from 1 through 10 {
+            &.width--#{$i} {
+                width: calc(100% * $i - 5rem);
+            }
+        }
+    }
+
+    &__forloopIcon {
+        width: max-content;
+
+        .cookingDiagram__iconWrapper {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            transform: translate(-50%, -50%);
+
+            .icon {
+                width: 4rem;
+                height: 4rem;
+            }
+        }
+    }
+
+    &__specialArrow{
+        width: 100%;
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        display: flex;
+        align-items: center;
+
+        .icon{
+            transform: rotate(180deg);
+            width: 2.4rem;
+            height: 2.4rem;
+        }
+
+        &--difficulties{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            gap: .2rem;
+            height: calc(3rem + 0.6rem);
+            width: calc(2rem + 0.2rem);
+            justify-content: center;
+            transform: rotate(180deg);
+        }
+
+        &--difficulty{
+            width: 1rem;
+            height: 1rem;
+            background: black;
+            border-radius: 50%;
+        }
+
+        &--imgWrapper{
+            width: 6rem;
+            height: 6rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2;
+        }
+
+        &--wrapper{
+            display: flex;
+            align-items: center;
+            // transform: translateX(-20%);
+            gap: 0.2rem;
+        }
+
+        &--line{
+            width: 3rem;
+            height: 0.2rem;
+            background: black;
+            border-radius: 0.2rem;
+        }
+
+        &--ingredient{
+            text-wrap: wrap;
+        }
+    }
+
+    &__specialArrow{
+        width: 100%;
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        display: flex;
+        align-items: center;
+
+        .icon{
+            transform: rotate(180deg);
+            width: 2.4rem;
+            height: 2.4rem;
+        }
+
+        &--difficulties{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            gap: .2rem;
+            height: calc(3rem + 0.6rem);
+            width: calc(2rem + 0.2rem);
+            justify-content: center;
+            transform: rotate(180deg);
+        }
+
+        &--difficulty{
+            width: 1rem;
+            height: 1rem;
+            background: black;
+            border-radius: 50%;
+        }
+
+        &--imgWrapper{
+            width: 6rem;
+            height: 6rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2;
+        }
+
+        &--img{
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        &--wrapper{
+            display: flex;
+            align-items: center;
+            // transform: translateX(-20%);
+            gap: 0.2rem;
+        }
+
+        &--line{
+            width: 3rem;
+            height: 0.2rem;
+            background: black;
+            border-radius: 0.2rem;
+        }
+
+        &--ingredient{
+            text-wrap: wrap;
+        }
+    }
+}

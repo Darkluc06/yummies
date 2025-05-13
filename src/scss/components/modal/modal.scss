@@ -1,0 +1,79 @@
+@use "../../assets/colors";
+@use "sass:map";
+
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    .modal_modal{
+        height: 85%;
+        background: map.get(map.get(colors.$palletTwo, "backgroundColors"), "second");
+        border-radius: 2rem 2rem 0 0;
+        overflow-y: scroll;
+        padding: 2rem;
+        border: 0.2rem solid map.get(map.get(colors.$palletTwo, "borderColors"), "default");
+        overflow-y: scroll;
+
+        .modal_header{
+            display: flex;
+            justify-content: space-between;
+
+            .modal_title{
+                font-size: 3rem;
+                color: map.get(map.get(colors.$palletTwo, "textColors"), "title");
+            }
+        }
+
+        .modal_summary {
+            list-style: none;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: map.get(map.get(colors.$palletTwo, "textColors"), "subTitle");
+        }
+
+        .modal_container-icons {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding: 0rem 1rem;
+
+            .modal_icons {
+                width: 25%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+
+                .modal_icon {
+                    width: 10rem;
+                    height: 10rem;
+                    object-fit: contain;
+                }
+
+                .modal_icon-label {
+                    font-size: 1.5rem;
+                    color: map.get(map.get(colors.$palletTwo, "textColors"), "subTitle");
+                }
+            }
+        }
+
+        .modal_close{
+            .icon{
+                width: 3rem;
+                height: 3rem;
+                fill: map.get(map.get(colors.$palletTwo, "textColors"), "title");
+            }
+        }
+    }
+
+
+}

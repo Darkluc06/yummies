@@ -1,0 +1,37 @@
+@use "../../assets/colors";
+@use "sass:map";
+
+.favorites {
+    min-height: 100vh;
+    padding: 2rem;
+    padding-bottom: 12rem;
+    background: map.get(map.get(colors.$palletTwo, "backgroundColors"), "main");
+
+    .favorites_header {
+        .favorites_h1 {
+            font-size: 3rem;
+            margin-bottom: 2rem;
+        }
+    }
+
+    .favorites_main {
+
+        .favorites_container {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 2rem;
+
+            .favorite_li {
+
+                .favorite_p {
+                    font-size: 2rem;
+                    font-style: italic;
+                    color: #777;
+                }
+            }
+        }
+    }
+}
