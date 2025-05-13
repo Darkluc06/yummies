@@ -562,7 +562,7 @@
                             "is-string": false,
                             "image": "/img/opwarmen.webp",
                             "imageAlt": "Opwarmen",
-                            "recipeId": 1,
+                            "recipeId": 1
                         },
                         {
                             "type": "Line",
