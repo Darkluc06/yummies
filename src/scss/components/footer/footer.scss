@@ -24,11 +24,22 @@
         flex-direction: column;
         color: map.get(map.get(colors.$palletTwo, "textColors"), "subTitle");
         z-index: 30;
+        padding: 0.5rem;
 
-        svg {
-            path {
-                fill: map.get(map.get(colors.$palletTwo, "textColors"), "title") !important;
+        &--active{
+            background: map.get(map.get(colors.$palletTwo, "backgroundColors"), "third");
+            color: map.get(map.get(colors.$palletTwo, "textColors"), "active");
+            border-radius: 1rem;
+
+            .icon{
+                fill: map.get(map.get(colors.$palletTwo, "textColors"), "active") !important;
             }
+        }
+
+        .icon {
+            width: 4rem;
+            height: 4rem;
+            fill: map.get(map.get(colors.$palletTwo, "textColors"), "title");
         }
 
         .footer_p {

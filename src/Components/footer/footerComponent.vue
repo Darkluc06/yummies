@@ -1,18 +1,18 @@
 <template>
     <section class="footer_component">
-        <RouterLink :to="`/`" class="footer_link">
+        <RouterLink :to="`/`" class="footer_link" activeClass="footer_link--active">
             <SvgIcon :name="'book'" />
             <p class="footer_p">
                 Recepten
             </p>
         </RouterLink>
-        <RouterLink :to="`/documentation`" class="footer_link">
+        <RouterLink :to="`/documentation`" class="footer_link" activeClass="footer_link--active">
             <SvgIcon :name="'document'" />
             <p class="footer_p">
                 Documentatie
             </p>
         </RouterLink>
-        <RouterLink :to="`/favorite`" class="footer_link">
+        <RouterLink :to="`/favorite`" class="footer_link" activeClass="footer_link--active">
             <SvgIcon :name="'heart'" />
             <p class="footer_p">
                 Favorieten
