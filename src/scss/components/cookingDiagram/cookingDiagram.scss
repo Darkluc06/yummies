@@ -1,4 +1,5 @@
 @use "../../assets/colors";
+@use "sass:map";
 
 .cookingDiagram {
     width: 100%;
@@ -7,7 +8,7 @@
     grid-auto-flow: row;
     grid-template-rows: auto;
     overflow-x: scroll;
-    background: map-get(map-get(colors.$palletTwo, "backgroundColors"), "white");
+    background: map.get(map.get(colors.$palletTwo, "backgroundColors"), "white");
     padding: 2rem 1rem;
     z-index: -1;
     margin-bottom: 5rem;
@@ -147,8 +148,8 @@
         width: 100%;
         height: max-content;
         position: absolute;
-        border: 0.2rem solid map-get(map-get(colors.$palletTwo, "borderColors"), "second");
-        background: map-get(map-get(colors.$palletTwo, "backgroundColors"), "second");
+        border: 0.2rem solid map.get(map.get(colors.$palletTwo, "borderColors"), "second");
+        background: map.get(map.get(colors.$palletTwo, "backgroundColors"), "second");
         display: flex;
         flex-direction: column;
         align-items: flex-end;
@@ -204,8 +205,8 @@
         left: 50%;
         width: 4rem;
         height: 4rem;
-        border: 0.2rem solid map-get(map-get(colors.$palletTwo, "borderColors"), "second");
-        background: map-get(map-get(colors.$palletTwo, "backgroundColors"), "second");
+        border: 0.2rem solid map.get(map.get(colors.$palletTwo, "borderColors"), "second");
+        background: map.get(map.get(colors.$palletTwo, "backgroundColors"), "second");
         transform: translate(-50%, -50%);
         border-radius: 50%;
         display: flex;
