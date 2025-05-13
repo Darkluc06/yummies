@@ -1,5 +1,8 @@
 <template>
     <section class="footer_component">
+        <figure class="arrow-container" v-if="this.renderArrow()">
+            <img class="arrow" src="./../../../../public/img/aardappels_van_a_naar_b.png" alt="">
+        </figure>
         <a href="http://127.0.0.1:8000/" class="footer_link">
             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-book"
                 viewBox="0 0 16 16">
@@ -36,4 +39,12 @@
 </template>
 
 <script>
+export default {
+    methods:
+    {
+        renderArrow() {
+            return localStorage.getItem("arrow") !== "true";
+        }
+    }
+}
 </script>

@@ -185,28 +185,22 @@ export default {
         },
         toggleFavorite() {
             this.isFavorite = !this.isFavorite;
-            console.log('toggleFavorite: isFavorite na toggle', this.isFavorite);
             const favoriteKey = 'favoriteRecipes';
             let favorites = JSON.parse(localStorage.getItem(favoriteKey)) || [];
 
             if (this.isFavorite) {
                 if (!favorites.includes(this.recipe.urlName)) {
                     favorites.push(this.recipe.urlName);
-                    console.log('toggleFavorite: recept toegevoegd aan favorieten', this.recipe.urlName, favorites);
                 }
             } else {
                 favorites = favorites.filter(url => url !== this.recipe.urlName);
-                console.log('toggleFavorite: recept verwijderd uit favorieten', this.recipe.urlName, favorites);
             }
 
             localStorage.setItem(favoriteKey, JSON.stringify(favorites));
-            console.log('toggleFavorite: localStorage na update', localStorage.getItem(favoriteKey));
             this.updateHeartColor();
-            console.log('toggleFavorite: heart na updateHeartColor', this.heart);
         },
         updateHeartColor() {
             this.heart = this.isFavorite ? "heart-fill" : "heart";
-            console.log('updateHeartColor: heart is nu', this.heart, 'isFavorite is', this.isFavorite);
         }
     }
 }
