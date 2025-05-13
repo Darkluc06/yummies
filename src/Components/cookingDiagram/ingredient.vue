@@ -1,7 +1,7 @@
 <template>
     <div class="cookingDiagram__column">
         <figure class="cookingDiagram__line cookingDiagram__line--active"></figure>
-        <div class="cookingDiagram__ingredient" v-if="isString === true">
+        <div class="cookingDiagram__ingredient" v-if="isString === true && hasIngredientArrow === false">
             <div class="cookingDiagram__ingredientWrapper" :class="popupActive ? `` : `cookingDiagram__ingredientWrapper--active`" @click="OpenPopup()">
                 <SvgIcon :name="`arrow-long`" />
                 <p>{{ this.ingredientsString }}</p>
@@ -13,7 +13,7 @@
                 <p>{{ this.ingredientsString }}</p>
             </div>
         </div>
-        <span class="cookingDiagram__icon" v-if="isString === false">
+        <span class="cookingDiagram__icon" v-if="isString === false && hasIngredientArrow === false">
             <!-- <div class="cookingDiagram__iconWrapper" :class="isCircle ? `circle` : `triangle`">
                 <SvgIcon :name="icon" />
             </div> -->
@@ -28,6 +28,7 @@
             </ul>
         </span>
         <BackwardsArrow :steps="steps" :direction="backwardsArrowDirection" v-if="hasBackwardsArrow === true"/>
+        <Arrow v-if="hasIngredientArrow === true" :image="image" :image-alt="imageAlt" :difficulty="difficulty" :ingredient="this.ingredientsString" />
     </div>
 </template>
 
@@ -35,12 +36,14 @@
 
 import SvgIcon from '../general/icon/SvgIcon.vue';
 import BackwardsArrow from './backwardsArrow.vue';
+import Arrow from './arrow.vue';
 import json from '../../assets/json/data.json'
 
 export default {
     components: {
         SvgIcon,
         BackwardsArrow,
+        Arrow
     },
     data () {
         return {
@@ -93,6 +96,10 @@ export default {
         backwardsArrowDirection: {
             type: String,
             default: "left"
+        },
+        hasIngredientArrow:{
+            type: Boolean,
+            default: false
         }
     },
     mounted() {

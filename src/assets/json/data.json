@@ -377,19 +377,29 @@
                 "servings": 3,
                 "ingredients": [
                     {
-                        "amount": "375",
-                        "unit": "gram",
-                        "name": "spaghetti"
+                        "amount": "3",
+                        "unit": "ml",
+                        "name": "Olie"
                     },
                     {
-                        "amount": "100",
+                        "amount": "250",
                         "unit": "gram",
-                        "name": "carbonara"
+                        "name": "Ui"
                     },
                     {
-                        "amount": "1",
-                        "unit": "liter",
-                        "name": "melk"
+                        "amount": "250",
+                        "unit": "gram",
+                        "name": "Aardappels"
+                    },
+                    {
+                        "amount": "250",
+                        "unit": "gram",
+                        "name": "Bleekschilderij"
+                    },
+                    {
+                        "amount": "4",
+                        "unit": "",
+                        "name": "Peppers"
                     }
                 ],
                 "keywords": [
@@ -538,72 +548,51 @@
                         {
                             "type": "Ingredient",
                             "is-string": true,
-                            "ingedient": "Boter"
+                            "ingredientIndexes": [0],
+                            "recipeId": 2
                         },
                         {
                             "type": "Line",
-                            "active": true
+                            "Active": true
                         }
                     ],
                     [
-                        {
-                            "type": "Line",
-                            "active": true,
-                            "end": true
-                        },
-                        {
-                            "type": "Line",
-                            "active": true
-                        },
-                        {
-                            "type": "Line",
-                            "active": true
-                        }
-                    ],
-                    [
-                        {
-                            "type": "Forloop",
-                            "width": "2",
-                            "steps": "8"
-                        },
                         {
                             "type": "Ingredient",
                             "is-string": false,
-                            "image": "/img/actie_x.webp",
-                            "imageAlt": "test",
-                            "difficulty": 0
+                            "image": "/img/opwarmen.webp",
+                            "imageAlt": "Opwarmen",
+                            "recipeId": 1
                         },
                         {
                             "type": "Line",
-                            "active": true
+                            "Active": true
                         }
                     ],
                     [
                         {
-                            "type": "Emty"
-                        },
-                        {
                             "type": "Ingredient",
-                            "is-string": false,
-                            "image": "/img/actie_x.webp",
-                            "imageAlt": "test",
-                            "difficulty": 5
+                            "has-ingredient-arrow": true,
+                            "image": "/img/blokjes_snijden.webp",
+                            "imageAlt": "Opwarmen",
+                            "recipeId": 2,
+                            "difficulty": 4,
+                            "ingredientIndexes": [1]
                         },
                         {
                             "type": "Line",
-                            "active": true
+                            "Active": true
                         }
                     ],
                     [
                         {
-                            "type": "Emty"
-                        },
-                        {
                             "type": "Ingredient",
-                            "is-string": false,
-                            "image": "/img/actie_x.webp",
-                            "imageAlt": "test",
-                            "difficulty": 0
+                            "has-ingredient-arrow": true,
+                            "image": "/img/blokjes_snijden.webp",
+                            "imageAlt": "Opwarmen",
+                            "recipeId": 2,
+                            "difficulty": 2,
+                            "ingredientIndexes": [2]
                         },
                         {
                             "type": "Line",
@@ -639,67 +628,37 @@
                         },
                         {
                             "type": "Line",
-                            "active": true
+                            "Active": true
                         }
                     ],
                     [
-                        {
-                            "type": "Emty"
-                        },
                         {
                             "type": "Ingredient",
-                            "is-string": false,
-                            "image": "/img/actie_x.webp",
-                            "imageAlt": "test",
-                            "difficulty": 0
+                            "has-ingredient-arrow": true,
+                            "image": "/img/reepjes_snijden.webp",
+                            "imageAlt": "Opwarmen",
+                            "recipeId": 2,
+                            "difficulty": 3,
+                            "ingredientIndexes": [3]
                         },
                         {
                             "type": "Line",
-                            "active": true
+                            "Active": true
                         }
                     ],
                     [
-                        {
-                            "type": "Emty"
-                        },
                         {
                             "type": "Ingredient",
-                            "is-string": false,
-                            "image": "/img/actie_x.webp",
-                            "imageAlt": "test",
-                            "difficulty": 0,
-                            "has-backwards-arrow": true,
-                            "steps": "4"
+                            "has-ingredient-arrow": true,
+                            "image": "/img/blokjes_snijden.webp",
+                            "imageAlt": "Opwarmen",
+                            "recipeId": 2,
+                            "difficulty": 5,
+                            "ingredientIndexes": [4]
                         },
                         {
                             "type": "Line",
-                            "active": true
-                        }
-                    ],
-                    [
-                        {
-                            "type": "Emty"
-                        },
-                        {
-                            "type": "Line",
-                            "active": true,
-                            "end": true
-                        },
-                        {
-                            "type": "Line",
-                            "active": true
-                        }
-                    ],
-                    [
-                        {
-                            "type": "Emty"
-                        },
-                        {
-                            "type": "Emty"
-                        },
-                        {
-                            "type": "Line",
-                            "active": true
+                            "Active": true
                         }
                     ]
                 ]

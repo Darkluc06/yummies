@@ -1,4 +1,5 @@
 @use "../../assets/colors";
+@use "sass:map";
 
 .ingredients{
     list-style: none;
@@ -19,15 +20,15 @@
     &__button{
         width: 3rem;
         height: 3rem;
-        border: 0.2rem solid map-get(map-get(colors.$palletTwo, "borderColors"), "second");
+        border: 0.2rem solid map.get(map.get(colors.$palletTwo, "borderColors"), "second");
         display: flex;
         align-items: center;
         justify-content: center;
         border-radius: 1em;
-        background: map-get(map-get(colors.$palletTwo, "backgroundColors"), "second");
+        background: map.get(map.get(colors.$palletTwo, "backgroundColors"), "second");
 
         .icon{
-            fill: map-get(map-get(colors.$palletTwo, "textColors"), "icon");
+            fill: map.get(map.get(colors.$palletTwo, "textColors"), "icon");
         }
 
         &--false{

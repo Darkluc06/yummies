@@ -1,4 +1,5 @@
 @use "../../assets/colors";
+@use "sass:map";
 
 .recipe {
     display: flex;
@@ -40,10 +41,10 @@
 
     &__text {
         width: 100%;
-        border: 0.2rem solid map-get(map-get(colors.$palletTwo, "borderColors"), "second");
+        border: 0.2rem solid map.get(map.get(colors.$palletTwo, "borderColors"), "second");
         border-radius: 2rem;
         transform: translateY(-2rem);
-        background: map-get(map-get(colors.$palletTwo, "backgroundColors"), "second");
+        background: map.get(map.get(colors.$palletTwo, "backgroundColors"), "second");
         display: flex;
         flex-direction: column;
         gap: 0.5rem;
@@ -57,13 +58,13 @@
         top: 0;
         left: 50%;
         padding: 1rem;
-        background: map-get(map-get(colors.$palletTwo, "backgroundColors"), "second");
-        border: 0.2rem solid map-get(map-get(colors.$palletTwo, "borderColors"), "second");
+        background: map.get(map.get(colors.$palletTwo, "backgroundColors"), "second");
+        border: 0.2rem solid map.get(map.get(colors.$palletTwo, "borderColors"), "second");
         border-radius: 50%;
         transform: translate(-50%, -50%);
 
         .icon {
-            fill: map-get(map-get(colors.$palletTwo, "textColors"), "icon");
+            fill: map.get(map.get(colors.$palletTwo, "textColors"), "icon");
         }
 
         svg {
@@ -72,7 +73,7 @@
 
             g {
                 path {
-                    fill: map-get(map-get(colors.$palletTwo, "textColors"), "icon") !important;
+                    fill: map.get(map.get(colors.$palletTwo, "textColors"), "icon") !important;
                 }
             }
         }
@@ -80,7 +81,7 @@
 
     &__title {
         font-size: 2.5rem;
-        color: map-get(map-get(colors.$palletTwo, "textColors"), "text");
+        color: map.get(map.get(colors.$palletTwo, "textColors"), "text");
         align-items: center;
     }
 
@@ -90,10 +91,10 @@
         justify-content: flex-start;
         list-style: none;
         gap: 2rem;
-        color: map-get(map-get(colors.$palletTwo, "textColors"), "title");
+        color: map.get(map.get(colors.$palletTwo, "textColors"), "title");
 
         .icon {
-            fill: map-get(map-get(colors.$palletTwo, "textColors"), "title");
+            fill: map.get(map.get(colors.$palletTwo, "textColors"), "title");
         }
     }
 
@@ -112,7 +113,7 @@
         }
 
         .icon {
-            fill: map-get(map-get(colors.$palletTwo, "textColors"), "icon");
+            fill: map.get(map.get(colors.$palletTwo, "textColors"), "icon");
         }
     }
 
@@ -122,7 +123,7 @@
         height: 100%;
         align-items: center;
         font-size: 1.5rem;
-        color: map-get(map-get(colors.$palletTwo, "textColors"), "text");
+        color: map.get(map.get(colors.$palletTwo, "textColors"), "text");
 
         .icon {
             width: 2.5rem;
@@ -133,7 +134,7 @@
 
     &__paragraph {
         font-size: 1.8rem;
-        color: map-get(map-get(colors.$palletTwo, "textColors"), "text");
+        color: map.get(map.get(colors.$palletTwo, "textColors"), "text");
     }
 }
 
