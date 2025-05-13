@@ -117,12 +117,11 @@ export default {
             this.searchTerm = '';
             this.suggestions = [];
         },
-        checkScrollability() {
-            this.isScrollable = document.documentElement.scrollHeight > document.documentElement.clientHeight;
+         // Checkt if the footer needs to be visible on the page
+         checkScrollability() {
+            this.isScrollable = document.body.scrollHeight > document.body.clientHeight;
             if (!this.isScrollable && !this.isScrolling) {
                 this.footerVisible = true;
-            } else if (this.isScrollable && !this.isScrolling) {
-                this.footerVisible = (window.innerHeight + Math.ceil(window.scrollY)) >= document.documentElement.scrollHeight - 10;
             } else {
                 this.footerVisible = false;
             }
@@ -130,16 +129,11 @@ export default {
         handleScroll() {
             this.footerVisible = false;
             this.isScrolling = true;
-            if (this.scrollTimeout) clearTimeout(this.scrollTimeout);
+            clearTimeout(this.scrollTimeout);
             this.scrollTimeout = setTimeout(() => {
                 this.isScrolling = false;
-                 if (!this.isScrollable || (window.innerHeight + Math.ceil(window.scrollY)) >= document.documentElement.scrollHeight - 10) {
-                    this.footerVisible = true;
-                } else {
-                    this.footerVisible = false;
-                }
-                
-            }, 150);
+                this.checkScrollability();
+            }, 100);
         },
         generateSuggestions() {
              const searchTermLower = this.searchTerm.toLowerCase();
