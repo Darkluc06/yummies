@@ -26,7 +26,7 @@ export default {
         },
         size: {
             type: [String, Number],
-            default: '2.4em',
+            default: '1em',
         },
         color: {
             type: String,

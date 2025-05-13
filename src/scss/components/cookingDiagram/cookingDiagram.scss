@@ -83,28 +83,31 @@
                 top: 100%;
                 left: calc(100% - 1.8rem);
                 transform: translateY(-46%);
+                width: 2.4rem;
+                height: 2.4rem;
             }
         }
     }
 
     &__bigArrow {
         position: absolute;
-        width: calc(100% - 2rem);
+        width: calc(100% - 2em);
         height: 2rem;
         border: 0.2rem solid black;
         border-inline-end: none;
         top: 100%;
         left: 0;
-        //transform: translate(-50%, -100%);
-        transform: translateX(-45%) translateY(-100%);
+        transform: translateX(calc(-50% + 1em)) translateY(-100%);
         display: flex;
         align-items: center;
         z-index: 1;
 
         svg {
-            transform: translateX(-100%) scale(2);
+            transform: translateX(-50%);
             z-index: 10;
             background: transparent;
+            height: 4rem;
+            width: 4rem;
         }
     }
 
@@ -129,12 +132,17 @@
         position: absolute;
         width: 100%;
         display: flex;
+        align-items: center;
         gap: .5rem;
         height: 100%;
         overflow-y: scroll;
         z-index: 1;
         opacity: 0;
         transition: opacity 0.2s linear;
+        & > .icon{
+            width: 2em;
+            height: 2em;
+        }
 
         &--active{
             z-index: 2;
@@ -245,7 +253,7 @@
         border-bottom: 0.2rem solid black;
         border-right: 0.2rem solid black;
         border-top: 0.2rem solid black;
-
+        
         @for $i from 1 through 10 {
             &.steps--#{$i} {
                 height: calc(10rem * $i - 5rem);
@@ -260,6 +268,8 @@
 
         .icon {
             transform: translate(-25%, -54%) rotate(180deg);
+            width: 2.4em;
+            height: 2.4em;
         }
     }
 
