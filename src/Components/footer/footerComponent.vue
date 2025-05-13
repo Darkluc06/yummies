@@ -1,6 +1,6 @@
 <template>
     <section class="footer_component">
-        <a href="http://127.0.0.1:8000/" class="footer_link">
+        <RouterLink :to="`/`" class="footer_link">
             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-book"
                 viewBox="0 0 16 16">
                 <path
@@ -9,8 +9,8 @@
             <p class="footer_p">
                 Recepten
             </p>
-        </a>
-        <a href="/documentation" class="footer_link">
+        </RouterLink>
+        <RouterLink :to="`/documentation`" class="footer_link">
             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
                 class="bi bi-file-earmark-text" viewBox="0 0 16 16">
                 <path
@@ -21,8 +21,8 @@
             <p class="footer_p">
                 Documentatie
             </p>
-        </a>
-        <a href="/favorite" class="footer_link">
+        </RouterLink>
+        <RouterLink :to="`/favorite`" class="footer_link">
             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-heart"
                 viewBox="0 0 16 16">
                 <path
@@ -31,9 +31,18 @@
             <p class="footer_p">
                 Favorieten
             </p>
-        </a>
+        </RouterLink>
     </section>
 </template>
 
 <script>
+
+import { RouterLink } from 'vue-router';
+
+export default {
+    components:{
+        RouterLink
+    }
+}
+
 </script>
