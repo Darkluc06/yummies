@@ -1,10 +1,11 @@
 @use "../../assets/colors";
+@use "sass:map";
 
 .favorites {
     min-height: 100vh;
     padding: 2rem;
     padding-bottom: 12rem;
-    background: map-get(map-get(colors.$palletTwo, "backgroundColors"), "main");
+    background: map.get(map.get(colors.$palletTwo, "backgroundColors"), "main");
 
     .favorites_header {
         .favorites_h1 {

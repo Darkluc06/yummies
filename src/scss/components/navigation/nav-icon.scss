@@ -1,4 +1,5 @@
 @use "../../assets/colors";
+@use "sass:map";
 
 .nav_title {
     font-size: 2rem;
@@ -65,7 +66,7 @@
 
             h2{
                 font-size: 1.5rem;
-                color: map-get(map-get(colors.$palletTwo, "textColors"), "subTitle");
+                color: map.get(map.get(colors.$palletTwo, "textColors"), "subTitle");
                 font-weight: 500;
             }
 
@@ -78,13 +79,13 @@
                 padding: 1rem;
                 border-radius: 100%;
                 // box-shadow: 0 0 .5rem .2rem rgba(0,0,0, .3);
-                background: map-get(map-get(colors.$palletTwo, "backgroundColors"), "second");
-                border: 0.1rem solid map-get(map-get(colors.$palletTwo, "borderColors"), "default");
+                background: map.get(map.get(colors.$palletTwo, "backgroundColors"), "second");
+                border: 0.1rem solid map.get(map.get(colors.$palletTwo, "borderColors"), "default");
 
                 svg{
                     g{
                         path{
-                            fill: map-get(map-get(colors.$palletTwo, "textColors"), "icon") !important;
+                            fill: map.get(map.get(colors.$palletTwo, "textColors"), "icon") !important;
                         }
                     }
                 }

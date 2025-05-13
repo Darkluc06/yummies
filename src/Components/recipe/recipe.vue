@@ -31,10 +31,10 @@
 </template>
 
 <script>
-import imageComponent from '../general/image/imageComponent.vue'; // Ensure this path is correct
-import SvgIcon from '../general/icon/SvgIcon.vue'; // Ensure this path is correct
-import iconComponent from '../general/icon/icon.vue'; // Ensure this path is correct
-import { RouterLink } from 'vue-router'; // RouterLink can often be used globally if vue-router is installed
+import imageComponent from '../general/image/imageComponent.vue'; 
+import SvgIcon from '../general/icon/SvgIcon.vue'; 
+import iconComponent from '../general/icon/icon.vue'; 
+import { RouterLink } from 'vue-router';
 
 export default {
     name: "recipeList",
@@ -42,7 +42,7 @@ export default {
         imageComponent,
         iconComponent,
         SvgIcon,
-        RouterLink // Explicitly register RouterLink
+        RouterLink
     },
     props: {
         recipe: {
@@ -58,7 +58,6 @@ export default {
     },
     mounted() {
         const favoriteKey = 'favoriteRecipes';
-        // Ensure recipe and recipe.urlName exist before accessing localStorage
         if (this.recipe && this.recipe.urlName) {
             const storedFavorites = localStorage.getItem(favoriteKey);
             this.isFavorite = storedFavorites ? JSON.parse(storedFavorites).includes(this.recipe.urlName) : false;
