@@ -548,7 +548,7 @@
                         {
                             "type": "Ingredient",
                             "is-string": true,
-                            "ingredientIndecis": [0],
+                            "ingredientIndexes": [0],
                             "recipeId": 2
                         },
                         {
