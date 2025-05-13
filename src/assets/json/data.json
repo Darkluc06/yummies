@@ -9,7 +9,7 @@
                 "name": "Pannenkoek",
                 "urlName": "sushi-delight",
                 "type": "Japans",
-                "image": "../img/pannenkoek.webp",
+                "image": "/img/pannenkoek.webp",
                 "time": "25 min",
                 "description": "Heerlijke verse sushi.",
                 "servings": 2,
@@ -103,7 +103,7 @@
                         {
                             "type": "Ingredient",
                             "is-string": false,
-                            "image": "../img/actie_x.webp",
+                            "image": "/img/actie_x.webp",
                             "imageAlt": "test",
                             "difficulty": 1,
                             "recipeId": 1
@@ -152,7 +152,7 @@
                         {
                             "type": "Ingredient",
                             "is-string": false,
-                            "image": "../img/actie_y.webp",
+                            "image": "/img/actie_y.webp",
                             "imageAlt": "test",
                             "difficulty": 5,
                             "recipeId": 1
@@ -174,7 +174,7 @@
                         {
                             "type": "Ingredient",
                             "is-string": false,
-                            "image": "../img/actie_x.webp",
+                            "image": "/img/actie_x.webp",
                             "imageAlt": "test",
                             "difficulty": 3,
                             "recipeId": 1
@@ -224,7 +224,7 @@
                         {
                             "type": "Ingredient",
                             "is-string": false,
-                            "image": "../img/actie_x.webp",
+                            "image": "/img/actie_x.webp",
                             "imageAlt": "test",
                             "difficulty": 0,
                             "recipeId": 1
@@ -241,7 +241,7 @@
                         {
                             "type": "Ingredient",
                             "is-string": false,
-                            "image": "../img/actie_x.webp",
+                            "image": "/img/actie_x.webp",
                             "imageAlt": "test",
                             "difficulty": 5,
                             "recipeId": 1
@@ -258,7 +258,7 @@
                         {
                             "type": "Ingredient",
                             "is-string": false,
-                            "image": "../img/actie_x.webp",
+                            "image": "/img/actie_x.webp",
                             "imageAlt": "test",
                             "difficulty": 0,
                             "recipeId": 1
@@ -275,7 +275,7 @@
                         {
                             "type": "Ingredient",
                             "is-string": false,
-                            "image": "../img/actie_x.webp",
+                            "image": "/img/actie_x.webp",
                             "imageAlt": "test",
                             "difficulty": 0,
                             "recipeId": 1
@@ -292,7 +292,7 @@
                         {
                             "type": "Ingredient",
                             "is-string": false,
-                            "image": "../img/actie_x.webp",
+                            "image": "/img/actie_x.webp",
                             "imageAlt": "test",
                             "difficulty": 0,
                             "recipeId": 1
@@ -309,7 +309,7 @@
                         {
                             "type": "Ingredient",
                             "is-string": false,
-                            "image": "../img/actie_x.webp",
+                            "image": "/img/actie_x.webp",
                             "imageAlt": "test",
                             "difficulty": 0,
                             "recipeId": 1
@@ -326,7 +326,7 @@
                         {
                             "type": "Ingredient",
                             "is-string": false,
-                            "image": "../img/actie_x.webp",
+                            "image": "/img/actie_x.webp",
                             "imageAlt": "test",
                             "difficulty": 0,
                             "has-backwards-arrow": true,
@@ -371,7 +371,7 @@
                 "name": "Spaghetti Carbonara",
                 "urlName": "spaghetti-carbonara",
                 "type": "Italiaans",
-                "image": "../img/spaghetti.webp",
+                "image": "/img/spaghetti.webp",
                 "time": "20 min",
                 "description": "Klassieke romige carbonara.",
                 "servings": 3,
@@ -453,7 +453,7 @@
                         {
                             "type": "Ingredient",
                             "is-string": false,
-                            "image": "../img/actie_x.webp",
+                            "image": "/img/actie_x.webp",
                             "imageAlt": "test",
                             "difficulty": 1
                         },
@@ -500,7 +500,7 @@
                         {
                             "type": "Ingredient",
                             "is-string": false,
-                            "image": "../img/actie_x.webp",
+                            "image": "/img/actie_x.webp",
                             "imageAlt": "test",
                             "difficulty": 5
                         },
@@ -521,7 +521,7 @@
                         {
                             "type": "Ingredient",
                             "is-string": false,
-                            "image": "../img/actie_x.webp",
+                            "image": "/img/actie_x.webp",
                             "imageAlt": "test",
                             "difficulty": 3
                         },
@@ -569,7 +569,7 @@
                         {
                             "type": "Ingredient",
                             "is-string": false,
-                            "image": "../img/actie_x.webp",
+                            "image": "/img/actie_x.webp",
                             "imageAlt": "test",
                             "difficulty": 0
                         },
@@ -585,7 +585,7 @@
                         {
                             "type": "Ingredient",
                             "is-string": false,
-                            "image": "../img/actie_x.webp",
+                            "image": "/img/actie_x.webp",
                             "imageAlt": "test",
                             "difficulty": 5
                         },
@@ -601,7 +601,7 @@
                         {
                             "type": "Ingredient",
                             "is-string": false,
-                            "image": "../img/actie_x.webp",
+                            "image": "/img/actie_x.webp",
                             "imageAlt": "test",
                             "difficulty": 0
                         },
@@ -617,7 +617,7 @@
                         {
                             "type": "Ingredient",
                             "is-string": false,
-                            "image": "../img/actie_x.webp",
+                            "image": "/img/actie_x.webp",
                             "imageAlt": "test",
                             "difficulty": 0
                         },
@@ -633,7 +633,7 @@
                         {
                             "type": "Ingredient",
                             "is-string": false,
-                            "image": "../img/actie_x.webp",
+                            "image": "/img/actie_x.webp",
                             "imageAlt": "test",
                             "difficulty": 0
                         },
@@ -649,7 +649,7 @@
                         {
                             "type": "Ingredient",
                             "is-string": false,
-                            "image": "../img/actie_x.webp",
+                            "image": "/img/actie_x.webp",
                             "imageAlt": "test",
                             "difficulty": 0
                         },
@@ -665,7 +665,7 @@
                         {
                             "type": "Ingredient",
                             "is-string": false,
-                            "image": "../img/actie_x.webp",
+                            "image": "/img/actie_x.webp",
                             "imageAlt": "test",
                             "difficulty": 0,
                             "has-backwards-arrow": true,
@@ -709,7 +709,7 @@
                 "name": "Kip Curry",
                 "urlName": "kip-curry",
                 "type": "Aziatisch",
-                "image": "../img/curry.webp",
+                "image": "/img/curry.webp",
                 "time": "35 min",
                 "description": "Smaakvolle kip curry.",
                 "servings": 4,
@@ -755,7 +755,7 @@
                 "name": "Veggie Burger",
                 "urlName": "veggie-burger",
                 "type": "Vegetarisch",
-                "image": "../img/veggie.webp",
+                "image": "/img/veggie.webp",
                 "time": "30 min",
                 "description": "Heerlijke vegetarische burger.",
                 "servings": 2,
@@ -804,7 +804,7 @@
                 "name": "Pizza Margherita",
                 "urlName": "pizza-margherita",
                 "type": "Italiaans",
-                "image": "../img/pizza.webp",
+                "image": "/img/pizza.webp",
                 "time": "25 min",
                 "description": "Eenvoudige en smaakvolle pizza.",
                 "servings": 1,
@@ -846,7 +846,7 @@
                 "name": "Teriyaki Chicken",
                 "urlName": "teriyaki-chicken",
                 "type": "Japans",
-                "image": "../img/teriyaki.webp",
+                "image": "/img/teriyaki.webp",
                 "time": "30 min",
                 "description": "Zoete en hartige teriyaki kip.",
                 "servings": 3,
@@ -899,7 +899,7 @@
                 "name": "Nasi Goreng",
                 "urlName": "nasi-goreng",
                 "type": "Aziatisch",
-                "image": "../img/nasi.webp",
+                "image": "/img/nasi.webp",
                 "time": "25 min",
                 "description": "Indonesische gebakken rijst.",
                 "servings": 5,
@@ -954,7 +954,7 @@
                 "name": "Friet met mayonaise",
                 "urlName": "friet-met-mayonaise",
                 "type": "Fastfood",
-                "image": "../img/friet.webp",
+                "image": "/img/friet.webp",
                 "time": "15 min",
                 "description": "Klassieke friet met mayonaise.",
                 "servings": 2,

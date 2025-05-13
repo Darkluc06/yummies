@@ -25,9 +25,8 @@
             <section class="instruction_legenda-top">
                 <header class="instruction_legenda-header">
                     <h1 class="instruction_legenda-h1"> {{ instruction.legenda.title }} </h1>
-                    <Link class="instruction_legenda-close" :href="`/`">
+                    <Link class="instruction_legenda-close" :href="`/`" />
                     <SvgIcon :name="`close`" />
-                    </Link>
                 </header>
                 <div class="instruction__buttonWrapper">
                     <button class="instruction_legenda-button" @click="goToDocumentation"> {{
@@ -66,20 +65,23 @@
                             <span class="instruction_icon-label">{{ iconImg.label }}</span>
                         </li>
                     </ul>
+                  <p class="intensity-explanation">Intensiteit kan worden aangegeven op cond en acties van 0 naar
+                    5.
+                    Waar 5 het intens is en 0 niet gedefinieerd
+                  </p>
                     <ul class="instruction_container-icons icons-intensity">
-                        <p class="intensity-explanation">Intensiteit kan worden aangegeven op cond en acties van 0 naar
-                            5.
-                            Waar 5 het intens is en 0 niet gedefinieerd</p>
+
                         <li class="instruction_icons" v-for="(iconImg, index) in iconsIntensity" :key="index"
                             v-if="iconsIntensity">
                             <img class="instruction_icon" :src="getImgUrl(iconImg.src)" :alt="iconImg.alt" />
                             <span class="instruction_icon-label">{{ iconImg.label }}</span>
                         </li>
                     </ul>
+                  <p class="arrows-explanation">Een pijl, geeft aan dat alle elementen van de voorgaande moeten
+                    worden
+                    verplaats naar een ander instrumen</p>
                     <ul class="instruction_container-icons icons-arrows">
-                        <p class="arrows-explanation">Een pijl, geeft aan dat alle elementen van de voorgaande moeten
-                            worden
-                            verplaats naar een ander instrumen</p>
+
                         <li class="instruction_icons" v-for="(iconImg, index) in iconsArrows" :key="index"
                             v-if="iconsArrows">
                             <img class="instruction_icon" :src="getImgUrl(iconImg.src)" :alt="iconImg.alt" />
@@ -102,7 +104,7 @@
                         wat bepaalde stappen doen. Het item naam en symbolen in het vak blijven wit. Vervolgens staan de
                         ingredienten op volgorde van wat er
                         als eerst in gaat en op volgorde van kleur.</p>
-                    <img src="./../../../../public/img/colors.webp" alt="" class="instruction_ingredients-img">
+                    <img src="/img/colors.webp" alt="" class="instruction_ingredients-img">
                     <p class="instruction_ingredients-p">
                         In de ingredienten staan eerst de hoeveelheid. Altijd in eenheiden, grammen, liters, eetlepels
                         of thee lepels. En dan de naam. Wanneer een ingredient in twee blokken voorkomt
@@ -149,8 +151,8 @@
 <script>
 import SvgIcon from '@/Components/general/icon/SvgIcon.vue';
 import { RouterLink } from 'vue-router';
-import json from '../../assets/json/data.json';
-import FooterComponent from '../../Components/footer/footerComponent.vue';
+import json from '/src/assets/json/data.json';
+import FooterComponent from '/src/Components/footer/footerComponent.vue';
 
 export default {
     components: {
