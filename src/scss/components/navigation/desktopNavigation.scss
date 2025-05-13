@@ -15,13 +15,18 @@
     &__list{
         list-style: none;
         display: flex;
-        gap: 1rem;
+        gap: 2rem;
         align-items: center;
     }
 
     &__link{
         font-size: 1.8rem;
         color: map-get(map-get(colors.$palletTwo, "textColors"), "text");
+        padding: 0.5rem 0;
+
+        &--active{
+            border-bottom: .2rem solid map-get(map-get(colors.$palletTwo, "borderColors"), "second");
+        }
     }
 }
 

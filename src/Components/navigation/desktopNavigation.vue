@@ -7,17 +7,17 @@
         </RouterLink>
         <ul class="desktopNav__list">
             <li class="desktopNav__listItem">
-                <RouterLink :to="`/`" class="desktopNav__link">
+                <RouterLink :to="`/`" class="desktopNav__link" activeClass="desktopNav__link--active">
                     Recepten
                 </RouterLink>
             </li>
              <li class="desktopNav__listItem">
-                <RouterLink :to="`/documentation`" class="desktopNav__link">
+                <RouterLink :to="`/documentation`" class="desktopNav__link" activeClass="desktopNav__link--active">
                     Documentatie
                 </RouterLink>
             </li>
              <li class="desktopNav__listItem">
-                <RouterLink :to="`/favorite`" class="desktopNav__link">
+                <RouterLink :to="`/favorite`" class="desktopNav__link" activeClass="desktopNav__link--active">
                     Favorieten
                 </RouterLink>
             </li>
