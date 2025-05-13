@@ -23,6 +23,7 @@
         justify-content: center;
         flex-direction: column;
         color: map.get(map.get(colors.$palletTwo, "textColors"), "subTitle");
+        z-index: 30;
 
         svg {
             path {

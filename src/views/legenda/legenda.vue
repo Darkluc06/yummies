@@ -5,16 +5,13 @@
             <section class="instruction_legenda-top">
                 <header class="instruction_legenda-header">
                     <h1 class="instruction_legenda-h1"> {{ instruction.legenda.title }} </h1>
-                    <Link class="instruction_legenda-close" :href="`/`">
-                    <SvgIcon :name="`close`" />
-                    </Link>
+                    <div class="instruction__buttonWrapper">
+                        <RouterLink class="instruction_legenda-button" activeClass="instruction_legenda-button--active"
+                            :to="'/documentation'">Documentatie</RouterLink>
+                        <RouterLink class="instruction_legenda-button" activeClass="instruction_legenda-button--active"
+                            :to="'/legenda'">Legenda</RouterLink>
+                    </div>
                 </header>
-                <div class="instruction__buttonWrapper">
-                    <RouterLink class="instruction_legenda-button" activeClass="instruction_legenda-button--active"
-                        :to="'/documentation'">Documentatie</RouterLink>
-                    <RouterLink class="instruction_legenda-button" activeClass="instruction_legenda-button--active"
-                        :to="'/legenda'">Legenda</RouterLink>
-                </div>
             </section>
             <section class="instruction_legenda-mid">
                 <summary class="instruction_legenda-summary"> {{ instruction.legenda.summary }} </summary>

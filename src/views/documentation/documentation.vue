@@ -5,14 +5,13 @@
             <section class="instruction_documentation-top">
                 <header class="instruction_documentation-header">
                     <h1 class="instruction_documentation-h1"> {{ instruction.documentation.title }} </h1>
-                    <RouterLink class="instruction_documentation-close" :to="`/`">
-                        <SvgIcon :name="`close`" />
-                    </RouterLink>
+                    <div class="instruction__buttonWrapper">
+                        <RouterLink class="instruction_legenda-button" activeClass="instruction_legenda-button--active"
+                            :to="'/documentation'">Documentatie</RouterLink>
+                        <RouterLink class="instruction_legenda-button" activeClass="instruction_legenda-button--active"
+                            :to="'/legenda'">Legenda</RouterLink>
+                    </div>
                 </header>
-                <div class="instruction__buttonWrapper">
-                    <RouterLink class="instruction_legenda-button" activeClass="instruction_legenda-button--active" :to="'/documentation'">Documentatie</RouterLink>
-                    <RouterLink class="instruction_legenda-button" activeClass="instruction_legenda-button--active" :to="'/legenda'">Legenda</RouterLink>
-                </div>
             </section>
             <section class="instructions_documentation-mid">
                 <p class="instructions_documentation-p">
