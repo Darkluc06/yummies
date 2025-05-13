@@ -37,7 +37,7 @@
                 </div>
             </section>
             <section class="instruction_legenda-mid">
-                <summary class="instruction_legenda-summary"> {{ instruction.legenda.summary }} </summary>
+                <p class="instruction_legenda-summary"> {{ instruction.legenda.summary }} </p>
                 <div class="instruction_containers">
                     <ul class="instruction_container-icons icons-condition">
                         <li class="instruction_icons" v-for="(iconImg, index) in iconsCondition" :key="index"
@@ -92,7 +92,7 @@
                         moet
                         doen
                     </p>
-                    <img src="./../../../../public/img/iets_blijven_doen.webp" alt="" class="instruction_img-keep-doing">
+                    <img src="/img/iets_blijven_doen.webp" alt="" class="instruction_img-keep-doing">
                 </figure>
                 <div class="instruction_ingredients">
                     <p class="instruction_ingredients-p">Verschillende onderdelen (moeten) afgebeeld worden in
