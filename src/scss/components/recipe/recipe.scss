@@ -13,13 +13,7 @@
 
     &__item {
         height: max-content;
-<<<<<<< HEAD:resources/scss/components/recipe/recipe.scss
-        max-width: 50rem;
-        min-width: 30rem;
-        flex-shrink: 1;
-=======
         width: 50rem;
->>>>>>> develop:src/scss/components/recipe/recipe.scss
         position: relative;
     }
 
@@ -165,11 +159,7 @@
 @media screen and (max-width: 62.5rem) {
     .recipe{
         &__item{
-<<<<<<< HEAD:resources/scss/components/recipe/recipe.scss
-            max-width: 100%;
-=======
             width: 100%;
->>>>>>> develop:src/scss/components/recipe/recipe.scss
         }
     }
 }
