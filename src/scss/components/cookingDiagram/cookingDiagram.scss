@@ -226,6 +226,11 @@
         &--active {
             opacity: 1;
             transition: opacity 0.2s linear;
+
+            .icon{
+                width: 2rem;
+                height: 2rem;
+            }
         }
     }
 
