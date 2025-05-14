@@ -24,9 +24,18 @@
         font-size: 1.8rem;
         color: map.get(map.get(colors.$palletTwo, "textColors"), "text");
         padding: 0.5rem 0;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
 
         &--active{
             border-bottom: .2rem solid map.get(map.get(colors.$palletTwo, "borderColors"), "second");
+        }
+
+        .icon{
+            width: 3rem;
+            height: 3rem;
+            fill: map.get(map.get(colors.$palletTwo, "textColors"), "icon");
         }
     }
 }
