@@ -151,7 +151,7 @@
 <script>
 import SvgIcon from '@/Components/general/icon/SvgIcon.vue';
 import { RouterLink } from 'vue-router';
-import json from '/src/assets/json/data.json';
+import instruction from '/src/assets/json/instruction.json';
 import FooterComponent from '/src/Components/footer/footerComponent.vue';
 
 export default {
@@ -163,20 +163,20 @@ export default {
     data() {
         return {
             showDocumentation: true,
-            instruction: json["instruction"],
-            icons: json["instruction"]["legenda"]["imgs"],
+            instruction: instruction,
+            icons: instruction["legenda"]["imgs"],
 
-            info: json,
-            iconsCondition: json['instruction']['legenda']['iconsImgCondition'],
-            iconsXYZ: json['instruction']['legenda']['iconsXYZ'],
-            iconsCircles: json['instruction']['legenda']['iconsImgsCircle'],
-            iconsDiamonds: json['instruction']['legenda']['iconsImgsDiamond'],
-            iconsIntensity: json['instruction']['legenda']['iconsImgIntensity'],
-            iconsArrows: json['instruction']['legenda']['iconsImgArrows'],
-            ingredientsBlue: json['instruction']['legenda']['ingredients']['blueBox'],
-            ingredientsGreen: json['instruction']['legenda']['ingredients']['greenBox'],
-            ingredientsYellow: json['instruction']['legenda']['ingredients']['yellowBox'],
-            ingredientsWhite: json['instruction']['legenda']['ingredients']['whiteBox'],
+            info: instruction,
+            iconsCondition: instruction['legenda']['iconsImgCondition'],
+            iconsXYZ: instruction['legenda']['iconsXYZ'],
+            iconsCircles: instruction['legenda']['iconsImgsCircle'],
+            iconsDiamonds: instruction['legenda']['iconsImgsDiamond'],
+            iconsIntensity: instruction['legenda']['iconsImgIntensity'],
+            iconsArrows: instruction['legenda']['iconsImgArrows'],
+            ingredientsBlue: instruction['legenda']['ingredients']['blueBox'],
+            ingredientsGreen: instruction['legenda']['ingredients']['greenBox'],
+            ingredientsYellow: instruction['legenda']['ingredients']['yellowBox'],
+            ingredientsWhite: instruction['legenda']['ingredients']['whiteBox'],
 
             isScrollable: false,
             footerVisible: true,
@@ -187,6 +187,7 @@ export default {
         this.checkScrollability();
         window.addEventListener('resize', this.checkScrollability);
         window.addEventListener('scroll', this.handleScroll);
+        console.log(instruction)
     },
     beforeUnmount() {
         window.removeEventListener('resize', this.checkScrollability);
