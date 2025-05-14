@@ -506,6 +506,21 @@
                             "type": "Line",
                             "Active": true
                         }
+                    ],
+                    [
+                        {
+                             "type": "Ingredient",
+                            "is-string": false,
+                            "image": "../img/opwarmen.webp",
+                            "imageAlt": "Opwarmen",
+                            "recipeId": 1,
+                            "difficulty": 0,
+                            "has-brackets": true
+                        },
+                        {
+                            "type": "Line",
+                            "Active": true
+                        }
                     ]
                 ]
             },
