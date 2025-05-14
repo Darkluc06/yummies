@@ -18,9 +18,8 @@
         margin: 0 auto;
         width: 100%;
         min-height: 50vh;
-        padding-left: 1rem;
+        padding: 1rem;
         border-radius: 2rem;
-        padding-bottom: 1rem;
 
         .instruction_documentation-top {
             padding-bottom: 1rem;
@@ -29,6 +28,8 @@
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
+                flex-wrap: wrap;
+                gap: 1rem;
 
                 .instruction_documentation-h1 {
                     font-size: 4rem;
@@ -96,9 +97,8 @@
         max-width: 1600px;
         margin: 0 auto;
         width: 100%;    
-        padding-left: 1rem;
+        padding: 1rem;
         border-radius: 2rem;
-        padding-bottom: 1rem;
 
         .instruction_legenda-top {
             padding-bottom: 1rem;
@@ -107,6 +107,8 @@
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
+                flex-wrap: wrap;
+                gap: 1rem;
 
                 .instruction_legenda-h1 {
                     font-size: 4rem;
