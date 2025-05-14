@@ -1,8 +1,6 @@
 {
     "home": {
-        "title": "Kook Diagram",
-        "headerH2": "Verschillende kookstijlen",
-        "sectionRecipeH2": "Recepten",
+
         "recipes": [
             {
                 "id": 1,
@@ -957,14 +955,6 @@
                 ]
             }
         ]
-    },
-    "navigation": {
-        "all": "Alle",
-        "asian": "Aziatisch",
-        "italian": "Italiaans",
-        "fastfood": "Fastfood",
-        "japanese": "Japans",
-        "vegetarian": "Vegetarisch"
     },
     "instruction": {
         "buttons": {

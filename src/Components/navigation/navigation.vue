@@ -5,38 +5,38 @@
                 <figure class="nav_icon  ">
                     <iconComponent :icon="'Alle'"/>
                 </figure>
-                <h2> {{ cookingStyle.all }} </h2>
+                <h2> {{ navigation.all }} </h2>
             </li>
             <li class="nav_links" @click="selectCategory('Aziatisch', $event)">
                 <figure class="nav_icon  ">
                     <iconComponent :icon="'Aziatisch'"/>
                 </figure>
-                <h2> {{ cookingStyle.asian }} </h2>
+                <h2> {{ navigation.asian }} </h2>
             </li>
             <li class="nav_links" @click="selectCategory('Italiaans', $event)">
                 <figure class="nav_icon  ">
                     <iconComponent :icon="'Italiaans'"/>
                 </figure>
-                <h2>{{ cookingStyle.italian }}</h2>
+                <h2>{{ navigation.italian }}</h2>
             </li>
             <li class="nav_links" @click="selectCategory('Fastfood', $event)">
                 <figure class="nav_icon  ">
                     <iconComponent :icon="'Fastfood'"/>
                 </figure>
-                <h2> {{ cookingStyle.fastfood }} </h2>
+                <h2> {{ navigation.fastfood }} </h2>
                 <!-- <Link :href="route('Dashboard')"></Link> -->
             </li>
             <li class="nav_links" @click="selectCategory('Japans', $event)">
                 <figure class="nav_icon  ">
                     <iconComponent :icon="'Japans'"/>
                 </figure>
-                <h2> {{ cookingStyle.japanese }} </h2>
+                <h2> {{ navigation.japanese }} </h2>
             </li>
             <li class="nav_links" @click="selectCategory('Vegetarisch', $event)">
                 <figure class="nav_icon  ">
                     <iconComponent :icon="'Vegetarisch'"/>
                 </figure>
-                <h2> {{ cookingStyle.vegetarian }} </h2>
+                <h2> {{ navigation.vegetarian }} </h2>
             </li>
         </ul>
         <div class="filtered-results">
@@ -46,7 +46,7 @@
 
 <script>
 import { RouterLink } from 'vue-router';
-import json from '../../assets/json/data.json';
+import navigation from '../../assets/json/navigation.json';
 import iconComponent from './../general/icon/icon.vue'
 
 export default {
@@ -55,13 +55,10 @@ export default {
     },
     data() {
         return {
-            cookingStyle: json.navigation,
+            navigation: navigation,
             selectedCategory: null,
             clicked: false,
         }
-    },
-    mounted() {
-
     },
     methods: {
         selectCategory(category, event) {

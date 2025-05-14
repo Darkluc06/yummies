@@ -1,9 +1,9 @@
 <template>
     <article class="yummies">
-        <DesktopNavigation :title="data.title" />
+        <DesktopNavigation :title="home.title" />
         <header class="yummies_header">
             <div class="yummies_header-content">
-                <h1 class="yummies_header-h1"> {{ data.title }} </h1>
+                <h1 class="yummies_header-h1"> {{ home.title }} </h1>
                 <label class="yummies_span">
                     <SvgIcon :name="`search`" />
                     <input v-model="searchTerm" @input="generateSuggestions" @keyup.enter="performSearch" type="text"
@@ -37,7 +37,7 @@
                     </label>
                     <Navigation @categorySelected="setSelectedCategory" />
                 </div>
-                <h1 class="yummies_recipes-h1"> {{ data.sectionRecipeH2 }} </h1>
+                <h1 class="yummies_recipes-h1"> {{ home.sectionRecipeH2 }} </h1>
                 <ul class="yummies_recipes-container">
                     <Recipe v-for="recipe in filteredRecipes" :key="recipe.urlName || recipe.id" :recipe="recipe" />
                 </ul>
@@ -50,6 +50,7 @@
 <script>
 import Navigation from '@/Components/navigation/navigation.vue';
 import Recipe from '@/Components/recipe/recipe.vue';
+import home from '../assets/json/home.json';
 import json from '../assets/json/data.json';
 import SvgIcon from '@/Components/general/icon/SvgIcon.vue';
 import DesktopNavigation from '@/Components/navigation/desktopNavigation.vue';
@@ -66,6 +67,7 @@ export default {
     },
     data() {
         return {
+            home: home,
             data: json.home,
             selectedCategory: null,
             isScrollable: false,
