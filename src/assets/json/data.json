@@ -864,7 +864,7 @@
                 {
                     "alt": "Ruit conditie",
                     "label": "Ruit conditie",
-                    "src": "rconditie.webp"
+                    "src": "conditie.webp"
                 }
             ],
             "iconsXYZ": [
@@ -913,7 +913,7 @@
                 {
                     "alt": "Reepjes snijden X",
                     "label": "Reepjes snijden X",
-                    "src": "reepjes_snijden_x.webp"
+                    "src": "reepjes_snijden_X.webp"
                 },
                 {
                     "alt": "Reepjes snijden Y",
@@ -923,7 +923,7 @@
                 {
                     "alt": "Ringen snijden",
                     "label": "Ringen snijden",
-                    "src": "ringen_snijden.webp"
+                    "src": "ringen.webp"
                 },
                 {
                     "alt": "Afscheuren",
@@ -988,7 +988,7 @@
                 {
                     "alt": "Insijden boven",
                     "label": "Insnijden boven",
-                    "src": "insnijden_boven.webp"
+                    "src": "insijden_boven.webp"
                 },
                 {
                     "alt": "Insijden",
@@ -1007,13 +1007,13 @@
                 },
                 {
                     "alt": "Hoog maken",
-                    "label": "Actie",
+                    "label": "Hoog maken",
                     "src": "hoog_maken.webp"
                 },
                 {
                     "alt": "Plat Y-as",
                     "label": "Actie",
-                    "src": "plat_Y_axis.webp"
+                    "src": "plat_y_axis.webp"
                 }
             ],
             "iconsImgsDiamond": [
@@ -1065,7 +1065,7 @@
                 {
                     "alt": "Conditie A",
                     "label": "Conditie A",
-                    "src": "cond_a.webp"
+                    "src": "cond_A.webp"
                 },
                 {
                     "alt": "Conditie B",
@@ -1098,9 +1098,14 @@
                     "src": "verkleind.webp"
                 },
                 {
+                    "alt": "Zachr",
+                    "label": "Zacht",
+                    "src": "zacht.webp"
+                },
+                {
                     "alt": "Op of leeg",
                     "label": "Op/leeg",
-                    "src": "op_leeg.webp"
+                    "src": "op-leeg.webp"
                 }
             ],
             "iconsImgIntensity": [
