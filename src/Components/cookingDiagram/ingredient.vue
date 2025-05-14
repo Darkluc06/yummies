@@ -37,7 +37,7 @@
 import SvgIcon from '../general/icon/SvgIcon.vue';
 import BackwardsArrow from './backwardsArrow.vue';
 import Arrow from './arrow.vue';
-import json from '../../assets/json/data.json'
+import json from '../../assets/json/recipe.json'
 
 export default {
     components: {
@@ -47,7 +47,7 @@ export default {
     },
     data () {
         return {
-            data : json.home,
+            data : json.recipePage,
             ingredientsString: "",
             popupActive: false,
             finishedStep: false,

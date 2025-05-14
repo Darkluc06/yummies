@@ -51,7 +51,7 @@
 import Navigation from '@/Components/navigation/navigation.vue';
 import Recipe from '@/Components/recipe/recipe.vue';
 import home from '../assets/json/home.json';
-import json from '../assets/json/data.json';
+import json from '../assets/json/recipe.json';
 import SvgIcon from '@/Components/general/icon/SvgIcon.vue';
 import DesktopNavigation from '@/Components/navigation/desktopNavigation.vue';
 import FooterComponent from '../Components/footer/footerComponent.vue';
@@ -68,7 +68,7 @@ export default {
     data() {
         return {
             home: home,
-            data: json.home,
+            data: json.recipePage,
             selectedCategory: null,
             isScrollable: false,
             footerVisible: true,

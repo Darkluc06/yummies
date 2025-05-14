@@ -1,14 +1,14 @@
 {
-    "home": {
+    "recipePage": {
         "recipes": [
             {
                 "id": 1,
                 "name": "Pannenkoek",
-                "urlName": "sushi-delight",
-                "type": "Japans",
+                "urlName": "pannenkoek",
+                "type": "American",
                 "image": "/img/pannenkoek.webp",
                 "time": "25 min",
-                "description": "Heerlijke verse sushi.",
+                "description": "Heerlijke verse pannenkoeken.",
                 "servings": 2,
                 "ingredients": [
                     {
