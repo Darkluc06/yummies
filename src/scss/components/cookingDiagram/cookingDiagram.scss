@@ -135,7 +135,7 @@
         display: flex;
         align-items: center;
         gap: .5rem;
-        height: 100%;
+        height: max-content;
         overflow-y: scroll;
         z-index: 1;
         opacity: 0;
@@ -178,6 +178,13 @@
 
         button {
             z-index: 10;
+            background: transparent;
+            border: none;
+
+            .icon{
+                width: 2rem;
+                height: 2rem;
+            }
         }
     }
 
