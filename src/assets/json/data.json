@@ -516,7 +516,8 @@
                             "recipeId": 1,
                             "difficulty": 5,
                             "has-brackets": true,
-                            "steps": "2"
+                            "steps": "2",
+                            "bracket-text": "c.a 15m"
                         },
                         {
                             "type": "Line",

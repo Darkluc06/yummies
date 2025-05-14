@@ -34,7 +34,7 @@
                 <li class="cookingDiagram__brackets--left"></li>
                 <li class="cookingDiagram__brackets--right"></li>
             </ul>
-            <p class="cookingDiagram__brackets--text"></p>
+            <p class="cookingDiagram__brackets--text">{{ bracketText }}</p>
         </figure>
     </div>
 </template>
@@ -111,6 +111,10 @@ export default {
         hasBrackets:{
             type: Boolean,
             default: false
+        },
+        bracketText:{
+            type: String,
+            default: "",
         }
     },
     mounted() {

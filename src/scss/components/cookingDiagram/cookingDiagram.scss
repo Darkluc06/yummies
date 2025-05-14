@@ -462,5 +462,13 @@
             border-top: 0.2rem solid black;
             border-bottom: 0.2rem solid black;
         }
+
+        &--text{
+            position: absolute;
+            left: 110%;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.3rem;
+        }
     }
 }
