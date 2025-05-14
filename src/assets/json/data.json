@@ -509,7 +509,7 @@
                     ],
                     [
                         {
-                             "type": "Ingredient",
+                            "type": "Ingredient",
                             "is-string": false,
                             "image": "../img/opwarmen.webp",
                             "imageAlt": "Opwarmen",

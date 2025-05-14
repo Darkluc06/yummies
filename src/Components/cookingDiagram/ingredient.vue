@@ -23,7 +23,7 @@
                     <SvgIcon :name="`check`" />
                 </div>
             </figure>
-            <ul class="cookingDiagram__difficultyWrapper">
+            <ul class="cookingDiagram__difficultyWrapper" v-if="difficulty < 0">
                 <li class="cookingDiagram__difficulty" v-for="(difficulty, index) in difficulty"></li>
             </ul>
         </span>
