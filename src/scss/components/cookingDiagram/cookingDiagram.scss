@@ -49,6 +49,7 @@
     }
 
     &__lineWrapper {
+        display: flex;
         align-items: center;
         justify-content: center;
     }
@@ -282,13 +283,14 @@
 
         @for $i from 1 through 10 {
             &.steps--#{$i} {
-                height: calc(10rem * $i - 5rem);
+                height: calc(10rem * $i - 2.5rem);
             }
         }
 
         @for $i from 1 through 10 {
             &.width--#{$i} {
                 width: calc(100% * $i - 5rem);
+                transform: translate(-10%, 0rem);
             }
         }
     }
@@ -297,9 +299,9 @@
         width: max-content;
 
         .cookingDiagram__iconWrapper {
-            position: absolute;
+            position: relative;
             top: 100%;
-            left: 0;
+            left: 10%;
             transform: translate(-50%, -50%);
 
             .icon {
