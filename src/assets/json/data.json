@@ -420,131 +420,9 @@
                         {
                             "type": "Tools",
                             "tool": "pot"
-                        },
-                        {
-                            "type": "Tools",
-                            "tool": "pot"
-                        },
-                        {
-                            "type": "Tools",
-                            "tool": "pot"
                         }
                     ],
                     [
-                        {
-                            "type": "Line",
-                            "active": false
-                        },
-                        {
-                            "type": "Line",
-                            "active": false
-                        },
-                        {
-                            "type": "Ingredient",
-                            "is-string": true,
-                            "ingedient": "2L water",
-                            "active": true,
-                            "recipeId": 1
-                        },
-                        {
-                            "type": "Line",
-                            "active": false
-                        }
-                    ],
-                    [
-                        {
-                            "type": "Line",
-                            "active": false
-                        },
-                        {
-                            "type": "Line",
-                            "active": false
-                        },
-                        {
-                            "type": "Ingredient",
-                            "is-string": false,
-                            "image": "/img/actie_x.webp",
-                            "imageAlt": "test",
-                            "difficulty": 1
-                        },
-                        {
-                            "type": "Line",
-                            "active": false
-                        }
-                    ],
-                    [
-                        {
-                            "type": "Line",
-                            "active": false
-                        },
-                        {
-                            "type": "Line",
-                            "active": false
-                        },
-                        {
-                            "type": "Line",
-                            "active": true
-                        },
-                        {
-                            "type": "Line",
-                            "active": true,
-                            "has-big-arrow": true
-                        }
-                    ],
-                    [
-                        {
-                            "type": "Ingredient",
-                            "is-string": true,
-                            "ingedient": "500g Meel, 1l melk, 2 eieren"
-                        },
-                        {
-                            "type": "Line",
-                            "active": false
-                        },
-                        {
-                            "type": "Line",
-                            "active": true
-                        }
-                    ],
-                    [
-                        {
-                            "type": "Ingredient",
-                            "is-string": false,
-                            "image": "/img/actie_x.webp",
-                            "imageAlt": "test",
-                            "difficulty": 5
-                        },
-                        {
-                            "type": "Line",
-                            "active": false
-                        },
-                        {
-                            "type": "Line",
-                            "active": true
-                        }
-                    ],
-                    [
-                        {
-                            "type": "Line",
-                            "active": true
-                        },
-                        {
-                            "type": "Ingredient",
-                            "is-string": false,
-                            "image": "/img/actie_x.webp",
-                            "imageAlt": "test",
-                            "difficulty": 3
-                        },
-                        {
-                            "type": "Line",
-                            "active": true
-                        }
-                    ],
-                    [
-                        {
-                            "type": "Line",
-                            "active": true
-                        },
                         {
                             "type": "Ingredient",
                             "is-string": true,
@@ -553,7 +431,7 @@
                         },
                         {
                             "type": "Line",
-                            "Active": true
+                            "Active": false
                         }
                     ],
                     [
@@ -566,7 +444,7 @@
                         },
                         {
                             "type": "Line",
-                            "Active": true
+                            "Active": false
                         }
                     ],
                     [
@@ -581,7 +459,7 @@
                         },
                         {
                             "type": "Line",
-                            "Active": true
+                            "Active": false
                         }
                     ],
                     [
@@ -596,39 +474,7 @@
                         },
                         {
                             "type": "Line",
-                            "active": true
-                        }
-                    ],
-                    [
-                        {
-                            "type": "Emty"
-                        },
-                        {
-                            "type": "Ingredient",
-                            "is-string": false,
-                            "image": "/img/actie_x.webp",
-                            "imageAlt": "test",
-                            "difficulty": 0
-                        },
-                        {
-                            "type": "Line",
-                            "active": true
-                        }
-                    ],
-                    [
-                        {
-                            "type": "Emty"
-                        },
-                        {
-                            "type": "Ingredient",
-                            "is-string": false,
-                            "image": "/img/actie_x.webp",
-                            "imageAlt": "test",
-                            "difficulty": 0
-                        },
-                        {
-                            "type": "Line",
-                            "Active": true
+                            "active": false
                         }
                     ],
                     [
@@ -643,7 +489,7 @@
                         },
                         {
                             "type": "Line",
-                            "Active": true
+                            "Active": false
                         }
                     ],
                     [
@@ -658,7 +504,7 @@
                         },
                         {
                             "type": "Line",
-                            "Active": true
+                            "Active": false
                         }
                     ],
                     [
@@ -675,7 +521,7 @@
                         },
                         {
                             "type": "Line",
-                            "Active": true
+                            "Active": false
                         }
                     ],
                     [
@@ -689,7 +535,7 @@
                         },
                         {
                             "type": "Line",
-                            "Active": true
+                            "Active": false
                         }
                     ]
                 ]
