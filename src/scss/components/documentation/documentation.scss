@@ -5,7 +5,8 @@
 .instruction {
     width: 100%;
     min-height: 100vh;
-    padding: 1rem;
+    background: map.get(map.get(colors.$palletTwo, "backgroundColors"), "main");
+    padding-top: 2rem;
 
     &__buttonWrapper{
         display: flex;
@@ -13,10 +14,10 @@
     }
 
     .instruction_documentation {
+        max-width: 1600px;
+        margin: 0 auto;
         width: 100%;
         min-height: 50vh;
-        border: .2rem solid map.get(map.get(colors.$palletTwo, "borderColors"), "default");
-        background: map.get(map.get(colors.$palletTwo, "backgroundColors"), "second");
         padding-left: 1rem;
         border-radius: 2rem;
         padding-bottom: 1rem;
@@ -56,7 +57,7 @@
 
 
                 &--active{
-                    background: map.get(map.get(colors.$palletTwo, "backgroundColors"), "main");
+                    background: map.get(map.get(colors.$palletTwo, "backgroundColors"), "third");
                     color: map.get(map.get(colors.$palletTwo, "textColors"), "icon");
                 }
             }
@@ -73,8 +74,8 @@
                 border: 0.2rem solid map.get(map.get(colors.$palletTwo, "borderColors"), "second");
 
                 &--active{
-                    background: map.get(map.get(colors.$palletTwo, "backgroundColors"), "main");
-                    color: map.get(map.get(colors.$palletTwo, "textColors"), "icon");
+                    background: map.get(map.get(colors.$palletTwo, "backgroundColors"), "third");
+                    color: map.get(map.get(colors.$palletTwo, "textColors"), "active");
                 }
             }
         }
@@ -92,9 +93,9 @@
     }
 
     .instruction_legenda {
-        width: 100%;
-        border: .2rem solid map.get(map.get(colors.$palletTwo, "borderColors"), "default");   
-        background: map.get(map.get(colors.$palletTwo, "backgroundColors"), "second");     
+        max-width: 1600px;
+        margin: 0 auto;
+        width: 100%;    
         padding-left: 1rem;
         border-radius: 2rem;
         padding-bottom: 1rem;
@@ -116,41 +117,24 @@
                     padding-right: 1rem;
                 }
             }
-
-            .instruction_legenda-button{
-                font-size: 2rem;
-                padding: 0.5rem 1rem;
-                background: map.get(map.get(colors.$palletTwo, "backgroundColors"), "second");
-                color: map.get(map.get(colors.$palletTwo, "textColors"), "icon");
-                border-radius: 2rem;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                border: 0.2rem solid map.get(map.get(colors.$palletTwo, "borderColors"), "second");
-
-                &--active{
-                    background: map.get(map.get(colors.$palletTwo, "backgroundColors"), "main");
-                    color: map.get(map.get(colors.$palletTwo, "textColors"), "icon");
-                }
-            }
-
-            .instruction_legenda-button{
-                font-size: 2rem;
-                padding: 0.5rem 1rem;
-                background: map.get(map.get(colors.$palletTwo, "backgroundColors"), "second");
-                color: map.get(map.get(colors.$palletTwo, "textColors"), "icon");
-                border-radius: 2rem;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                border: 0.2rem solid map.get(map.get(colors.$palletTwo, "borderColors"), "second");
-
-                &--active{
-                    background: map.get(map.get(colors.$palletTwo, "backgroundColors"), "main");
-                    color: map.get(map.get(colors.$palletTwo, "textColors"), "icon");
-                }
-            }
         }
+
+        .instruction_legenda-button{
+                font-size: 2rem;
+                padding: 0.5rem 1rem;
+                background: map.get(map.get(colors.$palletTwo, "backgroundColors"), "second");
+                color: map.get(map.get(colors.$palletTwo, "textColors"), "icon");
+                border-radius: 2rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 0.2rem solid map.get(map.get(colors.$palletTwo, "borderColors"), "second");
+
+                &--active{
+                    background: map.get(map.get(colors.$palletTwo, "backgroundColors"), "third");
+                    color: map.get(map.get(colors.$palletTwo, "textColors"), "active");
+                }
+            }
 
         .instruction_legenda-mid {
             display: flex;
