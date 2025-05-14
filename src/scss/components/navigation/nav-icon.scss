@@ -66,7 +66,6 @@
 
             h2{
                 font-size: 1.5rem;
-                color: map.get(map.get(colors.$palletTwo, "textColors"), "subTitle");
                 font-weight: 500;
             }
 
@@ -85,7 +84,7 @@
                 svg{
                     g{
                         path{
-                            fill: map.get(map.get(colors.$palletTwo, "textColors"), "icon") !important;
+                            // fill: map.get(map.get(colors.$palletTwo, "textColors"), "icon") !important;
                         }
                     }
                 }

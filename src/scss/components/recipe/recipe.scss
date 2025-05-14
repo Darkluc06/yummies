@@ -73,7 +73,7 @@
 
             g {
                 path {
-                    fill: map.get(map.get(colors.$palletTwo, "textColors"), "icon") !important;
+                    // fill: map.get(map.get(colors.$palletTwo, "textColors"), "icon") !important;
                 }
             }
         }
