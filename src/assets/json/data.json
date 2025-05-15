@@ -537,6 +537,16 @@
                             "type": "Line",
                             "Active": false
                         }
+                    ],
+                    [
+                        {
+                            "type": "Timeline",
+                            "steps": "2"
+                        },
+                        {
+                            "type": "Line",
+                            "Active": false
+                        }
                     ]
                 ]
             },

@@ -1,8 +1,8 @@
 <template>
     <div class="cookingDiagram__lineWrapper">
-        <figure class="cookingDiagram__line"></figure>
+        <figure class="cookingDiagram__line cookingDiagram__line--active"></figure>
+        <figure class="cookingDiagram__timeline" :class="`steps--${steps}`"></figure>
     </div>
-    <figure class="cookingDiagram__timeline" :class="`steps--${steps}`"></figure>
 </template>
 
 <script>
