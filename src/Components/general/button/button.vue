@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import SvgIcon from '../svgIcon/SvgIcon.vue';
+import SvgIcon from '../icon/SvgIcon.vue';
 
 export default {
   name: 'ButtonVue',

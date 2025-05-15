@@ -8,7 +8,7 @@
 
 <script>
 
-import SvgIcon from '../general/svgIcon/SvgIcon.vue';
+import SvgIcon from '../general/icon/SvgIcon.vue';
 
 export default {
     components: {
