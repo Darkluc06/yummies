@@ -1,6 +1,7 @@
 <template>
     <DesktopNavigation :title="'Kook Diagram'" />
-    <article class="recipePage" v-if="recipe">
+        <article class="recipePage" v-if="recipe">
+        <div class="recipePage__container">
         <imageComponent 
             :figureClass="`recipePage__figure`" 
             :imageClass="`recipePage__img`" 
@@ -67,6 +68,7 @@
             <cookingDiagram :nameOfRecipe="recipe" :key="recipe.urlName" v-if="recipe.diagram" />
         </section>
         <modal :open="openModal" :recipe="recipe" @close="closeModal" />
+        </div>
     </article>
     <div v-else class="recipePage__loading">
         <p>Recept aan het laden...</p>
