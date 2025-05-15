@@ -498,11 +498,13 @@
     }
 
     &__timeline {
+        $timelineWidth: 3rem;
+
         top: 0;
         position: absolute;
         left: 50%;
         transform: translateX(0%);
-        width: 3rem;
+        width: $timelineWidth;
         border: 0.2rem solid black;
         border-left: none;
         border-top-right-radius: 5rem;
@@ -514,6 +516,15 @@
             &.steps--#{$i} {
                 height: calc(10rem * $i);
             }
+        }
+
+        &--time{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate($timelineWidth + 1rem, -50%);
+            width: calc(100% - $timelineWidth - 1rem);
+            font-size: 1.2rem;
         }
     }
 }
