@@ -185,6 +185,7 @@ export default {
     },
     mounted() {
         this.checkScrollability();
+        this.setPopUpArrow();
         window.addEventListener('resize', this.checkScrollability);
         window.addEventListener('scroll', this.handleScroll);
     },
@@ -193,6 +194,9 @@ export default {
         window.removeEventListener('scroll', this.handleScroll);
     },
     methods: {
+        setPopUpArrow () {
+            localStorage.setItem("arrow", "true");
+        },
         goToDocumentation() {
             this.showDocumentation = true;
         },
