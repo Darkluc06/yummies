@@ -13,7 +13,7 @@
 import Tools from './tools.vue';
 import Line from './line.vue';
 import Ingredient from './ingredient.vue';
-import Emty from './Empty.vue';
+import Empty from './Empty.vue';
 import Forloop from './forloop.vue';
 import Arrow from './arrow.vue'
 
