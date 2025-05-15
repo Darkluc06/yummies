@@ -7,7 +7,6 @@
     display: flex;
     flex-direction: column;
     position: relative;
-    padding-bottom: 6em;
     background: map.get(map.get(colors.$palletTwo, "backgroundColors"), "main");
 
     &__container{
@@ -25,7 +24,7 @@
     }
 
     &__figure{
-        height: 30rem;
+        height: 40rem;
         width: 100%;
     }
 
@@ -193,4 +192,10 @@
         color: map.get(map.get(colors.$palletTwo, "textColors"), "icon");
     }
 
+}
+
+@media screen and (max-width: 62.5rem) {
+    .recipePage{
+        padding-bottom: 6em;
+    }
 }
