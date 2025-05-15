@@ -25,7 +25,7 @@
         align-items: center;
         justify-content: center;
         border-radius: 1em;
-        background: map.get(map.get(colors.$palletTwo, "backgroundColors"), "second");
+        background: map.get(map.get(colors.$palletTwo, "backgroundColors"), "white");
 
         .icon{
             fill: map.get(map.get(colors.$palletTwo, "textColors"), "icon");

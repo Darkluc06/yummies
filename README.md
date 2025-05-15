@@ -1,3 +1,19 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+# Yummies
+
+## Assignment
+
+## How to run the server
+Open the terminal and type the following in each terminal:
+
+1. npm run dev
+2. php artisan serve
+3. php artisan inertia:start-ssr
+
+=======
+>>>>>>> develop
+=======
 # kook-diagram
 
 This template should help get you started developing with Vue 3 in Vite.
@@ -27,3 +43,4 @@ npm run dev
 ```sh
 npm run build
 ```
+>>>>>>> origin/develop

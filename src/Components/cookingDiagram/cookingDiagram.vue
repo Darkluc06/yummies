@@ -13,9 +13,10 @@
 import Tools from './tools.vue';
 import Line from './line.vue';
 import Ingredient from './ingredient.vue';
-import Emty from './emty.vue';
+import Empty from './empty.vue';
 import Forloop from './forloop.vue';
 import Arrow from './arrow.vue'
+import Timeline from './timeline.vue';
 
 export default {
     props: {
@@ -25,9 +26,10 @@ export default {
         Tools,
         Line,
         Ingredient,
-        Emty,
+        Empty,
         Forloop,
-        Arrow
+        Arrow,
+        Timeline
     },
     data() {
         let recipeDiagram = [];

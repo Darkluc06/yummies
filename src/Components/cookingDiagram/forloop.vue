@@ -1,5 +1,8 @@
 <template>
     <div class="cookingDiagram__column">
+        <div class="cookingDiagram__lineWrapper">
+            <figure class="cookingDiagram__line"></figure>
+        </div>
         <figure class="cookingDiagram__forloop" :class="`steps--${steps}`, `width--${width}`">
             <span class="cookingDiagram__forloopIcon">
                 <!-- <div class="cookingDiagram__iconWrapper triangle">

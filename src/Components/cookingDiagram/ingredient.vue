@@ -23,12 +23,19 @@
                     <SvgIcon :name="`check`" />
                 </div>
             </figure>
-            <ul class="cookingDiagram__difficultyWrapper">
+            <ul class="cookingDiagram__difficultyWrapper" v-if="difficulty > 0">
                 <li class="cookingDiagram__difficulty" v-for="(difficulty, index) in difficulty"></li>
             </ul>
         </span>
         <BackwardsArrow :steps="steps" :direction="backwardsArrowDirection" v-if="hasBackwardsArrow === true"/>
         <Arrow v-if="hasIngredientArrow === true" :image="image" :image-alt="imageAlt" :difficulty="difficulty" :ingredient="this.ingredientsString" />
+        <figure class="cookingDiagram__brackets" v-if="hasBrackets === true" :class="`steps--${steps}`">
+            <ul class="cookingDiagram__brackets--wrapper">
+                <li class="cookingDiagram__brackets--left"></li>
+                <li class="cookingDiagram__brackets--right"></li>
+            </ul>
+            <p class="cookingDiagram__brackets--text">{{ bracketText }}</p>
+        </figure>
     </div>
 </template>
 
@@ -100,6 +107,14 @@ export default {
         hasIngredientArrow:{
             type: Boolean,
             default: false
+        },
+        hasBrackets:{
+            type: Boolean,
+            default: false
+        },
+        bracketText:{
+            type: String,
+            default: "",
         }
     },
     mounted() {

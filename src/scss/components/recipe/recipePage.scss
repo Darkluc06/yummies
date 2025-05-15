@@ -7,7 +7,13 @@
     display: flex;
     flex-direction: column;
     position: relative;
-    padding-bottom: 6em;
+    background: map.get(map.get(colors.$palletTwo, "backgroundColors"), "main");
+
+    &__container{
+        max-width: 1600px;
+        margin: 0 auto;
+        width: 100%;
+    }
 
     &__link{
         .icon{
@@ -18,7 +24,7 @@
     }
 
     &__figure{
-        height: 30rem;
+        height: 40rem;
         width: 100%;
     }
 
@@ -41,7 +47,7 @@
         position: relative;
         padding: 1rem;
         margin-bottom: -2rem;
-        background: map.get(map.get(colors.$palletTwo, "backgroundColors"), "main");
+        background: map.get(map.get(colors.$palletTwo, "backgroundColors"), "second");
     }
 
     &__wrapper{
@@ -72,7 +78,7 @@
     &__button{
         width: 4rem;
         height: 4rem;
-        background: map.get(map.get(colors.$palletTwo, "backgroundColors"), "second");
+        background: map.get(map.get(colors.$palletTwo, "backgroundColors"), "white");
         border-radius: 50%;
         display: flex;
         align-items: center;
@@ -109,7 +115,7 @@
         width: 60%;
         margin: 0 auto;
         border: 0.2rem solid map.get(map.get(colors.$palletTwo, "borderColors"), "second");
-        background: map.get(map.get(colors.$palletTwo, "backgroundColors"), "second");
+        background: map.get(map.get(colors.$palletTwo, "backgroundColors"), "white");
         padding: 1rem;
         border-radius: 2rem;
         justify-content: space-evenly;
@@ -182,8 +188,14 @@
         border: 0.2rem solid map.get(map.get(colors.$palletTwo, "borderColors"), "second");
         font-size: 1.8rem;
         border-radius: 1rem;
-        background: map.get(map.get(colors.$palletTwo, "backgroundColors"), "second");
+        background: map.get(map.get(colors.$palletTwo, "backgroundColors"), "white");
         color: map.get(map.get(colors.$palletTwo, "textColors"), "icon");
     }
 
+}
+
+@media screen and (max-width: 62.5rem) {
+    .recipePage{
+        padding-bottom: 6em;
+    }
 }
