@@ -489,7 +489,7 @@
                         },
                         {
                             "type": "Line",
-                            "Active": false
+                            "active": false
                         }
                     ],
                     [
@@ -504,7 +504,7 @@
                         },
                         {
                             "type": "Line",
-                            "Active": false
+                            "active": false
                         }
                     ],
                     [
@@ -535,7 +535,7 @@
                         },
                         {
                             "type": "Line",
-                            "Active": false
+                            "active": false
                         }
                     ],
                     [
@@ -545,7 +545,17 @@
                         },
                         {
                             "type": "Line",
-                            "Active": false
+                            "active": false
+                        }
+                    ],
+                    [
+                        {
+                            "type": "Line",
+                            "active": true
+                        },
+                        {
+                            "type": "Line",
+                            "active": false
                         }
                     ]
                 ]

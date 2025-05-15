@@ -49,6 +49,7 @@
     }
 
     &__lineWrapper {
+        position: relative;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -141,12 +142,13 @@
         z-index: 1;
         opacity: 0;
         transition: opacity 0.2s linear;
-        & > .icon{
+
+        &>.icon {
             width: 2em;
             height: 2em;
         }
 
-        &--active{
+        &--active {
             z-index: 2;
             opacity: 1;
             transition: opacity 0.2s linear;
@@ -173,7 +175,7 @@
             transition: opacity 0.2s linear;
         }
 
-        p{
+        p {
             text-wrap: wrap;
         }
 
@@ -182,7 +184,7 @@
             background: transparent;
             border: none;
 
-            .icon{
+            .icon {
                 width: 2rem;
                 height: 2rem;
             }
@@ -235,7 +237,7 @@
             opacity: 1;
             transition: opacity 0.2s linear;
 
-            .icon{
+            .icon {
                 width: 2rem;
                 height: 2rem;
             }
@@ -267,7 +269,7 @@
         border-bottom: 0.2rem solid black;
         border-right: 0.2rem solid black;
         border-top: 0.2rem solid black;
-        
+
         @for $i from 1 through 10 {
             &.steps--#{$i} {
                 height: calc(10rem * $i - 5rem);
@@ -322,7 +324,7 @@
         }
     }
 
-    &__specialArrow{
+    &__specialArrow {
         width: 100%;
         position: absolute;
         top: 20%;
@@ -330,13 +332,13 @@
         display: flex;
         align-items: center;
 
-        .icon{
+        .icon {
             transform: rotate(180deg);
             width: 2.4rem;
             height: 2.4rem;
         }
 
-        &--difficulties{
+        &--difficulties {
             display: flex;
             flex-direction: column;
             flex-wrap: wrap;
@@ -347,14 +349,14 @@
             transform: rotate(180deg);
         }
 
-        &--difficulty{
+        &--difficulty {
             width: 1rem;
             height: 1rem;
             background: black;
             border-radius: 50%;
         }
 
-        &--imgWrapper{
+        &--imgWrapper {
             width: 6rem;
             height: 6rem;
             display: flex;
@@ -363,26 +365,26 @@
             z-index: 2;
         }
 
-        &--wrapper{
+        &--wrapper {
             display: flex;
             align-items: center;
             // transform: translateX(-20%);
             gap: 0.2rem;
         }
 
-        &--line{
+        &--line {
             width: 3rem;
             height: 0.2rem;
             background: black;
             border-radius: 0.2rem;
         }
 
-        &--ingredient{
+        &--ingredient {
             text-wrap: wrap;
         }
     }
 
-    &__specialArrow{
+    &__specialArrow {
         width: 100%;
         position: absolute;
         top: 20%;
@@ -390,13 +392,13 @@
         display: flex;
         align-items: center;
 
-        .icon{
+        .icon {
             transform: rotate(180deg);
             width: 2.4rem;
             height: 2.4rem;
         }
 
-        &--difficulties{
+        &--difficulties {
             display: flex;
             flex-direction: column;
             flex-wrap: wrap;
@@ -407,14 +409,14 @@
             transform: rotate(180deg);
         }
 
-        &--difficulty{
+        &--difficulty {
             width: 1rem;
             height: 1rem;
             background: black;
             border-radius: 50%;
         }
 
-        &--imgWrapper{
+        &--imgWrapper {
             width: 6rem;
             height: 6rem;
             display: flex;
@@ -423,32 +425,32 @@
             z-index: 2;
         }
 
-        &--img{
+        &--img {
             width: 100%;
             height: 100%;
             object-fit: contain;
         }
 
-        &--wrapper{
+        &--wrapper {
             display: flex;
             align-items: center;
             // transform: translateX(-20%);
             gap: 0.2rem;
         }
 
-        &--line{
+        &--line {
             width: 3rem;
             height: 0.2rem;
             background: black;
             border-radius: 0.2rem;
         }
 
-        &--ingredient{
+        &--ingredient {
             text-wrap: wrap;
         }
     }
 
-    &__brackets{
+    &__brackets {
         position: absolute;
         z-index: -1;
         top: 50%;
@@ -456,7 +458,7 @@
         width: 15%;
         transform: translate(-50%, -25%);
 
-        &--wrapper{
+        &--wrapper {
             position: relative;
             width: 100%;
             height: 100%;
@@ -470,7 +472,7 @@
             }
         }
 
-        &--left{
+        &--left {
             height: 100%;
             width: calc(50% - 2rem);
             border-left: 0.2rem solid black;
@@ -478,7 +480,7 @@
             border-bottom: 0.2rem solid black;
         }
 
-        &--right{
+        &--right {
             height: 100%;
             width: calc(50% - 2rem);
             border-right: 0.2rem solid black;
@@ -486,12 +488,32 @@
             border-bottom: 0.2rem solid black;
         }
 
-        &--text{
+        &--text {
             position: absolute;
             left: 110%;
             top: 50%;
             transform: translateY(-50%);
             font-size: 1.3rem;
+        }
+    }
+
+    &__timeline {
+        top: 0;
+        position: absolute;
+        left: 50%;
+        transform: translateX(0%);
+        width: 3rem;
+        border: 0.2rem solid black;
+        border-left: none;
+        border-top-right-radius: 5rem;
+        border-bottom-right-radius: 5rem;
+        background-color: transparent;
+        box-sizing: border-box;
+
+        @for $i from 1 through 10 {
+            &.steps--#{$i} {
+                height: calc(10rem * $i);
+            }
         }
     }
 }
