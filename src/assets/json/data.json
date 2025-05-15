@@ -219,7 +219,7 @@
                         {
                             "type": "Forloop",
                             "width": "2",
-                            "steps": "8"
+                            "steps": "7"
                         },
                         {
                             "type": "Ingredient",
@@ -236,7 +236,8 @@
                     ],
                     [
                         {
-                            "type": "Emty"
+                            "type": "Line",
+                            "active": false
                         },
                         {
                             "type": "Ingredient",
@@ -253,7 +254,8 @@
                     ],
                     [
                         {
-                            "type": "Emty"
+                            "type": "Line",
+                            "active": false
                         },
                         {
                             "type": "Ingredient",
@@ -270,7 +272,8 @@
                     ],
                     [
                         {
-                            "type": "Emty"
+                            "type": "Line",
+                            "active": false
                         },
                         {
                             "type": "Ingredient",
@@ -287,7 +290,8 @@
                     ],
                     [
                         {
-                            "type": "Emty"
+                            "type": "Line",
+                            "active": false
                         },
                         {
                             "type": "Ingredient",
@@ -304,7 +308,8 @@
                     ],
                     [
                         {
-                            "type": "Emty"
+                            "type": "Line",
+                            "active": false
                         },
                         {
                             "type": "Ingredient",
@@ -321,7 +326,8 @@
                     ],
                     [
                         {
-                            "type": "Emty"
+                            "type": "Line",
+                            "active": false
                         },
                         {
                             "type": "Ingredient",
