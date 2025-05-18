@@ -426,6 +426,23 @@
             z-index: 2;
         }
 
+        &--imgWrappers {
+            width: max-content;
+            max-width: 80%;
+            flex-wrap: wrap;
+            height: 6rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2;
+        }
+
+        &--imgs {
+            width: 6rem;
+            height: 100%;
+            object-fit: contain;
+        }
+
         &--img {
             width: 100%;
             height: 100%;

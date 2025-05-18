@@ -8,7 +8,7 @@
             <img :src="image" :alt="imageAlt" class="cookingDiagram__specialArrow--img">
         </figure>
         <figure class="cookingDiagram__specialArrow--imgWrappers" v-if="images">
-            <img :src="images.src" :alt="images.alt" class="cookingDiagram__specialArrow--img"  v-for="(images, index) in images">
+            <img :src="images.src" :alt="images.alt" class="cookingDiagram__specialArrow--imgs"  v-for="(images, index) in images">
         </figure>
         <div class="cookingDiagram__specialArrow--wrapper">
             <!-- <figure class="cookingDiagram__specialArrow--line"></figure> -->
