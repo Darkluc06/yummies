@@ -4,8 +4,11 @@
         <ul class="cookingDiagram__specialArrow--difficulties">
             <li class="cookingDiagram__specialArrow--difficulty" v-for="(difficulty, index) in difficulty"></li>
         </ul>
-        <figure class="cookingDiagram__specialArrow--imgWrapper">
+        <figure class="cookingDiagram__specialArrow--imgWrapper" v-if="image">
             <img :src="image" :alt="imageAlt" class="cookingDiagram__specialArrow--img">
+        </figure>
+        <figure class="cookingDiagram__specialArrow--imgWrappers" v-if="images">
+            <img :src="images.src" :alt="images.alt" class="cookingDiagram__specialArrow--img"  v-for="(images, index) in images">
         </figure>
         <div class="cookingDiagram__specialArrow--wrapper">
             <!-- <figure class="cookingDiagram__specialArrow--line"></figure> -->
@@ -32,7 +35,14 @@ export default {
         ingredient:{
             type: String,
             default: ""
-        }
+        },
+        images:{
+            type: Array,
+            required: false
+        },
+    },
+    mounted() {
+        console.log(this.images);
     }
 }
 

@@ -457,15 +457,19 @@
                         {
                             "type": "Ingredient",
                             "has-ingredient-arrow": true,
-                            "image": "/img/blokjes_snijden.webp",
-                            "imageAlt": "Opwarmen",
+                            "images":[
+                                {
+                                    "src": "/img/blokjes_snijden.webp",
+                                    "alt": "test"
+                                }
+                            ],
                             "recipeId": 2,
                             "difficulty": 4,
                             "ingredientIndexes": [1]
                         },
                         {
                             "type": "Line",
-                            "Active": false
+                            "active": false
                         }
                     ],
                     [
