@@ -3,12 +3,12 @@
         "recipes": [
             {
                 "id": 1,
-                "name": "Pannenkoek",
-                "urlName": "pannenkoek",
+                "name": "Pannekoek",
+                "urlName": "pannekoek",
                 "type": "American",
-                "image": "/img/pannenkoek.webp",
+                "image": "/img/pannekoek.webp",
                 "time": "25 min",
-                "description": "Heerlijke verse pannenkoeken.",
+                "description": "Heerlijke verse pannekoeken.",
                 "servings": 2,
                 "ingredients": [
                     {
@@ -80,7 +80,13 @@
                             "recipeId": 1,
                             "type": "Ingredient",
                             "is-string": true,
-                            "ingredientIndexes": [0],
+                            "ingredients": 
+                            [
+                                {
+                                    "index": 0,
+                                    "percentageOfTotal": 30
+                                }
+                            ],
                             "active": true
                         },
                         {
@@ -103,7 +109,22 @@
                             "image": "/img/actie_x.webp",
                             "imageAlt": "test",
                             "difficulty": 1,
-                            "recipeId": 1
+                            "recipeId": 1,
+                            "ingredients": 
+                            [
+                                {
+                                    "index": 0,
+                                    "percentageOfTotal": 30
+                                },
+                                {
+                                    "index": 1,
+                                    "percentageOfTotal": 50
+                                },
+                                {
+                                    "index": 2,
+                                    "percentageOfTotal": 80
+                                }
+                            ]
                         },
                         {
                             "type": "Line",
@@ -133,7 +154,21 @@
                         {
                             "type": "Ingredient",
                             "is-string": true,
-                            "ingredientIndexes": [1, 3, 5],
+                            "ingredients": 
+                            [
+                                {
+                                    "index": 1,
+                                    "percentageOfTotal": 30
+                                },
+                                {
+                                    "index": 3,
+                                    "percentageOfTotal": 50
+                                },
+                                {
+                                    "index": 5,
+                                    "percentageOfTotal": 80
+                                }
+                            ],
                             "recipeId": 1
                         },
                         {
@@ -189,7 +224,17 @@
                         {
                             "type": "Ingredient",
                             "is-string": true,
-                            "ingredientIndexes": [5],
+                            "ingredients": 
+                            [
+                                {
+                                    "index": 5,
+                                    "percentageOfTotal": 50
+                                },
+                                {
+                                    "index": 0,
+                                    "percentageOfTotal": 70
+                                }
+                            ],
                             "recipeId": 1
                         },
                         {
