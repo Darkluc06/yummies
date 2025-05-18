@@ -2,9 +2,12 @@
     <div class="cookingDiagram__column">
         <div class="cookingDiagram__lineWrapper">
             <figure class="cookingDiagram__line cookingDiagram__line--active"></figure>
-            <figure class="cookingDiagram__timeline" :class="`steps--${steps}`">
+            <ul class="cookingDiagram__timeline" :class="`steps--${steps}`">
+                <figure class="cookingDiagram__timeline--line"></figure>
+                <li class="cookingDiagram__timeline--divider cookingDiagram__timeline--divider-top"></li>
+                <li class="cookingDiagram__timeline--divider cookingDiagram__timeline--divider-bottom"></li>
                 <p class="cookingDiagram__timeline--time">{{ time }}</p>
-            </figure>
+            </ul>
         </div>
     </div>
 </template>

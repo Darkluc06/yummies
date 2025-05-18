@@ -500,11 +500,9 @@
 
     &__timeline {
         $timelineWidth: 3rem;
-
         top: 0;
         position: absolute;
         left: 50%;
-        transform: translateX(0%);
         width: $timelineWidth;
         border: 0.2rem solid black;
         border-left: none;
@@ -512,6 +510,24 @@
         border-bottom-right-radius: 5rem;
         background-color: transparent;
         box-sizing: border-box;
+
+        &--divider{
+            position: absolute;
+            width: $timelineWidth;
+            height: 0.2rem;
+            background: black;
+            transform: translateX(-50%);
+
+            &-top{
+                top: 0;
+                left: 50%;
+            }
+
+            &-bottom{
+                bottom: 0;
+                left: 50%;
+            }
+        }
 
         @for $i from 1 through 10 {
             &.steps--#{$i} {
