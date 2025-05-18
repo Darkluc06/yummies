@@ -548,7 +548,8 @@
             position: absolute;
             left: 40%;
             top: 100%;
-            width: calc(100% - $timelineWidth - 1rem);
+            width: $timelineWidth;
+            text-wrap: wrap;
             font-size: 1.2rem;
         }
     }
