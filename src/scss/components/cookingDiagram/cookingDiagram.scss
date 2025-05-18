@@ -499,47 +499,55 @@
     }
 
     &__timeline {
-        $timelineWidth: 3rem;
+        $timelineGap: 0.5rem;
+        $timelineWidth: 3.5rem;
+        margin-top: $timelineGap;
         top: 0;
         position: absolute;
         left: 50%;
         width: $timelineWidth;
-        border: 0.2rem solid black;
-        border-left: none;
-        border-top-right-radius: 5rem;
-        border-bottom-right-radius: 5rem;
-        background-color: transparent;
-        box-sizing: border-box;
+        display: flex;
+        align-items: center;
 
-        &--divider{
+        @for $i from 1 through 10 {
+            &.steps--#{$i} {
+                height: calc(10rem * $i - $timelineGap);
+            }
+        }
+
+        &--divider {
             position: absolute;
             width: $timelineWidth;
             height: 0.2rem;
             background: black;
             transform: translateX(-50%);
 
-            &-top{
+            &-top {
                 top: 0;
                 left: 50%;
             }
 
-            &-bottom{
+            &-bottom {
                 bottom: 0;
                 left: 50%;
             }
         }
 
-        @for $i from 1 through 10 {
-            &.steps--#{$i} {
-                height: calc(10rem * $i);
-            }
+        &--line {
+            border: 0.2rem solid black;
+            border-left: none;
+            border-top-right-radius: 5rem;
+            border-bottom-right-radius: 5rem;
+            background-color: transparent;
+            width: 2rem;
+            height: calc(100% - 2rem);
+            transform: translateX(1rem);
         }
 
-        &--time{
+        &--time {
             position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate($timelineWidth + 1rem, -50%);
+            left: 40%;
+            top: 100%;
             width: calc(100% - $timelineWidth - 1rem);
             font-size: 1.2rem;
         }
