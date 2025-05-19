@@ -34,7 +34,7 @@ export default {
     },
     data() {
         return {
-            data: json,
+            recipe: json,
             favoriteRecipeUrls: [], 
             isScrollable: false,
             footerVisible: true,
@@ -53,7 +53,7 @@ export default {
     },
     computed: {
         favoriteRecipes() {
-            return this.data.recipeHome.recipes.filter(recipe => this.favoriteRecipeUrls.includes(recipe.urlName));
+            return this.recipe.recipePage.recipes.filter(recipe => this.favoriteRecipeUrls.includes(recipe.urlName));
         }
     },
     methods: {

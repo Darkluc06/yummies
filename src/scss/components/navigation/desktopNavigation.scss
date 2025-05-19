@@ -1,26 +1,74 @@
 @use "../../assets/colors";
 @use "sass:map";
 
-.desktopNav{
+.desktopNav {
     width: 100%;
     display: flex;
     justify-content: space-between;
     padding: 2rem;
     background: map.get(map.get(colors.$palletTwo, "backgroundColors"), "second");
+    position: relative;
 
-    &__title{
+    &__title {
         font-size: 4rem;
         color: map.get(map.get(colors.$palletTwo, "textColors"), "title");
     }
 
-    &__list{
+    &__list {
         list-style: none;
         display: flex;
         gap: 2rem;
         align-items: center;
+
+        &Item {
+            position: relative;
+
+            .arrow-container {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: -9.5rem;
+                margin: auto;
+                z-index: 999;
+                animation: bounce 1.5s infinite cubic-bezier(0.22, 0.61, 0.36, 1);
+
+                &--p {
+                    margin: 0 auto;
+                    width: 9rem;
+                    margin-top: 1rem;
+                    padding: .5rem;
+                    font-size: 1.5rem;
+                    color: #485935;
+                    background: #F4EEE6;
+                    border-radius: .5rem;
+                    border: .2rem solid #485935;
+                }
+
+                &--img {
+                    height: 7rem;
+                    margin: 0 auto;
+                    padding-right: 4rem;
+                    rotate: 220deg;
+                }
+
+                @keyframes bounce {
+                    0%, 20%, 50%, 80%, 100% {
+                      transform: translateY(0);
+                    }
+                    40% {
+                      transform: translateY(-2rem);
+                    }
+                    60% {
+                      transform: translateY(-1rem);  
+                    }
+                  }
+            }
+        }
     }
 
-    &__link{
+    &__link {
         font-size: 1.8rem;
         color: map.get(map.get(colors.$palletTwo, "textColors"), "text");
         padding: 0.5rem 0;
@@ -28,11 +76,11 @@
         align-items: center;
         gap: 1rem;
 
-        &--active{
+        &--active {
             border-bottom: .2rem solid map.get(map.get(colors.$palletTwo, "borderColors"), "second");
         }
 
-        .icon{
+        .icon {
             width: 3rem;
             height: 3rem;
             fill: map.get(map.get(colors.$palletTwo, "textColors"), "icon");
@@ -41,7 +89,7 @@
 }
 
 @media screen and (max-width: 62.5rem) {
-    .desktopNav{
+    .desktopNav {
         display: none;
     }
 }

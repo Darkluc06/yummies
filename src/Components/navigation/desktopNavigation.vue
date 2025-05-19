@@ -13,6 +13,10 @@
                 </RouterLink>
             </li>
             <li class="desktopNav__listItem">
+                <figure class="arrow-container" v-if="this.renderArrow()">
+                    <img class="arrow-container--img" src="./../../../public/img/checkMe.png" alt="">
+                    <p class="arrow-container--p">Check me</p>
+                </figure>
                 <RouterLink :to="`/documentation`" class="desktopNav__link" activeClass="desktopNav__link--active">
                     <SvgIcon :name="'document'" />
                     Documentatie
@@ -40,6 +44,11 @@ export default {
     components: {
         RouterLink,
         SvgIcon
+    },
+    methods: {
+        renderArrow() {
+            return localStorage.getItem("arrow") !== "true";
+        }
     }
 }
 
