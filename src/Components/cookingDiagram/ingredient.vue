@@ -122,8 +122,8 @@ export default {
 
             for (let index = 0; index < this.ingredients.length; index++) {
                 let ingredientObject = this.ingredients[index];
-                let recipeIngredient = recipe.ingredients[ingredientObject.index]
-                this.ingredientsString += (recipeIngredient.amount / 100 * ingredientObject.percentageOfTotal) + " " + recipeIngredient.unit + " " + recipeIngredient.name;
+                let recipeIngredient = recipe.ingredients[ingredientObject.index] 
+                this.ingredientsString += Math.floor((recipeIngredient.amount / 100 * ingredientObject.percentageOfTotal)) + " " + recipeIngredient.unit + " " + recipeIngredient.name;
 
                 if (this.ingredients.length - 1 !== index) {
                     this.ingredientsString += ", ";

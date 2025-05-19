@@ -484,9 +484,15 @@
                         {
                             "type": "Ingredient",
                             "is-string": true,
-                            "ingedient": "2L water",
                             "active": true,
-                            "recipeId": 1
+                            "recipeId": 2,
+                            "ingredients": 
+                            [
+                                {
+                                    "index": 0,
+                                    "percentageOfTotal": 100
+                                }
+                            ]
                         },
                         {
                             "type": "Line",
@@ -537,7 +543,14 @@
                         {
                             "type": "Ingredient",
                             "is-string": true,
-                            "ingedient": "500g Meel, 1l melk, 2 eieren"
+                            "recipeId": 2,
+                            "ingredients": 
+                            [
+                                {
+                                    "index": 1,
+                                    "percentageOfTotal": 100
+                                }
+                            ]
                         },
                         {
                             "type": "Line",
@@ -590,8 +603,14 @@
                         {
                             "type": "Ingredient",
                             "is-string": true,
-                            "ingredientIndexes": [0],
-                            "recipeId": 2
+                            "recipeId": 2,
+                            "ingredients": 
+                            [
+                                {
+                                    "index": 2,
+                                    "percentageOfTotal": 100
+                                }
+                            ]
                         },
                         {
                             "type": "Line",
@@ -604,7 +623,7 @@
                             "is-string": false,
                             "image": "/img/opwarmen.webp",
                             "imageAlt": "Opwarmen",
-                            "recipeId": 1
+                            "recipeId": 2
                         },
                         {
                             "type": "Line",
@@ -618,8 +637,7 @@
                             "image": "/img/blokjes_snijden.webp",
                             "imageAlt": "Opwarmen",
                             "recipeId": 2,
-                            "difficulty": 4,
-                            "ingredientIndexes": [1]
+                            "difficulty": 4
                         },
                         {
                             "type": "Line",
@@ -633,8 +651,7 @@
                             "image": "/img/blokjes_snijden.webp",
                             "imageAlt": "Opwarmen",
                             "recipeId": 2,
-                            "difficulty": 2,
-                            "ingredientIndexes": [2]
+                            "difficulty": 2
                         },
                         {
                             "type": "Line",
@@ -643,7 +660,8 @@
                     ],
                     [
                         {
-                            "type": "Emty"
+                            "type": "Line",
+                            "active": true
                         },
                         {
                             "type": "Ingredient",
@@ -659,7 +677,8 @@
                     ],
                     [
                         {
-                            "type": "Emty"
+                            "type": "Line",
+                            "active": true
                         },
                         {
                             "type": "Ingredient",
@@ -695,8 +714,7 @@
                             "image": "/img/blokjes_snijden.webp",
                             "imageAlt": "Opwarmen",
                             "recipeId": 2,
-                            "difficulty": 5,
-                            "ingredientIndexes": [4]
+                            "difficulty": 5
                         },
                         {
                             "type": "Line",
