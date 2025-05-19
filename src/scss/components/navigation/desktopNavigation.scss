@@ -22,6 +22,7 @@
 
         &Item {
             position: relative;
+            z-index: 999;
 
             .arrow-container {
                 display: flex;
@@ -31,7 +32,7 @@
                 right: 0;
                 bottom: -9.5rem;
                 margin: auto;
-                z-index: 999;
+                z-index: -1;
                 animation: bounce 1.5s infinite cubic-bezier(0.22, 0.61, 0.36, 1);
 
                 &--p {
