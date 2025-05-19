@@ -63,37 +63,58 @@ export default {
         },
         getIcons() {
             const processedIcons = [];
-            const addedIconSources = new Set();
+            const addedCanonizedSources = new Set();
+            const canonizeSrc = (srcPath) => {
+                if (!srcPath) return null;
+                try {
+                    const baseUrl = window.location.origin;
+                    return new URL(srcPath, baseUrl).pathname;
+                } catch (e) {
+                    return srcPath;
+                }
+            };
 
             if (this.recipe && this.recipe.diagram) {
                 this.recipe.diagram
                     .flat()
                     .forEach(item => {
                         let iconToAdd = null;
-                        if (item && item.image !== undefined) {
+                        let originalSrc = null;
+
+                        if (!item) return;
+
+                        if (item.type === "Ingredient" &&
+                            item['is-string'] === false &&
+                            item.difficulty !== undefined &&
+                            item.difficulty >= 1) {
+                            originalSrc = '/img/intensiteit3Cirkel.webp';
                             iconToAdd = {
-                                src: item.image,
-                                alt: item.altImage || 'Icon',
-                                label: item.label || item.altImage || (item.type === 'Tools' && item.tool ? item.tool : 'Icon Label')
+                                src: originalSrc,
+                                alt: 'Moeilijkheidsgraad',
+                                label: `Intensiteit van de actie`
                             };
-                        }
-                        else if (item && item.type === "Line" && item.active === true && item['has-big-arrow'] === true) {
+                        } else if (item.image !== undefined) {
+                            originalSrc = item.image;
                             iconToAdd = {
-                                src: '/img/verplaats_instrument.webp',
+                                src: originalSrc,
+                                alt: item.imageAlt || item.altImage || 'Icon',
+                                label: item.label || item.imageAlt || item.altImage || (item.type === 'Tools' && item.tool ? item.tool : 'Icon Label')
+                            };
+                        } else if (item.type === "Line" && item.active === true && item['has-big-arrow'] === true) {
+                            originalSrc = '/img/verplaats_instrument.webp';
+                            iconToAdd = {
+                                src: originalSrc,
                                 alt: 'Laat zien dat je van lijn moet wisselen',
                                 label: 'Actie'
                             };
                         }
-                        else if (item && item.type === "Tools" && item.tool === "pot" && item.image === undefined) {
-                            iconToAdd = {
-                                src: 'YOUR_PATH/pot-icon.svg',
-                                alt: 'Pot tool',
-                                label: 'Pot'
-                            };
-                        }
-                        if (iconToAdd && iconToAdd.src && !addedIconSources.has(iconToAdd.src)) {
-                            processedIcons.push(iconToAdd);
-                            addedIconSources.add(iconToAdd.src);
+
+                        if (iconToAdd && originalSrc) {
+                            const canonizedVersion = canonizeSrc(originalSrc);
+                            if (canonizedVersion && !addedCanonizedSources.has(canonizedVersion)) {
+                                processedIcons.push(iconToAdd);
+                                addedCanonizedSources.add(canonizedVersion);
+                            }
                         }
                     });
                 this.icons = processedIcons;
