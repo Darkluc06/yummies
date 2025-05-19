@@ -24,7 +24,6 @@
 
 <script>
 import SvgIcon from '../general/icon/SvgIcon.vue';
-import json from '../../assets/json/data.json';
 
 export default {
     props: {
@@ -43,13 +42,17 @@ export default {
     },
     data() {
         return {
-            info: json,
             icons: [],
-            recipes: json['home']['recipes'],
         };
     },
     mounted() {
-        this.getIcons()
+        this.getIcons();
+    },
+    watch: {
+        recipe: {
+            handler: 'getIcons',
+            deep: true
+        }
     },
     methods: {
         modalClose() {
@@ -59,25 +62,45 @@ export default {
             return `${filename}`;
         },
         getIcons() {
-            const existedIcons = [];
-            if(this.recipe.diagram){
-                this.icons = this.recipe.diagram
-                .flat()  // Makes the diagram in the recipes 1 big array instead of multiple sub arrays
-                .filter(objectCookingDiagram => objectCookingDiagram.image !== undefined)
-                .map(objectCookingDiagram => ({
-                    src: objectCookingDiagram.image,
-                    alt: objectCookingDiagram.altImage
-                }))
-                .filter(icon => {
-                    if (existedIcons.includes(icon.src)) {
-                        return false;
-                    }
-                    existedIcons.push(icon.src);
-                    return true;
-                });
+            const processedIcons = [];
+            const addedIconSources = new Set();
+
+            if (this.recipe && this.recipe.diagram) {
+                this.recipe.diagram
+                    .flat()
+                    .forEach(item => {
+                        let iconToAdd = null;
+                        if (item && item.image !== undefined) {
+                            iconToAdd = {
+                                src: item.image,
+                                alt: item.altImage || 'Icon',
+                                label: item.label || item.altImage || (item.type === 'Tools' && item.tool ? item.tool : 'Icon Label')
+                            };
+                        }
+                        else if (item && item.type === "Line" && item.active === true && item['has-big-arrow'] === true) {
+                            iconToAdd = {
+                                src: '/img/verplaats_instrument.webp',
+                                alt: 'Laat zien dat je van lijn moet wisselen',
+                                label: 'Actie'
+                            };
+                        }
+                        else if (item && item.type === "Tools" && item.tool === "pot" && item.image === undefined) {
+                            iconToAdd = {
+                                src: 'YOUR_PATH/pot-icon.svg',
+                                alt: 'Pot tool',
+                                label: 'Pot'
+                            };
+                        }
+                        if (iconToAdd && iconToAdd.src && !addedIconSources.has(iconToAdd.src)) {
+                            processedIcons.push(iconToAdd);
+                            addedIconSources.add(iconToAdd.src);
+                        }
+                    });
+                this.icons = processedIcons;
+            } else {
+                this.icons = [];
             }
         },
     },
 };
-
 </script>
