@@ -1,5 +1,9 @@
 <template>
     <section class="footer_component">
+        <figure class="arrow-container" v-if="this.renderArrow()">
+            <p class="arrow-container-p">Check me</p>
+            <img class="arrow" src="./../../../public/img/checkMe.png" alt="">
+        </figure>            
         <RouterLink :to="`/`" class="footer_link" activeClass="footer_link--active">
             <SvgIcon :name="'book'" />
             <p class="footer_p">
@@ -30,6 +34,11 @@ export default {
     components:{
         RouterLink,
         SvgIcon
+    },
+    methods: {
+        renderArrow() {
+            return localStorage.getItem("arrow") !== "true";
+        }
     }
 }
 
