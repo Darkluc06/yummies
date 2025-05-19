@@ -32,6 +32,7 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
+        animation: .45s ease-out showImg forwards;
     }
 
     &__text{
@@ -48,6 +49,7 @@
         padding: 1rem;
         margin-bottom: -2rem;
         background: map.get(map.get(colors.$palletTwo, "backgroundColors"), "second");
+        animation: .45s ease-out go_up forwards;
     }
 
     &__wrapper{
@@ -197,5 +199,29 @@
 @media screen and (max-width: 62.5rem) {
     .recipePage{
         padding-bottom: 6em;
+    }
+}
+
+@keyframes showImg {
+    0% {
+        opacity: 0;
+    }
+    75% {
+        opacity: .3;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes go_up {
+    0% {
+        transform: translateY(50%);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
     }
 }

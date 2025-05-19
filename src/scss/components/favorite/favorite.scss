@@ -11,10 +11,12 @@
         .favorites_h1 {
             font-size: 3rem;
             margin-bottom: 2rem;
+            animation: .45s ease-out go_up forwards;
         }
     }
 
     .favorites_main {
+        animation: .65s ease-out go_up forwards;
 
         .favorites_container {
             list-style: none;
@@ -33,5 +35,21 @@
                 }
             }
         }
+    }
+}
+
+@keyframes go_up {
+    0% {
+        transform: translateY(100%);
+        opacity: 1;
+    }
+
+    75% {
+        opacity: .3;
+    }
+
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
     }
 }

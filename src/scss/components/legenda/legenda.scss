@@ -25,6 +25,7 @@
 
             .legenda_h1 {
                 font-size: 2rem;
+                animation: .45s ease-out go_up forwards;
             }
         }
 
@@ -37,5 +38,21 @@
     .legenda_container-bottom {
         width: 100%;
         height: 80%;
+    }
+}
+
+@keyframes go_up {
+    0% {
+        transform: translateY(100%);
+        opacity: 1;
+    }
+
+    75% {
+        opacity: .3;
+    }
+
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
     }
 }

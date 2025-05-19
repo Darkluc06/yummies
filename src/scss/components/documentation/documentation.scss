@@ -11,6 +11,7 @@
     &__buttonWrapper{
         display: flex;
         gap: 2rem;
+        animation: .65s ease-out go_up forwards;
     }
 
     .instruction_documentation {
@@ -34,6 +35,7 @@
                 .instruction_documentation-h1 {
                     font-size: 4rem;
                     color: map.get(map.get(colors.$palletTwo, "textColors"), "title");
+                    animation: .45s ease-out go_up forwards;
                 }
 
                 .instruction_documentation-close {
@@ -89,6 +91,7 @@
 
             .instructions_documentation-p {
                 font-size: 2rem;
+                animation: .85s ease-out go_up forwards;
             }
         }
     }
@@ -99,6 +102,8 @@
         width: 100%;    
         padding: 1rem;
         border-radius: 2rem;
+        animation: .45s ease-out go_up forwards;
+
 
         .instruction_legenda-top {
             padding-bottom: 1rem;
@@ -146,6 +151,7 @@
             .instruction_legenda-summary{
                 list-style: none;
                 font-size: 2rem;
+                animation: .65s ease-out go_up forwards;
             }
 
             .instruction_containers {
@@ -159,6 +165,7 @@
                     display: flex;
                     flex-wrap: wrap;
                     justify-content: flex-start;
+                    animation: .85s ease-out go_up forwards;
 
                     .instruction_icons {
                         width: auto;
@@ -277,5 +284,21 @@
 
 
         }
+    }
+}
+
+@keyframes go_up {
+    0% {
+        transform: translateY(100%);
+        opacity: 1;
+    }
+
+    75% {
+        opacity: .3;
+    }
+
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
     }
 }
