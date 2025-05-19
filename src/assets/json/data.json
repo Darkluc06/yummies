@@ -431,6 +431,21 @@
                     [
                         {
                             "type": "Ingredient",
+                            "has-ingredient-arrow": true,
+                            "standard-arrow": true,
+                            "image": "/img/pijl-kom.webp",
+                            "imageAlt": "Opwarmen",
+                            "ingredientIndexes": [0],
+                            "recipeId": 2
+                        },
+                        {
+                            "type": "Line",
+                            "Active": false
+                        }
+                    ],
+                    [
+                        {
+                            "type": "Ingredient",
                             "is-string": true,
                             "ingredientIndexes": [0],
                             "recipeId": 2

@@ -385,6 +385,58 @@
         }
     }
 
+    &__standardArrow {
+        width: 100%;
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        .icon {
+            transform: rotate(180deg);
+            width: 2.4rem;
+            height: 2.4rem;
+        }
+
+        &--imgWrapper {
+            width: 5rem;
+            height: 5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2;
+            border-left: 0.2rem solid black;
+            border-right: 0.2rem solid black;
+        }
+
+        &--img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            transform: rotate(90deg);
+        }
+
+        &--lineWrapper {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transform: translateX(-0.5rem);
+        }
+
+        &--line {
+            width: 2rem;
+            height: 0.2rem;
+            background: black;
+            border-radius: 0.2rem;
+        }
+
+        &--ingredient {
+            font-size: 1.3rem;
+        }
+    }
+
     &__specialArrow {
         width: 100%;
         position: absolute;
@@ -465,6 +517,7 @@
 
         &--ingredient {
             text-wrap: wrap;
+            font-size: 1.3rem;
         }
     }
 
