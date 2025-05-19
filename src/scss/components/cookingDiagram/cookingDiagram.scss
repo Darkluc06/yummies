@@ -496,6 +496,7 @@
             border-left: 0.2rem solid black;
             border-top: 0.2rem solid black;
             border-bottom: 0.2rem solid black;
+            border-radius: 0.2rem;
         }
 
         &--right {
@@ -504,6 +505,7 @@
             border-right: 0.2rem solid black;
             border-top: 0.2rem solid black;
             border-bottom: 0.2rem solid black;
+            border-radius: 0.2rem;
         }
 
         &--text {
@@ -537,7 +539,8 @@
             width: $timelineWidth;
             height: 0.2rem;
             background: black;
-            transform: translateX(-50%);
+            transform: translateX(-100%);
+            border-radius: 2rem;
 
             &-top {
                 top: 0;
