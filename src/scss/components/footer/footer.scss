@@ -1,0 +1,71 @@
+@use "../../assets/colors";
+@use "sass:map";
+
+.footer_component {
+    width: 100%;
+    height: 10rem;
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    padding: 0 2rem;
+    transition: transform 0.3s ease-in-out;
+    transform: translateY(0);
+    background: white;
+    z-index: 999;
+
+    .footer_link {
+        font-size: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        color: map.get(map.get(colors.$palletTwo, "textColors"), "subTitle");
+        z-index: 30;
+        padding: 0.5rem;
+
+        &--active{
+            background: map.get(map.get(colors.$palletTwo, "backgroundColors"), "third");
+            color: map.get(map.get(colors.$palletTwo, "textColors"), "active");
+            border-radius: 1rem;
+
+            .icon{
+                fill: map.get(map.get(colors.$palletTwo, "textColors"), "active") !important;
+            }
+        }
+
+        .icon {
+            width: 4rem;
+            height: 4rem;
+            fill: map.get(map.get(colors.$palletTwo, "textColors"), "title");
+        }
+
+        .footer_p {
+            font-size: 1.5rem;
+        }
+    }
+
+    &.hidden {
+        transform: translateY(100%);
+    }
+}
+
+@media screen and (max-width: 370px) {
+    .footer_component {
+
+        .footer_link {
+
+            .footer_p {
+                font-size: 1.3rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 62.5rem) {
+    .footer_component{
+        display: flex;
+    }
+}
