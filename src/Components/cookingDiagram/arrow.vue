@@ -1,5 +1,15 @@
 <template>
-    <figure class="cookingDiagram__specialArrow">
+    <figure class="cookingDiagram__standardArrow" v-if="standardArrow === true">
+        <SvgIcon :name="'arrow-long'" />
+        <figure class="cookingDiagram__standardArrow--imgWrapper">
+            <img :src="image" :alt="imageAlt" class="cookingDiagram__standardArrow--img">
+        </figure>
+        <section class="cookingDiagram__standardArrow--lineWrapper">
+            <figure class="cookingDiagram__standardArrow--line"></figure>
+            <p class="cookingDiagram__standardArrow--ingredient">{{ ingredient }}</p>
+        </section>
+    </figure>
+    <figure class="cookingDiagram__specialArrow" v-if="standardArrow === false">
         <SvgIcon :name="'arrow-long'" />
         <ul class="cookingDiagram__specialArrow--difficulties">
             <li class="cookingDiagram__specialArrow--difficulty" v-for="(difficulty, index) in difficulty"></li>
@@ -40,6 +50,10 @@ export default {
             type: Array,
             required: false
         },
+        standardArrow:{
+            type: Boolean,
+            default: true
+        }
     },
     mounted() {
         console.log(this.images);

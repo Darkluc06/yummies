@@ -457,6 +457,7 @@
                         {
                             "type": "Ingredient",
                             "has-ingredient-arrow": true,
+                            "standard-arrow": false,
                             "images":[
                                 {
                                     "src": "/img/blokjes_snijden.webp",
@@ -476,6 +477,7 @@
                         {
                             "type": "Ingredient",
                             "has-ingredient-arrow": true,
+                            "standard-arrow": false,
                             "image": "/img/blokjes_snijden.webp",
                             "imageAlt": "Opwarmen",
                             "recipeId": 2,
@@ -491,6 +493,7 @@
                         {
                             "type": "Ingredient",
                             "has-ingredient-arrow": true,
+                            "standard-arrow": false,
                             "image": "/img/reepjes_snijden.webp",
                             "imageAlt": "Opwarmen",
                             "recipeId": 2,
@@ -506,6 +509,7 @@
                         {
                             "type": "Ingredient",
                             "has-ingredient-arrow": true,
+                            "standard-arrow": false,
                             "image": "/img/blokjes_snijden.webp",
                             "imageAlt": "Opwarmen",
                             "recipeId": 2,

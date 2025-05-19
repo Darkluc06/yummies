@@ -28,7 +28,7 @@
             </ul>
         </span>
         <BackwardsArrow :steps="steps" :direction="backwardsArrowDirection" v-if="hasBackwardsArrow === true"/>
-        <Arrow v-if="hasIngredientArrow === true" :image="image" :image-alt="imageAlt" :difficulty="difficulty" :ingredient="this.ingredientsString" :images="images" />
+        <Arrow v-if="hasIngredientArrow === true" :image="image" :image-alt="imageAlt" :difficulty="difficulty" :ingredient="this.ingredientsString" :images="images" :standard-arrow="standardArrow" />
         <figure class="cookingDiagram__brackets" v-if="hasBrackets === true" :class="`steps--${steps}`">
             <ul class="cookingDiagram__brackets--wrapper">
                 <li class="cookingDiagram__brackets--left"></li>
@@ -119,6 +119,10 @@ export default {
         bracketText:{
             type: String,
             default: "",
+        },
+        standardArrow:{
+            type: Boolean,
+            default: true
         }
     },
     mounted() {
