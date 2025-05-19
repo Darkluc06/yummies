@@ -8,6 +8,7 @@
 
             .nav_container {
                 width: 40%;
+                animation: .40s ease-out go_up forwards;
             }
         }
 
@@ -24,5 +25,21 @@
                 display: none;
             }
         }
+    }
+}
+
+@keyframes go_up {
+    0% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+
+    75% {
+        opacity: .3;
+    }
+
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
     }
 }
