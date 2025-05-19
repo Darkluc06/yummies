@@ -24,7 +24,6 @@
 
 <script>
 import SvgIcon from '../general/icon/SvgIcon.vue';
-import json from '../../assets/json/recipe.json';
 
 export default {
     props: {
@@ -43,13 +42,17 @@ export default {
     },
     data() {
         return {
-            info: json,
             icons: [],
-            recipes: json['recipePage']['recipes'],
         };
     },
     mounted() {
-        this.getIcons()
+        this.getIcons();
+    },
+    watch: {
+        recipe: {
+            handler: 'getIcons',
+            deep: true
+        }
     },
     methods: {
         modalClose() {
@@ -59,25 +62,66 @@ export default {
             return `${filename}`;
         },
         getIcons() {
-            const existedIcons = [];
-            if(this.recipe.diagram){
-                this.icons = this.recipe.diagram
-                .flat()  // Makes the diagram in the recipes 1 big array instead of multiple sub arrays
-                .filter(objectCookingDiagram => objectCookingDiagram.image !== undefined)
-                .map(objectCookingDiagram => ({
-                    src: objectCookingDiagram.image,
-                    alt: objectCookingDiagram.altImage
-                }))
-                .filter(icon => {
-                    if (existedIcons.includes(icon.src)) {
-                        return false;
-                    }
-                    existedIcons.push(icon.src);
-                    return true;
-                });
+            const processedIcons = [];
+            const addedCanonizedSources = new Set();
+            const canonizeSrc = (srcPath) => {
+                if (!srcPath) return null;
+                try {
+                    const baseUrl = window.location.origin;
+                    return new URL(srcPath, baseUrl).pathname;
+                } catch (e) {
+                    return srcPath;
+                }
+            };
+
+            if (this.recipe && this.recipe.diagram) {
+                this.recipe.diagram
+                    .flat()
+                    .forEach(item => {
+                        let iconToAdd = null;
+                        let originalSrc = null;
+
+                        if (!item) return;
+
+                        if (item.type === "Ingredient" &&
+                            item['is-string'] === false &&
+                            item.difficulty !== undefined &&
+                            item.difficulty >= 1) {
+                            originalSrc = '/img/intensiteit3Cirkel.webp';
+                            iconToAdd = {
+                                src: originalSrc,
+                                alt: 'Moeilijkheidsgraad',
+                                label: `Intensiteit van de actie`
+                            };
+                        } else if (item.image !== undefined) {
+                            originalSrc = item.image;
+                            iconToAdd = {
+                                src: originalSrc,
+                                alt: item.imageAlt || item.altImage || 'Icon',
+                                label: item.label || item.imageAlt || item.altImage || (item.type === 'Tools' && item.tool ? item.tool : 'Icon Label')
+                            };
+                        } else if (item.type === "Line" && item.active === true && item['has-big-arrow'] === true) {
+                            originalSrc = '/img/verplaats_instrument.webp';
+                            iconToAdd = {
+                                src: originalSrc,
+                                alt: 'Laat zien dat je van lijn moet wisselen',
+                                label: 'Actie'
+                            };
+                        }
+
+                        if (iconToAdd && originalSrc) {
+                            const canonizedVersion = canonizeSrc(originalSrc);
+                            if (canonizedVersion && !addedCanonizedSources.has(canonizedVersion)) {
+                                processedIcons.push(iconToAdd);
+                                addedCanonizedSources.add(canonizedVersion);
+                            }
+                        }
+                    });
+                this.icons = processedIcons;
+            } else {
+                this.icons = [];
             }
         },
     },
 };
-
 </script>
