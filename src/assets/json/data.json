@@ -420,6 +420,10 @@
                         {
                             "type": "Tools",
                             "tool": "pot"
+                        },
+                        {
+                            "type": "Tools",
+                            "tool": "pot"
                         }
                     ],
                     [
@@ -432,7 +436,12 @@
                         {
                             "type": "Line",
                             "Active": false
+                        },
+                        {
+                            "type": "Line",
+                            "active": true
                         }
+
                     ],
                     [
                         {
@@ -445,6 +454,10 @@
                         {
                             "type": "Line",
                             "Active": false
+                        },
+                        {
+                            "type": "Line",
+                            "active": true
                         }
                     ],
                     [
@@ -460,6 +473,11 @@
                         {
                             "type": "Line",
                             "Active": false
+                        },
+                        {
+                            "type": "Indent",
+                            "image": "/img/opwarmen.webp",
+                            "imageAlt": "Opwarmen"
                         }
                     ],
                     [
