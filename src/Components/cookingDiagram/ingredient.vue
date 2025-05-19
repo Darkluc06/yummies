@@ -1,6 +1,6 @@
 <template>
-    <div class="cookingDiagram__column">
-        <figure class="cookingDiagram__line cookingDiagram__line--active"></figure>
+    <div class="cookingDiagram__column" :class="indent ? `cookingDiagram__indentPadding` : ``">
+        <figure class="cookingDiagram__line cookingDiagram__line--active" :class="indent ? `cookingDiagram__indented` : ``"></figure>
         <div class="cookingDiagram__ingredient" v-if="isString === true && hasIngredientArrow === false">
             <div class="cookingDiagram__ingredientWrapper" :class="popupActive ? `` : `cookingDiagram__ingredientWrapper--active`" @click="OpenPopup()">
                 <SvgIcon :name="`arrow-long`" />
@@ -115,7 +115,12 @@ export default {
         bracketText:{
             type: String,
             default: "",
-        }
+        },
+        indent: {
+            type: Boolean,
+            default: false,
+            required: false,
+        },
     },
     mounted() {
         this.searchRecipeId()

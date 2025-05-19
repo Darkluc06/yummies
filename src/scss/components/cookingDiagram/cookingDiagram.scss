@@ -67,6 +67,16 @@
             margin: 0 !important;
             border-radius: 0;
         }
+        
+        
+        &--rotate{
+            transform: rotate(90deg);
+            height: 5rem;
+            background: black;
+            position: absolute;
+            left: 45%;
+            top: 25%;
+        }
 
         &--active {
             height: 10rem;
@@ -95,8 +105,59 @@
                 height: 2.4rem;
             }
         }
+        &--filler{
+            background: black;
+            position: absolute;
+            left: 35%;
+            height: 2rem;
+            top: -5%;
+        }
     }
-
+    
+    &__indentPadding{
+        position: relative;
+        padding-inline-end: 35%;
+        //& > .cookingDiagram__specialArrow{
+        //    left: 35% !important;
+        //}
+        & > *{
+            left: 35% !important;
+        }
+    }
+    
+    &__indented{
+        position: absolute;
+        left: 35%;
+    }
+    
+    &__curve{
+        width: 5rem;
+        height: 5rem;
+        position: absolute;
+        bottom: -0.1rem;
+        &--RD{
+            border-left: 0.2rem solid black;
+            border-top: 0.2rem solid black;
+            border-top-left-radius: 2rem;
+            left: 35%;
+        }
+        &--DR{
+            border-left: 0.2rem solid black;
+            border-bottom: 0.2rem solid black;
+            border-bottom-left-radius: 2rem;
+            left: 35%;
+            top: 0.3rem;
+        }
+        &--LD{
+            //width: 2rem;
+            border-right: 0.2rem solid black;
+            border-top: 0.2rem solid black;
+            border-top-right-radius: 2rem;
+            right: calc(50% - 0.1rem);
+            //transform: translateX(-50%);
+        }
+    }
+    
     &__bigArrow {
         position: absolute;
         width: calc(100% - 2em);

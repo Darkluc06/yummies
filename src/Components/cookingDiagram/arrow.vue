@@ -1,5 +1,5 @@
 <template>
-    <figure class="cookingDiagram__specialArrow">
+    <figure class="cookingDiagram__specialArrow" :class="indent ? `cookingDiagram__indentPadding` : ``">
         <SvgIcon :name="'arrow-long'" />
         <ul class="cookingDiagram__specialArrow--difficulties">
             <li class="cookingDiagram__specialArrow--difficulty" v-for="(difficulty, index) in difficulty"></li>
@@ -32,7 +32,12 @@ export default {
         ingredient:{
             type: String,
             default: ""
-        }
+        },
+        indent: {
+            type: Boolean,
+            default: false,
+            required: false,
+        },
     }
 }
 

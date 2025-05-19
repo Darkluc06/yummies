@@ -493,6 +493,11 @@
                         {
                             "type": "Line",
                             "active": false
+                        },
+                        {
+                            "type": "Line",
+                            "active": true,
+                            "indent": true
                         }
                     ],
                     [
@@ -508,6 +513,16 @@
                         {
                             "type": "Line",
                             "Active": false
+                        },
+                        {
+                            "type": "Ingredient",
+                            "has-ingredient-arrow": true,
+                            "image": "/img/blokjes_snijden.webp",
+                            "imageAlt": "Opwarmen",
+                            "recipeId": 2,
+                            "difficulty": 2,
+                            "ingredientIndexes": [2],
+                            "indent": true
                         }
                     ],
                     [
@@ -523,6 +538,14 @@
                         {
                             "type": "Line",
                             "Active": false
+                        },
+                        {
+                            "type": "Ingredient",
+                            "is-string": false,
+                            "image": "/img/opwarmen.webp",
+                            "imageAlt": "Opwarmen",
+                            "recipeId": 1,
+                            "indent": true
                         }
                     ],
                     [
@@ -540,6 +563,12 @@
                         {
                             "type": "Line",
                             "Active": false
+                        },
+                        {
+                            "type": "Indent",
+                            "image": "/img/opwarmen.webp",
+                            "imageAlt": "Opwarmen",
+                            "end": true
                         }
                     ],
                     [
@@ -554,6 +583,10 @@
                         {
                             "type": "Line",
                             "Active": false
+                        },
+                        {
+                            "type": "Line",
+                            "active": true
                         }
                     ]
                 ]
