@@ -26,9 +26,9 @@
 <script>
 import SvgIcon from '@/Components/general/icon/SvgIcon.vue';
 import { RouterLink } from 'vue-router';
-import json from '../../assets/json/data.json';
-import FooterComponent from '../../Components/footer/footerComponent.vue';
 import DesktopNavigation from '@/Components/navigation/desktopNavigation.vue';
+import instruction from '/src/assets/json/instruction.json';
+import FooterComponent from '/src/Components/footer/footerComponent.vue';
 
 export default {
     components: {
@@ -39,20 +39,8 @@ export default {
     },
     data() {
         return {
-            instruction: json["instruction"],
-            icons: json["instruction"]["legenda"]["imgs"],
-
-            info: json,
-            iconsCondition: json['instruction']['legenda']['iconsImgCondition'],
-            iconsXYZ: json['instruction']['legenda']['iconsXYZ'],
-            iconsCircles: json['instruction']['legenda']['iconsImgsCircle'],
-            iconsDiamonds: json['instruction']['legenda']['iconsImgsDiamond'],
-            iconsIntensity: json['instruction']['legenda']['iconsImgIntensity'],
-            iconsArrows: json['instruction']['legenda']['iconsImgArrows'],
-            ingredientsBlue: json['instruction']['legenda']['ingredients']['blueBox'],
-            ingredientsGreen: json['instruction']['legenda']['ingredients']['greenBox'],
-            ingredientsYellow: json['instruction']['legenda']['ingredients']['yellowBox'],
-            ingredientsWhite: json['instruction']['legenda']['ingredients']['whiteBox'],
+            showDocumentation: true,
+            instruction: instruction,
 
             isScrollable: false,
             footerVisible: true,

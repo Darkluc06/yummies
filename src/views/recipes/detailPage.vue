@@ -83,7 +83,7 @@ import { RouterLink } from 'vue-router';
 import ingredients from '@/Components/recipe/ingredients.vue';
 import modal from '@/Components/modal/modal.vue';
 import cookingDiagram from '@/Components/cookingDiagram/cookingDiagram.vue';
-import json from '../../assets/json/data.json';
+import json from '../../assets/json/recipe.json';
 import FooterComponent from "../../Components/footer/footerComponent.vue";
 import DesktopNavigation from '@/Components/navigation/desktopNavigation.vue';
 import IconComponent from '@/Components/general/icon/icon.vue'
@@ -149,15 +149,15 @@ export default {
     methods: {
         loadRecipeData() {
             console.log('DetailPage loading data for urlName prop:', this.urlName);
-            if (json && json.home && json.home.recipes) {
-                this.recipe = json.home.recipes.find(r => r.urlName === this.urlName);
+            if (json && json.recipePage && json.recipePage.recipes) {
+                this.recipe = json.recipePage.recipes.find(r => r.urlName === this.urlName);
                 if (this.recipe) {
                     console.log('DetailPage - found recipe:', this.recipe);
                 } else {
                     console.error('Recipe not found for urlName:', this.urlName);
                 }
             } else {
-                console.error('Error: Could not access json.home.recipes or JSON data is not in the expected format.');
+                console.error('Error: Could not access json.recipePage.recipes or JSON data is not in the expected format.');
                 this.recipe = null;
             }
         },

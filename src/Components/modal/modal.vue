@@ -24,7 +24,7 @@
 
 <script>
 import SvgIcon from '../general/icon/SvgIcon.vue';
-import json from '../../assets/json/data.json';
+import json from '../../assets/json/recipe.json';
 
 export default {
     props: {
@@ -45,7 +45,7 @@ export default {
         return {
             info: json,
             icons: [],
-            recipes: json['home']['recipes'],
+            recipes: json['recipePage']['recipes'],
         };
     },
     mounted() {
