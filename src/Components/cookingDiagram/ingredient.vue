@@ -2,21 +2,20 @@
     <div class="cookingDiagram__column" :class="indent ? `cookingDiagram__indentPadding` : ``">
         <figure class="cookingDiagram__line cookingDiagram__line--active" :class="indent ? `cookingDiagram__indented` : ``"></figure>
         <div class="cookingDiagram__ingredient" v-if="isString === true && hasIngredientArrow === false">
-            <div class="cookingDiagram__ingredientWrapper" :class="popupActive ? `` : `cookingDiagram__ingredientWrapper--active`" @click="OpenPopup()">
+            <div class="cookingDiagram__ingredientWrapper"
+                :class="popupActive ? `` : `cookingDiagram__ingredientWrapper--active`" @click="OpenPopup()">
                 <SvgIcon :name="`arrow-long`" />
-                <p>{{ this.ingredientsString }}</p>
+                <p>{{ ingredientString }}</p>
             </div>
-            <div class="cookingDiagram__ingredientPopup" :class="popupActive ? `cookingDiagram__ingredientPopup--active` : ``">
+            <div class="cookingDiagram__ingredientPopup"
+                :class="popupActive ? `cookingDiagram__ingredientPopup--active` : ``">
                 <button @click="ClosePopup()">
-                    <SvgIcon :name="`close`"/>
+                    <SvgIcon :name="`close`" />
                 </button>
-                <p>{{ this.ingredientsString }}</p>
+                <p>{{ ingredientString }}</p>
             </div>
         </div>
         <span class="cookingDiagram__icon" v-if="isString === false && hasIngredientArrow === false">
-            <!-- <div class="cookingDiagram__iconWrapper" :class="isCircle ? `circle` : `triangle`">
-                <SvgIcon :name="icon" />
-            </div> -->
             <figure class="cookingDiagram__iconWrapper" @click="CompletedStep()">
                 <img :src="image" :alt="imageAlt" class="cookingDiagram__img">
                 <div class="cookingDiagram__completed" :class="finishedStep ? `cookingDiagram__completed--active` : ``">
@@ -27,8 +26,9 @@
                 <li class="cookingDiagram__difficulty" v-for="(difficulty, index) in difficulty"></li>
             </ul>
         </span>
-        <BackwardsArrow :steps="steps" :direction="backwardsArrowDirection" v-if="hasBackwardsArrow === true"/>
-        <Arrow v-if="hasIngredientArrow === true" :image="image" :image-alt="imageAlt" :difficulty="difficulty" :ingredient="this.ingredientsString" :images="images" :standard-arrow="standardArrow" />
+        <BackwardsArrow :steps="steps" :direction="backwardsArrowDirection" v-if="hasBackwardsArrow === true" />
+        <Arrow v-if="isArrowVisible" :image="image" :image-alt="imageAlt" :difficulty="difficulty"
+            :ingredient="ingredientString" />
         <figure class="cookingDiagram__brackets" v-if="hasBrackets === true" :class="`steps--${steps}`">
             <ul class="cookingDiagram__brackets--wrapper">
                 <li class="cookingDiagram__brackets--left"></li>
@@ -40,7 +40,6 @@
 </template>
 
 <script>
-
 import SvgIcon from '../general/icon/SvgIcon.vue';
 import BackwardsArrow from './backwardsArrow.vue';
 import Arrow from './arrow.vue';
@@ -52,10 +51,9 @@ export default {
         BackwardsArrow,
         Arrow
     },
-    data () {
+    data() {
         return {
-            data : json.recipePage,
-            ingredientsString: "",
+            data: json.recipePage,
             popupActive: false,
             finishedStep: false,
         }
@@ -77,7 +75,7 @@ export default {
             type: String,
             required: false
         },
-        imageAlt:{
+        imageAlt: {
             type: String
         },
         images:{
@@ -88,19 +86,19 @@ export default {
             type: Number,
             default: 1,
         },
-        active:{
+        active: {
             type: Boolean,
             default: false,
         },
-        isCircle:{
+        isCircle: {
             type: Boolean,
             default: true,
         },
-        hasBackwardsArrow:{
+        hasBackwardsArrow: {
             type: Boolean,
             default: false
         },
-        steps:{
+        steps: {
             type: String,
             default: "1"
         },
@@ -108,15 +106,15 @@ export default {
             type: String,
             default: "left"
         },
-        hasIngredientArrow:{
+        hasIngredientArrow: {
             type: Boolean,
             default: false
         },
-        hasBrackets:{
+        hasBrackets: {
             type: Boolean,
             default: false
         },
-        bracketText:{
+        bracketText: {
             type: String,
             default: "",
         },
@@ -130,44 +128,59 @@ export default {
             required: false,
         },
     },
-    mounted() {
-        let recipe = this.getRecipe();
-        this.setIngredientString(recipe)
-    },
-    beforeUpdate()
-    {
-        let recipe = this.getRecipe();
-        this.setIngredientString(recipe)
-    },
-    methods: {
-        getRecipe() {
+    computed: {
+        recipe() {
             return this.data.recipes.find(recipe => this.recipeId === recipe.id);
         },
-        setIngredientString(recipe)
-        {
-            if (this.ingredients === undefined) return;
-            this.ingredientsString = "";
+        ingredientString() {
+            if (!this.recipe || !this.ingredients) {
+                return "";
+            }
 
-            for (let index = 0; index < this.ingredients.length; index++) {
-                let ingredientObject = this.ingredients[index];
-                let recipeIngredient = recipe.ingredients[ingredientObject.index] 
-                this.ingredientsString += Math.floor((recipeIngredient.amount / 100 * ingredientObject.percentageOfTotal)) + " " + recipeIngredient.unit + " " + recipeIngredient.name;
+            let ingredientsString = "";
+            for (let i = 0; i < this.ingredients.length; i++) {
+                const ingredientObject = this.ingredients[i];
+                const recipeIngredient = this.recipe.ingredients[ingredientObject.index];
 
-                if (this.ingredients.length - 1 !== index) {
-                    this.ingredientsString += ", ";
+                if (recipeIngredient) {
+                    let amountToDisplay = (recipeIngredient.amount / 100) * ingredientObject.percentageOfTotal;
+                    let unitToDisplay = recipeIngredient.unit;
+
+                    if (unitToDisplay === 'l' || unitToDisplay === 'kg') {
+                        // Retain decimals for liters and kilograms
+                        amountToDisplay = parseFloat(amountToDisplay.toFixed(2));
+                    } else if (unitToDisplay === 'ml' || unitToDisplay === 'gram') {
+                        // Round to whole numbers for ml/gram unless it is less than 1
+                        if (amountToDisplay < 1 && amountToDisplay !== 0) {
+                            amountToDisplay = parseFloat(amountToDisplay.toFixed(2));
+                        } else {
+                            amountToDisplay = Math.round(amountToDisplay);
+                        }
+                    } else {
+                        amountToDisplay = Math.round(amountToDisplay);
+                    }
+
+                    ingredientsString += amountToDisplay + " " + unitToDisplay + " " + recipeIngredient.name;
+
+                    if (this.ingredients.length - 1 !== i) {
+                        ingredientsString += ", ";
+                    }
                 }
             }
-        },
-        OpenPopup(){
+            console.log('Ingredient - Final ingredientString (AFTER ROUNDING):', ingredientsString);
+            return ingredientsString;
+        }
+    },
+    methods: {
+        OpenPopup() {
             this.popupActive = true;
         },
-        ClosePopup(){
+        ClosePopup() {
             this.popupActive = false;
         },
-        CompletedStep(){
+        CompletedStep() {
             this.finishedStep = !this.finishedStep;
         }
     }
 }
-
 </script>
