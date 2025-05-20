@@ -481,8 +481,14 @@
                             "standard-arrow": true,
                             "image": "/img/pijl-kom.webp",
                             "imageAlt": "Opwarmen",
-                            "ingredientIndexes": [0],
-                            "recipeId": 2
+                            "recipeId": 2,
+                            "ingredients": 
+                            [
+                                {
+                                    "index": 0,
+                                    "percentageOfTotal": 100
+                                }
+                            ]
                         },
                         {
                             "type": "Line",
@@ -501,7 +507,7 @@
                             "ingredients": 
                             [
                                 {
-                                    "index": 2,
+                                    "index": 0,
                                     "percentageOfTotal": 100
                                 }
                             ]
@@ -544,7 +550,14 @@
                                 }
                             ],
                             "recipeId": 2,
-                            "difficulty": 4
+                            "difficulty": 4,
+                            "ingredients": 
+                            [
+                                {
+                                    "index": 1,
+                                    "percentageOfTotal": 100
+                                }
+                            ]
                         },
                         {
                             "type": "Line",
@@ -564,7 +577,14 @@
                             "image": "/img/blokjes_snijden.webp",
                             "imageAlt": "Opwarmen",
                             "recipeId": 2,
-                            "difficulty": 2
+                            "difficulty": 2,
+                            "ingredients": 
+                            [
+                                {
+                                    "index": 2,
+                                    "percentageOfTotal": 100
+                                }
+                            ]
                         },
                         {
                             "type": "Line",
@@ -585,7 +605,13 @@
                             "imageAlt": "Opwarmen",
                             "recipeId": 2,
                             "difficulty": 3,
-                            "ingredientIndexes": [3]
+                            "ingredients": 
+                            [
+                                {
+                                    "index": 3,
+                                    "percentageOfTotal": 100
+                                }
+                            ]
                         },
                         {
                             "type": "Line",
@@ -610,7 +636,14 @@
                             "image": "/img/blokjes_snijden.webp",
                             "imageAlt": "Opwarmen",
                             "recipeId": 2,
-                            "difficulty": 5
+                            "difficulty": 5,
+                            "ingredients": 
+                            [
+                                {
+                                    "index": 4,
+                                    "percentageOfTotal": 100
+                                }
+                            ]
                         },
                         {
                             "type": "Line",
