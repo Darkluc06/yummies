@@ -3,8 +3,7 @@
         <button :class="`ingredients__button ingredients__button--${checked}`" @click="checkBox">
             <SvgIcon :name="`check`"/>
         </button>
-        <p class="ingredients__name">{{ Math.round(ingredient.amount) }} {{ ingredient.unit }} {{ ingredient.name }}</p>    
-        </li>
+        <p class="ingredients__name">{{ Math.round(ingredient.amount * 100) / 100 }} {{ ingredient.unit }} {{ ingredient.name }}</p>        </li>
 </template>
 <script>
 
