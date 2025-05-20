@@ -2,7 +2,7 @@
     <section class="footer_component">
         <figure class="arrow-container" v-if="this.renderArrow()">
             <p class="arrow-container-p">Check me</p>
-            <img class="arrow" src="./../../../public/img/checkMe.webp" alt="">
+            <img class="arrow" src="/img/checkMe.webp" alt="">
         </figure>            
         <RouterLink :to="`/`" class="footer_link" activeClass="footer_link--active">
             <SvgIcon :name="'book'" />

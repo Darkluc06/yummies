@@ -14,7 +14,7 @@
             </li>
             <li class="desktopNav__listItem">
                 <figure class="arrow-container" v-if="this.renderArrow()">
-                    <img class="arrow-container--img" src="./../../../public/img/checkMe.webp" alt="">
+                    <img class="arrow-container--img" src="/img/checkMe.webp" alt="">
                     <p class="arrow-container--p">Check me</p>
                 </figure>
                 <RouterLink :to="`/documentation`" class="desktopNav__link" activeClass="desktopNav__link--active">
