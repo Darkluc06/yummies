@@ -1,5 +1,5 @@
 <template>
-    <figure class="cookingDiagram__standardArrow" v-if="standardArrow === true">
+    <figure class="cookingDiagram__standardArrow" v-if="standardArrow === true" :class="indent ? `cookingDiagram__indentPadding` : ``">
         <SvgIcon :name="'arrow-long'" />
         <figure class="cookingDiagram__standardArrow--imgWrapper">
             <img :src="image" :alt="imageAlt" class="cookingDiagram__standardArrow--img">
@@ -18,7 +18,7 @@
             <img :src="image" :alt="imageAlt" class="cookingDiagram__specialArrow--img">
         </figure>
         <figure class="cookingDiagram__specialArrow--imgWrappers" v-if="images">
-            <img :src="images.src" :alt="images.alt" class="cookingDiagram__specialArrow--imgs"  v-for="(images, index) in images">
+            <img :src="images.src" :alt="images.alt" class="cookingDiagram__specialArrow--imgs" v-for="(images, index) in images">
         </figure>
         <div class="cookingDiagram__specialArrow--wrapper">
             <!-- <figure class="cookingDiagram__specialArrow--line"></figure> -->
@@ -33,31 +33,36 @@ import SvgIcon from '../general/icon/SvgIcon.vue';
 
 export default {
     components: {
-        SvgIcon
+        SvgIcon,
     },
-    props:{
+    props: {
         image: String,
         imageAlt: String,
         difficulty: {
             type: Number,
             default: 1,
         },
-        ingredient:{
+        ingredient: {
             type: String,
-            default: ""
+            default: '',
         },
-        images:{
+        images: {
             type: Array,
-            required: false
+            required: false,
         },
-        standardArrow:{
+        standardArrow: {
             type: Boolean,
-            default: true
-        }
+            default: true,
+        },
+        indent: {
+            type: Boolean,
+            default: false,
+            required: false,
+        },
     },
     mounted() {
         console.log(this.images);
-    }
-}
+    },
+};
 
 </script>

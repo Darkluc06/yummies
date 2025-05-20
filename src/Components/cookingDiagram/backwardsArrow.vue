@@ -1,5 +1,5 @@
 <template>
-    <figure class="cookingDiagram__backwardsArrow" :class="`steps--${steps}`">
+    <figure class="cookingDiagram__backwardsArrow" :class="`steps--${steps}`, indent ? `cookingDiagram__indentPadding` : ``">
         <div class="cookingDiagram__arrow" :class="`arrow--${direction}`" v-if="direction === `left`">
             <SvgIcon :name="`arrow-long`"/>
         </div>
@@ -25,7 +25,12 @@ export default {
         steps:{
             type: String,
             default: "1"
-        }
+        },
+        indent: {
+            type: Boolean,
+            default: false,
+            required: false,
+        },
     }
 }
 

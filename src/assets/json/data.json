@@ -426,6 +426,10 @@
                         {
                             "type": "Tools",
                             "tool": "pot"
+                        },
+                        {
+                            "type": "Tools",
+                            "tool": "pot"
                         }
                     ],
                     [
@@ -441,6 +445,10 @@
                         {
                             "type": "Line",
                             "Active": false
+                        },
+                        {
+                            "type": "Line",
+                            "active": true
                         }
                     ],
                     [
@@ -453,6 +461,10 @@
                         {
                             "type": "Line",
                             "Active": false
+                        },
+                        {
+                            "type": "Line",
+                            "active": true
                         }
                     ],
                     [
@@ -466,6 +478,10 @@
                         {
                             "type": "Line",
                             "Active": false
+                        },
+                        {
+                            "type": "Line",
+                            "active": true
                         }
                     ],
                     [
@@ -477,7 +493,7 @@
                                 {
                                     "src": "/img/blokjes_snijden.webp",
                                     "alt": "test"
-                                }                               
+                                }
                             ],
                             "recipeId": 2,
                             "difficulty": 4,
@@ -486,6 +502,11 @@
                         {
                             "type": "Line",
                             "active": false
+                        },
+                        {
+                            "type": "Indent",
+                            "image": "/img/opwarmen.webp",
+                            "imageAlt": "Opwarmen"
                         }
                     ],
                     [
@@ -502,6 +523,11 @@
                         {
                             "type": "Line",
                             "active": false
+                        },
+                        {
+                            "type": "Line",
+                            "active": true,
+                            "indent": true
                         }
                     ],
                     [
@@ -518,6 +544,16 @@
                         {
                             "type": "Line",
                             "active": false
+                        },
+                        {
+                            "type": "Ingredient",
+                            "is-string": false,
+                            "image": "/img/actie_x.webp",
+                            "imageAlt": "test",
+                            "difficulty": 2,
+                            "has-backwards-arrow": true,
+                            "steps": "2",
+                            "indent": true
                         }
                     ],
                     [
@@ -534,6 +570,18 @@
                         {
                             "type": "Line",
                             "active": false
+                        },
+                        {
+                            "type": "Ingredient",
+                            "is-string": false,
+                            "image": "../img/opwarmen.webp",
+                            "imageAlt": "Opwarmen",
+                            "recipeId": 1,
+                            "difficulty": 5,
+                            "has-brackets": true,
+                            "steps": "1",
+                            "bracket-text": "c.a 15m",
+                            "indent": true
                         }
                     ],
                     [
@@ -551,6 +599,10 @@
                         {
                             "type": "Line",
                             "Active": false
+                        },
+                        {
+                            "type": "Indent",
+                            "end": true
                         }
                     ],
                     [
@@ -564,7 +616,11 @@
                         },
                         {
                             "type": "Line",
-                            "active": false
+                            "Active": false
+                        },
+                        {
+                            "type": "Line",
+                            "active": true
                         }
                     ],
                     [

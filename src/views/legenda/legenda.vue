@@ -14,7 +14,7 @@
                 </header>
             </section>
             <section class="instruction_legenda-mid">
-                <summary class="instruction_legenda-summary"> {{ instruction.legenda.summary }} </summary>
+                <p class="instruction_legenda-summary"> {{ instruction.legenda.summary }} </p>
                 <div class="instruction_containers">
                     <ul class="instruction_container-icons icons-condition">
                         <li class="instruction_icons" v-for="(iconImg, index) in iconsCondition" :key="index"
@@ -69,7 +69,7 @@
                         moet
                         doen
                     </p>
-                    <img src="/public/img/iets_blijven_doen.webp" alt="" class="instruction_img-keep-doing">
+                    <img src="/img/iets_blijven_doen.webp" alt="" class="instruction_img-keep-doing">
                 </figure>
                 <div class="instruction_ingredients">
                     <p class="instruction_ingredients-p">Verschillende onderdelen (moeten) afgebeeld worden in
@@ -79,7 +79,7 @@
                         wat bepaalde stappen doen. Het item naam en symbolen in het vak blijven wit. Vervolgens staan de
                         ingredienten op volgorde van wat er
                         als eerst in gaat en op volgorde van kleur.</p>
-                    <img src="/public/img/colors.webp" alt="" class="instruction_ingredients-img">
+                    <img src="/img/colors.webp" alt="" class="instruction_ingredients-img">
                     <p class="instruction_ingredients-p">
                         In de ingredienten staan eerst de hoeveelheid. Altijd in eenheiden, grammen, liters, eetlepels
                         of thee lepels. En dan de naam. Wanneer een ingredient in twee blokken voorkomt
