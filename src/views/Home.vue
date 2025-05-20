@@ -37,7 +37,7 @@
                     </label>
                     <Navigation @categorySelected="setSelectedCategory" />
                 </div>
-                <h1 class="yummies_recipes-h1"> {{ home.sectionRecipeH2 }} </h1>
+                <h2 class="yummies_recipes-h1"> {{ home.sectionRecipeH2 }} </h2>
                 <ul class="yummies_recipes-container">
                     <Recipe v-for="recipe in filteredRecipes" :key="recipe.urlName || recipe.id" :recipe="recipe" />
                 </ul>
