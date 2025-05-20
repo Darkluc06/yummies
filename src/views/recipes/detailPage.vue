@@ -1,73 +1,70 @@
 <template>
     <DesktopNavigation :title="'Kook Diagram'" />
-        <article class="recipePage" v-if="recipe">
+    <article class="recipePage" v-if="recipe">
         <div class="recipePage__container">
-        <imageComponent 
-            :figureClass="`recipePage__figure`" 
-            :imageClass="`recipePage__img`" 
-            :imageSource="recipe.image"
-            :imageAlt="recipe.name" 
-        />
-        <section class="recipePage__text">
-            <figure class="recipe__type">
-                <IconComponent :icon="recipe.type" />
-            </figure>
-            <div class="recipePage__wrapper recipePage__wrapper--header">
-                <div>
-                    <h1 class="recipePage__title">{{ recipe.name }}</h1>
-                    <span class="recipePage__favorite">
-                        <button :id="`safeRecipe-${recipe.id}`" class="recipe__span" @click="toggleFavorite">
-                            <SvgIcon :name="heart" />
+            <imageComponent :figureClass="`recipePage__figure`" :imageClass="`recipePage__img`"
+                :imageSource="recipe.image" :imageAlt="recipe.name" />
+            <section class="recipePage__text">
+                <figure class="recipe__type">
+                    <IconComponent :icon="recipe.type" />
+                </figure>
+                <div class="recipePage__wrapper recipePage__wrapper--header">
+                    <div>
+                        <h1 class="recipePage__title">{{ recipe.name }}</h1>
+                        <span class="recipePage__favorite">
+                            <button :id="`safeRecipe-${recipe.id}`" class="recipe__span" @click="toggleFavorite">
+                                <SvgIcon :name="heart" />
+                            </button>
+                        </span>
+                    </div>
+                    <RouterLink :to="{ name: 'home' }">
+                        <SvgIcon :name="`close`" :class-name="'recipePage__close'" />
+                    </RouterLink>
+                </div>
+                <p class="recipePage__p">
+                    {{ recipe.description }}
+                </p>
+                <ul class="recipePage__icons">
+                    <li class="recipePage__icon">
+                        <span>
+                            <SvgIcon :name="`timer`" /> {{ recipe.time }}
+                        </span>
+                    </li>
+                    <li class="recipePage__icon">
+                        <span>
+                            <SvgIcon :name="`grocery`" /> {{ recipe.ingredients.length }}
+                        </span>
+                    </li>
+                </ul>
+                <h2 class="recipePage__subTitle">
+                    Ingrediënten
+                </h2>
+                <div class="recipePage__wrapper">
+                    <h3> {{ recipe.servings }} porties </h3>
+                    <div>
+                        <button class="recipePage__button" @click="removeServingToRecipe">
+                            <SvgIcon :name="`minus`" />
                         </button>
-                    </span>
+                        <button class="recipePage__button" @click="addServingToRecipe">
+                            <SvgIcon :name="`plus`" />
+                        </button>
+                    </div>
                 </div>
-                <RouterLink :to="{ name: 'home' }">
-                    <SvgIcon :name="`close`" :class-name="'recipePage__close'" />
-                </RouterLink>
-            </div>
-            <p class="recipePage__p">
-                {{ recipe.description }}
-            </p>
-            <ul class="recipePage__icons">
-                <li class="recipePage__icon">
-                    <span>
-                        <SvgIcon :name="`timer`" /> {{ recipe.time }}
-                    </span>
-                </li>
-                <li class="recipePage__icon">
-                    <span>
-                        <SvgIcon :name="`grocery`" /> {{ recipe.ingredients.length }}
-                    </span>
-                </li>
-            </ul>
-            <h2 class="recipePage__subTitle">
-                Ingrediënten
-            </h2>
-            <div class="recipePage__wrapper">
-                <h3> {{ recipe.servings }} porties </h3>
-                <div>
-                    <button class="recipePage__button" @click="removeServingToRecipe">
-                        <SvgIcon :name="`minus`" />
-                    </button>
-                    <button class="recipePage__button" @click="addServingToRecipe">
-                        <SvgIcon :name="`plus`" />
-                    </button>
+                <ul class="ingredients ingredients--list">
+                    <ingredients v-for="(ingredient, index) in recipe.ingredients" :key="index"
+                        :ingredient="ingredient" />
+                </ul>
+                <div class="recipePage__wrapper" v-if="recipe.diagram">
+                    <h2 class="recipePage__subTitle">Kookdiagram</h2>
+                    <button @click="modalOpen" class="recipePage__modalButton">Legenda</button>
                 </div>
-            </div>
-            <ul class="ingredients ingredients--list">
-                <ingredients v-for="(ingredient, index) in recipe.ingredients" :key="index"
-                    :ingredient="ingredient" />
-            </ul>
-            <div class="recipePage__wrapper" v-if="recipe.diagram">
-                <h2 class="recipePage__subTitle">Kookdiagram</h2>
-                <button @click="modalOpen" class="recipePage__modalButton">Legenda</button>
-            </div>
-            <div class="recipePage__wrapper" v-if="!recipe.diagram">
-                <h2 class="recipePage__subTitle">Geen kookdiagram</h2>
-            </div>
-            <cookingDiagram :nameOfRecipe="recipe" :key="recipe.urlName" v-if="recipe.diagram" />
-        </section>
-        <modal :open="openModal" :recipe="recipe" @close="closeModal" />
+                <div class="recipePage__wrapper" v-if="!recipe.diagram">
+                    <h2 class="recipePage__subTitle">Geen kookdiagram</h2>
+                </div>
+                <cookingDiagram :nameOfRecipe="recipe"
+                    :key="`diagram-${JSON.stringify(recipe ? recipe.ingredients : [])}`" v-if="recipe.diagram" />
+            </section>
+            <modal :open="openModal" :recipe="recipe" @close="closeModal" />
         </div>
     </article>
     <div v-else class="recipePage__loading">
@@ -130,10 +127,11 @@ export default {
     beforeUnmount() {
         window.removeEventListener('resize', this.checkScrollability);
         window.removeEventListener('scroll', this.handleScroll);
-        if (this.scrollTimeout) { 
+        if (this.scrollTimeout) {
             clearTimeout(this.scrollTimeout);
         }
     },
+    // Looks for changes
     watch: {
         urlName(newUrlName, oldUrlName) {
             if (newUrlName && newUrlName !== oldUrlName) {
@@ -167,7 +165,6 @@ export default {
             const storedFavorites = localStorage.getItem(favoriteKey);
             this.isFavorite = storedFavorites ? JSON.parse(storedFavorites).includes(this.recipe.urlName) : false;
             this.updateHeartColor();
-            console.log('Favorite status updated. Recipe:', this.recipe.name, 'isFavorite:', this.isFavorite);
         },
         modalOpen() {
             this.openModal = true;
@@ -208,8 +205,27 @@ export default {
             if (!this.recipe || !this.recipe.ingredients || oldServings === 0) return;
             this.recipe.ingredients = this.recipe.ingredients.map(ingredient => {
                 const baseAmountPerOneServing = ingredient.amount / oldServings;
-                const newAmount = baseAmountPerOneServing * newServings;
-                return { ...ingredient, amount: parseFloat(newAmount.toFixed(2)) }; 
+                let newAmount = baseAmountPerOneServing * newServings;
+                let newUnit = ingredient.unit;
+
+                // Changes units from ml to l and gram to kg and back when above or below 1000
+                if (newUnit === 'ml' && newAmount >= 1000) {
+                    newAmount = parseFloat((newAmount / 1000).toFixed(2));
+                    newUnit = 'l';
+                } else if (newUnit === 'gram' && newAmount >= 1000) {
+                    newAmount = parseFloat((newAmount / 1000).toFixed(2));
+                    newUnit = 'kg';
+                } else if (newUnit === 'l' && newAmount < 1) {
+                    newAmount = Math.round(newAmount * 1000);
+                    newUnit = 'ml';
+                } else if (newUnit === 'kg' && newAmount < 1) {
+                    newAmount = Math.round(newAmount * 1000);
+                    newUnit = 'gram';
+                } else {
+                    newAmount = parseFloat(newAmount.toFixed(2));
+                }
+
+                return { ...ingredient, amount: newAmount, unit: newUnit };
             });
         },
         checkScrollability() {
@@ -217,7 +233,7 @@ export default {
             if (!this.isScrollable && !this.isScrolling) {
                 this.footerVisible = true;
             } else if (this.isScrollable && !this.isScrolling) {
-                 this.footerVisible = (window.innerHeight + Math.ceil(window.scrollY)) >= document.documentElement.scrollHeight -10;
+                this.footerVisible = (window.innerHeight + Math.ceil(window.scrollY)) >= document.documentElement.scrollHeight - 10;
             } else {
                 this.footerVisible = false;
             }
@@ -228,7 +244,7 @@ export default {
             if (this.scrollTimeout) clearTimeout(this.scrollTimeout);
             this.scrollTimeout = setTimeout(() => {
                 this.isScrolling = false;
-                if (!this.isScrollable || (window.innerHeight + Math.ceil(window.scrollY)) >= document.documentElement.scrollHeight -10 ) { 
+                if (!this.isScrollable || (window.innerHeight + Math.ceil(window.scrollY)) >= document.documentElement.scrollHeight - 10) {
                     this.footerVisible = true;
                 } else {
                     this.footerVisible = false;

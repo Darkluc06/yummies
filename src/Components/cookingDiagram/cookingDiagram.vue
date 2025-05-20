@@ -36,8 +36,8 @@ export default {
 
         recipeDiagram = this.nameOfRecipe.diagram;
 
-        if(recipeDiagram){
-            return{
+        if (recipeDiagram) {
+            return {
                 diagramData: recipeDiagram,
                 isDragging: false,
                 startX: 0,
