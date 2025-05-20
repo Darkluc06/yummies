@@ -7,12 +7,6 @@
                 </figure>
                 <h2> {{ navigation.all }} </h2>
             </li>
-            <li class="nav_links" @click="selectCategory('American', $event)">
-                <figure class="nav_icon  ">
-                    <iconComponent :icon="'American'"/>
-                </figure>
-                <h2> {{ navigation.asian }} </h2>
-            </li>
             <li class="nav_links" @click="selectCategory('Aziatisch', $event)">
                 <figure class="nav_icon  ">
                     <iconComponent :icon="'Aziatisch'"/>
