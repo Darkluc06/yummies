@@ -17,6 +17,7 @@ import Empty from './empty.vue';
 import Forloop from './forloop.vue';
 import Arrow from './arrow.vue'
 import Timeline from './timeline.vue';
+import Indent from './indent.vue';
 
 export default {
     props: {
@@ -29,7 +30,8 @@ export default {
         Empty,
         Forloop,
         Arrow,
-        Timeline
+        Timeline,
+        Indent
     },
     data() {
         let recipeDiagram = [];

@@ -1,10 +1,13 @@
 <template>
     <div class="cookingDiagram__column">
+        <p class="cookingDiagram__timeline--time">{{ time }}</p>
         <div class="cookingDiagram__lineWrapper">
             <figure class="cookingDiagram__line cookingDiagram__line--active"></figure>
-            <figure class="cookingDiagram__timeline" :class="`steps--${steps}`">
-                <p class="cookingDiagram__timeline--time">{{ time }}</p>
-            </figure>
+            <ul class="cookingDiagram__timeline" :class="`steps--${steps}`">
+                <figure class="cookingDiagram__timeline--line"></figure>
+                <li class="cookingDiagram__timeline--divider cookingDiagram__timeline--divider-top"></li>
+                <li class="cookingDiagram__timeline--divider cookingDiagram__timeline--divider-bottom"></li>
+            </ul>
         </div>
     </div>
 </template>
@@ -17,7 +20,7 @@ export default {
             type: String,
             default: "1"
         },
-        time:{
+        time: {
             type: String,
             default: "1 min",
             required: false
