@@ -22,7 +22,7 @@
 
 <script>
 import FooterComponent from '../../Components/footer/footerComponent.vue';
-import json from '../../assets/json/data.json';
+import json from '../../assets/json/recipe.json';
 import Recipe from './../../Components/recipe/recipe.vue';
 import DesktopNavigation from '@/Components/navigation/desktopNavigation.vue';
 
@@ -53,7 +53,7 @@ export default {
     },
     computed: {
         favoriteRecipes() {
-            return this.data.home.recipes.filter(recipe => this.favoriteRecipeUrls.includes(recipe.urlName));
+            return this.data.recipeHome.recipes.filter(recipe => this.favoriteRecipeUrls.includes(recipe.urlName));
         }
     },
     methods: {

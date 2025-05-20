@@ -44,7 +44,7 @@
 import SvgIcon from '../general/icon/SvgIcon.vue';
 import BackwardsArrow from './backwardsArrow.vue';
 import Arrow from './arrow.vue';
-import json from '../../assets/json/data.json'
+import json from '../../assets/json/recipe.json'
 
 export default {
     components: {
@@ -54,7 +54,7 @@ export default {
     },
     data () {
         return {
-            data : json.home,
+            data : json.recipePage,
             ingredientsString: "",
             popupActive: false,
             finishedStep: false,
@@ -65,7 +65,7 @@ export default {
             type: Number,
             required: true
         },
-        ingredientIndexes: {
+        ingredients: {
             type: Array,
             required: false
         },
@@ -131,26 +131,29 @@ export default {
         },
     },
     mounted() {
-        this.searchRecipeId()
+        let recipe = this.getRecipe();
+        this.setIngredientString(recipe)
     },
     beforeUpdate()
     {
-        this.searchRecipeId()
+        let recipe = this.getRecipe();
+        this.setIngredientString(recipe)
     },
     methods: {
-        searchRecipeId() {
-            let recipe = this.data.recipes.find(recipe => this.recipeId === recipe.id);
-            if (this.ingredientIndexes === undefined) return;
-
+        getRecipe() {
+            return this.data.recipes.find(recipe => this.recipeId === recipe.id);
+        },
+        setIngredientString(recipe)
+        {
+            if (this.ingredients === undefined) return;
             this.ingredientsString = "";
 
-            for (let index = 0; index < this.ingredientIndexes.length; index++) {
-                let ingredientIndex = this.ingredientIndexes[index];
-                let ingredient = recipe.ingredients[ingredientIndex]
+            for (let index = 0; index < this.ingredients.length; index++) {
+                let ingredientObject = this.ingredients[index];
+                let recipeIngredient = recipe.ingredients[ingredientObject.index] 
+                this.ingredientsString += Math.floor((recipeIngredient.amount / 100 * ingredientObject.percentageOfTotal)) + " " + recipeIngredient.unit + " " + recipeIngredient.name;
 
-                this.ingredientsString += ingredient.amount + " " + ingredient.unit + " " + ingredient.name;
-
-                if (this.ingredientIndexes.length - 1 !== index) {
+                if (this.ingredients.length - 1 !== index) {
                     this.ingredientsString += ", ";
                 }
             }

@@ -1,17 +1,14 @@
 {
-    "home": {
-        "title": "Kook Diagram",
-        "headerH2": "Verschillende kookstijlen",
-        "sectionRecipeH2": "Recepten",
+    "recipePage": {
         "recipes": [
             {
                 "id": 1,
-                "name": "Pannenkoek",
-                "urlName": "sushi-delight",
-                "type": "Japans",
-                "image": "/img/pannenkoek.webp",
+                "name": "Pannekoek",
+                "urlName": "pannekoek",
+                "type": "American",
+                "image": "/img/pannekoek.webp",
                 "time": "25 min",
-                "description": "Heerlijke verse sushi.",
+                "description": "Heerlijke verse pannekoeken.",
                 "servings": 2,
                 "ingredients": [
                     {
@@ -83,7 +80,13 @@
                             "recipeId": 1,
                             "type": "Ingredient",
                             "is-string": true,
-                            "ingredientIndexes": [0],
+                            "ingredients": 
+                            [
+                                {
+                                    "index": 0,
+                                    "percentageOfTotal": 30
+                                }
+                            ],
                             "active": true
                         },
                         {
@@ -106,7 +109,22 @@
                             "image": "/img/actie_x.webp",
                             "imageAlt": "test",
                             "difficulty": 1,
-                            "recipeId": 1
+                            "recipeId": 1,
+                            "ingredients": 
+                            [
+                                {
+                                    "index": 0,
+                                    "percentageOfTotal": 30
+                                },
+                                {
+                                    "index": 1,
+                                    "percentageOfTotal": 50
+                                },
+                                {
+                                    "index": 2,
+                                    "percentageOfTotal": 80
+                                }
+                            ]
                         },
                         {
                             "type": "Line",
@@ -136,7 +154,21 @@
                         {
                             "type": "Ingredient",
                             "is-string": true,
-                            "ingredientIndexes": [1, 3, 5],
+                            "ingredients": 
+                            [
+                                {
+                                    "index": 1,
+                                    "percentageOfTotal": 30
+                                },
+                                {
+                                    "index": 3,
+                                    "percentageOfTotal": 50
+                                },
+                                {
+                                    "index": 5,
+                                    "percentageOfTotal": 80
+                                }
+                            ],
                             "recipeId": 1
                         },
                         {
@@ -192,7 +224,17 @@
                         {
                             "type": "Ingredient",
                             "is-string": true,
-                            "ingredientIndexes": [5],
+                            "ingredients": 
+                            [
+                                {
+                                    "index": 5,
+                                    "percentageOfTotal": 50
+                                },
+                                {
+                                    "index": 0,
+                                    "percentageOfTotal": 70
+                                }
+                            ],
                             "recipeId": 1
                         },
                         {
@@ -455,8 +497,14 @@
                         {
                             "type": "Ingredient",
                             "is-string": true,
-                            "ingredientIndexes": [0],
-                            "recipeId": 2
+                            "recipeId": 2,
+                            "ingredients": 
+                            [
+                                {
+                                    "index": 2,
+                                    "percentageOfTotal": 100
+                                }
+                            ]
                         },
                         {
                             "type": "Line",
@@ -473,7 +521,7 @@
                             "is-string": false,
                             "image": "/img/opwarmen.webp",
                             "imageAlt": "Opwarmen",
-                            "recipeId": 1
+                            "recipeId": 2
                         },
                         {
                             "type": "Line",
@@ -496,8 +544,7 @@
                                 }
                             ],
                             "recipeId": 2,
-                            "difficulty": 4,
-                            "ingredientIndexes": [1]
+                            "difficulty": 4
                         },
                         {
                             "type": "Line",
@@ -517,8 +564,7 @@
                             "image": "/img/blokjes_snijden.webp",
                             "imageAlt": "Opwarmen",
                             "recipeId": 2,
-                            "difficulty": 2,
-                            "ingredientIndexes": [2]
+                            "difficulty": 2
                         },
                         {
                             "type": "Line",
@@ -564,8 +610,7 @@
                             "image": "/img/blokjes_snijden.webp",
                             "imageAlt": "Opwarmen",
                             "recipeId": 2,
-                            "difficulty": 5,
-                            "ingredientIndexes": [4]
+                            "difficulty": 5
                         },
                         {
                             "type": "Line",
@@ -939,480 +984,5 @@
                 ]
             }
         ]
-    },
-    "navigation": {
-        "all": "Alle",
-        "asian": "Aziatisch",
-        "italian": "Italiaans",
-        "fastfood": "Fastfood",
-        "japanese": "Japans",
-        "vegetarian": "Vegetarisch"
-    },
-    "instruction": {
-        "buttons": {
-            "button-legenda": "Legenda",
-            "button-documentation": "Documentatie"
-        },
-        "documentation": {
-            "title": "Documentatie",
-            "paragraph": "Dit document legt uit..."
-        },
-        "legenda": {
-            "title": "Legenda",
-            "summary": "In deze legenda kun je alle iconen, pijlen, kleuren en voorbeelden zien",
-            "iconsImgCondition": [
-                {
-                    "alt": "Cirkel conditie",
-                    "label": "Cirkel conditie",
-                    "src": "cirkel_conditie.webp"
-                },
-                {
-                    "alt": "Ruit conditie",
-                    "label": "Ruit conditie",
-                    "src": "conditie.webp"
-                }
-            ],
-            "iconsXYZ": [
-                {
-                    "alt": "Niet X",
-                    "label": "Niet X",
-                    "src": "niet_x.webp"
-                },
-                {
-                    "alt": "X en Y",
-                    "label": "X en Y",
-                    "src": "x_en_y.webp"
-                },
-                {
-                    "alt": "X of Y Z",
-                    "label": "X of Y Z",
-                    "src": "x_of_y_en_z.webp"
-                },
-                {
-                    "alt": "X of Y",
-                    "label": "X of Y",
-                    "src": "x_of_y.webp"
-                }
-            ],
-            "iconsImgsCircle": [
-                {
-                    "alt": "Roeren",
-                    "label": "Roeren",
-                    "src": "roeren.webp"
-                },
-                {
-                    "alt": "Schillen",
-                    "label": "Schillen",
-                    "src": "schillen.webp"
-                },
-                {
-                    "alt": "Openen",
-                    "label": "Openen",
-                    "src": "openen.webp"
-                },
-                {
-                    "alt": "Blokjes snijden",
-                    "label": "Blokjes snijden",
-                    "src": "blokjes_snijden.webp"
-                },
-                {
-                    "alt": "Reepjes snijden X",
-                    "label": "Reepjes snijden X",
-                    "src": "reepjes_snijden_X.webp"
-                },
-                {
-                    "alt": "Reepjes snijden Y",
-                    "label": "Reepjes snijden Y",
-                    "src": "reepjes_snijden.webp"
-                },
-                {
-                    "alt": "Ringen snijden",
-                    "label": "Ringen snijden",
-                    "src": "ringen.webp"
-                },
-                {
-                    "alt": "Afscheuren",
-                    "label": "Afscheuren",
-                    "src": "afscheuren.webp"
-                },
-                {
-                    "alt": "Draaien",
-                    "label": "Draaien",
-                    "src": "draaien.webp"
-                },
-                {
-                    "alt": "Mengen/kneden",
-                    "label": "Mengen of kneden",
-                    "src": "gemengd.webp"
-                },
-                {
-                    "alt": "Plat maken",
-                    "label": "Plat maken",
-                    "src": "plat_maken.webp"
-                },
-                {
-                    "alt": "Afgieten",
-                    "label": "Afgieten",
-                    "src": "afgieten.webp"
-                },
-                {
-                    "alt": "Wassen",
-                    "label": "Wassen",
-                    "src": "wassen.webp"
-                },
-                {
-                    "alt": "Opwarmen",
-                    "label": "Opwarmen",
-                    "src": "opwarmen.webp"
-                },
-                {
-                    "alt": "Koud maken",
-                    "label": "Koud maken",
-                    "src": "koud_maken.webp"
-                },
-                {
-                    "alt": "Actie X",
-                    "label": "Actie X",
-                    "src": "actie_x.webp"
-                },
-                {
-                    "alt": "Actie Y",
-                    "label": "Actie Y",
-                    "src": "actie_y.webp"
-                },
-                {
-                    "alt": "Actie Z",
-                    "label": "Actie Z",
-                    "src": "actie_z.webp"
-                },
-                {
-                    "alt": "Breed maken",
-                    "label": "Breed maken",
-                    "src": "breed_maken.webp"
-                },
-                {
-                    "alt": "Insijden boven",
-                    "label": "Insnijden boven",
-                    "src": "insijden_boven.webp"
-                },
-                {
-                    "alt": "Insijden",
-                    "label": "Insnijden",
-                    "src": "insnijden.webp"
-                },
-                {
-                    "alt": "Oven op ven",
-                    "label": "Oven op ven",
-                    "src": "oven_op_ven.webp"
-                },
-                {
-                    "alt": "Blenderen",
-                    "label": "Blenderen",
-                    "src": "blenderen.webp"
-                },
-                {
-                    "alt": "Hoog maken",
-                    "label": "Hoog maken",
-                    "src": "hoog_maken.webp"
-                },
-                {
-                    "alt": "Plat Y-as",
-                    "label": "Actie",
-                    "src": "plat_Y_as.webp"
-                }
-            ],
-            "iconsImgsDiamond": [
-                {
-                    "alt": "Koken",
-                    "label": "Actie",
-                    "src": "koken.webp"
-                },
-                {
-                    "alt": "Waterig",
-                    "label": "Waterig",
-                    "src": "waterig.webp"
-                },
-                {
-                    "alt": "Gemengd",
-                    "label": "Gemengd",
-                    "src": "gemengd.webp"
-                },
-                {
-                    "alt": "Droog",
-                    "label": "Droog",
-                    "src": "droog.webp"
-                },
-                {
-                    "alt": "Vast",
-                    "label": "Vast",
-                    "src": "vast.webp"
-                },
-                {
-                    "alt": "Sterk",
-                    "label": "Sterk",
-                    "src": "sterk.webp"
-                },
-                {
-                    "alt": "Bruin",
-                    "label": "Bruin",
-                    "src": "bruin.webp"
-                },
-                {
-                    "alt": "Wit",
-                    "label": "Kleur",
-                    "src": "wit.webp"
-                },
-                {
-                    "alt": "Zwart",
-                    "label": "Zwart",
-                    "src": "zwart.webp"
-                },
-                {
-                    "alt": "Conditie A",
-                    "label": "Conditie A",
-                    "src": "cond_A.webp"
-                },
-                {
-                    "alt": "Conditie B",
-                    "label": "Conditie B",
-                    "src": "cond_B.webp"
-                },
-                {
-                    "alt": "Conditie C",
-                    "label": "Conditie C",
-                    "src": "cond_C.webp"
-                },
-                {
-                    "alt": "Wacht X tijd",
-                    "label": "Instructie",
-                    "src": "wacht_x_tijd.webp"
-                },
-                {
-                    "alt": "Eetbaar",
-                    "label": "Eetbaar",
-                    "src": "eetbaar.webp"
-                },
-                {
-                    "alt": "Gaar",
-                    "label": "Gaar",
-                    "src": "gaar.webp"
-                },
-                {
-                    "alt": "Verkleind",
-                    "label": "Verkleind",
-                    "src": "verkleind.webp"
-                },
-                {
-                    "alt": "Zachr",
-                    "label": "Zacht",
-                    "src": "zacht.webp"
-                },
-                {
-                    "alt": "Op of leeg",
-                    "label": "Op/leeg",
-                    "src": "op-leeg.webp"
-                }
-            ],
-            "iconsImgIntensity": [
-                {
-                    "alt": "Intensiteit 1 Cirkel",
-                    "label": "",
-                    "src": "intensiviteit1Cirkel.webp"
-                },
-                {
-                    "alt": "Intensiteit 2 Cirkel",
-                    "label": "",
-                    "src": "intensiviteit2Cirkel.webp"
-                },
-                {
-                    "alt": "Intensiteit 3 Cirkel",
-                    "label": "",
-                    "src": "intensiteit3Cirkel.webp"
-                },
-                {
-                    "alt": "Intensiteit 4 Cirkel",
-                    "label": "",
-                    "src": "intensiteit4Cirkel.webp"
-                },
-                {
-                    "alt": "Intensiteit 5 Cirkel",
-                    "label": "",
-                    "src": "intensiteit5Cirkel.webp"
-                },
-                {
-                    "alt": "Intensiteit 1",
-                    "label": "",
-                    "src": "intensiteit1.webp"
-                },
-                {
-                    "alt": "Intensiteit 2",
-                    "label": "",
-                    "src": "intensiteit1.webp"
-                },
-                {
-                    "alt": "Intensiteit 3",
-                    "label": "",
-                    "src": "intensiteit3.webp"
-                },
-                {
-                    "alt": "Intensiteit 4",
-                    "label": "",
-                    "src": "intensiteit4.webp"
-                },
-                {
-                    "alt": "Intensiteit 5",
-                    "label": "",
-                    "src": "intensiteit5.webp"
-                }
-            ],
-            "iconsImgArrows": [
-                {
-                    "alt": "Doe alles erin",
-                    "label": "Actie",
-                    "src": "doe_alles_er_in.webp"
-                },
-                {
-                    "alt": "Smeer alles",
-                    "label": "Actie",
-                    "src": "smeer_alles.webp"
-                },
-                {
-                    "alt": "Strooi",
-                    "label": "Actie",
-                    "src": "strooi.webp"
-                },
-                {
-                    "alt": "Bekleed buitenkant",
-                    "label": "Voorbereiding",
-                    "src": "bekleed_buitenkant.webp"
-                },
-                {
-                    "alt": "Bekleed binnenkant",
-                    "label": "Voorbereiding",
-                    "src": "bekleed_binnenkant.webp"
-                },
-                {
-                    "alt": "Verplaats instrument",
-                    "label": "Actie",
-                    "src": "verplaats_instrument.webp"
-                },
-                {
-                    "alt": "Aardappels van A naar B",
-                    "label": "Aardappels van A naar B",
-                    "src": "doe_de_aardappels_van_a_naar_b.webp"
-                }
-            ],
-            "iconsImgDoSomething": {
-                "alt": "Iets blijven doen",
-                "label": "Actie",
-                "src": "iets_blijven_doen.webp"
-            },
-            "colorImg": [
-                {
-                    "explanation": "Verschillende onderdelen (moeten) afgebeeld worden in (kleuren)vakken, zodat je makkelijk kan zien wat bepaalde stappen doen. Het item naam en symbool in het vak blijven wit. Vervolgens staan de ingredienten op volgorde van wat er als eerst in gaat en op de volgorde va kleur",
-                    "alt": "colors",
-                    "label": "Voorbeeld",
-                    "src": "colors.webp"
-                }
-            ],
-            "ingredients": {
-                "blueBox": [
-                    {
-                        "amount": 1.5,
-                        "unit": "kg",
-                        "name": "low sodium vegetable broth"
-                    },
-                    {
-                        "amount": 63,
-                        "unit": "g",
-                        "name": "low sodium soy sauce"
-                    },
-                    {
-                        "amount": 2,
-                        "unit": "el",
-                        "name": "rice vinegar"
-                    },
-                    {
-                        "amount": 60,
-                        "unit": "g",
-                        "name": "tahini (sesame seed paste)"
-                    },
-                    {
-                        "amount": 3,
-                        "unit": "tl",
-                        "name": "white miso paste"
-                    },
-                    {
-                        "amount": 2,
-                        "unit": "el",
-                        "name": "hot chili oil"
-                    },
-                    {
-                        "amount": 1,
-                        "unit": "",
-                        "name": "ginger"
-                    },
-                    {
-                        "amount": 2,
-                        "unit": "",
-                        "name": "garlic"
-                    },
-                    {
-                        "amount": 8,
-                        "unit": "",
-                        "name": "mi bolletjes"
-                    },
-                    {
-                        "amount": 200,
-                        "unit": "g",
-                        "name": "spinazie"
-                    }
-                ],
-                "greenBox": [
-                    {
-                        "amount": 4,
-                        "unit": "el",
-                        "name": "boter"
-                    },
-                    {
-                        "amount": 900,
-                        "unit": "g",
-                        "name": "champions"
-                    },
-                    {
-                        "amount": 2,
-                        "unit": "",
-                        "name": "charlotjes"
-                    },
-                    {
-                        "amount": 2,
-                        "unit": "el",
-                        "name": "raw sesame seeds"
-                    },
-                    {
-                        "amount": 2,
-                        "unit": "tl",
-                        "name": "chili flakes"
-                    }
-                ],
-                "yellowBox": [
-                    {
-                        "amount": 4,
-                        "unit": "",
-                        "name": "ei"
-                    }
-                ],
-                "whiteBox": {
-                    "amount": 1,
-                    "unit": "",
-                    "name": "wortel"
-                }
-            },
-            "doSomethingImg": {
-                "alt": "Instructie alleen op subset doen",
-                "label": "nstructie alleen op subset doen",
-                "src": "instructie_alleen_op_subset_doen.webp"
-            }
-        }
     }
 }

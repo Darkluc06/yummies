@@ -4,7 +4,7 @@
         <article id="instruction_legenda" class="instruction_legenda">
             <section class="instruction_legenda-top">
                 <header class="instruction_legenda-header">
-                    <h1 class="instruction_legenda-h1"> {{ instruction.legenda.title }} </h1>
+                    <h1 class="instruction_legenda-h1"> {{ legenda.title }} </h1>
                     <div class="instruction__buttonWrapper">
                         <RouterLink class="instruction_legenda-button" activeClass="instruction_legenda-button--active"
                             :to="'/documentation'">Documentatie</RouterLink>
@@ -126,7 +126,7 @@
 <script>
 import SvgIcon from '@/Components/general/icon/SvgIcon.vue';
 import { RouterLink } from 'vue-router';
-import json from '../../assets/json/data.json';
+import json from '../../assets/json/instruction.json';
 import FooterComponent from '../../Components/footer/footerComponent.vue';
 import DesktopNavigation from '@/Components/navigation/desktopNavigation.vue';
 
@@ -139,20 +139,20 @@ export default {
     },
     data() {
         return {
-            instruction: json["instruction"],
-            icons: json["instruction"]["legenda"]["imgs"],
+            legenda: json["legenda"],
+            icons: json["legenda"]["imgs"],
 
             info: json,
-            iconsCondition: json['instruction']['legenda']['iconsImgCondition'],
-            iconsXYZ: json['instruction']['legenda']['iconsXYZ'],
-            iconsCircles: json['instruction']['legenda']['iconsImgsCircle'],
-            iconsDiamonds: json['instruction']['legenda']['iconsImgsDiamond'],
-            iconsIntensity: json['instruction']['legenda']['iconsImgIntensity'],
-            iconsArrows: json['instruction']['legenda']['iconsImgArrows'],
-            ingredientsBlue: json['instruction']['legenda']['ingredients']['blueBox'],
-            ingredientsGreen: json['instruction']['legenda']['ingredients']['greenBox'],
-            ingredientsYellow: json['instruction']['legenda']['ingredients']['yellowBox'],
-            ingredientsWhite: json['instruction']['legenda']['ingredients']['whiteBox'],
+            iconsCondition: json['legenda']['iconsImgCondition'],
+            iconsXYZ: json['legenda']['iconsXYZ'],
+            iconsCircles: json['legenda']['iconsImgsCircle'],
+            iconsDiamonds: json['legenda']['iconsImgsDiamond'],
+            iconsIntensity: json['legenda']['iconsImgIntensity'],
+            iconsArrows: json['legenda']['iconsImgArrows'],
+            ingredientsBlue: json['legenda']['ingredients']['blueBox'],
+            ingredientsGreen: json['legenda']['ingredients']['greenBox'],
+            ingredientsYellow: json['legenda']['ingredients']['yellowBox'],
+            ingredientsWhite: json['legenda']['ingredients']['whiteBox'],
 
             isScrollable: false,
             footerVisible: true,
