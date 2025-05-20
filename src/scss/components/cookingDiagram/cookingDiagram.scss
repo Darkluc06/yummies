@@ -526,7 +526,7 @@
         z-index: -1;
         top: 50%;
         left: 50%;
-        width: 15%;
+        width: 20%;
         transform: translate(-50%, -25%);
 
         &--wrapper {
@@ -624,6 +624,46 @@
             width: $timelineWidth;
             text-wrap: wrap;
             font-size: 1.2rem;
+        }
+    }
+}
+
+@media screen and (max-width: 56.25rem) {
+    .cookingDiagram {
+        &__brackets {
+            width: 30%;
+        }
+
+        &__timeline {
+            &--time{
+                left: 30%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 40.62rem) {
+    .cookingDiagram {
+        &__row {
+
+            @for $i from 1 through 10 {
+                &.columns--#{$i} {
+                    grid-template-columns: repeat($i, calc(100% / 2));
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 25rem) {
+    .cookingDiagram {
+        &__row {
+
+            @for $i from 1 through 10 {
+                &.columns--#{$i} {
+                    grid-template-columns: repeat($i, calc(100% / 4 * 3));
+                }
+            }
         }
     }
 }
