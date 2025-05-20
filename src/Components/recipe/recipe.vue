@@ -1,7 +1,7 @@
 <template>
     <li class="recipe__item">
         <span class="recipe__favorite">
-            <button :id="`safeRecipe-${recipe.id}`" class="recipe__span" @click="toggleFavorite">
+            <button :id="`safeRecipe-${recipe.id}`" class="recipe__span" @click="toggleFavorite" :aria-label="`Favorite--button--${ recipe.name }`">
                 <SvgIcon :name="heart" />
             </button>
         </span>
