@@ -15,12 +15,12 @@
                 {
                     "alt": "Cirkel conditie",
                     "label": "Cirkel conditie",
-                    "src": "cconditie.webp"
+                    "src": "cirkel_conditie.webp"
                 },
                 {
                     "alt": "Ruit conditie",
                     "label": "Ruit conditie",
-                    "src": "rconditie.webp"
+                    "src": "conditie.webp"
                 }
             ],
             "iconsXYZ": [
@@ -69,7 +69,7 @@
                 {
                     "alt": "Reepjes snijden X",
                     "label": "Reepjes snijden X",
-                    "src": "reepjes_snijden_x.webp"
+                    "src": "reepjes_snijden.webp"
                 },
                 {
                     "alt": "Reepjes snijden Y",
@@ -79,7 +79,7 @@
                 {
                     "alt": "Ringen snijden",
                     "label": "Ringen snijden",
-                    "src": "ringen_snijden.webp"
+                    "src": "ringen.webp"
                 },
                 {
                     "alt": "Afscheuren",
@@ -144,7 +144,7 @@
                 {
                     "alt": "Insijden boven",
                     "label": "Insnijden boven",
-                    "src": "insnijden_boven.webp"
+                    "src": "insijden_boven.webp"
                 },
                 {
                     "alt": "Insijden",
@@ -256,7 +256,7 @@
                 {
                     "alt": "Op of leeg",
                     "label": "Op/leeg",
-                    "src": "op_leeg.webp"
+                    "src": "op-leeg.webp"
                 }
             ],
             "iconsImgIntensity": [
@@ -273,49 +273,49 @@
                 {
                     "alt": "Intensiteit 3 Cirkel",
                     "label": "",
-                    "src": "intensiviteit3Cirkel.webp"
+                    "src": "intensiteit3Cirkel.webp"
                 },
                 {
                     "alt": "Intensiteit 4 Cirkel",
                     "label": "",
-                    "src": "intensiviteit4Cirkel.webp"
+                    "src": "intensiteit4Cirkel.webp"
                 },
                 {
                     "alt": "Intensiteit 5 Cirkel",
                     "label": "",
-                    "src": "intensiviteit5Cirkel.webp"
+                    "src": "intensiteit5Cirkel.webp"
                 },
                 {
                     "alt": "Intensiteit 1",
                     "label": "",
-                    "src": "intensiviteit1.webp"
+                    "src": "intensiteit1.webp"
+                },
+                {
+                    "alt": "Intensiteit 2",
+                    "label": "",
+                    "src": "intensiteit2.webp"
                 },
                 {
                     "alt": "Intensiteit 3",
                     "label": "",
-                    "src": "intensiviteit3.webp"
+                    "src": "intensiteit3.webp"
                 },
                 {
                     "alt": "Intensiteit 4",
                     "label": "",
-                    "src": "intensiviteit4.webp"
+                    "src": "intensiteit4.webp"
                 },
                 {
                     "alt": "Intensiteit 5",
                     "label": "",
-                    "src": "intensiviteit5.webp"
-                },
-                {
-                    "alt": "Intensiteit 12",
-                    "label": "",
-                    "src": "intensiviteit12.webp"
+                    "src": "intensiteit5.webp"
                 }
             ],
             "iconsImgArrows": [
                 {
                     "alt": "Doe alles erin",
                     "label": "Actie",
-                    "src": "doe_alles_erin.webp"
+                    "src": "doe_alles_er_in.webp"
                 },
                 {
                     "alt": "Smeer alles",
@@ -345,7 +345,7 @@
                 {
                     "alt": "Aardappels van A naar B",
                     "label": "Aardappels van A naar B",
-                    "src": "aardappels_van_a_naar_b.webp"
+                    "src": "doe_de_aardappels_van_a_naar_b.webp"
                 }
             ],
             "iconsImgDoSomething": {
