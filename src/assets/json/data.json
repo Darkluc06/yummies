@@ -516,12 +516,12 @@
                         },
                         {
                             "type": "Ingredient",
-                            "has-ingredient-arrow": true,
-                            "image": "/img/blokjes_snijden.webp",
-                            "imageAlt": "Opwarmen",
-                            "recipeId": 2,
+                            "is-string": false,
+                            "image": "/img/actie_x.webp",
+                            "imageAlt": "test",
                             "difficulty": 2,
-                            "ingredientIndexes": [2],
+                            "has-backwards-arrow": true,
+                            "steps": "2",
                             "indent": true
                         }
                     ],
@@ -542,9 +542,13 @@
                         {
                             "type": "Ingredient",
                             "is-string": false,
-                            "image": "/img/opwarmen.webp",
+                            "image": "../img/opwarmen.webp",
                             "imageAlt": "Opwarmen",
                             "recipeId": 1,
+                            "difficulty": 5,
+                            "has-brackets": true,
+                            "steps": "1",
+                            "bracket-text": "c.a 15m",
                             "indent": true
                         }
                     ],
@@ -566,8 +570,6 @@
                         },
                         {
                             "type": "Indent",
-                            "image": "/img/opwarmen.webp",
-                            "imageAlt": "Opwarmen",
                             "end": true
                         }
                     ],

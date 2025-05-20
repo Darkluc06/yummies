@@ -31,6 +31,7 @@ import SvgIcon from '@/Components/general/icon/SvgIcon.vue';
 export default {
     components: {
         SvgIcon,
+        finishedStep: false,
     },
     props: {
         image: {
