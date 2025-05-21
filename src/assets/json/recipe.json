@@ -479,7 +479,7 @@
                             "type": "Ingredient",
                             "has-ingredient-arrow": true,
                             "standard-arrow": true,
-                            "image": "/img/pijl-kom.webp",
+                            "image": "/img/halve_vierkant.webp",
                             "imageAlt": "Opwarmen",
                             "recipeId": 2,
                             "ingredients": 
