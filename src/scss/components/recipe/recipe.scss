@@ -14,8 +14,12 @@
 
     &__item {
         height: max-content;
-        width: 50rem;
-        position: relative;
+        //width: 50rem;
+        //position: relative;
+        flex-grow: 1;
+        align-self: center;
+        justify-self: center;
+        
     }
 
     &__link {
@@ -157,7 +161,7 @@
     }
 }
 
-@media screen and (max-width: 62.5rem) {
+@media screen and (max-width: 69rem) {
     .recipe{
         &__item{
             width: 100%;
