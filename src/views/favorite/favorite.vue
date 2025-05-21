@@ -1,10 +1,10 @@
 <template>
     <DesktopNavigation :title="'Kook Diagram'" />
     <article class="favorites">
-        <header class="favorites_header">
-            <h1 class="favorites_h1">Mijn Favoriete Recepten</h1>
-        </header>
         <main class="favorites_main">
+            <header class="favorites_header">
+                <h1 class="favorites_h1">Mijn Favoriete Recepten</h1>
+            </header>
             <ul class="favorites_container">
                 <Recipe
                     v-for="recipe in favoriteRecipes"
