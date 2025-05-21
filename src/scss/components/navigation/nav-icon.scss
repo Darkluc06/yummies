@@ -14,9 +14,11 @@
     gap: 2rem;
 
     .nav_arrow-container {
-        
         .nav-arrow {
             width: 2rem;
+            &--end{
+                transform: rotate(180deg);
+            }
         }
     }
 
