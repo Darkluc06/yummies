@@ -2,9 +2,10 @@
     &__desktop {
         &--wrapper {
             display: flex;
-            align-items: flex-start;
+            align-items: center;
             justify-content: space-between;
             z-index: 20;
+            height: 13rem;
 
             .nav_container {
                 width: 40%;
