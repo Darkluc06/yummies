@@ -59,10 +59,7 @@ export default {
             default: false,
             required: false,
         },
-    },
-    mounted() {
-        console.log(this.images);
-    },
+    }
 };
 
 </script>
