@@ -11,20 +11,28 @@
     overflow: hidden;
     display: flex;
     align-items: center;
-    flex-direction: column;
     gap: 2rem;
+
+    .nav_arrow-container {
+        
+        .nav-arrow {
+            width: 2rem;
+        }
+    }
 
     .nav_ul {
         display: flex;
+        align-items: center;
         flex-direction: row;
         gap: 2rem;
         padding: 1.5rem 0;
         overflow-x: auto;
         overflow-y: hidden;
         white-space: nowrap;
-        width: 100%;
+        width: auto;
         box-sizing: border-box;
         scrollbar-width: thin;
+        
 
             .nav_button {
                 position: relative;
