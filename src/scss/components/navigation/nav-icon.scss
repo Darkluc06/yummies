@@ -13,8 +13,9 @@
     align-items: center;
     gap: 2rem;
 
-    .nav_arrow-container {
-        .nav-arrow {
+    .scroll_button {
+        
+        .scroll_button-svg {
             width: 2rem;
             &--end{
                 transform: rotate(180deg);
