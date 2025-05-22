@@ -49,370 +49,306 @@
                     "avondeten"
                 ],
                 "diagram": [
-                    [
-                        {
-                            "type": "Tools",
-                            "tool": "pot"
-                        },
-                        {
-                            "type": "Tools",
-                            "tool": "pot"
-                        },
-                        {
-                            "type": "Tools",
-                            "tool": "pot"
-                        },
-                        {
-                            "type": "Tools",
-                            "tool": "pot"
-                        }
-                    ],
-                    [
-                        {
-                            "type": "Line",
-                            "active": false
-                        },
-                        {
-                            "type": "Line",
-                            "active": false
-                        },
-                        {
-                            "recipeId": 1,
-                            "type": "Ingredient",
-                            "is-string": true,
-                            "ingredients": 
-                            [
-                                {
-                                    "index": 0,
-                                    "percentageOfTotal": 30
-                                }
-                            ],
-                            "active": true
-                        },
-                        {
-                            "type": "Line",
-                            "active": false
-                        }
-                    ],
-                    [
-                        {
-                            "type": "Line",
-                            "active": false
-                        },
-                        {
-                            "type": "Line",
-                            "active": false
-                        },
-                        {
-                            "type": "Ingredient",
-                            "is-string": false,
-                            "image": "/img/actie_x.webp",
-                            "imageAlt": "test",
-                            "difficulty": 1,
-                            "recipeId": 1,
-                            "ingredients": 
-                            [
-                                {
-                                    "index": 0,
-                                    "percentageOfTotal": 30
-                                },
-                                {
-                                    "index": 1,
-                                    "percentageOfTotal": 50
-                                },
-                                {
-                                    "index": 2,
-                                    "percentageOfTotal": 80
-                                }
-                            ]
-                        },
-                        {
-                            "type": "Line",
-                            "active": false
-                        }
-                    ],
-                    [
-                        {
-                            "type": "Line",
-                            "active": false
-                        },
-                        {
-                            "type": "Line",
-                            "active": false
-                        },
-                        {
-                            "type": "Line",
-                            "active": true
-                        },
-                        {
-                            "type": "Line",
-                            "active": true,
-                            "has-big-arrow": true
-                        }
-                    ],
-                    [
-                        {
-                            "type": "Ingredient",
-                            "is-string": true,
-                            "ingredients": 
-                            [
-                                {
-                                    "index": 1,
-                                    "percentageOfTotal": 30
-                                },
-                                {
-                                    "index": 3,
-                                    "percentageOfTotal": 50
-                                },
-                                {
-                                    "index": 5,
-                                    "percentageOfTotal": 80
-                                }
-                            ],
-                            "recipeId": 1
-                        },
-                        {
-                            "type": "Line",
-                            "active": false
-                        },
-                        {
-                            "type": "Line",
-                            "active": true
-                        }
-                    ],
-                    [
-                        {
-                            "type": "Ingredient",
-                            "is-string": false,
-                            "image": "/img/actie_y.webp",
-                            "imageAlt": "test",
-                            "difficulty": 5,
-                            "recipeId": 1
-                        },
-                        {
-                            "type": "Line",
-                            "active": false
-                        },
-                        {
-                            "type": "Line",
-                            "active": true
-                        }
-                    ],
-                    [
-                        {
-                            "type": "Line",
-                            "active": true
-                        },
-                        {
-                            "type": "Ingredient",
-                            "is-string": false,
-                            "image": "/img/actie_x.webp",
-                            "imageAlt": "test",
-                            "difficulty": 3,
-                            "recipeId": 1
-                        },
-                        {
-                            "type": "Line",
-                            "active": true
-                        }
-                    ],
-                    [
-                        {
-                            "type": "Line",
-                            "active": true
-                        },
-                        {
-                            "type": "Ingredient",
-                            "is-string": true,
-                            "ingredients": 
-                            [
-                                {
-                                    "index": 5,
-                                    "percentageOfTotal": 50
-                                },
-                                {
-                                    "index": 0,
-                                    "percentageOfTotal": 70
-                                }
-                            ],
-                            "recipeId": 1
-                        },
-                        {
-                            "type": "Line",
-                            "active": true
-                        }
-                    ],
-                    [
-                        {
-                            "type": "Line",
-                            "active": true,
-                            "end": true
-                        },
-                        {
-                            "type": "Line",
-                            "active": true
-                        },
-                        {
-                            "type": "Line",
-                            "active": true
-                        }
-                    ],
-                    [
-                        {
-                            "type": "Forloop",
-                            "width": "2",
-                            "steps": "7"
-                        },
-                        {
-                            "type": "Ingredient",
-                            "is-string": false,
-                            "image": "/img/actie_x.webp",
-                            "imageAlt": "test",
-                            "difficulty": 0,
-                            "recipeId": 1
-                        },
-                        {
-                            "type": "Line",
-                            "active": true
-                        }
-                    ],
-                    [
-                        {
-                            "type": "Line",
-                            "active": false
-                        },
-                        {
-                            "type": "Ingredient",
-                            "is-string": false,
-                            "image": "/img/actie_x.webp",
-                            "imageAlt": "test",
-                            "difficulty": 5,
-                            "recipeId": 1
-                        },
-                        {
-                            "type": "Line",
-                            "active": true
-                        }
-                    ],
-                    [
-                        {
-                            "type": "Line",
-                            "active": false
-                        },
-                        {
-                            "type": "Ingredient",
-                            "is-string": false,
-                            "image": "/img/actie_x.webp",
-                            "imageAlt": "test",
-                            "difficulty": 0,
-                            "recipeId": 1
-                        },
-                        {
-                            "type": "Line",
-                            "active": true
-                        }
-                    ],
-                    [
-                        {
-                            "type": "Line",
-                            "active": false
-                        },
-                        {
-                            "type": "Ingredient",
-                            "is-string": false,
-                            "image": "/img/actie_x.webp",
-                            "imageAlt": "test",
-                            "difficulty": 0,
-                            "recipeId": 1
-                        },
-                        {
-                            "type": "Line",
-                            "active": true
-                        }
-                    ],
-                    [
-                        {
-                            "type": "Line",
-                            "active": false
-                        },
-                        {
-                            "type": "Ingredient",
-                            "is-string": false,
-                            "image": "/img/actie_x.webp",
-                            "imageAlt": "test",
-                            "difficulty": 0,
-                            "recipeId": 1
-                        },
-                        {
-                            "type": "Line",
-                            "active": true
-                        }
-                    ],
-                    [
-                        {
-                            "type": "Line",
-                            "active": false
-                        },
-                        {
-                            "type": "Ingredient",
-                            "is-string": false,
-                            "image": "/img/actie_x.webp",
-                            "imageAlt": "test",
-                            "difficulty": 0,
-                            "recipeId": 1
-                        },
-                        {
-                            "type": "Line",
-                            "active": true
-                        }
-                    ],
-                    [
-                        {
-                            "type": "Line",
-                            "active": false
-                        },
-                        {
-                            "type": "Ingredient",
-                            "is-string": false,
-                            "image": "/img/actie_x.webp",
-                            "imageAlt": "test",
-                            "difficulty": 0,
-                            "has-backwards-arrow": true,
-                            "steps": "4",
-                            "recipeId": 1
-                        },
-                        {
-                            "type": "Line",
-                            "active": true
-                        }
-                    ],
-                    [
-                        {
-                            "type": "Empty"
-                        },
-                        {
-                            "type": "Line",
-                            "active": true,
-                            "end": true
-                        },
-                        {
-                            "type": "Line",
-                            "active": true
-                        }
-                    ],
-                    [
-                        {
-                            "type": "Empty"
-                        },
-                        {
-                            "type": "Empty"
-                        },
-                        {
-                            "type": "Line",
-                            "active": true
-                        }
-                    ]
+                [
+                    {
+                        "type": "Tools",
+                        "tool": "pot"
+                    },
+                    {
+                        "type": "Tools",
+                        "tool": "pot"
+                    },
+                    {
+                        "type": "Tools",
+                        "tool": "pot"
+                    },
+                    {
+                        "type": "Tools",
+                        "tool": "pot"
+                    }
+                ],
+                [
+                    {
+                        "type": "Line",
+                        "active": false
+                    },
+                    {
+                        "type": "Line",
+                        "active": false
+                    },
+                    {
+                        "type": "Ingredient",
+                        "is-string": true,
+                        "ingedient": "2L water",
+                        "active": true
+                    },
+                    {
+                        "type": "Line",
+                        "active": false
+                    }
+                ],
+                [
+                    {
+                        "type": "Line",
+                        "active": false
+                    },
+                    {
+                        "type": "Line",
+                        "active": false
+                    },
+                    {
+                        "type": "Ingredient",
+                        "is-string": false,
+                        "image": "./img/actie_x.png",
+                        "imageAlt": "test",
+                        "difficulty": 1
+                    },
+                    {
+                        "type": "Line",
+                        "active": false
+                    }
+                ],
+                [
+                    {
+                        "type": "Line",
+                        "active": false
+                    },
+                    {
+                        "type": "Line",
+                        "active": false
+                    },
+                    {
+                        "type": "Line",
+                        "active": true
+                    },
+                    {
+                        "type": "Line",
+                        "active": true,
+                        "has-big-arrow": true
+                    }
+                ],
+                [
+                    {
+                        "type": "Ingredient",
+                        "is-string": true,
+                        "ingedient": "500g Meel, 1l melk, 2 eieren"
+                    },
+                    {
+                        "type": "Line",
+                        "active": false
+                    },
+                    {
+                        "type": "Line",
+                        "active": true
+                    }
+                ],
+                [
+                    {
+                        "type": "Ingredient",
+                        "is-string": false,
+                        "image": "./img/actie_x.png",
+                        "imageAlt": "test",
+                        "difficulty": 5
+                    },
+                    {
+                        "type": "Line",
+                        "active": false
+                    },
+                    {
+                        "type": "Line",
+                        "active": true
+                    }
+                ],
+                [
+                    {
+                        "type": "Line",
+                        "active": true
+                    },
+                    {
+                        "type": "Ingredient",
+                        "is-string": false,
+                        "image": "./img/actie_x.png",
+                        "imageAlt": "test",
+                        "difficulty": 3
+                    },
+                    {
+                        "type": "Line",
+                        "active": true
+                    }
+                ],
+                [
+                    {
+                        "type": "Line",
+                        "active": true
+                    },
+                    {
+                        "type": "Ingredient",
+                        "is-string": true,
+                        "ingedient": "Boter"
+                    },
+                    {
+                        "type": "Line",
+                        "active": true
+                    }
+                ],
+                [
+                    {
+                        "type": "Line",
+                        "active": true,
+                        "end": true
+                    },
+                    {
+                        "type": "Line",
+                        "active": true
+                    },
+                    {
+                        "type": "Line",
+                        "active": true
+                    }
+                ],
+                [
+                    {
+                        "type": "Forloop",
+                        "width": "2",
+                        "steps": "8"
+                    },
+                    {
+                        "type": "Ingredient",
+                        "is-string": false,
+                        "image": "./img/actie_x.png",
+                        "imageAlt": "test",
+                        "difficulty": 0
+                    },
+                    {
+                        "type": "Line",
+                        "active": true
+                    }
+                ],
+                [
+                    {
+                        "type": "Emty"
+                    },
+                    {
+                        "type": "Ingredient",
+                        "is-string": false,
+                        "image": "./img/actie_x.png",
+                        "imageAlt": "test",
+                        "difficulty": 5
+                    },
+                    {
+                        "type": "Line",
+                        "active": true
+                    }
+                ],
+                [
+                    {
+                        "type": "Emty"
+                    },
+                    {
+                        "type": "Ingredient",
+                        "is-string": false,
+                        "image": "./img/actie_x.png",
+                        "imageAlt": "test",
+                        "difficulty": 0
+                    },
+                    {
+                        "type": "Line",
+                        "active": true
+                    }
+                ],
+                [
+                    {
+                        "type": "Emty"
+                    },
+                    {
+                        "type": "Ingredient",
+                        "is-string": false,
+                        "image": "./img/actie_x.png",
+                        "imageAlt": "test",
+                        "difficulty": 0
+                    },
+                    {
+                        "type": "Line",
+                        "active": true
+                    }
+                ],
+                [
+                    {
+                        "type": "Emty"
+                    },
+                    {
+                        "type": "Ingredient",
+                        "is-string": false,
+                        "image": "./img/actie_x.png",
+                        "imageAlt": "test",
+                        "difficulty": 0
+                    },
+                    {
+                        "type": "Line",
+                        "active": true
+                    }
+                ],
+                [
+                    {
+                        "type": "Emty"
+                    },
+                    {
+                        "type": "Ingredient",
+                        "is-string": false,
+                        "image": "./img/actie_x.png",
+                        "imageAlt": "test",
+                        "difficulty": 0
+                    },
+                    {
+                        "type": "Line",
+                        "active": true
+                    }
+                ],
+                [
+                    {
+                        "type": "Emty"
+                    },
+                    {
+                        "type": "Ingredient",
+                        "is-string": false,
+                        "image": "./img/actie_x.png",
+                        "imageAlt": "test",
+                        "difficulty": 0,
+                        "has-backwards-arrow": true,
+                        "steps": "4"
+                    },
+                    {
+                        "type": "Line",
+                        "active": true
+                    }
+                ],
+                [
+                    {
+                        "type": "Emty"
+                    },
+                    {
+                        "type": "Line",
+                        "active": true,
+                        "end": true
+                    },
+                    {
+                        "type": "Line",
+                        "active": true
+                    }
+                ],
+                [
+                    {
+                        "type": "Emty"
+                    },
+                    {
+                        "type": "Emty"
+                    },
+                    {
+                        "type": "Line",
+                        "active": true
+                    }
                 ]
+            ]
             },
             {
                 "id": 2,
@@ -494,10 +430,6 @@
                         {
                             "type": "Tools",
                             "tool": "pot"
-                        },
-                        {
-                            "type": "Tools",
-                            "tool": "pot"
                         }
                     ],
                     [
@@ -512,10 +444,6 @@
                                     "percentageOfTotal": 100
                                 }
                             ]
-                        },
-                        {
-                            "type": "Line",
-                            "Active": false
                         }
                     ],
                     [
@@ -526,10 +454,6 @@
                             "imageAlt": "Opwarmen",
                             "recipeId": 2,
                             "difficulty": 0
-                        },
-                        {
-                            "type": "Line",
-                            "Active": false
                         }
                     ],
                     [
@@ -552,10 +476,6 @@
                                     "percentageOfTotal": 100
                                 }
                             ]
-                        },
-                        {
-                            "type": "Line",
-                            "active": false
                         }
                     ],
                     [
@@ -574,15 +494,6 @@
                                     "percentageOfTotal": 100
                                 }
                             ]
-                        },
-                        {
-                            "type": "Line",
-                            "active": false
-                        },
-                        {
-                            "type": "Line",
-                            "active": true,
-                            "indent": true
                         }
                     ],
                     [
@@ -601,20 +512,6 @@
                                     "percentageOfTotal": 100
                                 }
                             ]
-                        },
-                        {
-                            "type": "Line",
-                            "active": false
-                        },
-                        {
-                            "type": "Ingredient",
-                            "is-string": false,
-                            "image": "/img/actie_x.webp",
-                            "imageAlt": "test",
-                            "difficulty": 2,
-                            "has-backwards-arrow": true,
-                            "steps": "2",
-                            "indent": true
                         }
                     ],
                     [
@@ -633,22 +530,6 @@
                                     "percentageOfTotal": 100
                                 }
                             ]
-                        },
-                        {
-                            "type": "Line",
-                            "active": false
-                        },
-                        {
-                            "type": "Ingredient",
-                            "is-string": false,
-                            "image": "../img/opwarmen.webp",
-                            "imageAlt": "Opwarmen",
-                            "recipeId": 1,
-                            "difficulty": 5,
-                            "has-brackets": true,
-                            "steps": "1",
-                            "bracket-text": "c.a 15m",
-                            "indent": true
                         }
                     ],
                     [
@@ -656,10 +537,6 @@
                             "type": "Indent",
                             "image": "/img/roeren.webp",
                             "imageAlt": "Opwarmen"
-                        },
-                        {
-                            "type": "Line",
-                            "Active": false
                         }
                     ],
                     [
@@ -668,10 +545,6 @@
                             "steps": "1",
                             "time": "5min",
                             "indent": true
-                        },
-                        {
-                            "type": "Line",
-                            "Active": false
                         }
                     ],
                     [
@@ -687,10 +560,6 @@
                                 }
                             ],
                             "indent": true
-                        },
-                        {
-                            "type": "Line",
-                            "active": false
                         }
                     ],
                     [
@@ -699,10 +568,6 @@
                             "steps": "1",
                             "time": "5min",
                             "indent": true
-                        },
-                        {
-                            "type": "Line",
-                            "active": false
                         }
                     ],
                     [
@@ -718,10 +583,6 @@
                                 }
                             ],
                             "indent": true
-                        },
-                        {
-                            "type": "Line",
-                            "active": false
                         }
                     ],
                     [
@@ -737,10 +598,6 @@
                                 }
                             ],
                             "indent": true
-                        },
-                        {
-                            "type": "Line",
-                            "active": false
                         }
                     ],
                     [
@@ -752,10 +609,6 @@
                             "recipeId": 2,
                             "difficulty": 0,
                             "indent": true
-                        },
-                        {
-                            "type": "Line",
-                            "Active": false
                         }
                     ],
                     [
@@ -767,10 +620,6 @@
                             "recipeId": 2,
                             "difficulty": 0,
                             "indent": true
-                        },
-                        {
-                            "type": "Line",
-                            "Active": false
                         }
                     ],
                     [
@@ -785,10 +634,6 @@
                             "steps": "1",
                             "bracket-text": "c.a 15m Aardappels",
                             "indent": true
-                        },
-                        {
-                            "type": "Line",
-                            "Active": false
                         }
                     ],
                     [
@@ -812,10 +657,6 @@
                                 }
                             ],
                             "indent": true
-                        },
-                        {
-                            "type": "Line",
-                            "active": false
                         }
                     ],
                     [
@@ -827,10 +668,6 @@
                             "recipeId": 2,
                             "difficulty": 0,
                             "indent": true
-                        },
-                        {
-                            "type": "Line",
-                            "Active": false
                         }
                     ],
                     [
@@ -842,10 +679,6 @@
                             "recipeId": 2,
                             "difficulty": 0,
                             "indent": true
-                        },
-                        {
-                            "type": "Line",
-                            "Active": false
                         }
                     ],
                     [
@@ -854,20 +687,12 @@
                             "steps": "1",
                             "time": "2min",
                             "indent": true
-                        },
-                        {
-                            "type": "Line",
-                            "Active": false
                         }
                     ],
                     [
                         {
                             "type": "Indent",
                             "end": true
-                        },
-                        {
-                            "type": "Line",
-                            "Active": false
                         }
                     ],
                     [
@@ -882,10 +707,6 @@
                                     "percentageOfTotal": 100
                                 }
                             ]
-                        },
-                        {
-                            "type": "Line",
-                            "active": false
                         }
                     ],
                     [
@@ -896,10 +717,6 @@
                             "imageAlt": "Opwarmen",
                             "recipeId": 2,
                             "difficulty": 0
-                        },
-                        {
-                            "type": "Line",
-                            "Active": false
                         }
                     ]
                 ]

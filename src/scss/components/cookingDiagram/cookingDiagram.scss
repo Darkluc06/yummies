@@ -18,6 +18,7 @@
         display: grid;
         grid-auto-flow: column;
         white-space: nowrap;
+        min-height: 10rem;
         height: max-content;
 
         @for $i from 1 through 10 {
@@ -411,6 +412,9 @@
 
     &__forloopIcon {
         width: max-content;
+        position: absolute;
+        transform: translate(150%, 100%);
+        bottom: 0;
 
         .cookingDiagram__iconWrapper {
             position: relative;
