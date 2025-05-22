@@ -14,7 +14,6 @@
     gap: 2rem;
 
     .scroll_button {
-        
         .scroll_button-svg {
             width: 2rem;
             &--end{
@@ -35,7 +34,7 @@
         width: auto;
         box-sizing: border-box;
         scrollbar-width: thin;
-        
+        scroll-behavior: smooth;
 
             .nav_button {
                 position: relative;
