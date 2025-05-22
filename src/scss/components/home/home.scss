@@ -157,7 +157,7 @@
             width: 100%;
 
             &-h1 {
-                font-size: v.$home-h1;
+                //font-size: v.$home-h1;
                 padding-bottom: 1rem;
                 animation: .6s ease-out go_up forwards;
                 color: map.get(map.get(colors.$palletTwo, "textColors"), "title");
@@ -165,11 +165,10 @@
             }
 
             &-container {
-                display: flex;
-                flex-wrap: wrap;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
                 gap: 2rem;
                 animation: .65s ease-out go_up forwards;
-                justify-content: space-around;
             }
         }
     }
@@ -217,7 +216,19 @@
     }
 }
 
-@media screen and (max-width: 62.5rem) {
+@media screen and (max-width: 100rem) {
+        .yummies_recipes-container{
+            grid-template-columns: repeat(2, 1fr) !important;
+        }
+}
+
+//@media screen and (max-width: 69rem) {
+//    .yummies_recipes-container{
+//        grid-template-columns: repeat(1, 1fr) !important;
+//    }
+//}
+
+@media screen and (max-width: 69rem) {
     .yummies {
         padding: 0rem v.$home-padding-sides;
 
@@ -233,12 +244,10 @@
 
     .yummies_recipes {
         &-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
             gap: 2rem;
             margin-bottom: 2rem;
             animation: .65s ease-out go_up forwards;
+            grid-template-columns: repeat(1, 1fr) !important;
         }
     }
 }

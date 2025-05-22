@@ -17,6 +17,9 @@
         
         .scroll_button-svg {
             width: 2rem;
+            &--end{
+                transform: rotate(180deg);
+            }
         }
     }
 
