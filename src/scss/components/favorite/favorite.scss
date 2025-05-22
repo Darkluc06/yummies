@@ -68,3 +68,12 @@
         opacity: 1;
     }
 }
+
+@media screen and (max-width: 69rem) {
+
+    .favorites {
+        &_container {
+            grid-template-columns: repeat(1, 1fr) !important;
+        }
+    }
+}
