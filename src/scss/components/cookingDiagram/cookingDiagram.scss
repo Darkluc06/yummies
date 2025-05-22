@@ -47,7 +47,7 @@
             width: 5rem;
         }
     }
-  
+
     &__lineWrapper {
         display: flex;
         align-items: center;
@@ -61,21 +61,25 @@
         border-radius: 2rem;
         margin: 0.2rem 0;
         z-index: -1;
-        
-        &Wrapper--indent{
+
+        &Wrapper--indent {
             height: 100%;
             width: 100%;
         }
-        
-        &--indent{
+
+        &--indent {
             height: 6rem;
             background: black;
             margin: 0 !important;
             border-radius: 0;
+
+            &--wrapper {
+                height: 10rem;
+            }
         }
-        
-        
-        &--rotate{
+
+
+        &--rotate {
             transform: rotate(90deg);
             height: 5rem;
             background: black;
@@ -111,7 +115,8 @@
                 height: 2.4rem;
             }
         }
-        &--filler{
+
+        &--filler {
             background: black;
             position: absolute;
             left: 35%;
@@ -119,51 +124,65 @@
             top: -5%;
         }
     }
-    
-    &__indentContainer{
+
+    &__indentContainer {
         width: 100%;
         height: 100%;
     }
-    
-    &__indentPadding{
+
+    &__indentPadding {
         position: relative;
-        padding-inline-end: 35%;
+        padding-inline-end: 29.7%;
+
         //& > .cookingDiagram__specialArrow{
         //    left: 35% !important;
         //}
-        & > *{
+        &>* {
             left: 35% !important;
         }
 
-         .cookingDiagram__brackets{
+        .cookingDiagram__brackets {
             top: 30% !important;
         }
+
+        .cookingDiagram__timeline--time{
+            left: 25% !important;
+        }
+
+        .cookingDiagram__lineWrapper {
+            .cookingDiagram__timeline {
+                left: 35%;
+            }
+        }
     }
-    
-    &__indented{
+
+    &__indented {
         position: absolute;
         left: 35%;
     }
-    
-    &__curve{
+
+    &__curve {
         width: 5rem;
         height: 5rem;
         position: absolute;
         bottom: -0.1rem;
-        &--RD{
+
+        &--RD {
             border-left: 0.2rem solid black;
             border-top: 0.2rem solid black;
             border-top-left-radius: 2rem;
             left: 35%;
         }
-        &--DR{
+
+        &--DR {
             border-left: 0.2rem solid black;
             border-bottom: 0.2rem solid black;
             border-bottom-left-radius: 2rem;
             left: 35%;
             top: 0.3rem;
         }
-        &--LD{
+
+        &--LD {
             //width: 2rem;
             border-right: 0.2rem solid black;
             border-top: 0.2rem solid black;
@@ -172,7 +191,7 @@
             //transform: translateX(-50%);
         }
     }
-    
+
     &__bigArrow {
         position: absolute;
         width: calc(100% - 2em);
@@ -701,7 +720,7 @@
         &--time {
             position: absolute;
             left: 40%;
-            top: 100%;
+            top: 50%;
             width: $timelineWidth;
             text-wrap: wrap;
             font-size: 1.2rem;
@@ -716,7 +735,7 @@
         }
 
         &__timeline {
-            &--time{
+            &--time {
                 left: 30%;
             }
         }

@@ -1,5 +1,5 @@
 <template>
-    <div class="cookingDiagram__column">
+    <div class="cookingDiagram__column" :class="indent ? `cookingDiagram__indentPadding` : ``">
         <p class="cookingDiagram__timeline--time">{{ time }}</p>
         <div class="cookingDiagram__lineWrapper">
             <figure class="cookingDiagram__line cookingDiagram__line--active"></figure>
@@ -24,6 +24,10 @@ export default {
             type: String,
             default: "1 min",
             required: false
+        },
+        indent:{
+            type: Boolean,
+            default: false
         }
     }
 }

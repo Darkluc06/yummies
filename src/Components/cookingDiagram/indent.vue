@@ -1,6 +1,6 @@
 <template>
     <div class="cookingDiagram__column">
-        <div v-if="end === false">
+        <div class="cookingDiagram__line--indent--wrapper" v-if="end === false">
             <figure class="cookingDiagram__line cookingDiagram__line--indent"></figure>
             <div class="cookingDiagram__lineWrapper--indent">
                 <div class="cookingDiagram__icon">
@@ -17,7 +17,7 @@
                 </div>
             </div>
         </div>
-        <div v-if="end === true">
+        <div class="cookingDiagram__line--indent--wrapper" v-if="end === true">
             <figure class="cookingDiagram__line cookingDiagram__line--filler"/>
             <figure class="cookingDiagram__curve cookingDiagram__curve--DR" />
             <figure class="cookingDiagram__curve cookingDiagram__curve--LD" />

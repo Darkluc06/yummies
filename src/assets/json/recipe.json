@@ -448,6 +448,36 @@
                         "amount": "4",
                         "unit": "",
                         "name": "Peppers"
+                    },
+                    {
+                        "amount": "100",
+                        "unit": "ml",
+                        "name": "Wijn"
+                    },
+                    {
+                        "amount": "200",
+                        "unit": "ml",
+                        "name": "Slagroom"
+                    },
+                    {
+                        "amount": "400",
+                        "unit": "ml",
+                        "name": "Boilion"
+                    },
+                    {
+                        "amount": "200",
+                        "unit": "ml",
+                        "name": "Water"
+                    },
+                    {
+                        "amount": "100",
+                        "unit": "gram",
+                        "name": "Prei"
+                    },
+                    {
+                        "amount": "400",
+                        "unit": "gram",
+                        "name": "Witte bonen"
                     }
                 ],
                 "keywords": [
@@ -468,35 +498,6 @@
                         {
                             "type": "Tools",
                             "tool": "pot"
-                        },
-                        {
-                            "type": "Tools",
-                            "tool": "pot"
-                        }
-                    ],
-                    [
-                        {
-                            "type": "Ingredient",
-                            "has-ingredient-arrow": true,
-                            "standard-arrow": true,
-                            "image": "/img/halve_vierkant.webp",
-                            "imageAlt": "Opwarmen",
-                            "recipeId": 2,
-                            "ingredients": 
-                            [
-                                {
-                                    "index": 0,
-                                    "percentageOfTotal": 100
-                                }
-                            ]
-                        },
-                        {
-                            "type": "Line",
-                            "Active": false
-                        },
-                        {
-                            "type": "Line",
-                            "active": true
                         }
                     ],
                     [
@@ -515,10 +516,6 @@
                         {
                             "type": "Line",
                             "Active": false
-                        },
-                        {
-                            "type": "Line",
-                            "active": true
                         }
                     ],
                     [
@@ -527,15 +524,12 @@
                             "is-string": false,
                             "image": "/img/opwarmen.webp",
                             "imageAlt": "Opwarmen",
-                            "recipeId": 2
+                            "recipeId": 2,
+                            "difficulty": 0
                         },
                         {
                             "type": "Line",
                             "Active": false
-                        },
-                        {
-                            "type": "Line",
-                            "active": true
                         }
                     ],
                     [
@@ -562,11 +556,6 @@
                         {
                             "type": "Line",
                             "active": false
-                        },
-                        {
-                            "type": "Indent",
-                            "image": "/img/opwarmen.webp",
-                            "imageAlt": "Opwarmen"
                         }
                     ],
                     [
@@ -601,7 +590,7 @@
                             "type": "Ingredient",
                             "has-ingredient-arrow": true,
                             "standard-arrow": false,
-                            "image": "/img/reepjes_snijden.webp",
+                            "image": "/img/reepjes_snijden_X.webp",
                             "imageAlt": "Opwarmen",
                             "recipeId": 2,
                             "difficulty": 3,
@@ -664,47 +653,40 @@
                     ],
                     [
                         {
-                            "type": "Ingredient",
-                            "is-string": false,
-                            "image": "../img/opwarmen.webp",
-                            "imageAlt": "Opwarmen",
-                            "recipeId": 1,
-                            "difficulty": 5,
-                            "has-brackets": true,
-                            "steps": "2",
-                            "bracket-text": "c.a 15m"
-                        },
-                        {
-                            "type": "Line",
-                            "Active": false
-                        },
-                        {
                             "type": "Indent",
-                            "end": true
-                        }
-                    ],
-                    [
-                        {
-                            "type": "Ingredient",
-                            "is-string": false,
-                            "image": "../img/opwarmen.webp",
-                            "imageAlt": "Opwarmen",
-                            "recipeId": 1,
-                            "difficulty": 0
+                            "image": "/img/roeren.webp",
+                            "imageAlt": "Opwarmen"
                         },
                         {
                             "type": "Line",
                             "Active": false
-                        },
-                        {
-                            "type": "Line",
-                            "active": true
                         }
                     ],
                     [
                         {
                             "type": "Timeline",
-                            "steps": "2"
+                            "steps": "1",
+                            "time": "5min",
+                            "indent": true
+                        },
+                        {
+                            "type": "Line",
+                            "Active": false
+                        }
+                    ],
+                    [
+                        {
+                            "type": "Ingredient",
+                            "is-string": true,
+                            "recipeId": 2,
+                            "ingredients": 
+                            [
+                                {
+                                    "index": 5,
+                                    "percentageOfTotal": 100
+                                }
+                            ],
+                            "indent": true
                         },
                         {
                             "type": "Line",
@@ -713,12 +695,211 @@
                     ],
                     [
                         {
-                            "type": "Line",
-                            "active": true
+                            "type": "Timeline",
+                            "steps": "1",
+                            "time": "5min",
+                            "indent": true
                         },
                         {
                             "type": "Line",
                             "active": false
+                        }
+                    ],
+                    [
+                       {
+                            "type": "Ingredient",
+                            "is-string": true,
+                            "recipeId": 2,
+                            "ingredients": 
+                            [
+                                {
+                                    "index": 6,
+                                    "percentageOfTotal": 100
+                                }
+                            ],
+                            "indent": true
+                        },
+                        {
+                            "type": "Line",
+                            "active": false
+                        }
+                    ],
+                    [
+                       {
+                            "type": "Ingredient",
+                            "is-string": true,
+                            "recipeId": 2,
+                            "ingredients": 
+                            [
+                                {
+                                    "index": 7,
+                                    "percentageOfTotal": 100
+                                }
+                            ],
+                            "indent": true
+                        },
+                        {
+                            "type": "Line",
+                            "active": false
+                        }
+                    ],
+                    [
+                        {
+                            "type": "Ingredient",
+                            "is-string": false,
+                            "image": "/img/opwarmen.webp",
+                            "imageAlt": "Opwarmen",
+                            "recipeId": 2,
+                            "difficulty": 0,
+                            "indent": true
+                        },
+                        {
+                            "type": "Line",
+                            "Active": false
+                        }
+                    ],
+                    [
+                        {
+                            "type": "Ingredient",
+                            "is-string": false,
+                            "image": "/img/koken.webp",
+                            "imageAlt": "Opwarmen",
+                            "recipeId": 2,
+                            "difficulty": 0,
+                            "indent": true
+                        },
+                        {
+                            "type": "Line",
+                            "Active": false
+                        }
+                    ],
+                    [
+                        {
+                            "type": "Ingredient",
+                            "is-string": false,
+                            "image": "/img/koken.webp",
+                            "imageAlt": "Opwarmen",
+                            "recipeId": 2,
+                            "difficulty": 0,
+                            "has-brackets": true,
+                            "steps": "1",
+                            "bracket-text": "c.a 15m Aardappels",
+                            "indent": true
+                        },
+                        {
+                            "type": "Line",
+                            "Active": false
+                        }
+                    ],
+                    [
+                        {
+                            "type": "Ingredient",
+                            "has-ingredient-arrow": true,
+                            "standard-arrow": false,
+                            "image": "/img/reepjes_snijden_X.webp",
+                            "imageAlt": "Opwarmen",
+                            "recipeId": 2,
+                            "difficulty": 3,
+                            "ingredients": 
+                            [
+                                {
+                                    "index": 8,
+                                    "percentageOfTotal": 100
+                                },
+                                {
+                                    "index": 9,
+                                    "percentageOfTotal": 100
+                                }
+                            ],
+                            "indent": true
+                        },
+                        {
+                            "type": "Line",
+                            "active": false
+                        }
+                    ],
+                    [
+                        {
+                            "type": "Ingredient",
+                            "is-string": false,
+                            "image": "/img/opwarmen.webp",
+                            "imageAlt": "Opwarmen",
+                            "recipeId": 2,
+                            "difficulty": 0,
+                            "indent": true
+                        },
+                        {
+                            "type": "Line",
+                            "Active": false
+                        }
+                    ],
+                    [
+                        {
+                            "type": "Ingredient",
+                            "is-string": false,
+                            "image": "/img/koken.webp",
+                            "imageAlt": "Opwarmen",
+                            "recipeId": 2,
+                            "difficulty": 0,
+                            "indent": true
+                        },
+                        {
+                            "type": "Line",
+                            "Active": false
+                        }
+                    ],
+                    [
+                        {
+                            "type": "Timeline",
+                            "steps": "1",
+                            "time": "2min",
+                            "indent": true
+                        },
+                        {
+                            "type": "Line",
+                            "Active": false
+                        }
+                    ],
+                    [
+                        {
+                            "type": "Indent",
+                            "end": true
+                        },
+                        {
+                            "type": "Line",
+                            "Active": false
+                        }
+                    ],
+                    [
+                       {
+                            "type": "Ingredient",
+                            "is-string": true,
+                            "recipeId": 2,
+                            "ingredients": 
+                            [
+                                {
+                                    "index": 10,
+                                    "percentageOfTotal": 100
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Line",
+                            "active": false
+                        }
+                    ],
+                    [
+                        {
+                            "type": "Ingredient",
+                            "is-string": false,
+                            "image": "/img/blenderen.webp",
+                            "imageAlt": "Opwarmen",
+                            "recipeId": 2,
+                            "difficulty": 0
+                        },
+                        {
+                            "type": "Line",
+                            "Active": false
                         }
                     ]
                 ]
