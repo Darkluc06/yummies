@@ -1,6 +1,6 @@
 <template>
     <section class="footer_component">
-        <figure class="arrow-container" v-if="this.renderArrow()">
+        <figure class="arrow-container" :class="{ 'hidden-arrow': !showArrow }">
             <p class="arrow-container-p">Check me</p>
             <img class="arrow" src="/img/checkMe.webp" alt="">
         </figure>            
@@ -26,8 +26,7 @@
 </template>
 
 <script>
-
-import { RouterLink } from 'vue-router';
+import { RouterLink, useRoute } from 'vue-router'; 
 import SvgIcon from '../general/icon/SvgIcon.vue';
 
 export default {
@@ -35,11 +34,44 @@ export default {
         RouterLink,
         SvgIcon
     },
+    data() {
+        return {
+            isArrowHidden: localStorage.getItem("arrow") === "true",
+        };
+    },
+    setup() {
+        const route = useRoute(); 
+        return { route }; 
+    },
+    computed: {
+        showArrow() {
+            return !this.isArrowHidden && this.route.path !== '/documentation';
+        }
+    },
+    // Watch the route change to update localStorage
+    watch: {
+        '$route'(to) {
+            if (to.path === '/documentation') {
+                localStorage.setItem("arrow", "true"); 
+                this.isArrowHidden = true; 
+            } else {
+                this.isArrowHidden = localStorage.getItem("arrow") === "true";
+            }
+        }
+    },
+    mounted() {
+        this.isArrowHidden = localStorage.getItem("arrow") === "true";
+        window.addEventListener('storage', this.handleStorageChange);
+    },
+    beforeUnmount() {
+        window.removeEventListener('storage', this.handleStorageChange);
+    },
     methods: {
-        renderArrow() {
-            return localStorage.getItem("arrow") !== "true";
+        handleStorageChange(event) {
+            if (event.key === 'arrow') {
+                this.isArrowHidden = event.newValue === 'true';
+            }
         }
     }
 }
-
 </script>
