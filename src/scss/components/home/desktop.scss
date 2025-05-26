@@ -6,9 +6,10 @@
             justify-content: space-between;
             z-index: 20;
             height: 13rem;
+            gap: 2rem;
 
             .nav_container {
-                width: 40%;
+                width: 50%;
                 animation: .40s ease-out go_up forwards;
             }
         }
