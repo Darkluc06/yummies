@@ -166,7 +166,7 @@ export default {
                     }
                 }
             }
-            console.log('Ingredient - Final ingredientString (AFTER ROUNDING):', ingredientsString);
+            // console.log('Ingredient - Final ingredientString (AFTER ROUNDING):', ingredientsString);
             return ingredientsString;
         }
     },

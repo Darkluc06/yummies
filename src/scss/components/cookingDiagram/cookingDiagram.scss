@@ -13,7 +13,9 @@
     z-index: -1;
     margin-bottom: 5rem;
     border-radius: 2rem;
-
+    
+    
+    
     &__row {
         display: grid;
         grid-auto-flow: column;
@@ -22,10 +24,69 @@
         height: max-content;
 
         @for $i from 1 through 10 {
+            @if($i == 1 ){
+                &.columns--#{$i} {
+                    grid-template-columns: 100% !important;
+                }
+                .cookingDiagram__line--rotate{
+                    left: 47.5% !important;
+                }
+                .cookingDiagram__curve--RD {
+                    left: 44% !important;
+                }
+                .cookingDiagram__line--filler {
+                    left: 44% !important;
+                    
+                }
+                .cookingDiagram__curve--DR {
+                    left: 44% !important;
+                }
+                .cookingDiagram__indented{
+                    left: 44% !important;
+                    
+                }
+                .cookingDiagram__indentPadding {
+                    padding-inline-end: 0 !important;
+                    
+                    &>* {
+                        left: 44% !important;
+                    }
+                    
+                    .cookingDiagram__brackets {
+                        top: 44% !important;
+                    }
+                    
+                    .cookingDiagram__timeline--time{
+                        left: 44% !important;
+                    }
+                    
+                    .cookingDiagram__lineWrapper {
+                        .cookingDiagram__timeline {
+                            left: 44%;
+                        }
+                    }
+                    
+                    .cookingDiagram__line--active{
+                        position: absolute;
+                        left: 44% !important;
+                    }
+                    .cookingDiagram__timeline--time{
+                        left: 41% !important;
+                    }
+                }
+                .cookingDiagram__brackets--wrapper{
+                    max-width: 10rem;
+                    transform: translateX(105%);
+                }
+                .cookingDiagram__brackets--text{
+                    left: 70%;
+                }
+            }
             &.columns--#{$i} {
                 grid-template-columns: repeat($i, calc(100% / 3));
             }
         }
+        
     }
 
     &__column {
