@@ -1,6 +1,8 @@
 <template>
     <div class="cookingDiagram__column" :class="indent ? `cookingDiagram__indentPadding` : ``">
-        <figure class="cookingDiagram__line cookingDiagram__line--active" :class="indent ? `cookingDiagram__indented` : ``"></figure>
+        <figure class="cookingDiagram__line--startOfLine" v-if="startOfLine === true"></figure>
+        <figure class="cookingDiagram__line cookingDiagram__line--active"
+            :class="indent ? `cookingDiagram__indented` : ``"></figure>
         <div class="cookingDiagram__ingredient" v-if="isString === true && hasIngredientArrow === false">
             <div class="cookingDiagram__ingredientWrapper"
                 :class="popupActive ? `` : `cookingDiagram__ingredientWrapper--active`" @click="OpenPopup()">
@@ -27,7 +29,8 @@
             </ul>
         </span>
         <BackwardsArrow :steps="steps" :direction="backwardsArrowDirection" v-if="hasBackwardsArrow === true" />
-        <Arrow v-if="hasIngredientArrow === true" :image="image" :image-alt="imageAlt" :difficulty="difficulty" :ingredient="ingredientString" :standard-arrow="standardArrow" :images="images" :indent="indent" />
+        <Arrow v-if="hasIngredientArrow === true" :image="image" :image-alt="imageAlt" :difficulty="difficulty"
+            :ingredient="ingredientString" :standard-arrow="standardArrow" :images="images" :indent="indent" />
         <figure class="cookingDiagram__brackets" v-if="hasBrackets === true" :class="`steps--${steps}`">
             <ul class="cookingDiagram__brackets--wrapper">
                 <li class="cookingDiagram__brackets--left"></li>
@@ -35,6 +38,7 @@
             </ul>
             <p class="cookingDiagram__brackets--text">{{ bracketText }}</p>
         </figure>
+        <SvgIcon v-if="endOfLine === true" :name="`arrow-long`" :className="'cookingDiagram__line--endOfLine'" />
     </div>
 </template>
 
@@ -77,7 +81,7 @@ export default {
         imageAlt: {
             type: String
         },
-        images:{
+        images: {
             type: Array,
             required: false
         },
@@ -117,7 +121,7 @@ export default {
             type: String,
             default: "",
         },
-        standardArrow:{
+        standardArrow: {
             type: Boolean,
             default: true
         },
@@ -126,6 +130,14 @@ export default {
             default: false,
             required: false,
         },
+        startOfLine: {
+            type: Boolean,
+            default: false
+        },
+        endOfLine: {
+            type: Boolean,
+            default: false,
+        }
     },
     computed: {
         recipe() {
