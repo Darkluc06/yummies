@@ -5,8 +5,7 @@
 .instruction {
     width: 100%;
     min-height: 100vh;
-    background: map.get(map.get(colors.$palletTwo, "backgroundColors"), "second");
-    padding-top: 2rem;
+    background: map.get(map.get(colors.$palletTwo, "backgroundColors"), "main");
 
     &__buttonWrapper{
         display: flex;
