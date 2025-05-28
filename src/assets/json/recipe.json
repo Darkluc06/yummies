@@ -85,7 +85,8 @@
                                     "index": 0,
                                     "percentageOfTotal": 100
                                 }
-                            ]
+                            ],
+                            "start-of-line": true
                         },
                         {
                             "type": "Line",
@@ -220,7 +221,7 @@
                         {
                             "type": "Line",
                             "active": true,
-                            "end": true
+                            "conectionArrow": true
                         },
                         {
                             "type": "Line",
@@ -360,7 +361,7 @@
                         {
                             "type": "Line",
                             "active": true,
-                            "end": true
+                            "conectionArrow": true
                         },
                         {
                             "type": "Line",
@@ -376,7 +377,8 @@
                         },
                         {
                             "type": "Line",
-                            "active": true
+                            "active": true,
+                            "end-of-line": true
                         }
                     ]
                 ]

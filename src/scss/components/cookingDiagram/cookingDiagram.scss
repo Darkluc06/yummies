@@ -124,6 +124,26 @@
         margin: 0.2rem 0;
         z-index: -1;
 
+        &--startOfLine{
+            position: absolute;
+            top: 0%;
+            left: 50%;
+            width: 2rem;
+            height: 2rem;
+            background: black;
+            transform: translate(-50%, -200%);
+            border-radius: 50%;
+        }
+
+        &--endOfLine{
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%, 50%) rotate(90deg);
+            width: 2.4rem;
+            height: 2.4rem;
+        }
+
         &Wrapper--indent {
             height: 100%;
             width: 100%;
