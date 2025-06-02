@@ -105,7 +105,7 @@ export default {
                             iconToAdd = {
                                 src: originalSrc,
                                 alt: 'Laat zien dat je van lijn moet wisselen',
-                                label: 'Actie'
+                                label: 'Verplaats ingredient'
                             };
                         }
 

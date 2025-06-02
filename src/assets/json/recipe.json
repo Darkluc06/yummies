@@ -167,7 +167,7 @@
                             "type": "Ingredient",
                             "is-string": false,
                             "image": "/img/gemengd.webp",
-                            "imageAlt": "test",
+                            "imageAlt": "mengen",
                             "difficulty": 5
                         },
                         {
@@ -188,7 +188,7 @@
                             "type": "Ingredient",
                             "is-string": false,
                             "image": "/img/opwarmen.webp",
-                            "imageAlt": "test",
+                            "imageAlt": "Opwarmen",
                             "difficulty": 3
                         },
                         {
@@ -243,7 +243,7 @@
                             "type": "Ingredient",
                             "is-string": false,
                             "image": "/img/breed_maken.webp",
-                            "imageAlt": "test",
+                            "imageAlt": "Breed maken",
                             "difficulty": 0
                         },
                         {
@@ -260,7 +260,7 @@
                             "type": "Ingredient",
                             "is-string": false,
                             "image": "/img/vast.webp",
-                            "imageAlt": "test",
+                            "imageAlt": "Vast",
                             "difficulty": 5
                         },
                         {
@@ -277,7 +277,7 @@
                             "type": "Ingredient",
                             "is-string": false,
                             "image": "/img/droog.webp",
-                            "imageAlt": "test",
+                            "imageAlt": "Droog",
                             "difficulty": 3
                         },
                         {
@@ -294,7 +294,7 @@
                             "type": "Ingredient",
                             "is-string": false,
                             "image": "/img/draaien.webp",
-                            "imageAlt": "test",
+                            "imageAlt": "Draaien",
                             "difficulty": 0
                         },
                         {
@@ -326,7 +326,7 @@
                             "type": "Ingredient",
                             "is-string": false,
                             "image": "/img/draaien.webp",
-                            "imageAlt": "test",
+                            "imageAlt": "Draaien",
                             "difficulty": 0
                         },
                         {
@@ -343,7 +343,7 @@
                             "type": "Ingredient",
                             "is-string": false,
                             "image": "/img/bruin.webp",
-                            "imageAlt": "test",
+                            "imageAlt": "Bruin",
                             "difficulty": 3,
                             "has-backwards-arrow": true,
                             "steps": "4"
@@ -496,7 +496,7 @@
                             "images": [
                                 {
                                     "src": "/img/blokjes_snijden.webp",
-                                    "alt": "test"
+                                    "alt": "Blokjes snijden"
                                 }
                             ],
                             "recipeId": 2,

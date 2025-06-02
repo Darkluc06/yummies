@@ -163,19 +163,19 @@
                 },
                 {
                     "alt": "Hoog maken",
-                    "label": "Actie",
+                    "label": "Hoog maken",
                     "src": "hoog_maken.webp"
                 },
                 {
                     "alt": "Plat Y-as",
-                    "label": "Actie",
+                    "label": "Plat Y-as",
                     "src": "plat_Y_axis.webp"
                 }
             ],
             "iconsImgsDiamond": [
                 {
                     "alt": "Koken",
-                    "label": "Actie",
+                    "label": "Koken",
                     "src": "koken.webp"
                 },
                 {
@@ -314,17 +314,17 @@
             "iconsImgArrows": [
                 {
                     "alt": "Doe alles erin",
-                    "label": "Actie",
+                    "label": "Doe alles erin",
                     "src": "doe_alles_er_in.webp"
                 },
                 {
                     "alt": "Smeer alles",
-                    "label": "Actie",
+                    "label": "Smeer alles",
                     "src": "smeer_alles.webp"
                 },
                 {
                     "alt": "Strooi",
-                    "label": "Actie",
+                    "label": "Strooi",
                     "src": "strooi.webp"
                 },
                 {
@@ -339,18 +339,18 @@
                 },
                 {
                     "alt": "Verplaats instrument",
-                    "label": "Actie",
+                    "label": "Verplaats instrument",
                     "src": "verplaats_instrument.webp"
                 },
                 {
                     "alt": "Aardappels van A naar B",
-                    "label": "Aardappels van A naar B",
+                    "label": "Ingrëdient A naar B",
                     "src": "doe_de_aardappels_van_a_naar_b.webp"
                 }
             ],
             "iconsImgDoSomething": {
                 "alt": "Iets blijven doen",
-                "label": "Actie",
+                "label": "Iets blijven doen",
                 "src": "iets_blijven_doen.webp"
             },
             "colorImg": [
