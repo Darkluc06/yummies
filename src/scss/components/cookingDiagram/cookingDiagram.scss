@@ -2,867 +2,882 @@
 @use "sass:map";
 
 .cookingDiagram {
-    width: 100%;
-    height: auto;
-    display: grid;
-    grid-auto-flow: row;
-    grid-template-rows: auto;
-    overflow-x: scroll;
-    background: map.get(map.get(colors.$palletTwo, "backgroundColors"), "white");
-    padding: 2rem 1rem;
-    z-index: -1;
-    margin-bottom: 5rem;
-    border-radius: 2rem;
-    
-    
-    
-    &__row {
-        display: grid;
-        grid-auto-flow: column;
-        white-space: nowrap;
-        min-height: 10rem;
-        height: max-content;
-
-        @for $i from 1 through 10 {
-            @if($i == 1 ){
-                &.columns--#{$i} {
-                    grid-template-columns: 100% !important;
-                }
-                .cookingDiagram__line--rotate{
-                    left: 47.5% !important;
-                }
-                .cookingDiagram__curve--RD {
-                    left: 44% !important;
-                }
-                .cookingDiagram__line--filler {
-                    left: 44% !important;
-                    
-                }
-                .cookingDiagram__curve--DR {
-                    left: 44% !important;
-                }
-                .cookingDiagram__indented{
-                    left: 44% !important;
-                    
-                }
-                .cookingDiagram__indentPadding {
-                    padding-inline-end: 0 !important;
-                    
-                    &>* {
-                        left: 44% !important;
-                    }
-                    
-                    .cookingDiagram__brackets {
-                        top: 44% !important;
-                    }
-                    
-                    .cookingDiagram__timeline--time{
-                        left: 44% !important;
-                    }
-                    
-                    .cookingDiagram__lineWrapper {
-                        .cookingDiagram__timeline {
-                            left: 44%;
-                        }
-                    }
-                    
-                    .cookingDiagram__line--active{
-                        position: absolute;
-                        left: 44% !important;
-                    }
-                    .cookingDiagram__timeline--time{
-                        left: 41% !important;
-                    }
-                }
-                .cookingDiagram__brackets--wrapper{
-                    max-width: 10rem;
-                    transform: translateX(105%);
-                }
-                .cookingDiagram__brackets--text{
-                    left: 70%;
-                }
-            }
-            &.columns--#{$i} {
-                grid-template-columns: repeat($i, calc(100% / 3));
-            }
-        }
-        
-    }
-
-    &__column {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        position: relative;
-        height: auto;
-    }
-
-    &__tool {
-        width: 5rem;
-        height: 5rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        .icon {
-            height: 5rem;
-            width: 5rem;
-        }
-    }
-
-    &__lineWrapper {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    &__line {
-        width: 0.2rem;
-        height: 7rem;
-        background: #C3C3C3;
-        border-radius: 2rem;
-        margin: 0.2rem 0;
-        z-index: -1;
-
-        &--startOfLine{
-            position: absolute;
-            top: 0%;
-            left: 50%;
-            width: 2rem;
-            height: 2rem;
-            background: black;
-            transform: translate(-50%, -200%);
-            border-radius: 50%;
-        }
-
-        &--endOfLine{
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translate(-50%, 50%) rotate(90deg);
-            width: 2.4rem;
-            height: 2.4rem;
-        }
-
-        &Wrapper--indent {
-            height: 100%;
-            width: 100%;
-        }
-
-        &--figure {
-            width: 6rem;
-            height: 6rem;
-            position: absolute;
-            bottom: 0%;
-            transform: translate(0%, 25%);
-        }
-
-        &--img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-        }
-
-        &--indent {
-            height: 6rem;
-            background: black;
-            margin: 0 !important;
-            border-radius: 0;
-
-            &--wrapper {
-                height: 10rem;
-            }
-        }
-
-
-        &--rotate {
-            transform: rotate(90deg);
-            height: 5rem;
-            background: black;
-            position: absolute;
-            left: 45%;
-            top: 25%;
-        }
-
-        &--active {
-            height: 10rem;
-            background: black;
-            margin: 0 !important;
-            border-radius: 0;
-        }
-
-        &--end {
-            position: absolute;
-            width: 100%;
-            background: transparent;
-            border-left: 0.2rem solid black;
-            border-radius: 0;
-            top: 50%;
-            left: 50%;
-            transform: translate(-0.1em, -50%);
-            border-bottom: 0.2rem solid black;
-
-            .icon {
-                position: absolute;
-                top: 100%;
-                left: calc(100% - 1.8rem);
-                transform: translateY(-46%);
-                width: 2.4rem;
-                height: 2.4rem;
-            }
-        }
-
-        &--filler {
-            background: black;
-            position: absolute;
-            left: 35%;
-            height: 2rem;
-            top: -5%;
-        }
-    }
-
-    &__indentContainer {
-        width: 100%;
-        height: 100%;
-    }
-
-    &__indentPadding {
-        position: relative;
-        padding-inline-end: 29.7%;
-
-        //& > .cookingDiagram__specialArrow{
-        //    left: 35% !important;
-        //}
-        &>* {
-            left: 35% !important;
-        }
-
-        .cookingDiagram__brackets {
-            top: 30% !important;
-        }
-
-        .cookingDiagram__timeline--time{
-            left: 25% !important;
-        }
-
-        .cookingDiagram__lineWrapper {
-            .cookingDiagram__timeline {
-                left: 35%;
-            }
-        }
-    }
-
-    &__indented {
-        position: absolute;
-        left: 35%;
-    }
-
-    &__curve {
-        width: 5rem;
-        height: 5rem;
-        position: absolute;
-        bottom: -0.1rem;
-
-        &--RD {
-            border-left: 0.2rem solid black;
-            border-top: 0.2rem solid black;
-            border-top-left-radius: 2rem;
-            left: 35%;
-        }
-
-        &--DR {
-            border-left: 0.2rem solid black;
-            border-bottom: 0.2rem solid black;
-            border-bottom-left-radius: 2rem;
-            left: 35%;
-            top: 0.3rem;
-        }
-
-        &--LD {
-            //width: 2rem;
-            border-right: 0.2rem solid black;
-            border-top: 0.2rem solid black;
-            border-top-right-radius: 2rem;
-            right: calc(50% - 0.1rem);
-            //transform: translateX(-50%);
-        }
-    }
-
-    &__bigArrow {
-        position: absolute;
-        width: calc(100% - 2em);
-        height: 2rem;
-        border: 0.2rem solid black;
-        border-inline-end: none;
-        top: 100%;
-        left: 0;
-        transform: translateX(calc(-50% + 1em)) translateY(-100%);
-        display: flex;
-        align-items: center;
-        z-index: 1;
-
-        svg {
-            transform: translateX(-50%);
-            z-index: 10;
-            background: transparent;
-            height: 4rem;
-            width: 4rem;
-        }
-    }
-
-    &__ingredient {
-        position: absolute;
-        left: 50%;
-        font-size: 1.5rem;
-        width: 90%;
-        height: 100%;
-
-        .icon {
-            transform: rotate(180deg);
-        }
-
-        p {
-            width: 100%;
-            text-wrap: wrap;
-        }
-    }
-
-    &__ingredientWrapper {
-        position: absolute;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        gap: .5rem;
-        height: max-content;
-        overflow-y: scroll;
-        z-index: 1;
-        opacity: 0;
-        transition: opacity 0.2s linear;
-
-        &>.icon {
-            width: 2em;
-            height: 2em;
-        }
-
-        &--active {
-            z-index: 2;
-            opacity: 1;
-            transition: opacity 0.2s linear;
-        }
-    }
-
-    &__ingredientPopup {
-        width: 100%;
-        height: max-content;
-        position: absolute;
-        border: 0.2rem solid map.get(map.get(colors.$palletTwo, "borderColors"), "second");
-        background: map.get(map.get(colors.$palletTwo, "backgroundColors"), "second");
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        padding: .5rem;
-        opacity: 0;
-        transition: opacity 0.2s linear;
-        z-index: 0;
-
-        &--active {
-            z-index: 2;
-            opacity: 1;
-            transition: opacity 0.2s linear;
-        }
-
-        p {
-            text-wrap: wrap;
-        }
-
-        button {
-            z-index: 10;
-            background: transparent;
-            border: none;
-
-            .icon {
-                width: 2rem;
-                height: 2rem;
-            }
-        }
-    }
-
-    &__icon {
-        position: absolute;
-        width: 6rem;
-        height: 6rem;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-    }
-
-    &__iconWrapper {
-        width: 6rem;
-        height: 6rem;
-        z-index: 10;
-        position: relative;
-    }
-
-    &__img {
-        height: 100%;
-        width: 100%;
-        object-fit: contain;
-    }
-
-    &__completed {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        width: 4rem;
-        height: 4rem;
-        border: 0.2rem solid map.get(map.get(colors.$palletTwo, "borderColors"), "second");
-        background: map.get(map.get(colors.$palletTwo, "backgroundColors"), "second");
-        transform: translate(-50%, -50%);
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        opacity: 0;
-        transition: opacity 0.2s linear;
-
-        &--active {
-            opacity: 1;
-            transition: opacity 0.2s linear;
-
-            .icon {
-                width: 2rem;
-                height: 2rem;
-            }
-        }
-    }
-
-    &__difficultyWrapper {
-        display: flex;
-        width: 100%;
-        justify-content: center;
-        gap: 0.2rem;
-        flex-wrap: wrap;
-    }
-
-    &__difficulty {
-        height: 1.5rem;
-        width: 1.5rem;
-        background: rgb(0, 0, 0);
-        border-radius: 50%;
-    }
-
-    &__backwardsArrow {
-        position: absolute;
-        z-index: -1;
-        top: 50%;
-        left: 50%;
-        width: 25%;
-        transform: translate(3%, -101%);
-        border-bottom: 0.2rem solid black;
-        border-right: 0.2rem solid black;
-        border-top: 0.2rem solid black;
-
-        @for $i from 1 through 10 {
-            &.steps--#{$i} {
-                height: calc(10rem * $i - 5rem);
-            }
-        }
-    }
-
-    &__arrow {
-        width: 100%;
-        height: 100%;
-        position: relative;
-
-        .icon {
-            transform: translate(-25%, -54%) rotate(180deg);
-            width: 2.4em;
-            height: 2.4em;
-        }
-    }
-
-    &__forloop {
-        position: absolute;
-        left: 50%;
-        top: calc(0% + 1rem);
-        border: 0.2rem dashed black;
-
-        @for $i from 1 through 10 {
-            &.steps--#{$i} {
-                height: calc(10rem * $i - 2.5rem);
-            }
-        }
-
-        @for $i from 1 through 10 {
-            &.width--#{$i} {
-                width: calc(100% * $i - 5rem);
-                transform: translate(-10%, 0rem);
-            }
-        }
-    }
-
-    &__forloopIcon {
-        width: max-content;
-        position: absolute;
-        transform: translate(150%, 100%);
-        bottom: 0;
-
-        .cookingDiagram__iconWrapper {
-            position: relative;
-            top: 100%;
-            left: 10%;
-            transform: translate(-50%, -50%);
-
-            .icon {
-                width: 4rem;
-                height: 4rem;
-            }
-        }
-    }
-
-    &__specialArrow {
-        width: 100%;
-        position: absolute;
-        top: 20%;
-        left: 50%;
-        display: flex;
-        align-items: center;
-
-        .icon {
-            transform: rotate(180deg);
-            width: 2.4rem;
-            height: 2.4rem;
-        }
-
-        &--difficulties {
-            display: flex;
-            flex-direction: column;
-            flex-wrap: wrap;
-            gap: .2rem;
-            height: calc(3rem + 0.6rem);
-            width: calc(2rem + 0.2rem);
-            justify-content: center;
-            transform: rotate(180deg);
-        }
-
-        &--difficulty {
-            width: 1rem;
-            height: 1rem;
-            background: black;
-            border-radius: 50%;
-        }
-
-        &--imgWrapper {
-            width: 6rem;
-            height: 6rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 2;
-        }
-
-        &--wrapper {
-            display: flex;
-            align-items: center;
-            // transform: translateX(-20%);
-            gap: 0.2rem;
-        }
-
-        &--line {
-            width: 3rem;
-            height: 0.2rem;
-            background: black;
-            border-radius: 0.2rem;
-        }
-
-        &--ingredient {
-            text-wrap: wrap;
-        }
-    }
-
-    &__standardArrow {
-        width: 100%;
-        position: absolute;
-        top: 20%;
-        left: 50%;
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-
-        .icon {
-            transform: rotate(180deg);
-            width: 2.4rem;
-            height: 2.4rem;
-        }
-
-        &--imgWrapper {
-            width: 5rem;
-            height: 5rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 2;
-            border-left: 0.2rem solid black;
-            border-right: 0.2rem solid black;
-        }
-
-        &--img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            transform: rotate(90deg);
-        }
-
-        &--lineWrapper {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            transform: translateX(-0.5rem);
-        }
-
-        &--line {
-            width: 2rem;
-            height: 0.2rem;
-            background: black;
-            border-radius: 0.2rem;
-        }
-
-        &--ingredient {
-            font-size: 1.3rem;
-        }
-    }
-
-    &__specialArrow {
-        width: 100%;
-        position: absolute;
-        top: 20%;
-        left: 50%;
-        display: flex;
-        align-items: center;
-
-        .icon {
-            transform: rotate(180deg);
-            width: 2.4rem;
-            height: 2.4rem;
-        }
-
-        &--difficulties {
-            display: flex;
-            flex-direction: column;
-            flex-wrap: wrap;
-            gap: .2rem;
-            height: calc(3rem + 0.6rem);
-            width: calc(2rem + 0.2rem);
-            justify-content: center;
-            transform: rotate(180deg);
-        }
-
-        &--difficulty {
-            width: 1rem;
-            height: 1rem;
-            background: black;
-            border-radius: 50%;
-        }
-
-        &--imgWrapper {
-            width: 6rem;
-            height: 6rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 2;
-        }
-
-        &--imgWrappers {
-            width: max-content;
-            max-width: 80%;
-            flex-wrap: wrap;
-            height: 6rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 2;
-        }
-
-        &--imgs {
-            width: 6rem;
-            height: 100%;
-            object-fit: contain;
-        }
-
-        &--img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-        }
-
-        &--wrapper {
-            display: flex;
-            align-items: center;
-            // transform: translateX(-20%);
-            gap: 0.2rem;
-        }
-
-        &--line {
-            width: 3rem;
-            height: 0.2rem;
-            background: black;
-            border-radius: 0.2rem;
-        }
-
-        &--ingredient {
-            text-wrap: wrap;
-            font-size: 1.3rem;
-        }
-    }
-
-    &__brackets {
-        position: absolute;
-        z-index: -1;
-        top: 50%;
-        left: 50%;
-        width: 20%;
-        transform: translate(-50%, -25%);
-
-        &--wrapper {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: space-between;
-        }
-
-        @for $i from 1 through 10 {
-            &.steps--#{$i} {
-                height: calc(10rem * $i);
-            }
-        }
-
-        &--left {
-            height: 100%;
-            width: calc(50% - 2rem);
-            border-left: 0.2rem solid black;
-            border-top: 0.2rem solid black;
-            border-bottom: 0.2rem solid black;
-            border-radius: 0.2rem;
-        }
-
-        &--right {
-            height: 100%;
-            width: calc(50% - 2rem);
-            border-right: 0.2rem solid black;
-            border-top: 0.2rem solid black;
-            border-bottom: 0.2rem solid black;
-            border-radius: 0.2rem;
-        }
-
-        &--text {
-            position: absolute;
-            left: 110%;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 1.3rem;
-        }
-    }
-
-    &__timeline {
-        $timelineGap: 0.5rem;
-        $timelineWidth: 3.5rem;
-        margin-top: $timelineGap;
-        top: 0;
-        position: absolute;
-        left: 50%;
-        width: $timelineWidth;
-        display: flex;
-        align-items: center;
-
-        @for $i from 1 through 10 {
-            &.steps--#{$i} {
-                height: calc(10rem * $i - $timelineGap);
-            }
-        }
-
-        &--divider {
-            position: absolute;
-            width: $timelineWidth;
-            height: 0.2rem;
-            background: black;
-            transform: translateX(-100%);
-            border-radius: 2rem;
-
-            &-top {
-                top: 0;
-                left: 50%;
-            }
-
-            &-bottom {
-                bottom: 0;
-                left: 50%;
-            }
-        }
-
-        &--line {
-            border: 0.2rem solid black;
-            border-left: none;
-            border-top-right-radius: 5rem;
-            border-bottom-right-radius: 5rem;
-            background-color: transparent;
-            width: 2rem;
-            height: calc(100% - 2rem);
-            transform: translateX(1rem);
-        }
-
-        &--time {
-            position: absolute;
-            left: 40%;
-            top: 50%;
-            width: $timelineWidth;
-            text-wrap: wrap;
-            font-size: 1.2rem;
-        }
-    }
+	width: 100%;
+	height: auto;
+	display: grid;
+	grid-auto-flow: row;
+	grid-template-rows: auto;
+	overflow-x: auto;
+	background: map.get(map.get(colors.$palletTwo, "backgroundColors"), "white");
+	padding: 2rem 1rem;
+	z-index: -1;
+	margin-bottom: 5rem;
+	border-radius: 2rem;
+	
+	
+	&__row {
+		display: grid;
+		grid-auto-flow: column;
+		white-space: nowrap;
+		min-height: 10rem;
+		height: max-content;
+		
+		@for $i from 1 through 10 {
+			@if ($i == 1) {
+				
+				&.columns--#{$i} {
+					grid-template-columns: repeat(1, 100%) !important;
+				}
+				.cookingDiagram__line--rotate {
+					left: 47.5% !important;
+				}
+				.cookingDiagram__curve--RD {
+					left: 40% !important;
+				}
+				.cookingDiagram__line--filler {
+					left: 40% !important;
+					
+				}
+				.cookingDiagram__curve--DR {
+					left: 40% !important;
+				}
+				.cookingDiagram__indented {
+					left: 40% !important;
+					
+				}
+				.cookingDiagram__indentPadding {
+					padding-inline-end: 0 !important;
+					
+					& > * {
+						left: 40% !important;
+					}
+					
+					.cookingDiagram__brackets {
+						top: 40% !important;
+						&--wrapper{
+							margin: 0 auto !important;
+							transform: translateX(0) !important;
+						}
+					}
+					
+					.cookingDiagram__timeline--time {
+						left: 40% !important;
+					}
+					
+					.cookingDiagram__lineWrapper {
+						.cookingDiagram__timeline {
+							left: 40%;
+						}
+					}
+					
+					.cookingDiagram__line--active {
+						position: absolute;
+						left: 40% !important;
+					}
+					
+					.cookingDiagram__timeline--time {
+						left: 36% !important;
+					}
+				}
+				.cookingDiagram__brackets--wrapper {
+					max-width: 10rem;
+					transform: translateX(105%);
+				}
+				.cookingDiagram__brackets--text {
+					left: 80%;
+				}
+			}
+			&.columns--#{$i} {
+				grid-template-columns: repeat($i, calc(100% / 3));
+			}
+		}
+		
+	}
+	
+	&__column {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		position: relative;
+		height: auto;
+	}
+	
+	&__tool {
+		width: 5rem;
+		height: 5rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		
+		.icon {
+			height: 5rem;
+			width: 5rem;
+		}
+	}
+	
+	&__lineWrapper {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	
+	&__line {
+		width: 0.2rem;
+		height: 7rem;
+		background: #C3C3C3;
+		border-radius: 2rem;
+		margin: 0.2rem 0;
+		z-index: -1;
+		
+		&--startOfLine {
+			position: absolute;
+			top: 0%;
+			left: 50%;
+			width: 2rem;
+			height: 2rem;
+			background: black;
+			transform: translate(-50%, -200%);
+			border-radius: 50%;
+		}
+		
+		&--endOfLine {
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			transform: translate(-50%, 50%) rotate(90deg);
+			width: 2.4rem;
+			height: 2.4rem;
+		}
+		
+		&Wrapper--indent {
+			height: 100%;
+			width: 100%;
+		}
+		
+		&--figure {
+			width: 6rem;
+			height: 6rem;
+			position: absolute;
+			bottom: 0%;
+			transform: translate(0%, 25%);
+		}
+		
+		&--img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+		
+		&--indent {
+			height: 6rem;
+			background: black;
+			margin: 0 !important;
+			border-radius: 0;
+			
+			&--wrapper {
+				height: 10rem;
+			}
+		}
+		
+		
+		&--rotate {
+			transform: rotate(90deg);
+			height: 7.5rem;
+			background: black;
+			position: absolute;
+			left: 45%;
+			top: 12.5%;
+		}
+		
+		&--active {
+			height: 10rem;
+			background: black;
+			margin: 0 !important;
+			border-radius: 0;
+		}
+		
+		&--end {
+			position: absolute;
+			width: 100%;
+			background: transparent;
+			border-left: 0.2rem solid black;
+			border-radius: 0;
+			top: 50%;
+			left: 50%;
+			transform: translate(-0.1em, -50%);
+			border-bottom: 0.2rem solid black;
+			
+			.icon {
+				position: absolute;
+				top: 100%;
+				left: calc(100% - 1.8rem);
+				transform: translateY(-46%);
+				width: 2.4rem;
+				height: 2.4rem;
+			}
+		}
+		
+		&--filler {
+			background: black;
+			position: absolute;
+			left: 35%;
+			height: 2rem;
+			top: -5%;
+		}
+	}
+	
+	&__indentContainer {
+		width: 100%;
+		height: 100%;
+	}
+	
+	&__indentPadding {
+		position: relative;
+		padding-inline-end: 29.7%;
+		
+		//& > .cookingDiagram__specialArrow{
+		//    left: 35% !important;
+		//}
+		& > * {
+			left: 35% !important;
+		}
+		
+		.cookingDiagram__brackets {
+			top: 30% !important;
+		}
+		
+		.cookingDiagram__timeline--time {
+			left: 25% !important;
+		}
+		
+		.cookingDiagram__lineWrapper {
+			.cookingDiagram__timeline {
+				left: 35%;
+			}
+		}
+	}
+	
+	&__indented {
+		position: absolute;
+		left: 35%;
+	}
+	
+	&__curve {
+		width: 5.2%;
+		height: 5rem;
+		position: absolute;
+		bottom: -0.1rem;
+		
+		&--RD {
+			border-left: 0.2rem solid black;
+			border-top: 0.2rem solid black;
+			border-top-left-radius: 2rem;
+			left: 35%;
+		}
+		
+		&--DR {
+			border-left: 0.2rem solid black;
+			border-bottom: 0.2rem solid black;
+			border-bottom-left-radius: 2rem;
+			left: 35%;
+			top: 0.3rem;
+		}
+		
+		&--LD {
+			//width: 2rem;
+			border-right: 0.2rem solid black;
+			border-top: 0.2rem solid black;
+			border-top-right-radius: 2rem;
+			right: calc(50% - 0.1rem);
+			//transform: translateX(-50%);
+		}
+	}
+	
+	&__bigArrow {
+		position: absolute;
+		width: calc(100% - 2em);
+		height: 2rem;
+		border: 0.2rem solid black;
+		border-inline-end: none;
+		top: 100%;
+		left: 0;
+		transform: translateX(calc(-50% + 1em)) translateY(-100%);
+		display: flex;
+		align-items: center;
+		z-index: 1;
+		
+		svg {
+			transform: translateX(-50%);
+			z-index: 10;
+			background: transparent;
+			height: 4rem;
+			width: 4rem;
+		}
+	}
+	
+	&__ingredient {
+		position: absolute;
+		left: 50%;
+		font-size: 1.5rem;
+		width: 90%;
+		height: 100%;
+		
+		.icon {
+			transform: rotate(180deg);
+		}
+		
+		p {
+			width: 100%;
+			text-wrap: wrap;
+		}
+	}
+	
+	&__ingredientWrapper {
+		position: absolute;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		gap: .5rem;
+		height: max-content;
+		overflow-y: scroll;
+		z-index: 1;
+		opacity: 0;
+		transition: opacity 0.2s linear;
+		
+		& > .icon {
+			width: 2em;
+			height: 2em;
+		}
+		
+		&--active {
+			z-index: 2;
+			opacity: 1;
+			transition: opacity 0.2s linear;
+		}
+	}
+	
+	&__ingredientPopup {
+		width: 100%;
+		height: max-content;
+		position: absolute;
+		border: 0.2rem solid map.get(map.get(colors.$palletTwo, "borderColors"), "second");
+		background: map.get(map.get(colors.$palletTwo, "backgroundColors"), "second");
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		padding: .5rem;
+		opacity: 0;
+		transition: opacity 0.2s linear;
+		z-index: 0;
+		
+		&--active {
+			z-index: 2;
+			opacity: 1;
+			transition: opacity 0.2s linear;
+		}
+		
+		p {
+			text-wrap: wrap;
+		}
+		
+		button {
+			z-index: 10;
+			background: transparent;
+			border: none;
+			
+			.icon {
+				width: 2rem;
+				height: 2rem;
+			}
+		}
+	}
+	
+	&__icon {
+		position: absolute;
+		width: 6rem;
+		height: 6rem;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+	}
+	
+	&__iconWrapper {
+		width: 6rem;
+		height: 6rem;
+		z-index: 10;
+		position: relative;
+	}
+	
+	&__img {
+		height: 100%;
+		width: 100%;
+		object-fit: contain;
+	}
+	
+	&__completed {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 4rem;
+		height: 4rem;
+		border: 0.2rem solid map.get(map.get(colors.$palletTwo, "borderColors"), "second");
+		background: map.get(map.get(colors.$palletTwo, "backgroundColors"), "second");
+		transform: translate(-50%, -50%);
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		opacity: 0;
+		transition: opacity 0.2s linear;
+		
+		&--active {
+			opacity: 1;
+			transition: opacity 0.2s linear;
+			
+			.icon {
+				width: 2rem;
+				height: 2rem;
+			}
+		}
+	}
+	
+	&__difficultyWrapper {
+		display: flex;
+		width: 100%;
+		justify-content: center;
+		gap: 0.2rem;
+		flex-wrap: wrap;
+	}
+	
+	&__difficulty {
+		height: 1.5rem;
+		width: 1.5rem;
+		background: rgb(0, 0, 0);
+		border-radius: 50%;
+	}
+	
+	&__backwardsArrow {
+		position: absolute;
+		z-index: -1;
+		top: 50%;
+		left: 50%;
+		width: 25%;
+		transform: translate(3%, -101%);
+		border-bottom: 0.2rem solid black;
+		border-right: 0.2rem solid black;
+		border-top: 0.2rem solid black;
+		
+		@for $i from 1 through 10 {
+			&.steps--#{$i} {
+				height: calc(10rem * $i - 5rem);
+			}
+		}
+	}
+	
+	&__arrow {
+		width: 100%;
+		height: 100%;
+		position: relative;
+		
+		.icon {
+			transform: translate(-25%, -54%) rotate(180deg);
+			width: 2.4em;
+			height: 2.4em;
+		}
+	}
+	
+	&__forloop {
+		position: absolute;
+		left: 50%;
+		top: calc(0% + 1rem);
+		border: 0.2rem dashed black;
+		
+		@for $i from 1 through 10 {
+			&.steps--#{$i} {
+				height: calc(10rem * $i - 2.5rem);
+			}
+		}
+		
+		@for $i from 1 through 10 {
+			&.width--#{$i} {
+				width: calc(100% * $i - 5rem);
+				transform: translate(-10%, 0rem);
+			}
+		}
+	}
+	
+	&__forloopIcon {
+		width: max-content;
+		position: absolute;
+		transform: translate(150%, 100%);
+		bottom: 0;
+		
+		.cookingDiagram__iconWrapper {
+			position: relative;
+			top: 100%;
+			left: 10%;
+			transform: translate(-50%, -50%);
+			
+			.icon {
+				width: 4rem;
+				height: 4rem;
+			}
+		}
+	}
+	
+	&__specialArrow {
+		width: 100%;
+		position: absolute;
+		top: 20%;
+		left: 50%;
+		display: flex;
+		align-items: center;
+		
+		.icon {
+			transform: rotate(180deg);
+			width: 2.4rem;
+			height: 2.4rem;
+		}
+		
+		&--difficulties {
+			display: flex;
+			flex-direction: column;
+			flex-wrap: wrap;
+			gap: .2rem;
+			height: calc(3rem + 0.6rem);
+			width: calc(2rem + 0.2rem);
+			justify-content: center;
+			transform: rotate(180deg);
+		}
+		
+		&--difficulty {
+			width: 1rem;
+			height: 1rem;
+			background: black;
+			border-radius: 50%;
+		}
+		
+		&--imgWrapper {
+			width: 6rem;
+			height: 6rem;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			z-index: 2;
+		}
+		
+		&--wrapper {
+			display: flex;
+			align-items: center;
+			// transform: translateX(-20%);
+			gap: 0.2rem;
+		}
+		
+		&--line {
+			width: 3rem;
+			height: 0.2rem;
+			background: black;
+			border-radius: 0.2rem;
+		}
+		
+		&--ingredient {
+			text-wrap: wrap;
+		}
+	}
+	
+	&__standardArrow {
+		width: 100%;
+		position: absolute;
+		top: 20%;
+		left: 50%;
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		
+		.icon {
+			transform: rotate(180deg);
+			width: 2.4rem;
+			height: 2.4rem;
+		}
+		
+		&--imgWrapper {
+			width: 5rem;
+			height: 5rem;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			z-index: 2;
+			border-left: 0.2rem solid black;
+			border-right: 0.2rem solid black;
+		}
+		
+		&--img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+			transform: rotate(90deg);
+		}
+		
+		&--lineWrapper {
+			display: flex;
+			align-items: center;
+			gap: 0.5rem;
+			transform: translateX(-0.5rem);
+		}
+		
+		&--line {
+			width: 2rem;
+			height: 0.2rem;
+			background: black;
+			border-radius: 0.2rem;
+		}
+		
+		&--ingredient {
+			font-size: 1.3rem;
+		}
+	}
+	
+	&__specialArrow {
+		width: 100%;
+		position: absolute;
+		top: 20%;
+		left: 50%;
+		display: flex;
+		align-items: center;
+		
+		.icon {
+			transform: rotate(180deg);
+			width: 2.4rem;
+			height: 2.4rem;
+		}
+		
+		&--difficulties {
+			display: flex;
+			flex-direction: column;
+			flex-wrap: wrap;
+			gap: .2rem;
+			height: calc(3rem + 0.6rem);
+			width: calc(2rem + 0.2rem);
+			justify-content: center;
+			transform: rotate(180deg);
+		}
+		
+		&--difficulty {
+			width: 1rem;
+			height: 1rem;
+			background: black;
+			border-radius: 50%;
+		}
+		
+		&--imgWrapper {
+			width: 6rem;
+			height: 6rem;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			z-index: 2;
+		}
+		
+		&--imgWrappers {
+			width: max-content;
+			max-width: 80%;
+			flex-wrap: wrap;
+			height: 6rem;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			z-index: 2;
+		}
+		
+		&--imgs {
+			width: 6rem;
+			height: 100%;
+			object-fit: contain;
+		}
+		
+		&--img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+		
+		&--wrapper {
+			display: flex;
+			align-items: center;
+			// transform: translateX(-20%);
+			gap: 0.2rem;
+		}
+		
+		&--line {
+			width: 3rem;
+			height: 0.2rem;
+			background: black;
+			border-radius: 0.2rem;
+		}
+		
+		&--ingredient {
+			text-wrap: wrap;
+			font-size: 1.3rem;
+		}
+	}
+	
+	&__brackets {
+		position: absolute;
+		z-index: -1;
+		top: 50%;
+		left: 50%;
+		width: 20%;
+		transform: translate(-50%, -25%);
+		
+		&--wrapper {
+			position: relative;
+			width: 100%;
+			height: 100%;
+			display: flex;
+			justify-content: space-between;
+		}
+		
+		@for $i from 1 through 10 {
+			&.steps--#{$i} {
+				height: calc(10rem * $i);
+			}
+		}
+		
+		&--left {
+			height: 100%;
+			width: calc(50% - 2rem);
+			border-left: 0.2rem solid black;
+			border-top: 0.2rem solid black;
+			border-bottom: 0.2rem solid black;
+			border-radius: 0.2rem;
+		}
+		
+		&--right {
+			height: 100%;
+			width: calc(50% - 2rem);
+			border-right: 0.2rem solid black;
+			border-top: 0.2rem solid black;
+			border-bottom: 0.2rem solid black;
+			border-radius: 0.2rem;
+		}
+		
+		&--text {
+			position: absolute;
+			left: 110%;
+			top: 50%;
+			transform: translateY(-50%);
+			font-size: 1.3rem;
+		}
+	}
+	
+	&__timeline {
+		$timelineGap: 0.5rem;
+		$timelineWidth: 3.5rem;
+		margin-top: $timelineGap;
+		top: 0;
+		position: absolute;
+		left: 50%;
+		width: $timelineWidth;
+		display: flex;
+		align-items: center;
+		
+		@for $i from 1 through 10 {
+			&.steps--#{$i} {
+				height: calc(10rem * $i - $timelineGap);
+			}
+		}
+		
+		&--divider {
+			position: absolute;
+			width: $timelineWidth;
+			height: 0.2rem;
+			background: black;
+			transform: translateX(-100%);
+			border-radius: 2rem;
+			
+			&-top {
+				top: 0;
+				left: 50%;
+			}
+			
+			&-bottom {
+				bottom: 0;
+				left: 50%;
+			}
+		}
+		
+		&--line {
+			border: 0.2rem solid black;
+			border-left: none;
+			border-top-right-radius: 5rem;
+			border-bottom-right-radius: 5rem;
+			background-color: transparent;
+			width: 2rem;
+			height: calc(100% - 2rem);
+			transform: translateX(1rem);
+		}
+		
+		&--time {
+			position: absolute;
+			left: 40%;
+			top: 50%;
+			width: $timelineWidth;
+			text-wrap: wrap;
+			font-size: 1.2rem;
+		}
+	}
 }
 
-@media screen and (max-width: 56.25rem) {
-    .cookingDiagram {
-        &__brackets {
-            width: 30%;
-        }
 
-        &__timeline {
-            &--time {
-                left: 30%;
-            }
-        }
-    }
+@media screen and (max-width: 56.25rem) {
+	.cookingDiagram {
+		&__brackets {
+			width: 30%;
+		}
+		
+		&__timeline {
+			&--time {
+				left: 30%;
+			}
+		}
+	}
+	
 }
 
 @media screen and (max-width: 40.62rem) {
-    .cookingDiagram {
-        &__row {
-
-            @for $i from 1 through 10 {
-                &.columns--#{$i} {
-                    grid-template-columns: repeat($i, calc(100% / 2));
-                }
-            }
-        }
-    }
+	.cookingDiagram {
+		&__row {
+			
+			@for $i from 1 through 10 {
+				&.columns--#{$i} {
+					grid-template-columns: repeat($i, calc(100% / 2));
+				}
+			}
+		}
+		&__line--rotate {
+			display: none;
+		}
+		
+	}
+	.cookingDiagram__brackets--text {
+		left: 100% !important;
+	}
 }
 
-@media screen and (max-width: 25rem) {
-    .cookingDiagram {
-        &__row {
 
-            @for $i from 1 through 10 {
-                &.columns--#{$i} {
-                    grid-template-columns: repeat($i, calc(100% / 4 * 3));
-                }
-            }
-        }
-    }
+@media screen and (max-width: 25rem) {
+	.cookingDiagram {
+		&__row {
+			
+			@for $i from 1 through 10 {
+				&.columns--#{$i} {
+					grid-template-columns: repeat($i, calc(100% / 4 * 3));
+				}
+			}
+		}
+	}
 }
