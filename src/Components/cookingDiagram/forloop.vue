@@ -8,7 +8,7 @@
                 <!-- <div class="cookingDiagram__iconWrapper triangle">
                     <SvgIcon :name="name" />
                 </div> -->
-                <ImageComponent :figure-class="`cookingDiagram__iconWrapper`" :image-class="`cookingDiagram__img`" :image-source="image" :image-alt="`test`" />
+                <ImageComponent :figure-class="`cookingDiagram__iconWrapper`" :image-class="`cookingDiagram__img`" :image-source="image" :image-alt="`test`" v-if="image != null" />
             </span>
         </figure>
     </div>

@@ -1,6 +1,7 @@
 <template>
     <div class="cookingDiagram__column">
         <div class="cookingDiagram__lineWrapper">
+            <ImageComponent :figure-class="'cookingDiagram__line--figure'" :image-class="'cookingDiagram__line--img'" :image-source="imgInLine" v-if="imgInLine != null" />
             <figure class="cookingDiagram__line--startOfLine" v-if="startOfLine === true"></figure>
             <figure class="cookingDiagram__line"
                 :class="active ? `cookingDiagram__line--active` : ``, conectionArrow ? `cookingDiagram__line--end` : ``, indent ? `cookingDiagram__indented` : ``">
@@ -18,6 +19,7 @@
 <script>
 
 import SvgIcon from '../general/icon/SvgIcon.vue';
+import ImageComponent from '../general/image/imageComponent.vue';
 
 
 export default {
@@ -45,6 +47,9 @@ export default {
             type: Boolean,
             default: false
         },
+        imgInLine: {
+            type: String,
+        },
         endOfLine: {
             type: Boolean,
             default: false,
@@ -52,6 +57,7 @@ export default {
     },
     components: {
         SvgIcon,
+        ImageComponent
     },
 };
 

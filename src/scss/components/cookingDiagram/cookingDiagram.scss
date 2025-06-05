@@ -149,6 +149,20 @@
             width: 100%;
         }
 
+        &--figure {
+            width: 6rem;
+            height: 6rem;
+            position: absolute;
+            bottom: 0%;
+            transform: translate(0%, 25%);
+        }
+
+        &--img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
         &--indent {
             height: 6rem;
             background: black;

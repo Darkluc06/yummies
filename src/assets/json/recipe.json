@@ -236,8 +236,7 @@
                         {
                             "type": "Forloop",
                             "width": "2",
-                            "steps": "8",
-                            "image": "/img/op-leeg.webp"
+                            "steps": "8"                        
                         },
                         {
                             "type": "Ingredient",
@@ -356,7 +355,8 @@
                     [
                         {
                             "type": "Line",
-                            "active": false
+                            "active": false,
+                            "img-in-line": "/img/op-leeg.webp"
                         },
                         {
                             "type": "Line",
