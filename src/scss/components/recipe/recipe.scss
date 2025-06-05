@@ -14,12 +14,11 @@
 
     &__item {
         height: max-content;
-        //width: 50rem;
         position: relative;
         flex-grow: 1;
         align-self: center;
         justify-self: center;
-        
+        width: 100%;
     }
 
     &__link {
